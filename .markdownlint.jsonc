@@ -1,0 +1,6 @@
+{
+  // Line length
+  "MD013": false,
+  // Trailing punctuation in heading
+  "MD026": false,
+}
