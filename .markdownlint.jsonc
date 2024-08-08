@@ -3,4 +3,8 @@
   "MD013": false,
   // Trailing punctuation in heading
   "MD026": false,
+  // Inline HTML
+  "MD033": false,
+  // First line in a file should be a top-level heading
+  "MD041": false,
 }
