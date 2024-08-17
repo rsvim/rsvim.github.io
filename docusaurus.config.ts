@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "RSVIM Documentation",
+  title: "RSVIM",
   tagline: "The VIM editor reinvented in Rust+Typescript.",
   favicon:
     "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
@@ -52,7 +52,7 @@ const config: Config = {
     image:
       "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
     navbar: {
-      title: "RSVIM Documentation",
+      title: "RSVIM",
       logo: {
         src: "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
       },
