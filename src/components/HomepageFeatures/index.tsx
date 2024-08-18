@@ -10,7 +10,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Follow VIM's Philosophy",
+    title: "Philosophy",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
@@ -20,7 +20,17 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Programmable Editor",
+    title: "TUI Engine",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    description: (
+      <>
+        RSVIM provides widgets, layouts and rendering effects that can help
+        improve user experiences.
+      </>
+    ),
+  },
+  {
+    title: "Javascript Runtime",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
@@ -31,17 +41,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Background Editing Service",
+    title: "Background Service",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
-      <>Allow multiple users access and work together, local or remote.</>
+      <>
+        Running as a background daemon, RSVIM allows multiple users access and
+        work together, local or remote.
+      </>
     ),
   },
 ];
 
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("col col--3")}>
     {/*<div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>*/}
