@@ -64,9 +64,15 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "userManualSidebar",
+          sidebarId: "manualSidebarId",
           position: "left",
           label: "User Manual",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "apiSidebarId",
+          position: "left",
+          label: "API References",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {

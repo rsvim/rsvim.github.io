@@ -10,22 +10,17 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Philosophy",
+    title: "Never Blocks",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    description: (
-      <>
-        RSVIM is still the VIM editor with editing modes, buffers, windows,
-        statusline, etc. Not anything else.
-      </>
-    ),
+    description: <>Always running in async mode and never blocks anything.</>,
   },
   {
     title: "TUI Engine",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        RSVIM provides widgets, layouts and rendering effects that can help
-        improve user experiences.
+        Widgets, layouts and rendering effects that can help improve user
+        experiences.
       </>
     ),
   },
@@ -34,9 +29,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        RSVIM provides the best scripting runtime with Javascript/Typescript
-        ever, with builtin support for async/await, type system and plugin
-        manager.
+        Best scripting runtime with Javascript/Typescript ever, builtin support
+        for async/await, type system and plugin manager.
       </>
     ),
   },
@@ -45,7 +39,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Running as a background daemon, RSVIM allows multiple users access and
+        Running as a background daemon that allows multiple users access and
         work together, local or remote.
       </>
     ),
@@ -55,7 +49,7 @@ const FeatureList: FeatureItem[] = [
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx("col col--3")}>
-    {/*<div className="text--center">
+      {/*<div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>*/}
       <div className="text--center padding-horiz--md">
