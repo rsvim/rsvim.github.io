@@ -64,13 +64,13 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "manualSidebarId",
+          sidebarId: "userManualSidebarId",
           position: "left",
           label: "User Manual",
         },
         {
           type: "docSidebar",
-          sidebarId: "apiSidebarId",
+          sidebarId: "apiReferencesSidebarId",
           position: "left",
           label: "API References",
         },
