@@ -86,12 +86,16 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Sponsor",
           items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
+            // {
+            //   label: "User Manual",
+            //   to: "/docs/user_manual/intro",
+            // },
+            // {
+            //   label: "API References",
+            //   to: "/docs/api_references/intro",
+            // },
           ],
         },
         {
