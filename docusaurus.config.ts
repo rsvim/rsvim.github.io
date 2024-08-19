@@ -51,6 +51,11 @@ const config: Config = {
     // Replace with your project's social card
     image:
       "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
       title: "RSVIM",
       logo: {
