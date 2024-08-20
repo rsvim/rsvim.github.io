@@ -15,3 +15,5 @@ To format document, please install below formatters:
 - [`biome`](https://biomejs.dev/) and [`prettier`](https://prettier.io/), use `biome` if the file types are supported, otherwise use `prettier`.
 
   > Please check [Biome - Language support](https://biomejs.dev/internals/language-support/) for more details.
+
+To configure the Search index, please go to [Doc Search](https://docsearch.algolia.com/).

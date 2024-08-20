@@ -47,6 +47,11 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    ["@docusaurus/theme-search-algolia", { id: "1" }],
+    ["@docusaurus/theme-search-algolia", { id: "2" }],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image:
@@ -55,6 +60,31 @@ const config: Config = {
       sidebar: {
         hideable: true,
       },
+    },
+    algolia: {
+      appId: "6GZS4A5AM4",
+      apiKey: "43f79b6b63823243472aa2acca6cc9ea",
+      indexName: "rsvimio",
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      // externalUrlRegex: "external\\.com|domain\\.com",
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      // replaceSearchResultPathname: {
+      //   from: "/docs/", // or as RegExp: /\/docs\//
+      //   to: "/",
+      // },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: false,
+
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      insights: false,
+
+      //... other Algolia params
     },
     navbar: {
       title: "RSVIM",
@@ -86,16 +116,20 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Sponsor",
+          title: "Editor",
           items: [
-            // {
-            //   label: "User Manual",
-            //   to: "/docs/user_manual/intro",
-            // },
-            // {
-            //   label: "API References",
-            //   to: "/docs/api_references/intro",
-            // },
+            {
+              label: "Vi",
+              to: "https://en.wikipedia.org/wiki/Vi_(text_editor)",
+            },
+            {
+              label: "Vim",
+              to: "https://www.vim.org/",
+            },
+            {
+              label: "Neovim",
+              to: "https://neovim.io/",
+            },
           ],
         },
         {
