@@ -106,6 +106,14 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
+          type: "docsVersionDropdown",
+          position: "right",
+        },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
+        {
           href: "https://github.com/rsvim/rsvim",
           label: "GitHub",
           position: "right",
