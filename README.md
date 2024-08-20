@@ -17,3 +17,7 @@ To format document, please install below formatters:
   > Please check [Biome - Language support](https://biomejs.dev/internals/language-support/) for more details.
 
 To configure the Search index, please go to [Doc Search](https://docsearch.algolia.com/).
+
+To tag a version, please run below commands (see [Docusaurus - Versioning](https://docusaurus.io/docs/versioning)):
+
+1. `npm run docusaurus docs:version 0.1.0`
