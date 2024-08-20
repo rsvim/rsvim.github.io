@@ -10,11 +10,6 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Never Blocks",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    description: <>Always running in async mode and never blocks anything.</>,
-  },
-  {
     title: "TUI Engine",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
@@ -29,18 +24,28 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        Best scripting runtime with Javascript/Typescript ever, builtin support
-        for async/await, type system and plugin manager.
+        The best scripting runtime ever, with builtin support for async/await,
+        type system, functional programming, etc.
       </>
     ),
   },
   {
-    title: "Background Service",
+    title: "Plugin Manager",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    description: (
+      <>
+        Builtin plugin (package) manager for js/ts scripts, integrating with
+        npm, yarn, etc.
+      </>
+    ),
+  },
+  {
+    title: "Editing Service",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Running as a background daemon that allows multiple users access and
-        work together, local or remote.
+        A background daemon that allows multiple users access and work together,
+        local or remote.
       </>
     ),
   },
