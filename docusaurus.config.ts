@@ -116,16 +116,20 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Sponsor",
+          title: "Editor",
           items: [
-            // {
-            //   label: "User Manual",
-            //   to: "/docs/user_manual/intro",
-            // },
-            // {
-            //   label: "API References",
-            //   to: "/docs/api_references/intro",
-            // },
+            {
+              label: "Vi",
+              to: "https://en.wikipedia.org/wiki/Vi_(text_editor)",
+            },
+            {
+              label: "Vim",
+              to: "https://www.vim.org/",
+            },
+            {
+              label: "Neovim",
+              to: "https://neovim.io/",
+            },
           ],
         },
         {

@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Get Started
 
 This is the introduction page for User Manual.
