@@ -1,6 +1,6 @@
 ---
 slug: mdx-blog-post
-title: MDX Blog Post
+title: RSVIM's First Blog
 authors: [linrongbin16]
 tags: [docusaurus]
 ---
