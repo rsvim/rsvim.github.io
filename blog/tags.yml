@@ -12,3 +12,8 @@ rsvim:
   label: rsvim
   permalink: https://github.com/rsvim/rsvim
   description: The VIM editor reinvented in Rust+Typescript
+
+vscode:
+  label: vscode
+  permalink: https://code.visualstudio.com/
+  description: Code Editing. Redefined
