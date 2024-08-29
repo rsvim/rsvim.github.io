@@ -5,4 +5,9 @@ hide_table_of_contents: true
 
 # Sponsor
 
-This is the sponsoring page.
+If you like RSVIM, please consider sponsoring it. Your support encourages contributors and maintainers of this project, and other fees and efforts spent on it.
+
+- [GitHub Sponsor](https://github.com/rsvim)
+- [Open Collective](https://opencollective.com/dashboard/rsvim)
+
+Or tip me via wechat-pay or alipay:
