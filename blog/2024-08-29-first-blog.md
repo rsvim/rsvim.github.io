@@ -2,7 +2,7 @@
 slug: mdx-blog-post
 title: RSVIM's First Blog
 authors: [linrongbin16]
-tags: [docusaurus]
+tags: [vim, neovim, rsvim]
 ---
 
 Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
