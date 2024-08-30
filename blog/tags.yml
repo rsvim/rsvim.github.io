@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+vim:
+  label: vim
+  permalink: https://www.vim.org/
+  description: Vim - the ubiquitous text editor
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+neovim:
+  label: neovim
+  permalink: https://neovim.io/
+  description: hyperextensible Vim-based text editor
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+rsvim:
+  label: rsvim
+  permalink: https://github.com/rsvim/rsvim
+  description: The VIM editor reinvented in Rust+Typescript
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+vscode:
+  label: vscode
+  permalink: https://code.visualstudio.com/
+  description: Code Editing. Redefined

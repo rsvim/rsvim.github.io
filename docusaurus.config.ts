@@ -104,6 +104,11 @@ const config: Config = {
           position: "left",
           label: "API References",
         },
+        {
+          to: "/sponsor",
+          position: "left",
+          label: "Sponsor",
+        },
         { to: "/blog", label: "Blog", position: "left" },
         {
           type: "docsVersionDropdown",
