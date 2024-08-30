@@ -43,6 +43,6 @@ Javascript meets most of the requirements, enterprises/communities spent million
 
 - More elegant and beautiful grammar design.
 - Static type.
-- Fully compatible with the community.
+- Fully compatible with js and the community.
 
 Another strong trend is that, more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up. This brings the idea to provide a more powerful TUI engine for Vim users.
