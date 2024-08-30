@@ -63,4 +63,4 @@ Most GUI frameworks support below features:
 3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
 4. Specialized widgets: popup, dialog, contents previewer, text editer, etc.
 
-By introducing GUI frameworks like concepts, it can improve a lot on Vim's editing experiences and extensibility.
+By introducing such concepts, it improves a lot on Vim's editing experiences and extensibility.
