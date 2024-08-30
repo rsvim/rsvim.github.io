@@ -28,7 +28,7 @@ Script [plays a most important role in (Neo)Vim editor, it also turns the editor
 
 The disadvantages of choosing lua gradually emerged, after all it's limited by the poor grammar design and community support, far behind popular script languages mentioned above.
 
-This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with c/c++, rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. When thinking about the script language, we would want one that has:
+This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with c/c++, rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. For the script language, we would want one that has:
 
 - Modern programming language features and package management mentioned above.
 - Popular and widely used, with active developing community.
