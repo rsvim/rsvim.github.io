@@ -21,7 +21,7 @@ Script [plays a most important role in (Neo)Vim editor, it also turns the editor
   - Builtin async/await.
   - Static type
   - And a lot more.
-- Package management, registry and distribution:
+- Package management, registry and distribution. For example:
   - [Luarocks](https://luarocks.org/) for lua.
   - [Npm](https://www.npmjs.com/) for js/ts.
   - [Pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) for python.
