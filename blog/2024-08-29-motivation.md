@@ -49,9 +49,7 @@ Javascript meets most of the requirements, enterprises/communities spent million
 
 ## TUI
 
-Another strong trend is: more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up. This requires a more powerful TUI engine.
-
-Vim TUI is like a screen that can contains multiple windows and other UI widgets, i.e. the terminal itself is both the screen and the root window widget, and users can create more widgets inside it. This idea leads to modern GUI frameworks and even web UI components:
+Another strong trend is: more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up, they treat (Neo)Vim as a screen that can contains multiple windows and other UI widgets, i.e. the terminal itself is both the screen and the root window widget, and users can create more widgets inside it. This idea leads to modern GUI frameworks and even web UI components:
 
 - [Qt](https://www.qt.io/)
 - [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html)
