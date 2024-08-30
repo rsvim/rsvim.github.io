@@ -51,4 +51,16 @@ Javascript meets most of the requirements, enterprises/communities spent million
 
 Another strong trend is: more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up. This requires a more powerful TUI engine.
 
-Vim TUI is like a GUI window widget that can contains nested window and other UI widgets. This idea leads to modern GUI frameworks and even web UI components.
+Vim TUI is like a screen that can contains multiple windows and other UI widgets, i.e. the terminal itself is both the screen and the root window widget, and users can create more widgets inside it. This idea leads to modern GUI frameworks and even web UI components:
+
+- [Qt](https://www.qt.io/)
+- [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [Material UI](https://mui.com/material-ui/)
+- [Iced](https://iced.rs/)
+
+Most GUI frameworks support below features:
+
+1. Coordinate systems: manage widgets shapes (position and size), conflicts and overlaps (Z-index).
+2. Event handling: user keyboard/mouse events can be located based on widgets shapes, and dispatch to the corresponding handler (callback) binded on that widget.
+3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
+4. Specialized widgets: popup, dialog, contents previewer, text editer, etc.
