@@ -12,8 +12,15 @@ Turns out Neovim's choice is successful, luajit improves the performance a lot, 
 
 Script language [plays a most important role in (Neo)Vim editor, it also turns the editor into a script interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9). When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
 
-- Modern programming language features, for example functional programming (closure), builtin async/await, static type, etc.
-- Package manager and registry, for example [luarocks](https://luarocks.org/) for lua, [npm](https://www.npmjs.com/) for js/ts, [pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) for python.
+- Modern programming language features:
+  - Functional programming: closure,
+  - Builtin async/await.
+  - Static type
+  - And a lot more.
+- Package management, registry and distribution:
+  - [Luarocks](https://luarocks.org/) for lua.
+  - [Npm](https://www.npmjs.com/) for js/ts.
+  - [Pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) for python.
 
 The disadvantages of choosing lua gradually emerged, after all it's limited by the poor grammar design and community support, far behind popular script languages mentioned above.
 
@@ -33,3 +40,7 @@ Javascript meets most of the requirements, and enterprises/communities spent mil
 - More elegant and beautiful grammar design.
 - Static type.
 - Fully compatible with javascript community.
+
+Another strong trend is that, more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up. This brings the idea to provide a more powerful TUI engine for Vim users.
+
+This is the motivation of RSVIM project.
