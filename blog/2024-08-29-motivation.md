@@ -14,6 +14,8 @@ Then Neovim came along in [2014](<https://en.wikipedia.org/wiki/Vim_(text_editor
 
 Turns out Neovim's choice is successful, luajit improves the performance a lot, and lua provides a much better grammar (compares with vimscript) on handling user logic. This encourages more users creating their own plugins (include myself) and contributing to Neovim project. At the same time, Vim brings [vimscript9](https://www.vim.org/vim90.php) as a better script, but still lots of efforts are needed. Obviously it's much easier and faster to embed a script that is ready to use.
 
+## Script
+
 Script [plays a most important role in (Neo)Vim editor, it also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
 
 - Modern programming language features:
@@ -45,4 +47,20 @@ Javascript meets most of the requirements, enterprises/communities spent million
 - Static type.
 - Fully compatible with js and the community.
 
-Another strong trend is: more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up. This requires a more powerful TUI engine.
+## TUI
+
+Another strong trend is: more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up, they treat (Neo)Vim as a screen that contains multiple UI widgets, while the screen itself is also a root widget. This idea leads to modern GUI frameworks and even web UI components:
+
+- [Qt](https://www.qt.io/)
+- [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [Material UI](https://mui.com/material-ui/)
+- [Iced](https://iced.rs/)
+
+Most GUI frameworks support below features:
+
+1. Coordinate systems: manage widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
+2. Event handling: user keyboard/mouse events can be located based on shapes, and dispatched to corresponding handlers (callbacks) binded on widgets.
+3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
+4. Specialized widgets: button, popup, dialog, contents previewer, text editer, etc.
+
+By introducing such concepts, it improves a lot on Vim's visual effects, standardizes widget behaviors, and reduces developing efforts.
