@@ -23,12 +23,8 @@ This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it wit
 - Popular and widely used, with active developing community.
 - Great performance that won't make the editor laggy.
 
-The options are few: python is too slow, other scripts such as lua/vimscript/lisp are not so popular. Javascript meets most of the requirements, and enterprises/communities spent millions of dollars and tosn of engineering hours on javascript engines such as [V8](https://v8.dev/) and [QuickJS](https://bellard.org/quickjs/), which are great solutions for us to embed javascript into command line.
+The options are few: python is too slow, other scripts such as lua/vimscript/lisp are not so popular. Javascript meets most of the requirements, and enterprises/communities spent millions of dollars and tosn of engineering hours on javascript engines such as [V8](https://v8.dev/) and [QuickJS](https://bellard.org/quickjs/), which are great solutions for us to embed javascript into command line. But js grammar is evil and chaotic, the success actually belongs to network and browsers industry, not js itself. So hope to [support typescript as the first-class citizens, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Typescript makes up for some shortcomings of javascript:
 
-- The language itself is actually evil and chaotic, success belongs to network and browser. But today we have typescript
-
-- Functional programming features such as closure, pattern matching, etc.
-- Memory safety, lifetime, borrow check.
-- Async/await support.
-- Error handling,
-- More powerful/productive language features such as many functional programming features, lifetime,
+- More elegant and beautiful grammar design.
+- Static type.
+- Fully compatible with javascript community.
