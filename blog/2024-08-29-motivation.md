@@ -4,7 +4,9 @@ authors: [linrongbin16]
 tags: []
 ---
 
-Vim and Neovim editors are so popular and loved by software developers and text writers from all over the world, so am I. During the Vim's development lead by [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar), there's always a trend that users want to make Vim an IDE, by providing all kinds of plugins: file explorer, UI widgets and icons, code completion, diagnostics, formatters, integrations with third-party command utils, etc. Even though Vim uses [vimscript](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script>) as its first-class citizen, it's still somehow a minority and discourage people to create their plugins or contribute to Vim project itself, maybe it's also related to the documentation and grammar design. The confliction between Vim's extensibility and user's requirements is growing.
+Vim and Neovim editors are so popular and loved by software developers and text writers from all over the world, so am I.
+
+During the Vim's development lead by [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar), there's always a trend that users want to make Vim an IDE, by providing all kinds of plugins: file explorer, UI widgets and icons, code completion, diagnostics, formatters, integrations with third-party command utils, etc. Even though Vim uses [vimscript](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script>) as its first-class citizen, it's still somehow a minority and discourage people to create their plugins or contribute to Vim project itself, maybe it's also related to the documentation and grammar design. The confliction between Vim's extensibility and user's requirements is growing.
 
 <!-- truncate -->
 
