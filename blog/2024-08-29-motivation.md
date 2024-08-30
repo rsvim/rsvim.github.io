@@ -30,7 +30,7 @@ This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it wit
 - Popular and widely used, with active developing community.
 - Great performance that won't make the editor laggy.
 
-We don't have too many options:
+We don't have many options:
 
 - Python is too slow.
 - Other scripts such as lua/vimscript/lisp are not so popular, some new script languages are still too young and not widely accepted.
