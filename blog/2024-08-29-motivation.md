@@ -14,6 +14,8 @@ Then Neovim came along in [2014](<https://en.wikipedia.org/wiki/Vim_(text_editor
 
 Turns out Neovim's choice is successful, luajit improves the performance a lot, and lua provides a much better grammar (compares with vimscript) on handling user logic. This encourages more users creating their own plugins (include myself) and contributing to Neovim project. At the same time, Vim brings [vimscript9](https://www.vim.org/vim90.php) as a better script, but still lots of efforts are needed. Obviously it's much easier and faster to embed a script that is ready to use.
 
+## Script
+
 Script [plays a most important role in (Neo)Vim editor, it also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
 
 - Modern programming language features:
@@ -45,4 +47,8 @@ Javascript meets most of the requirements, enterprises/communities spent million
 - Static type.
 - Fully compatible with js and the community.
 
+## TUI
+
 Another strong trend is: more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up. This requires a more powerful TUI engine.
+
+Vim TUI is like a GUI window widget that can contains nested window and other UI widgets. This idea leads to modern GUI frameworks and even web UI components.
