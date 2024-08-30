@@ -39,7 +39,7 @@ We don't have many options:
 - Python is too slow.
 - Other scripts such as lua/vimscript/lisp are not so popular, some new scripts are still too young and not widely used.
 
-Javascript meets most of the requirements, and enterprises/communities spent millions of dollars and tosn of engineering hours on javascript engines such as [V8](https://v8.dev/) and [QuickJS](https://bellard.org/quickjs/), which are great solutions for us to embed javascript into command line. But js grammar is bad and chaotic, the success actually belongs to network and browsers industry, not js itself. So hope to [support typescript as the first-class citizens, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Typescript makes up for some shortcomings of javascript:
+Javascript meets most of the requirements, enterprises/communities spent millions of dollars and tons of engineering hours on javascript engines such as [V8](https://v8.dev/) and [QuickJS](https://bellard.org/quickjs/), which are great solutions for us to embed javascript into command line. But js grammar is bad and chaotic, the success actually belongs to network and browsers industry, not js itself. So hope to [support typescript as the first-class citizens, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Typescript makes up for some shortcomings of javascript:
 
 - More elegant and beautiful grammar design.
 - Static type.
