@@ -61,6 +61,6 @@ Most GUI frameworks support below features:
 1. Coordinate systems: manage widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
 2. Event handling: user keyboard/mouse events can be located based on shapes, and dispatched to corresponding handlers (callbacks) binded on widgets.
 3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
-4. Specialized widgets: popup, dialog, contents previewer, text editer, etc.
+4. Specialized widgets: button, popup, dialog, contents previewer, text editer, etc.
 
 By introducing such concepts, it improves a lot on Vim's visual effects, standardizes widget behaviors, and reduces developing efforts.
