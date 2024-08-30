@@ -9,5 +9,3 @@ If you like RSVIM, please consider sponsoring it. Your support encourages contri
 
 - [GitHub Sponsor](https://github.com/rsvim)
 - [Open Collective](https://opencollective.com/dashboard/rsvim)
-
-Or tip me via wechat-pay or alipay:
