@@ -58,7 +58,7 @@ Another strong trend is: more plugins are providing complicated TUI widgets by c
 
 Most GUI frameworks support below features:
 
-1. Coordinate systems: manage widgets shapes (position and size), conflicts and overlaps (Z-index).
+1. Coordinate systems: manage widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
 2. Event handling: user keyboard/mouse events can be located based on widgets shapes, and dispatch to the corresponding handler (callback) binded on that widget.
 3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
 4. Specialized widgets: popup, dialog, contents previewer, text editer, etc.
