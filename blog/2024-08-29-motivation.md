@@ -17,11 +17,13 @@ Script language [plays a most important role in (Neo)Vim editor, it also turns t
 
 The disadvantages of choosing lua gradually emerged, after all it's limited by the poor grammar design and community support, far behind popular script languages mentioned above.
 
-This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with C/C++, Rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. When thinking about the script language, things get more complicated and controversial. But javascript is the best after all:
+This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with C/C++, Rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. When thinking about the script language, we would want one that has:
 
-- Modern programming language featuers such as functional programming (closure), builtin async/await, etc.
+- Modern programming language features and package management mentioned above.
 - Popular and widely used, with active developing community.
-- Enterprises ([Google](https://www.google.com/)) and communities throws millions of dollars and tons of engineer working hours on the javascript engine, which
+- Great performance that won't make the editor laggy.
+
+The options are few: python is too slow, other scripts such as lua/vimscript/lisp are not so popular.
 
 The cons:
 
