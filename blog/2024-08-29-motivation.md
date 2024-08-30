@@ -8,8 +8,28 @@ Vim and Neovim editors are so popular and loved by software developers and text 
 
 Then Neovim came along in [2014](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Neovim>), with the goal of providing more friendly functionalities for developers and closer to the IDE editing experiences, by introducing [lua](https://www.lua.org/) as its scripting language and [LuaJIT](https://luajit.org/) as the scripts runtime. This is quite controversial at the beginning since lua is somehow not very popular and successful, unlike [python](https://www.python.org/) or [javascript](https://en.wikipedia.org/wiki/JavaScript)/[typescript](https://www.typescriptlang.org/) (on a runtime such as [node.js](https://nodejs.org/)). Before Neovim and lua, Vim community usually leverage these external languages for complex plugins such as code-completion, file explorer, etc. But the overhead is the [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) across the editor instance and language interpreter/runtime process.
 
-Turns out Neovim's choice is successful, luajit improves the performance a lot, and lua provides a much better grammar (compares with vimscript) that helps user handle more code logic. It encourages more user to create their own plugins and provide more features. The scripting language [plays a most important role in (Neo)Vim editor, it also turns the editor into a script interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9). But after all lua is limited by its grammar design and community support, far behind popular script languages mentioned above.
+Turns out Neovim's choice is successful, luajit improves the performance a lot, and lua provides a much better grammar (compares with vimscript) that helps user handle more code logic. It encourages more user to create their own plugins and provide more features. At the same time, Vim brings [vimscript9](https://www.vim.org/vim90.php) as a better script, but still lots of efforts are needed. Obviously it's much easier and faster to embed a script language that is ready to use.
 
-This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up.
+Script language [plays a most important role in (Neo)Vim editor, it also turns the editor into a script interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9). When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
 
-Compares with C/C++, Rust provides much more powerful language features, toolchains and community libraries/frameworks. And Javascript engines such as [V8](https://v8.dev/), [QuickJS](https://bellard.org/quickjs/) also provide great solutions to be possible to embed it into a command line.
+- Modern programming language features, for example functional programming (closure), builtin async/await, static type, etc.
+- Package manager and registry, for example [luarocks](https://luarocks.org/) for lua, [npm](https://www.npmjs.com/) for js/ts, [pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) for python.
+
+The disadvantages of choosing lua gradually emerged, after all it's limited by the poor grammar design and community support, far behind popular script languages mentioned above.
+
+This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with C/C++, Rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. When thinking about the script language, things get more complicated and controversial. But javascript is the best after all:
+
+- Modern programming language featuers such as functional programming (closure), builtin async/await, etc.
+- Popular and widely used, with active developing community.
+- Enterprises ([Google](https://www.google.com/)) and communities throws millions of dollars and tons of engineer working hours on the javascript engine, which
+
+The cons:
+
+- The language itself is actually evil and chaotic, success belongs to network and browser. But today we have typescript
+
+- Functional programming features such as closure, pattern matching, etc.
+- Memory safety, lifetime, borrow check.
+- Async/await support.
+- Error handling,
+- More powerful/productive language features such as many functional programming features, lifetime,
+  much more powerful language features, toolchains and community libraries/frameworks. And Javascript engines such as [V8](https://v8.dev/), [QuickJS](https://bellard.org/quickjs/) also provide great solutions to be possible to embed it into a command line.
