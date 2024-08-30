@@ -17,15 +17,15 @@ Script language [plays a most important role in (Neo)Vim editor, it also turns t
 
 The disadvantages of choosing lua gradually emerged, after all it's limited by the poor grammar design and community support, far behind popular script languages mentioned above.
 
-This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with C/C++, Rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. When thinking about the script language, we would want one that has:
+This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with c/c++, rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. When thinking about the script language, we would want one that has:
 
 - Modern programming language features and package management mentioned above.
 - Popular and widely used, with active developing community.
 - Great performance that won't make the editor laggy.
 
-The options are few: python is too slow, other scripts such as lua/vimscript/lisp are not so popular.
+The options are few: python is too slow, other scripts such as lua/vimscript/lisp are not so popular. Javascript meets most of the requirements, and has some extra advantages:
 
-The cons:
+- Enterprises and communities spent millions of dollars and tosn of engineering hours on javascript engine such as [V8](https://v8.dev/) and [QuickJS](https://bellard.org/quickjs/), which are great solutions for us to embed javascript into command line.
 
 - The language itself is actually evil and chaotic, success belongs to network and browser. But today we have typescript
 
@@ -34,4 +34,3 @@ The cons:
 - Async/await support.
 - Error handling,
 - More powerful/productive language features such as many functional programming features, lifetime,
-  much more powerful language features, toolchains and community libraries/frameworks. And Javascript engines such as [V8](https://v8.dev/), [QuickJS](https://bellard.org/quickjs/) also provide great solutions to be possible to embed it into a command line.
