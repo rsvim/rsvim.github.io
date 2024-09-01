@@ -16,21 +16,21 @@ Turns out Neovim's choice is successful, luajit improves the performance a lot, 
 
 ## Script
 
-Script [plays a most important role in (Neo)Vim editor, it also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
+Script [plays a most important role in (Neo)Vim editor: it drives the editor's looking and behavior, schedules background job, communicates with remote process, etc. It also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
 
 - Modern programming language features:
   - Functional programming: iteration, closure, no side effects, etc.
   - Builtin async/await.
   - Static type
   - And a lot more.
-- Package management, registry and distribution. For example:
+- Package management, upgrade and distribution. For example:
   - [Luarocks](https://luarocks.org/) for lua.
   - [Npm](https://www.npmjs.com/) for js/ts.
   - [Pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) for python.
 
 The disadvantages of choosing lua gradually emerged, after all it's limited by the poor grammar design and community support, far behind popular script languages mentioned above.
 
-This is why when I'm looking at the (Neo)Vim editor, the idea to reinvent it with Rust+Javascript suddenly popped up. Compares with c/c++, rust provides so much powerful and productive features and toolchains, with a active developing community that can leverage. For the script language, we would want one that has:
+This is why when looking at the (Neo)Vim editor, the idea to reinvent it with rust+javascript suddenly popped up. Compares with c/c++, rust provides so much powerful and productive features, also the toolchains, the active developing communities. As for the script, we would want one has:
 
 - Modern programming language features and package management mentioned above.
 - Popular and widely used, with active developing community.
@@ -41,7 +41,7 @@ We don't have many options:
 - Python is too slow.
 - Other scripts such as lua/vimscript/lisp are not so popular, some new scripts are still too young and not widely used.
 
-Javascript meets most of the requirements, enterprises/communities spent millions of dollars and tons of engineering hours on engines such as [V8](https://v8.dev/) and [QuickJS](https://bellard.org/quickjs/), which are great solutions to embed into command line. But wait, js grammar is bad and chaotic, success actually belongs to the network and browsers industry, not js itself. So hope to [support typescript as the first-class citizens, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Ts makes up for some shortcomings of js:
+Javascript meets most of the requirements, enterprise spent millions of dollars and tons of engineering hours on the [V8](https://v8.dev/) engine, communities also comes up with [QuickJS](https://bellard.org/quickjs/), both are great solutions to embed into command line. However, js grammar is bad and chaotic, success actually belongs to the network and browser industry, not js itself. So the final target is [scripting with typescript, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Ts makes up for some shortcomings of js:
 
 - More elegant and beautiful grammar design.
 - Static type.
@@ -49,18 +49,13 @@ Javascript meets most of the requirements, enterprises/communities spent million
 
 ## TUI
 
-Another strong trend is: more plugins are providing complicated TUI widgets by customizing [windows](https://vimhelp.org/windows.txt.html#windows)/[buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up, they treat (Neo)Vim as a screen that contains multiple UI widgets, while the screen itself is also a root widget. This idea leads to modern GUI frameworks and even web UI components:
-
-- [Qt](https://www.qt.io/)
-- [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html)
-- [Material UI](https://mui.com/material-ui/)
-- [Iced](https://iced.rs/)
+Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also treats (Neo)Vim as a screen that contains UI widgets. This idea leads to the modern GUI frameworks and even web UI components, for example [Qt](https://www.qt.io/), [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html), [Material UI](https://mui.com/material-ui/), [Iced](https://iced.rs/).
 
 Most GUI frameworks support below features:
 
-1. Coordinate systems: manage widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
-2. Event handling: user keyboard/mouse events can be located based on shapes, and dispatched to corresponding handlers (callbacks) binded on widgets.
+1. Coordinate system: manages widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
+2. Event handling: user keyboard/mouse events can be located based on shapes, and dispatched to corresponding handlers (callbacks) binded on widgets, thus simplifies user logic handling.
 3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
 4. Specialized widgets: button, popup, dialog, contents previewer, text editer, etc.
 
-By introducing such concepts, it improves a lot on Vim's visual effects, standardizes widget behaviors, and reduces developing efforts.
+By introducing a TUI engine with such concepts, it improves visual effects, standardizes widget behaviors, and reduces plugin developing efforts.
