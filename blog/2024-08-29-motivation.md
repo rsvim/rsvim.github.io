@@ -16,7 +16,7 @@ Turns out Neovim's choice is successful, luajit improves the performance a lot, 
 
 ## Script
 
-Script [plays a most important role in (Neo)Vim editor, it drives the editor's looking and behavior, schedules background job, communicates with remote process, etc. It also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
+Script [plays a most important role in (Neo)Vim editor: it drives the editor's looking and behavior, schedules background job, communicates with remote process, etc. It also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
 
 - Modern programming language features:
   - Functional programming: iteration, closure, no side effects, etc.
