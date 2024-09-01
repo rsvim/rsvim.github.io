@@ -49,7 +49,7 @@ Javascript meets most of the requirements, enterprise spent millions of dollars 
 
 ## TUI
 
-Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also shows up, they treat (Neo)Vim as a screen that contains multiple UI widgets, while the screen itself is also a root widget. This idea leads to modern GUI frameworks and even web UI components:
+Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also treats (Neo)Vim as a screen that contains UI widgets. This idea leads to modern GUI frameworks and even web UI components:
 
 - [Qt](https://www.qt.io/)
 - [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html)
