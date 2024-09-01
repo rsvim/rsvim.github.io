@@ -49,18 +49,13 @@ Javascript meets most of the requirements, enterprise spent millions of dollars 
 
 ## TUI
 
-Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also treats (Neo)Vim as a screen that contains UI widgets. This idea leads to modern GUI frameworks and even web UI components:
-
-- [Qt](https://www.qt.io/)
-- [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html)
-- [Material UI](https://mui.com/material-ui/)
-- [Iced](https://iced.rs/)
+Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also treats (Neo)Vim as a screen that contains UI widgets. This idea leads to the modern GUI frameworks and even web UI components, for example [Qt](https://www.qt.io/), [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html), [Material UI](https://mui.com/material-ui/), [Iced](https://iced.rs/).
 
 Most GUI frameworks support below features:
 
-1. Coordinate systems: manage widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
-2. Event handling: user keyboard/mouse events can be located based on shapes, and dispatched to corresponding handlers (callbacks) binded on widgets.
+1. Coordinate system: manages widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
+2. Event handling: user keyboard/mouse events can be located based on shapes, and dispatched to corresponding handlers (callbacks) binded on widgets, thus simplifies user logic handling.
 3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
 4. Specialized widgets: button, popup, dialog, contents previewer, text editer, etc.
 
-By introducing such concepts, it improves a lot on Vim's visual effects, standardizes widget behaviors, and reduces developing efforts.
+By introducing a TUI engine with such concepts, it improves visual effects, standardizes widget behaviors, and reduces plugin developing efforts.
