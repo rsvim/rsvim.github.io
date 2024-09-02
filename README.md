@@ -2,17 +2,17 @@
 
 To setup local environment, please install below dependencies:
 
-1. [node.js](https://nodejs.org/) with 18.0+ version.
-2. [docusaurus](https://docusaurus.io/).
+1. [node.js](https://nodejs.org/) with 18.0+ version
+2. [docusaurus](https://docusaurus.io/)
 
 To start local documentation service, please run below commands:
 
-1. `npm install`.
-2. `npm run start`.
+1. `npm install`
+2. `npm run start`
 
 To format document, please install below formatters:
 
-- [`prettier`](https://prettier.io/).
+- [`prettier`](https://prettier.io/)
 
 To configure the Search index, please go to [Doc Search](https://docsearch.algolia.com/).
 
