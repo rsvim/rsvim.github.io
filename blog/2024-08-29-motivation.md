@@ -39,9 +39,9 @@ This is why when looking at the (Neo)Vim editor, the idea to reinvent it with ru
 We don't have many options:
 
 - Python is too slow.
-- Other scripts such as lua/vimscript/lisp are not so popular, some new scripts are still too young and not widely used.
+- Other scripts such as lua/vimscript/lisp are not so popular, some new scripts are too young and not widely used.
 
-Javascript meets most of the requirements, enterprise spent millions of dollars and tons of engineering hours on the [V8](https://v8.dev/) engine, communities also comes up with [QuickJS](https://bellard.org/quickjs/), both are great solutions to embed into command line. However, js grammar is bad and chaotic, success actually belongs to the network and browser industry, not js itself. So the final target is [scripting with typescript, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Ts makes up for some shortcomings of js:
+Javascript meets most of the requirements, enterprise spent millions of dollars and tons of engineering hours on the [V8](https://v8.dev/) engine, community also comes up with [QuickJS](https://bellard.org/quickjs/), both are great solutions to embed into command line. However, js grammar is bad and chaotic, success actually belongs to the network and browser industry, not js itself. So the final target is [scripting with typescript, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Ts makes up for some shortcomings of js:
 
 - More elegant and beautiful grammar design.
 - Static type.
@@ -49,12 +49,12 @@ Javascript meets most of the requirements, enterprise spent millions of dollars 
 
 ## TUI
 
-Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI librariy/framework also treats (Neo)Vim as a screen that contains UI widgets. This idea leads to the modern GUI frameworks and even web UI components, for example [Qt](https://www.qt.io/), [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html), [Material UI](https://mui.com/material-ui/), [Iced](https://iced.rs/).
+Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI libraries/frameworks also show up, they treat (Neo)Vim as a screen that contains UI widgets. This idea leads to the modern GUI frameworks and even web UI components, for example [Qt](https://www.qt.io/), [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html), [Material UI](https://mui.com/material-ui/), [Iced](https://iced.rs/).
 
 Most GUI frameworks support below features:
 
-1. Coordinate system: manages widget shapes, positions and sizes on plain 2-dimensions coordinates, conflicts and overlaps on 3-dimensions by introducing the Z-index.
-2. Event handling: user keyboard/mouse events can be located based on shapes, and dispatched to corresponding handlers (callbacks) binded on widgets, thus simplifies user logic handling.
+1. Coordinate system: Manages widget shapes, positions and sizes on plain 2-dimensions coordinates, as well as conflicts and overlaps on 3-dimensions by introducing the Z-index.
+2. Event handling: (Since user keyboard/mouse events can be located by shapes and positions, thus can be) dispatched to the handlers (callbacks) binded on the corresponding widgets and simplify user logic handling.
 3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
 4. Specialized widgets: button, popup, dialog, contents previewer, text editer, etc.
 
