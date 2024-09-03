@@ -39,7 +39,7 @@ This is why when looking at the (Neo)Vim editor, the idea to reinvent it with ru
 We don't have many options:
 
 - Python is too slow.
-- Other scripts such as lua/vimscript/lisp are not so popular, some new scripts are still too young and not widely used.
+- Other scripts such as lua/vimscript/lisp are not so popular, some new scripts are too young and not widely used.
 
 Javascript meets most of the requirements, enterprise spent millions of dollars and tons of engineering hours on the [V8](https://v8.dev/) engine, community also comes up with [QuickJS](https://bellard.org/quickjs/), both are great solutions to embed into command line. However, js grammar is bad and chaotic, success actually belongs to the network and browser industry, not js itself. So the final target is [scripting with typescript, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Ts makes up for some shortcomings of js:
 
