@@ -10,42 +10,42 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "TUI Engine",
+    title: "Powerful",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Widgets, layouts and rendering effects that can help improve user
-        experiences.
+        A TUI engine similar to GUI frameworks that provides widgets, event
+        handlers, layouts, etc.
       </>
     ),
   },
   {
-    title: "Javascript Runtime",
+    title: "Programmable",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        The best scripting runtime ever, with builtin support for async/await,
-        type system, functional programming, etc.
+        A programmable editor that provides a consistent script runtime, with
+        builtin support for type system, async/await, plugin management, etc.
       </>
     ),
   },
   {
-    title: "Plugin Manager",
+    title: "Multiplayer",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        Builtin plugin (package) manager for js/ts scripts, integrating with
-        npm, yarn, etc.
+        A background editing service that allows multiple remote clients to
+        access and work together.
       </>
     ),
   },
   {
-    title: "Editing Service",
+    title: "Integrable",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        A background daemon that allows multiple users access and work together,
-        local or remote.
+        A text processing tool that batch processes text contents and integrates
+        with shell environment.
       </>
     ),
   },
@@ -69,6 +69,12 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
+        <p align="center">
+          The goal of RSVIM is to be a highly extensible text editor by
+          following the main features and philosophy of (
+          <a href="https://neovim.io/">Neo</a>)
+          <a href="https://www.vim.org/">VIM</a> editor, while also to be:
+        </p>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
