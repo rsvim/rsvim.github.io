@@ -10,12 +10,12 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Powerful",
+    title: "Simply",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        A TUI engine similar to GUI frameworks that provides widgets, event
-        handlers, layouts, etc.
+        A powerful TUI engine similar to GUI frameworks that provides widgets,
+        event handlers, layouts, etc.
       </>
     ),
   },
