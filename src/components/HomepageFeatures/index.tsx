@@ -69,12 +69,6 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <p align="center">
-          The goal of RSVIM is to be a highly extensible text editor by
-          following the main features and philosophy of (
-          <a href="https://neovim.io/">Neo</a>)
-          <a href="https://www.vim.org/">VIM</a> editor, while also to be:
-        </p>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
