@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "RSVIM",
-  tagline: "The VIM editor reinvented in Rust+Typescript.",
+  tagline: "The VIM editor reinvented in Rust+TypeScript.",
   favicon:
     "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
 

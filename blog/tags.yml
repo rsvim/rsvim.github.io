@@ -11,7 +11,7 @@ neovim:
 rsvim:
   label: rsvim
   permalink: https://github.com/rsvim/rsvim
-  description: The VIM editor reinvented in Rust+Typescript
+  description: The VIM editor reinvented in Rust+TypeScript
 
 vscode:
   label: vscode
