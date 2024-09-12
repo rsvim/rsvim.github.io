@@ -10,12 +10,19 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: "Smooth",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    description: (
+      <>A fast editor that fully utilizes all CPU cores and never freezes.</>
+    ),
+  },
+  {
     title: "Simple",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        A powerful TUI engine similar to GUI frameworks that provides widgets,
-        event handlers, layouts, etc.
+        A powerful TUI engine that provides widgets, event handlers, layouts,
+        etc.
       </>
     ),
   },
@@ -24,8 +31,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        A programmable editor that provides a consistent script runtime, with
-        builtin support for type system, async/await, plugin management, etc.
+        A consistent scripting runtime with built-in support for type system,
+        async/await, plugin management, etc.
       </>
     ),
   },
@@ -34,8 +41,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        A background editing service that allows multiple remote clients to
-        access and work together.
+        An editing service that allows multiple users to access remotely and
+        work together.
       </>
     ),
   },
@@ -43,21 +50,18 @@ const FeatureList: FeatureItem[] = [
     title: "Integrable",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
-      <>
-        A text processing tool that batch processes text contents and integrates
-        with shell environment.
-      </>
+      <>A text processing tool that integrates with the shell environment.</>
     ),
   },
 ];
 
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx("col col--3")}>
+    <div className={clsx("col col--2")}>
       {/*<div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>*/}
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--sm">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
@@ -70,9 +74,11 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
+          <div className="col col--1"></div>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+          <div className="col col--1"></div>
         </div>
       </div>
     </section>
