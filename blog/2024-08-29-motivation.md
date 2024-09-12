@@ -30,28 +30,28 @@ Script [plays a most important role in the (Neo)Vim editor: it drives the appear
   - [Npm](https://www.npmjs.com/) for js/ts.
   - [Pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) for python.
 
-The disadvantages of choosing lua gradually emerged, after all it's limited by the poor grammar design and community support, far behind popular script languages mentioned above.
+The disadvantages of choosing lua gradually emerged, after all it is limited by the poor syntax design and lacks a large support from the community, far behind the truly popular scripting languages mentioned above.
 
-This is why when looking at the (Neo)Vim editor, the idea to reinvent it with rust+javascript suddenly popped up. Compares with c/c++, rust provides so much powerful and productive features, also the toolchains, the active developing communities. As for the script, we would want one has:
+That's why when looking at the (Neo)Vim editor, the idea of rewriting (reinventing) it with rust+javascript suddenly popped up. Compared with c/c++, rust provides so many powerful and productive features, not to mention the toolchains and active community. As for scripts, we hope to have a scripting language with following features:
 
-- Modern programming language features and package management mentioned above.
-- Popular and widely used, with active developing community.
-- Great performance that won't make the editor laggy.
+- Includes modern features of above scripting languages and package management system.
+- Popular and widely used, with an active development community.
+- Excellent performance that won't make the editor lag.
 
 We don't have many options:
 
 - Python is too slow.
-- Other scripts such as lua/vimscript/lisp are not so popular, some new scripts are too young and not widely used.
+- Other scripting languages like lua/vimscript/lisp are not that popular, and some new scripting languages are too young to be widely used.
 
-Javascript meets most of the requirements, enterprise spent millions of dollars and tons of engineering hours on the [V8](https://v8.dev/) engine, community also comes up with [QuickJS](https://bellard.org/quickjs/), both are great solutions to embed into command line. However, js grammar is bad and chaotic, success actually belongs to the network and browser industry, not js itself. So the final target is [scripting with typescript, js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Ts makes up for some shortcomings of js:
+Javascript meets most of the requirements. Google has spent millions of dollars and tons of engineering hours on the [V8](https://v8.dev/) engine, the community has also emerged with [QuickJS](https://bellard.org/quickjs/), both are great solutions built into the editor. But wait, js has a bad and chaotic syntax, its success actually belongs to the browsers and web industry, not js itself. So the ultimate goal is [to write scripts in typescript, and js can play the role of the middle layer under the hood](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L25). Ts makes up for some shortcomings of js:
 
-- More elegant and beautiful grammar design.
+- More elegant and beautiful syntax design.
 - Static type.
 - Fully compatible with js and the community.
 
 ## TUI
 
-Another strong trend is: more and more plugins are providing complicated TUI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). TUI libraries/frameworks also show up, they treat (Neo)Vim as a screen that contains UI widgets. This idea leads to the modern GUI frameworks and even web UI components, for example [Qt](https://www.qt.io/), [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html), [Material UI](https://mui.com/material-ui/), [Iced](https://iced.rs/).
+Another strong trend is: more and more (Neo)Vim plugins provide complex UI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). There are even some TUI libraries/frameworks that treat (Neo)Vim as a screen containing UI widgets. This idea leads to look at some modern GUI frameworks and even web UI components, such as [Qt](https://www.qt.io/), [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html), [Material UI](https://mui.com/material-ui/), [Iced](https://iced.rs/).
 
 Most GUI frameworks support below features:
 
