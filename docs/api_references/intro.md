@@ -14,6 +14,6 @@ fn main() {
 
 ```javascript showLineNumbers
 function main() {
-  console.log("Hello Javascript!");
+  console.log("Hello JavaScript!");
 }
 ```
