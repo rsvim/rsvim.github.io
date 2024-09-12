@@ -17,18 +17,26 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/user_manual/get_started"
-          >
-            Get Started
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/api_references/intro"
-          >
-            API References
-          </Link>
+          <div className="container">
+            <div className="row">
+              <div className="col col--2 col--offset-4">
+                <Link
+                  className="button button--primary button--lg padding-horiz-sm"
+                  to="/docs/user_manual/get_started"
+                >
+                  Get Started
+                </Link>
+              </div>
+              <div className="col col--2">
+                <Link
+                  className="button button--secondary button--lg padding-horiz-sm"
+                  to="/docs/api_references/intro"
+                >
+                  API References
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
