@@ -53,11 +53,11 @@ Javascript meets most of the requirements. Google has spent millions of dollars 
 
 Another strong trend is: more and more (Neo)Vim plugins provide complex UI widgets by customizing [floating windows](https://neovim.io/doc/user/api.html#_floating-windows) and [buffers](https://vimhelp.org/windows.txt.html#buffers). There are even some TUI libraries/frameworks that treat (Neo)Vim as a screen containing UI widgets. This idea leads to look at some modern GUI frameworks and even web UI components, such as [Qt](https://www.qt.io/), [Tk](https://www.tcl.tk/)/[Tkinter](https://docs.python.org/3/library/tkinter.html), [Material UI](https://mui.com/material-ui/), [Iced](https://iced.rs/).
 
-Most GUI frameworks support below features:
+Most GUI frameworks support the following features:
 
-1. Coordinate system: Manages widget shapes, positions and sizes on plain 2-dimensions coordinates, as well as conflicts and overlaps on 3-dimensions by introducing the Z-index.
-2. Event handling: (Since user keyboard/mouse events can be located by shapes and positions, thus can be) dispatched to the handlers (callbacks) binded on the corresponding widgets and simplify user logic handling.
-3. Layout: shapes can be fixed or flexible, even managed by [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) like rows, columns and grids.
-4. Specialized widgets: button, popup, dialog, contents previewer, text editer, etc.
+1. Coordinate system: Manages the shape, position and size of the UI in the plain 2-dimensions coordinates, as well as the collision and superposition in the 3-dimensions (by introducing the coordinate of the 3rd dimension, namely Z-index).
+2. Event handling: (Since users keyboard/mouse events can be located according to the position and shape, it is also possible to) dispatch them to the corresponding handlers (callbacks) bound to the UI components, thereby simplifying the processing of user logic.
+3. Layout: The shape of the UI can be fixed or flexible, and can even be managed by mechanisms such as [css flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox), such as row, column and grid.
+4. Specialized UI components: buttons, pop-up windows, dialog boxes, contents previewers, text editing windows, etc.
 
-By introducing a TUI engine with such concepts, it improves visual effects, standardizes widget behaviors, and reduces plugin developing efforts.
+By introducing a TUI engine with such concepts, visual effects can be improved, widget behavior can be standardized, and the workload of plugin development can be reduced.
