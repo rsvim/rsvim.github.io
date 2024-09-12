@@ -8,24 +8,24 @@ tags: []
 
 ## History
 
-During the development of Vim led by [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar), there has always been a trend that users want to turn Vim into an IDE by providing all various plugins: file explorer, UI components and icons, code completion, diagnostics, code formatting, etc. Vim uses [vimscript](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script>) as its first-class citizen to support, but this is somewhat niche and hinders people from creating their own plugins or contributing to Vim project itself (perhaps it is also related to the documentation and syntax design of vimscript). The conflict between Vim's extensibility and user needs has been growing.
+During the development of Vim led by [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar), there has always been a trend that users want to turn Vim into an IDE by providing all various plugins: file explorer, UI components and icons, code completion, diagnostics, code formatting, etc. Vim uses [vimscript](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script>) as its first-class citizen to support, but this is somewhat niche and hinders people from creating their own plugins or contributing to the Vim project itself (perhaps it is also related to the documentation and syntax design of vimscript). The conflict between Vim's extensibility and user needs has been growing.
 
 <!-- truncate -->
 
 Then Neovim came along in [2014](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Neovim>). In order to provide richer and more friendly functions, as well as editing experiences closer to IDE, it introduced [lua](https://www.lua.org/) as its script language and [LuaJIT](https://luajit.org/) as its script runtime. This caused a lot of controversy at the beginning, since lua not only brought quite break changes that are no longer compatible with vimscript (as a scripting language designed for Vim, vimscript is indeed more fittable into the editor), and is not as popular among developers as [python](https://www.python.org/) or [javascript](https://en.wikipedia.org/wiki/JavaScript)/[typescript](https://www.typescriptlang.org/). Before the emergence of Neovim and lua, Vim community usually used these external languages to implement complex plugins, such as auto-completion, file explorer, etc. However, the [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) overhead between the editor itself and the language interpreter/runtime cannot be elimiated, and adding an additional language cannot be used not out of box.
 
-Turns out Neovim's choice is successful, luajit improves the performance a lot, and lua provides a much better grammar (compares with vimscript) on handling user logic. This encourages more users creating their own plugins (include myself) and contributing to Neovim project. At the same time, Vim brings [vimscript9](https://www.vim.org/vim90.php) as a better script, but still lots of efforts are needed. Obviously it's much easier and faster to embed a script that is ready to use.
+Neovim's choice has proven to be successful, with luajit greatly improving the performance and lua providing a much better syntax (compared to vimscript) for handling user's own logic. This has encouraged more users to create their own plugins (including myself) and contribute to the Neovim project. At the same time, Vim brought [vimscript9](https://www.vim.org/vim90.php) as a better scripting language to replace the original vimscript, but this still requires a lot of effort, including development/maintenance as well as time and user feedback. Obviously it is much easier and faster to embed a ready-made scripting language.
 
 ## Script
 
-Script [plays a most important role in (Neo)Vim editor: it drives the editor's looking and behavior, schedules background job, communicates with remote process, etc. It also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When looking at (Neo)Vim editor as a language interpreter, people start to think about more topics:
+Script [plays a most important role in the (Neo)Vim editor: it drives the appearance and behavior of the editor, schedules background tasks, is responsible for communicating with remote processes, and so on. It also turns the editor into a language interpreter/runtime/virtual machine](https://github.com/rsvim/rfc/blob/873cf96ca2ea256c0694e9396816b2ded827d08a/2-JavascriptEngine.md?plain=1#L9) at the same time. When regarding the (Neo)Vim editor as a language interpreter, we will start to think about more topics:
 
 - Modern programming language features:
-  - Functional programming: iteration, closure, no side effects, etc.
-  - Builtin async/await.
+  - Functional programming: closures, no side effects, etc.
+  - Built-in async/await.
   - Static type
   - And a lot more.
-- Package management, upgrade and distribution. For example:
+- Package management, upgrades and distribution. For example:
   - [Luarocks](https://luarocks.org/) for lua.
   - [Npm](https://www.npmjs.com/) for js/ts.
   - [Pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) for python.
