@@ -1,0 +1,55 @@
+name: API Docs
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+jobs:
+  typedoc:
+    name: Generate Typedoc
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - uses: actions/checkout@v4
+      - name: Make Typedoc
+        run: |
+          echo "show PWD (rsvim.github.io)"
+          echo $PWD
+          echo "ls -la"
+          ls -la
+
+          REPOSITORY="rsvim/rsvim"
+          FOLDER="$HOME/.repo/$REPOSITORY"
+          echo "var REPOSITORY"
+          echo $REPOSITORY
+          echo "var FOLDER"
+          echo $FOLDER
+
+          echo "git clone rsvim repo"
+          git clone --depth=1 --branch=main https://github.com/$REPOSITORY $FOLDER
+          echo "cp $FOLDER/src/js/runtime/*.ts to .jsruntime"
+          rm -rf .jsruntime
+          cp -rf $FOLDER/src/js/runtime .jsruntime
+
+          echo "tree .jsruntime"
+          tree .jsruntime
+          echo "npm install"
+          npm install
+          echo "npm run typedoc"
+          npm run typedoc
+          echo "tree docs/api_references"
+          tree docs/api_references
+      - name: Submit PR
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "docs/api_references"
+          default_author: github_actions
+          message: "chore(api): Auto generate API docs"
+          new_branch: generate-typedocs
+          push: "origin generate-typedocs --set-upstream --force"
