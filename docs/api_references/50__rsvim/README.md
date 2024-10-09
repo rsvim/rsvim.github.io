@@ -18,9 +18,7 @@
 </td>
 <td>
 
-The type definition for global object `Rsvim`.
-
-It contains multiple sub fields:
+The `Rsvim` global object, it contains multiple sub fields:
 
 - `Rsvim.opt`: Global editor options, also see [RsvimOpt](interfaces/RsvimOpt.md).
 
@@ -34,7 +32,7 @@ It contains multiple sub fields:
 </td>
 <td>
 
-The type definition for global object `Rsvim.opt`. Also see [Rsvim](interfaces/Rsvim.md).
+The `Rsvim.opt` global object, also see [Rsvim](interfaces/Rsvim.md).
 
 </td>
 </tr>

@@ -1,4 +1,4 @@
-The type definition for global object `Rsvim.opt`. Also see [Rsvim](Rsvim.md).
+The `Rsvim.opt` global object, also see [Rsvim](Rsvim.md).
 
 ## Methods
 
@@ -8,13 +8,13 @@ The type definition for global object `Rsvim.opt`. Also see [Rsvim](Rsvim.md).
 lineWrap(): boolean
 ```
 
-Get editor line-wrap option.
+Get the _line-wrap_ option.
 
 #### Returns
 
 `boolean`
 
-The line-wrap value.
+The _line-wrap_ option.
 
 #### Default Value
 
@@ -22,7 +22,7 @@ The line-wrap value.
 
 #### Defined in
 
-[50\_\_rsvim.ts:28](https://github.com/rsvim/rsvim/blob/45d35ba0c3bfab48984f37fb3180156cbe44de69/src/js/runtime/50__rsvim.ts#L28)
+[50\_\_rsvim.ts:26](https://github.com/rsvim/rsvim/blob/76a8c622418e2ece247fb2c8d09ac592edee8252/src/js/runtime/50__rsvim.ts#L26)
 
 ***
 
@@ -32,7 +32,7 @@ The line-wrap value.
 setLineWrap(value): void
 ```
 
-Set editor line-wrap option.
+Set the _line-wrap_ option.
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Set editor line-wrap option.
 </td>
 <td>
 
-The line-wrap value.
+The _line-wrap_ option.
 
 </td>
 </tr>
@@ -71,8 +71,8 @@ The line-wrap value.
 
 #### Throws
 
-Error if value is not boolean.
+Error if value is not a boolean value.
 
 #### Defined in
 
-[50\_\_rsvim.ts:37](https://github.com/rsvim/rsvim/blob/45d35ba0c3bfab48984f37fb3180156cbe44de69/src/js/runtime/50__rsvim.ts#L37)
+[50\_\_rsvim.ts:35](https://github.com/rsvim/rsvim/blob/76a8c622418e2ece247fb2c8d09ac592edee8252/src/js/runtime/50__rsvim.ts#L35)
