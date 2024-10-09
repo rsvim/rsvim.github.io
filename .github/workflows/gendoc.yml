@@ -69,4 +69,5 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           title: "chore(api): Auto generate API docs"
-          branch: "generate-typedocs"
+          branch: generate-typedocs
+          base: main
