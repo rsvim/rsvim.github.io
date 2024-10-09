@@ -90,7 +90,7 @@ The ID (integer) which identifies the timer created.
 
 #### Defined in
 
-[10\_\_global.ts:23](https://github.com/rsvim/rsvim/blob/5ae3ef0a2c04507f535e8d7bc0dce1dbd58e1c21/src/js/runtime/10__global.ts#L23)
+[10\_\_global.ts:27](https://github.com/rsvim/rsvim/blob/1b4b924908b10e9a5e111937c5a50495e6ba0fd5/src/js/runtime/10__global.ts#L27)
 
 ***
 
@@ -145,4 +145,4 @@ Nothing.
 
 #### Defined in
 
-[10\_\_global.ts:36](https://github.com/rsvim/rsvim/blob/5ae3ef0a2c04507f535e8d7bc0dce1dbd58e1c21/src/js/runtime/10__global.ts#L36)
+[10\_\_global.ts:40](https://github.com/rsvim/rsvim/blob/1b4b924908b10e9a5e111937c5a50495e6ba0fd5/src/js/runtime/10__global.ts#L40)

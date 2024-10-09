@@ -4,16 +4,6 @@ sidebar_position: 1
 
 # Introduction
 
-This is the introduction page for API References.
-
-```rust showLineNumbers
-fn main() {
-    println!("Hello Rust!");
-}
-```
-
-```javascript showLineNumbers
-function main() {
-  console.log("Hello JavaScript!");
-}
-```
+:::danger
+Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding it to the `__InternalRsvimGlobalObject` global object, which you should never use directly.
+:::
