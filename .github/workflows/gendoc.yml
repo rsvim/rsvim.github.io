@@ -53,6 +53,8 @@ jobs:
           cp -rf $FOLDER/generated-typedocs/10__global ./docs/api_references
           cp -rf $FOLDER/generated-typedocs/50__rsvim ./docs/api_references
 
+          echo "git status"
+          git status
           echo "tree docs/api_references"
           tree docs/api_references
       - name: Submit PR
