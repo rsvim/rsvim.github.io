@@ -23,6 +23,7 @@ jobs:
           echo $PWD
           echo "ls -la"
           ls -la
+          IO_FOLDER="$PWD"
 
           REPOSITORY="rsvim/rsvim"
           FOLDER="$HOME/.repo/$REPOSITORY"
@@ -33,16 +34,25 @@ jobs:
 
           echo "git clone rsvim repo"
           git clone --depth=1 --branch=main https://github.com/$REPOSITORY $FOLDER
-          echo "cp $FOLDER/src/js/runtime/*.ts to .jsruntime"
-          rm -rf .jsruntime
-          cp -rf $FOLDER/src/js/runtime .jsruntime
-
-          echo "tree .jsruntime"
-          tree .jsruntime
+          cd $FOLDER
+          echo "show PWD (rsvim)"
+          echo $PWD
+          echo "ls -la"
+          ls -la
           echo "npm install"
           npm install
           echo "npm run typedoc"
           npm run typedoc
+          echo "tree generated-typedocs"
+          tree generated-typedocs
+
+          cd $IO_FOLDER
+          echo "cp $FOLDER/generated-typedocs to ./docs/api_references"
+          rm -rf ./docs/api_references/10__global
+          rm -rf ./docs/api_references/50__rsvim
+          cp -rf $FOLDER/generated-typedocs/10__global ./docs/api_references
+          cp -rf $FOLDER/generated-typedocs/50__rsvim ./docs/api_references
+
           echo "tree docs/api_references"
           tree docs/api_references
       - name: Submit PR
