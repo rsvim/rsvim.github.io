@@ -1,3 +1,5 @@
+The global namespace for `Rsvim` specific, non-standard WinterCG APIs.
+
 ## Index
 
 ### Interfaces
