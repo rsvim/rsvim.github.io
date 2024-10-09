@@ -6,4 +6,4 @@ The `Rsvim` global object, it contains multiple sub fields:
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| `opt` | [`RsvimOpt`](RsvimOpt.md) | [50\_\_rsvim.ts:16](https://github.com/rsvim/rsvim/blob/5fe6171ee4d60d88c883bafbaf0a0118245cb6eb/src/js/runtime/50__rsvim.ts#L16) |
+| `opt` | [`RsvimOpt`](RsvimOpt.md) | [50\_\_rsvim.ts:16](https://github.com/rsvim/rsvim/blob/5ae3ef0a2c04507f535e8d7bc0dce1dbd58e1c21/src/js/runtime/50__rsvim.ts#L16) |

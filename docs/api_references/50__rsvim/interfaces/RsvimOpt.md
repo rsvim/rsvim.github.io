@@ -14,7 +14,7 @@ Get the _line-wrap_ option.
 
 `boolean`
 
-- The _line-wrap_ option.
+The _line-wrap_ option.
 
 #### Default Value
 
@@ -22,7 +22,7 @@ Get the _line-wrap_ option.
 
 #### Defined in
 
-[50\_\_rsvim.ts:29](https://github.com/rsvim/rsvim/blob/5fe6171ee4d60d88c883bafbaf0a0118245cb6eb/src/js/runtime/50__rsvim.ts#L29)
+[50\_\_rsvim.ts:29](https://github.com/rsvim/rsvim/blob/5ae3ef0a2c04507f535e8d7bc0dce1dbd58e1c21/src/js/runtime/50__rsvim.ts#L29)
 
 ***
 
@@ -69,10 +69,12 @@ The _line-wrap_ option.
 
 `void`
 
+Nothing.
+
 #### Throws
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
 
 #### Defined in
 
-[50\_\_rsvim.ts:37](https://github.com/rsvim/rsvim/blob/5fe6171ee4d60d88c883bafbaf0a0118245cb6eb/src/js/runtime/50__rsvim.ts#L37)
+[50\_\_rsvim.ts:38](https://github.com/rsvim/rsvim/blob/5ae3ef0a2c04507f535e8d7bc0dce1dbd58e1c21/src/js/runtime/50__rsvim.ts#L38)

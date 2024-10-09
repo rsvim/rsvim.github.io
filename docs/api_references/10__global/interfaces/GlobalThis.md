@@ -8,7 +8,7 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 setTimeout(
    callback, 
    delay, ...
-   args?): void
+   args?): number
 ```
 
 Sets a timer which executes a function or specified piece of code once the timer expires. Also see [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout).
@@ -80,7 +80,7 @@ Additional arguments which are passed through to the function.
 
 #### Returns
 
-`void`
+`number`
 
 The ID (integer) which identifies the timer created.
 
@@ -90,7 +90,7 @@ The ID (integer) which identifies the timer created.
 
 #### Defined in
 
-[10\_\_global.ts:23](https://github.com/rsvim/rsvim/blob/5fe6171ee4d60d88c883bafbaf0a0118245cb6eb/src/js/runtime/10__global.ts#L23)
+[10\_\_global.ts:23](https://github.com/rsvim/rsvim/blob/5ae3ef0a2c04507f535e8d7bc0dce1dbd58e1c21/src/js/runtime/10__global.ts#L23)
 
 ***
 
@@ -126,7 +126,7 @@ Cancels a timeout previously established by calling [setTimeout](GlobalThis.md#s
 </td>
 <td>
 
-The ID which identifies the timer.
+The ID (integer) which identifies the timer.
 
 </td>
 </tr>
@@ -137,10 +137,12 @@ The ID which identifies the timer.
 
 `void`
 
+Nothing.
+
 #### Throws
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if ID is not an integer value.
 
 #### Defined in
 
-[10\_\_global.ts:35](https://github.com/rsvim/rsvim/blob/5fe6171ee4d60d88c883bafbaf0a0118245cb6eb/src/js/runtime/10__global.ts#L35)
+[10\_\_global.ts:36](https://github.com/rsvim/rsvim/blob/5ae3ef0a2c04507f535e8d7bc0dce1dbd58e1c21/src/js/runtime/10__global.ts#L36)
