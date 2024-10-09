@@ -1,4 +1,8 @@
-# 50\_\_rsvim
+---
+sidebar_position: 2
+---
+
+# Rsvim APIs
 
 ## Interfaces
 
@@ -12,13 +16,9 @@ It contains multiple sub fields:
 
 #### Properties
 
-##### opt
-
-> **opt**: [`RsvimOpt`](50__rsvim.md#rsvimopt)
-
-###### Defined in
-
-[50\_\_rsvim.ts:14](https://github.com/rsvim/rsvim/blob/34d52a8ac112d0eb16aef04556925ab751702af7/src/js/runtime/50__rsvim.ts#L14)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| `opt` | [`RsvimOpt`](50__rsvim.md#rsvimopt) | [50\_\_rsvim.ts:14](https://github.com/rsvim/rsvim/blob/34d52a8ac112d0eb16aef04556925ab751702af7/src/js/runtime/50__rsvim.ts#L14) |
 
 ***
 
@@ -52,15 +52,40 @@ The line-wrap option value.
 
 ##### setLineWrap()
 
-> **setLineWrap**(`value`): `void`
+> **setLineWrap**(`value`: `boolean`): `void`
 
 Set editor line-wrap option.
 
 ###### Parameters
 
-• **value**: `boolean`
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
 
 line-wrap value.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ###### Returns
 
