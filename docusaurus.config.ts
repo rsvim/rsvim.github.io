@@ -56,6 +56,10 @@ const config: Config = {
     // Replace with your project's social card
     image:
       "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 6,
+    },
     docs: {
       sidebar: {
         hideable: true,
