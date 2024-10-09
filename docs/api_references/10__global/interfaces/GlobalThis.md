@@ -15,68 +15,11 @@ Sets a timer which executes a function or specified piece of code once the timer
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`callback`
-
-</td>
-<td>
-
-(...`args`) => `void`
-
-</td>
-<td>
-
-A function to be executed after the timer expires.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`delay`
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The milliseconds that the timer should wait before the function is executed.
-
-</td>
-</tr>
-<tr>
-<td>
-
-...`args`?
-
-</td>
-<td>
-
-`any`[]
-
-</td>
-<td>
-
-Additional arguments which are passed through to the function.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `callback` | (...`args`) => `void` | A function to be executed after the timer expires. |
+| `delay` | `number` | The milliseconds that the timer should wait before the function is executed. |
+| ...`args`? | `any`[] | Additional arguments which are passed through to the function. |
 
 #### Returns
 
@@ -90,7 +33,7 @@ The ID (integer) which identifies the timer created.
 
 #### Defined in
 
-[10\_\_global.ts:27](https://github.com/rsvim/rsvim/blob/1b4b924908b10e9a5e111937c5a50495e6ba0fd5/src/js/runtime/10__global.ts#L27)
+[10\_\_global.ts:23](https://github.com/rsvim/rsvim/blob/913b4f141a869533f584487316d2598495e6f9bc/src/js/runtime/10__global.ts#L23)
 
 ***
 
@@ -104,34 +47,9 @@ Cancels a timeout previously established by calling [setTimeout](GlobalThis.md#s
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`id`
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The ID (integer) which identifies the timer.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `id` | `number` | The ID (integer) which identifies the timer. |
 
 #### Returns
 
@@ -145,4 +63,4 @@ Nothing.
 
 #### Defined in
 
-[10\_\_global.ts:40](https://github.com/rsvim/rsvim/blob/1b4b924908b10e9a5e111937c5a50495e6ba0fd5/src/js/runtime/10__global.ts#L40)
+[10\_\_global.ts:36](https://github.com/rsvim/rsvim/blob/913b4f141a869533f584487316d2598495e6f9bc/src/js/runtime/10__global.ts#L36)

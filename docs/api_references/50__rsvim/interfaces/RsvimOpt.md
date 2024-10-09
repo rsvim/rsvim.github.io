@@ -22,7 +22,7 @@ The _line-wrap_ option.
 
 #### Defined in
 
-[50\_\_rsvim.ts:33](https://github.com/rsvim/rsvim/blob/1b4b924908b10e9a5e111937c5a50495e6ba0fd5/src/js/runtime/50__rsvim.ts#L33)
+[50\_\_rsvim.ts:29](https://github.com/rsvim/rsvim/blob/913b4f141a869533f584487316d2598495e6f9bc/src/js/runtime/50__rsvim.ts#L29)
 
 ***
 
@@ -36,34 +36,9 @@ Set the _line-wrap_ option.
 
 #### Parameters
 
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`value`
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-The _line-wrap_ option.
-
-</td>
-</tr>
-</tbody>
-</table>
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `value` | `boolean` | The _line-wrap_ option. |
 
 #### Returns
 
@@ -77,4 +52,4 @@ Nothing.
 
 #### Defined in
 
-[50\_\_rsvim.ts:42](https://github.com/rsvim/rsvim/blob/1b4b924908b10e9a5e111937c5a50495e6ba0fd5/src/js/runtime/50__rsvim.ts#L42)
+[50\_\_rsvim.ts:38](https://github.com/rsvim/rsvim/blob/913b4f141a869533f584487316d2598495e6f9bc/src/js/runtime/50__rsvim.ts#L38)
