@@ -1,5 +1,5 @@
 import { themes as prismThemes } from "prism-react-renderer";
-import type { Config } from "@docusaurus/types";
+import type { Config, DefaultParseFrontMatter } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
@@ -188,6 +188,29 @@ const config: Config = {
       ],
     },
   } satisfies Preset.ThemeConfig,
+  markdown: {
+    // Add front matters for generated typedoc APIs.
+    parseFrontMatter: async (params: {
+      filePath: string;
+      fileContent: string;
+      defaultParseFrontMatter: DefaultParseFrontMatter;
+    }) => {
+      const result = await params.defaultParseFrontMatter(params);
+
+      if (params.filePath.endsWith("50__rsvim/README.md")) {
+        result.frontMatter = {
+          title: "Rsvim APIs",
+          sidebar_position: 2,
+        };
+      } else if (params.filePath.endsWith("10__global/README.md")) {
+        result.frontMatter = {
+          title: "Web APIs",
+          sidebar_position: 3,
+        };
+      }
+      return result;
+    },
+  },
 };
 
 export default config;

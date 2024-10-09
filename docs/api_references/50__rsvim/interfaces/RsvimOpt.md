@@ -22,7 +22,7 @@ The line-wrap value.
 
 #### Defined in
 
-[50\_\_rsvim.ts:28](https://github.com/rsvim/rsvim/blob/da6cb2835f7e9733f9b461f7ea97a3d7e0734465/src/js/runtime/50__rsvim.ts#L28)
+[50\_\_rsvim.ts:28](https://github.com/rsvim/rsvim/blob/45d35ba0c3bfab48984f37fb3180156cbe44de69/src/js/runtime/50__rsvim.ts#L28)
 
 ***
 
@@ -75,4 +75,4 @@ Error if value is not boolean.
 
 #### Defined in
 
-[50\_\_rsvim.ts:37](https://github.com/rsvim/rsvim/blob/da6cb2835f7e9733f9b461f7ea97a3d7e0734465/src/js/runtime/50__rsvim.ts#L37)
+[50\_\_rsvim.ts:37](https://github.com/rsvim/rsvim/blob/45d35ba0c3bfab48984f37fb3180156cbe44de69/src/js/runtime/50__rsvim.ts#L37)

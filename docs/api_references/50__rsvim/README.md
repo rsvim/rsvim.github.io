@@ -1,8 +1,3 @@
----
-title: Rsvim APIs
-sidebar_position: 2
----
-
 ## Index
 
 ### Interfaces
