@@ -15,11 +15,15 @@ jobs:
   typedoc:
     name: Generate Typedoc
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/setup-node@v4
         with:
           node-version: latest
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Delete Branch
         run: |
           git push -d -f origin "refs/heads/${BRANCH_NAME}" || true
