@@ -70,7 +70,7 @@ jobs:
           default_author: github_actions
           message: "chore(api): Auto generate API docs"
           new_branch: ${{ env.BRANCH_NAME }}
-          push: ${{ format('origin {0} --set-upstream --force', env.BRANCH_NAME) }}
+          # push: ${{ format('origin {0} --set-upstream --force', env.BRANCH_NAME) }}
       - name: Create PR
         uses: peter-evans/create-pull-request@v7
         with:
