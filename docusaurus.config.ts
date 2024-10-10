@@ -200,6 +200,8 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
   markdown: {
+    format: "mdx",
+    mermaid: true,
     // Add front matters for generated typedoc APIs.
     parseFrontMatter: async (params: {
       filePath: string;
@@ -208,17 +210,22 @@ const config: Config = {
     }) => {
       const result = await params.defaultParseFrontMatter(params);
 
-      if (params.filePath.endsWith("50__rsvim/README.md")) {
+      // Set front matter
+      if (params.filePath.includes("api_references/50__rsvim/README.md")) {
         result.frontMatter = {
           title: "Rsvim APIs",
           sidebar_position: 2,
         };
-      } else if (params.filePath.endsWith("10__global/README.md")) {
+      } else if (
+        params.filePath.endsWith("api_references/10__global/README.md")
+      ) {
         result.frontMatter = {
           title: "Web APIs",
           sidebar_position: 3,
         };
       }
+
+      // console.log(result);
       return result;
     },
   },
