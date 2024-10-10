@@ -63,22 +63,12 @@ jobs:
           git status
           echo "tree docs/api_references"
           tree docs/api_references
-      - name: Checkout Branch
-        uses: EndBug/add-and-commit@v9
+      - name: Push Branch
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          add: "./docs/api_references"
-          default_author: github_actions
-          message: "chore(api): Auto generate API docs"
-          new_branch: ${{ env.BRANCH_NAME }}
-          # push: ${{ format('origin {0} --set-upstream --force', env.BRANCH_NAME) }}
-      - name: Push Commit
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "./docs/api_references"
-          default_author: github_actions
-          message: "chore(api): Auto generate API docs"
-          # new_branch: ${{ env.BRANCH_NAME }}
-          # push: ${{ format('origin {0} --set-upstream --force', env.BRANCH_NAME) }}
+          add_options: "./docs/api_references"
+          commit_message: "chore(api): Auto generate API docs"
+          branch: ${{ env.BRANCH_NAME }}
       - name: Create PR
         uses: peter-evans/create-pull-request@v7
         with:
