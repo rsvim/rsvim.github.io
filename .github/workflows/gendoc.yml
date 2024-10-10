@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pull-requests: write
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
@@ -19,6 +20,9 @@ jobs:
         with:
           node-version: latest
       - uses: actions/checkout@v4
+      - name: Delete Branch
+        run: |
+          git push -d -f origin "refs/heads/${BRANCH_NAME}" || true
       - name: Make Typedoc
         run: |
           echo "show PWD (rsvim.github.io)"
@@ -59,9 +63,6 @@ jobs:
           git status
           echo "tree docs/api_references"
           tree docs/api_references
-      - name: Delete Branch
-        run: |
-          git push -d -f origin "refs/heads/${BRANCH_NAME}" || true
       - name: Push Branch
         uses: EndBug/add-and-commit@v9
         with:
