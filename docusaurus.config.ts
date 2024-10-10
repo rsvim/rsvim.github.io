@@ -44,7 +44,7 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         gtag: {
-          trackingID: "rsvim.github.io",
+          trackingID: ["G-VSKBV47BJ0", "GT-5D9JBQRP"],
           anonymizeIP: true,
         },
         googleTagManager: {
