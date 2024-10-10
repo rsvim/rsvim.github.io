@@ -213,14 +213,14 @@ const config: Config = {
       // Set front matter
       if (params.filePath.includes("api_references/50__rsvim/README.md")) {
         result.frontMatter = {
-          title: "Rsvim APIs",
+          title: "Editor APIs",
           sidebar_position: 2,
         };
       } else if (
         params.filePath.endsWith("api_references/10__global/README.md")
       ) {
         result.frontMatter = {
-          title: "Web APIs",
+          title: "General APIs",
           sidebar_position: 3,
         };
       }
