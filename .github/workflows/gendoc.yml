@@ -61,7 +61,7 @@ jobs:
           tree docs/api_references
       - name: Delete Branch
         run: |
-          git push -D origin "${BRANCH_NAME}"
+          git push -d -f origin "${BRANCH_NAME}"
       - name: Push Branch
         uses: EndBug/add-and-commit@v9
         with:
