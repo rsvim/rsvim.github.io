@@ -1,4 +1,4 @@
-name: AutoGen API Docs
+name: Test Deployment
 on:
   pull_request:
     branches:
