@@ -43,6 +43,13 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        gtag: {
+          trackingID: "rsvim.github.io",
+          anonymizeIP: true,
+        },
+        googleTagManager: {
+          containerId: "197117370",
+        },
       } satisfies Preset.Options,
     ],
   ],
