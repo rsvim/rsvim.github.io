@@ -48,7 +48,7 @@ const config: Config = {
           anonymizeIP: true,
         },
         googleTagManager: {
-          containerId: "197117370",
+          containerId: "GTM-52JR9XCL",
         },
       } satisfies Preset.Options,
     ],
