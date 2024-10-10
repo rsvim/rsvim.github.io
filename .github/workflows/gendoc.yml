@@ -50,9 +50,9 @@ jobs:
 
           cd $IO_FOLDER
           echo "cp $FOLDER/generated-typedocs to ./docs/api_references"
-          rm -rf ./docs/api_references/10__global
+          rm -rf ./docs/api_references/10__web
           rm -rf ./docs/api_references/50__rsvim
-          cp -rf $FOLDER/generated-typedocs/10__global ./docs/api_references
+          cp -rf $FOLDER/generated-typedocs/10__web ./docs/api_references
           cp -rf $FOLDER/generated-typedocs/50__rsvim ./docs/api_references
 
           echo "git status"
