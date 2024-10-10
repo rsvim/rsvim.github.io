@@ -59,9 +59,15 @@ jobs:
           git status
           echo "tree docs/api_references"
           tree docs/api_references
+      - name: Detect Branch Exist
+        id: branch_exist
+        run: |
+          git show-ref --verify --quiet "refs/heads/${BRANCH_NAME}"
+          echo -e $?
       - name: Delete Branch
         run: |
-          git push -d -f origin "${BRANCH_NAME}"
+          git push -d -f origin "refs/heads/${BRANCH_NAME}"
+        if: ${{ steps.branch_exist.outputs.stdout == '1' }}
       - name: Push Branch
         uses: EndBug/add-and-commit@v9
         with:
