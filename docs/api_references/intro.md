@@ -24,13 +24,13 @@ ECMAScript standard (and V8 engine) only contains a small set, Rsvim editor prov
 
 Editor APIs are for everything about the Rsvim editor, including windows, buffers, cursors, commands, etc. With the idea of transforming the Rsvim editor into a scripting language interpreter/runtime/virtual machine, literally scripting with editor APIs is the only way to interact with Rsvim inside the scripts. For others such as ex commands and key mappings, they are only user interfaces.
 
-The editor APIs can be accessed via the global object [`Rsvim`](rsvim/interfaces/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) namespace inside lua with Neovim.
+The editor APIs can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) namespace inside lua with Neovim.
 
 ### 2.2. General APIs
 
 General APIs are similar to the concept of the standard library of many scripting languages. From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [node.js](https://nodejs.org/) and [deno](https://deno.com/). But still, Rsvim focus on editing and text processing, the existence of general APIs serves this purpose as well, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
 
-The general APIs share the same global object [`Rsvim`](rsvim/interfaces/Rsvim), the implementation keeps the same with [Deno APIs](https://docs.deno.com/api/deno/).
+The general APIs share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementation keeps the same with [Deno APIs](https://docs.deno.com/api/deno/).
 
 ### 2.3. Web APIs
 
