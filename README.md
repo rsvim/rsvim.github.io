@@ -19,6 +19,8 @@ To format docs, please install below formatters:
 
 - [`prettier`](https://prettier.io/)
 
+To sync API docs from [rsvim](https://github.com/rsvim/rsvim), use ["Auto Generate API Docs"](https://github.com/rsvim/rsvim.github.io/actions) github action.
+
 To configure the Search index, please go to [Doc Search](https://docsearch.algolia.com/).
 
 To tag a version, please run below commands (see [Docusaurus - Versioning](https://docusaurus.io/docs/versioning)):
