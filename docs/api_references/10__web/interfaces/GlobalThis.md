@@ -88,10 +88,6 @@ The ID (integer) which identifies the timer created.
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if callback is not a function value.
 
-#### Defined in
-
-[10\_\_web.ts:26](https://github.com/rsvim/rsvim/blob/71064d559cf34fd8e4f1a742d088269caba3c631/src/js/runtime/10__web.ts#L26)
-
 ***
 
 ### clearTimeout()
@@ -100,7 +96,7 @@ The ID (integer) which identifies the timer created.
 clearTimeout(id): void
 ```
 
-Cancels a timeout previously established by calling [setTimeout](GlobalThis.md#settimeout).
+Cancels a timeout previously established by calling [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout).
 
 #### Parameters
 
@@ -140,7 +136,3 @@ The ID (integer) which identifies the timer.
 #### Throws
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if ID is not an integer value.
-
-#### Defined in
-
-[10\_\_web.ts:38](https://github.com/rsvim/rsvim/blob/71064d559cf34fd8e4f1a742d088269caba3c631/src/js/runtime/10__web.ts#L38)
