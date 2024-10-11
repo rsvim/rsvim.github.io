@@ -211,12 +211,12 @@ const config: Config = {
       const result = await params.defaultParseFrontMatter(params);
 
       // Set front matter
-      if (params.filePath.includes("api_references/50__rsvim/index.md")) {
+      if (params.filePath.includes("api_references/50__rsvim/README.md")) {
         result.frontMatter = {
           title: "Rsvim APIs",
           sidebar_position: 2,
         };
-      } else if (params.filePath.endsWith("api_references/10__web/index.md")) {
+      } else if (params.filePath.endsWith("api_references/10__web/README.md")) {
         result.frontMatter = {
           title: "Web APIs",
           sidebar_position: 3,
@@ -227,17 +227,6 @@ const config: Config = {
       return result;
     },
   },
-  plugins: [
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        // "typedoc" options
-        entryPoints: ["./jsruntime/*.ts"],
-        // tsconfig
-        tsconfig: "./tsconfig.json",
-      },
-    ],
-  ],
 };
 
 export default config;

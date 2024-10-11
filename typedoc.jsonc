@@ -5,7 +5,7 @@
   "exclude": ["./jsruntime/*.d.ts", "./jsruntime/*infra.ts"],
   "disableSources": true,
   "sort": ["source-order", "alphabetical", "visibility"],
-  "cleanOutputDir": false,
+  "out": "./generated-typedocs",
   "skipErrorChecking": true,
   // "typedoc" plugins
   "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
