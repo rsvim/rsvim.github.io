@@ -1,11 +1,11 @@
-The `Rsvim.opt` namespace for global editor options.
+The `Rsvim.opt` object for global editor options.
 
-## Methods
+## Accessors
 
-### getWrap()
+### wrap
 
 ```ts
-getWrap(): boolean
+get wrap(): boolean
 ```
 
 Get the _wrap_ option.
@@ -19,12 +19,8 @@ displaying continues on the next line. When `false` (off) lines will not wrap
 and only part of long lines will be displayed. When the cursor is
 moved to a part that is not shown, the screen will scroll horizontally.
 
-The line will be broken in the middle of a word if necessary. See [getLineBreak()](RsvimOpt.md#getlinebreak)
+The line will be broken in the middle of a word if necessary. See getLineBreak | getLineBreak()
 to get the break at a word boundary.
-
-#### Returns
-
-`boolean`
 
 #### See
 
@@ -33,17 +29,17 @@ to get the break at a word boundary.
 
 #### Default Value
 
-`true`.
-
-***
-
-### setWrap()
+`true`
 
 ```ts
-setWrap(value): void
+set wrap(value): void
 ```
 
 Set the _wrap_ option.
+
+#### Throws
+
+[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
 
 #### Parameters
 
@@ -78,22 +74,14 @@ The _wrap_ option.
 
 #### Returns
 
-`void`
-
-#### See
-
-[getWrap()](RsvimOpt.md#getwrap)
-
-#### Throws
-
-[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+`boolean`
 
 ***
 
-### getLineBreak()
+### lineBreak
 
 ```ts
-getLineBreak(): boolean
+get lineBreak(): boolean
 ```
 
 Get the _line-break_ option.
@@ -106,11 +94,7 @@ than at the last character that fits on the screen.
 It only affects the way the file is displayed, not its contents.
 If 'breakindent' is set, line is visually indented. Then, the value
 of 'showbreak' is used to put in front of wrapped lines. This option
-is not used when the [() | _wrap_](RsvimOpt.md#getwrap) option is `false`.
-
-#### Returns
-
-`boolean`
+is not used when the getWrap() | _wrap_ option is `false`.
 
 #### See
 
@@ -119,17 +103,17 @@ is not used when the [() | _wrap_](RsvimOpt.md#getwrap) option is `false`.
 
 #### Default Value
 
-`false`.
-
-***
-
-### setLineBreak()
+`false`
 
 ```ts
-setLineBreak(value): void
+set lineBreak(value): void
 ```
 
 Set the _line-break_ option.
+
+#### Throws
+
+[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
 
 #### Parameters
 
@@ -164,12 +148,4 @@ The _line-break_ option.
 
 #### Returns
 
-`void`
-
-#### See
-
-[getLineBreak()](RsvimOpt.md#getlinebreak)
-
-#### Throws
-
-[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+`boolean`

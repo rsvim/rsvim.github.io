@@ -4,6 +4,6 @@ The `Rsvim` global object, it contains multiple sub fields:
 
 ## Properties
 
-| Property | Type |
-| ------ | ------ |
-| `opt` | [`RsvimOpt`](RsvimOpt.md) |
+| Property | Modifier | Type |
+| ------ | ------ | ------ |
+| `opt` | `readonly` | [`RsvimOpt`](RsvimOpt.md) |

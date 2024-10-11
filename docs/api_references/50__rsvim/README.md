@@ -15,7 +15,7 @@ These APIs are specific for Rsvim editors such as buffers, windows, key mappings
 <table>
 <thead>
 <tr>
-<th>Interface</th>
+<th>Class</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -23,12 +23,12 @@ These APIs are specific for Rsvim editors such as buffers, windows, key mappings
 <tr>
 <td>
 
-[RsvimOpt](interfaces/RsvimOpt.md)
+[RsvimOpt](classes/RsvimOpt.md)
 
 </td>
 <td>
 
-The `Rsvim.opt` namespace for global editor options.
+The `Rsvim.opt` object for global editor options.
 
 </td>
 </tr>
@@ -42,7 +42,7 @@ The global namespace.
 <table>
 <thead>
 <tr>
-<th>Interface</th>
+<th>Class</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -50,7 +50,7 @@ The global namespace.
 <tr>
 <td>
 
-[Rsvim](interfaces/Rsvim.md)
+[Rsvim](classes/Rsvim.md)
 
 </td>
 <td>
