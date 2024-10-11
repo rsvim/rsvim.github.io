@@ -38,14 +38,15 @@ jobs:
           sudo npm install -g typedoc
           echo "npm install"
           npm install
-          echo "npm run typedoc"
-          npm run typedoc
+          echo "npm run build"
+          npm run build
 
           rm -rf ./docs/api_references/10__web
           rm -rf ./docs/api_references/50__rsvim
-          echo "cp -rf ./generated-typedocs to ./docs/api_references"
-          cp -rf ./generated-typedocs/10__web ./docs/api_references
-          cp -rf ./generated-typedocs/50__rsvim ./docs/api_references
+          echo "cp -rf ./docs/api to ./docs/api_references"
+          cp -rf ./docs/api/10__web ./docs/api_references
+          cp -rf ./docs/api/50__rsvim ./docs/api_references
+          cp -rf ./docs/api/typedoc-sidebar.cjs ./
 
           echo "git status"
           git status

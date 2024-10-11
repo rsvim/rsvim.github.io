@@ -1,4 +1,0 @@
-{
-  "include": ["./jsruntime/*.ts"],
-  "exclude": ["src/**/*.tsx"]
-}
