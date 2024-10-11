@@ -10,7 +10,7 @@ getWrap(): boolean
 
 Get the _wrap_ option.
 
-Local to Window.
+Local to [Window](https://developer.mozilla.org/docs/Web/API/Window).
 
 This option changes how text is displayed.
 
@@ -34,10 +34,6 @@ to get the break at a word boundary.
 #### Default Value
 
 `true`.
-
-#### Defined in
-
-[50\_\_rsvim.ts:60](https://github.com/rsvim/rsvim/blob/71064d559cf34fd8e4f1a742d088269caba3c631/src/js/runtime/50__rsvim.ts#L60)
 
 ***
 
@@ -92,10 +88,6 @@ The _wrap_ option.
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
 
-#### Defined in
-
-[50\_\_rsvim.ts:70](https://github.com/rsvim/rsvim/blob/71064d559cf34fd8e4f1a742d088269caba3c631/src/js/runtime/50__rsvim.ts#L70)
-
 ***
 
 ### getLineBreak()
@@ -106,7 +98,7 @@ getLineBreak(): boolean
 
 Get the _line-break_ option.
 
-Local to Window.
+Local to [Window](https://developer.mozilla.org/docs/Web/API/Window).
 
 If `true` (on), Vim will wrap long lines at a character in 'breakat' rather
 than at the last character that fits on the screen.
@@ -128,10 +120,6 @@ is not used when the [() | _wrap_](RsvimOpt.md#getwrap) option is `false`.
 #### Default Value
 
 `false`.
-
-#### Defined in
-
-[50\_\_rsvim.ts:91](https://github.com/rsvim/rsvim/blob/71064d559cf34fd8e4f1a742d088269caba3c631/src/js/runtime/50__rsvim.ts#L91)
 
 ***
 
@@ -185,7 +173,3 @@ The _line-break_ option.
 #### Throws
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
-
-#### Defined in
-
-[50\_\_rsvim.ts:101](https://github.com/rsvim/rsvim/blob/71064d559cf34fd8e4f1a742d088269caba3c631/src/js/runtime/50__rsvim.ts#L101)
