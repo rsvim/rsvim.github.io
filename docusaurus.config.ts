@@ -143,10 +143,6 @@ const config: Config = {
           title: "Editor",
           items: [
             {
-              label: "Vi",
-              to: "https://en.wikipedia.org/wiki/Vi_(text_editor)",
-            },
-            {
               label: "Vim",
               to: "https://www.vim.org/",
             },
