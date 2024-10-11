@@ -227,6 +227,17 @@ const config: Config = {
       return result;
     },
   },
+  plugins: [
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        // "typedoc" options
+        entryPoints: ["./jsruntime/*.ts"],
+        // tsconfig
+        tsconfig: "./typedoc-tsconfig.json",
+      },
+    ],
+  ],
 };
 
 export default config;
