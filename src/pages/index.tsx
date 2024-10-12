@@ -23,7 +23,7 @@ function HomepageHeader() {
               <div className="col col--2 col--offset-4">
                 <Link
                   className="button button--primary button--lg padding-horiz-sm"
-                  to="/docs/manual/get_started"
+                  to="/docs/user_manual/get_started"
                 >
                   Get Started
                 </Link>
@@ -31,7 +31,7 @@ function HomepageHeader() {
               <div className="col col--2">
                 <Link
                   className="button button--secondary button--lg padding-horiz-sm"
-                  to="/docs/api/intro"
+                  to="/docs/api_references/intro"
                 >
                   API References
                 </Link>
