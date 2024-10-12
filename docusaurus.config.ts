@@ -207,12 +207,12 @@ const config: Config = {
       const result = await params.defaultParseFrontMatter(params);
 
       // Set front matter
-      if (params.filePath.includes("api_references/50__rsvim/README.md")) {
+      if (params.filePath.includes("docs/api/50__rsvim/README.md")) {
         result.frontMatter = {
           title: "Rsvim APIs",
           sidebar_position: 2,
         };
-      } else if (params.filePath.endsWith("api_references/10__web/README.md")) {
+      } else if (params.filePath.endsWith("docs/api/10__web/README.md")) {
         result.frontMatter = {
           title: "Web APIs",
           sidebar_position: 3,

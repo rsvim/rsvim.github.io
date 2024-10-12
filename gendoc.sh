@@ -18,14 +18,14 @@ cp -rf $REPOSITORY/src/js/runtime $JSRUNTIME
 echo "npm run typedoc"
 npm run typedoc
 
-API_REF="${PWD}/docs/api_references"
-echo "copy generated docs to ${API_REF}"
-rm -rf ${API_REF}/10__web
-rm -rf ${API_REF}/50__rsvim
-cp -rf ${GENERATED_TYPEDOCS}/10__web ${API_REF}
-cp -rf ${GENERATED_TYPEDOCS}/50__rsvim ${API_REF}
+API="${PWD}/docs/api"
+echo "copy generated docs to ${API}"
+rm -rf ${API}/10__web
+rm -rf ${API}/50__rsvim
+cp -rf ${GENERATED_TYPEDOCS}/10__web ${API}
+cp -rf ${GENERATED_TYPEDOCS}/50__rsvim ${API}
 
 echo "git status"
 git status
-echo "tree ./docs/api_references"
-tree ./docs/api_references
+echo "tree ${API}"
+tree ${API}
