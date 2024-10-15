@@ -11,7 +11,7 @@ setTimeout(
    args?): number
 ```
 
-Sets a timer which executes a function or specified piece of code once the timer expires. Also see [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout).
+Sets a timer which executes a function or specified piece of code once the timer expires. Also see [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
 
 #### Parameters
 
@@ -96,7 +96,7 @@ The ID (integer) which identifies the timer created.
 clearTimeout(id): void
 ```
 
-Cancels a timeout previously established by calling [setTimeout](https://developer.mozilla.org/docs/Web/API/setTimeout).
+Cancels a timeout previously established by calling [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
 
 #### Parameters
 

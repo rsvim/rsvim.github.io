@@ -30,6 +30,13 @@ These APIs are specific for Rsvim editors such as buffers, windows, key mappings
 
 The `Rsvim.opt` object for global editor options.
 
+**Example**
+
+```javascript
+// Create a variable alias to 'Rsvim.opt'.
+const opt = Rsvim.opt;
+```
+
 </td>
 </tr>
 </tbody>
@@ -58,6 +65,13 @@ The global namespace.
 The `Rsvim` global object, it contains multiple sub fields:
 
 - `Rsvim.opt`: Global editor options.
+
+**Example**
+
+```javascript
+// Create a variable alias to 'Rsvim'.
+const vim = Rsvim;
+```
 
 </td>
 </tr>

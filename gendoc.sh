@@ -13,7 +13,7 @@ GENERATED_TYPEDOCS="${PWD}/generated-typedocs"
 echo "copy typescripts to $JSRUNTIME"
 rm -rf ./jsruntime
 rm -rf ./generated-typedocs
-cp -rf $REPOSITORY/src/js/runtime $JSRUNTIME
+cp -rf $REPOSITORY/rsvim_core/src/js/runtime $JSRUNTIME
 
 echo "npm run typedoc"
 npm run typedoc
