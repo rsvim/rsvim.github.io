@@ -2,8 +2,7 @@
 
 To setup local environment, please install below dependencies:
 
-1. Latest stable version management tools [mise](https://github.com/jdx/mise) and [pipx](https://github.com/pypa/pipx), then install multiple command lines with `mise i`.
-2. [docusaurus](https://docusaurus.io/)
+1. Latest stable version management tools [mise](https://github.com/jdx/mise), then install multiple command lines with `mise i`.
 
 To start local service, please run below commands:
 
