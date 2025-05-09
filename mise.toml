@@ -1,0 +1,5 @@
+[tools]
+node = "22"
+"npm:prettier" = "latest"
+"npm:markdownlint" = "latest"
+"npm:typedoc" = "latest"

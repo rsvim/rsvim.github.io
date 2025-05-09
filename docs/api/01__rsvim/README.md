@@ -6,9 +6,7 @@ The global namespace for `Rsvim` specific, non-standard runtime APIs.
  - [Neovim docs - Api](https://neovim.io/doc/user/api.html)
  - [Deno APIs](https://docs.deno.com/api/deno/)
 
-## Index
-
-### Editor APIs
+## Editor APIs
 
 These APIs are specific for Rsvim editors such as buffers, windows, key mappings, etc.
 
@@ -42,7 +40,7 @@ const opt = Rsvim.opt;
 </tbody>
 </table>
 
-### Global Object
+## Global Object
 
 The global namespace.
 

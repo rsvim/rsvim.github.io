@@ -16,23 +16,23 @@
     "typedoc": "typedoc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.6.3",
-    "@docusaurus/preset-classic": "^3.6.3",
-    "@docusaurus/theme-search-algolia": "^3.6.3",
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
+    "@docusaurus/theme-search-algolia": "^3.7.0",
     "@mdx-js/react": "^3.1.0",
-    "clsx": "^2.0.0",
-    "prism-react-renderer": "^2.4.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "clsx": "^2.1.1",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.6.3",
-    "@docusaurus/tsconfig": "^3.6.3",
-    "@docusaurus/types": "^3.6.3",
-    "typedoc": "^0.27.2",
-    "typedoc-plugin-markdown": "^4.3.1",
-    "typedoc-plugin-mdn-links": "^4.0.3",
-    "typescript": "~5.6.3"
+    "@docusaurus/module-type-aliases": "^3.7.0",
+    "@docusaurus/tsconfig": "^3.7.0",
+    "@docusaurus/types": "^3.7.0",
+    "typedoc": "^0.28.4",
+    "typedoc-plugin-markdown": "^4.6.3",
+    "typedoc-plugin-mdn-links": "^5.0.1",
+    "typescript": "~5.8.3"
   },
   "browserslist": {
     "production": [
