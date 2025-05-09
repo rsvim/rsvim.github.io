@@ -6,7 +6,7 @@ const config: Config = {
   title: "RSVIM",
   tagline: "The VIM editor reinvented in Rust+TypeScript.",
   favicon:
-    "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
+    "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square.png",
 
   // Set the production url of your site here
   url: "https://rsvim.github.io/",
@@ -62,7 +62,7 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image:
-      "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
+      "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square.png",
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 6,
@@ -100,7 +100,7 @@ const config: Config = {
     navbar: {
       title: "RSVIM",
       logo: {
-        src: "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square-whitebg.png",
+        src: "https://raw.githubusercontent.com/rsvim/assets/main/logo/RSVIM-logo-square.png",
       },
       items: [
         {
