@@ -1,6 +1,4 @@
 [tools]
-python = "latest"
-
 node = "latest"
 "npm:prettier" = "latest"
 "npm:markdownlint" = "latest"
