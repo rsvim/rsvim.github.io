@@ -30,4 +30,12 @@
   --ifm-color-primary-lighter: #ff631d;
   --ifm-color-primary-lightest: #ff7c42;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  svg path:not(:last-child) {
+    fill: #fff;
+  }
+}
+
+svg path:not(:last-child) {
+  fill: #000;
 }
