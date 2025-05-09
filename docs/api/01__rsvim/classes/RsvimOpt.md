@@ -11,8 +11,10 @@ const opt = Rsvim.opt;
 
 ### wrap
 
+#### Get Signature
+
 ```ts
-get wrap(): boolean
+get wrap(): boolean;
 ```
 
 Get the _wrap_ option.
@@ -26,15 +28,15 @@ displaying continues on the next line. When `false` (off) lines will not wrap
 and only part of long lines will be displayed. When the cursor is
 moved to a part that is not shown, the screen will scroll horizontally.
 
-The line will be broken in the middle of a word if necessary. See [lineBreak](RsvimOpt.md#linebreak)
+The line will be broken in the middle of a word if necessary. See [lineBreak](#linebreak)
 to get the break at a word boundary.
 
-#### See
+##### See
 
  - [Wikipedia - line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap)
  - [Vim: options.txt - 'wrap'](https://vimhelp.org/options.txt.html#%27wrap%27)
 
-#### Example
+##### Example
 
 ```javascript
 // Get the 'wrap' option.
@@ -43,21 +45,27 @@ const value = Rsvim.opt.wrap;
 Rsvim.opt.wrap = true;
 ```
 
-#### Default Value
+##### Default Value
 
 `true`
 
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
 ```ts
-set wrap(value): void
+set wrap(value): void;
 ```
 
 Set the _wrap_ option.
 
-#### Throws
+##### Throws
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
 
-#### Parameters
+##### Parameters
 
 <table>
 <thead>
@@ -88,16 +96,18 @@ The _wrap_ option.
 </tbody>
 </table>
 
-#### Returns
+##### Returns
 
-`boolean`
+`void`
 
 ***
 
 ### lineBreak
 
+#### Get Signature
+
 ```ts
-get lineBreak(): boolean
+get lineBreak(): boolean;
 ```
 
 **`Experimental`**
@@ -106,20 +116,19 @@ Get the _line-break_ option.
 
 Local to Window.
 
-If `true` (on), Vim will wrap long lines at a character in breakAt rather
-than at the last character that fits on the screen.
+If `true` (on), Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
 
 It only affects the way the file is displayed, not its contents.
 If 'breakindent' is set, line is visually indented. Then, the value
 of 'showbreak' is used to put in front of wrapped lines. This option
-is not used when the [wrap](RsvimOpt.md#wrap) option is `false`.
+is not used when the [wrap](#wrap) option is `false`.
 
-#### See
+##### See
 
  - [Wikipedia - word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap)
  - [Vim: options.txt - 'linebreak'](https://vimhelp.org/options.txt.html#%27linebreak%27)
 
-#### Example
+##### Example
 
 ```javascript
 // Get the 'lineBreak' option.
@@ -128,21 +137,27 @@ const value = Rsvim.opt.lineBreak;
 Rsvim.opt.lineBreak = true;
 ```
 
-#### Default Value
+##### Default Value
 
 `false`
 
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
 ```ts
-set lineBreak(value): void
+set lineBreak(value): void;
 ```
 
 Set the _line-break_ option.
 
-#### Throws
+##### Throws
 
 [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
 
-#### Parameters
+##### Parameters
 
 <table>
 <thead>
@@ -173,6 +188,6 @@ The _line-break_ option.
 </tbody>
 </table>
 
-#### Returns
+##### Returns
 
-`boolean`
+`void`

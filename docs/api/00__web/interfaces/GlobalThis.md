@@ -8,7 +8,7 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 setTimeout(
    callback, 
    delay, ...
-   args?): number
+   args?): number;
 ```
 
 Sets a timer which executes a function or specified piece of code once the timer expires. Also see [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
@@ -61,7 +61,7 @@ The milliseconds that the timer should wait before the function is executed.
 <tr>
 <td>
 
-...`args`?
+...`args?`
 
 </td>
 <td>
@@ -93,7 +93,7 @@ The ID (integer) which identifies the timer created.
 ### clearTimeout()
 
 ```ts
-clearTimeout(id): void
+clearTimeout(id): void;
 ```
 
 Cancels a timeout previously established by calling [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).

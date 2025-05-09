@@ -20,10 +20,14 @@ npm run typedoc
 
 API="${PWD}/docs/api"
 echo "copy generated docs to ${API}"
-rm -rf ${API}/10__web
-rm -rf ${API}/50__rsvim
-cp -rf ${GENERATED_TYPEDOCS}/10__web ${API}
-cp -rf ${GENERATED_TYPEDOCS}/50__rsvim ${API}
+
+_00_WEB=00__web
+_01_RSVIM=01__rsvim
+
+rm -rf ${API}/${_00_WEB}
+rm -rf ${API}/${_01_RSVIM}
+cp -rf ${GENERATED_TYPEDOCS}/${_00_WEB} ${API}
+cp -rf ${GENERATED_TYPEDOCS}/${_01_RSVIM} ${API}
 
 echo "git status"
 git status

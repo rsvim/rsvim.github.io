@@ -5,9 +5,7 @@ The [WinterCG](https://wintercg.org/) compatible web platform APIs.
  - [Minimum Common Web Platform API](https://common-min-api.proposal.wintercg.org/)
  - [MDN | Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
 
-## Index
-
-### Interfaces
+## Interfaces
 
 <table>
 <thead>
