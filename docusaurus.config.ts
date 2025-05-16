@@ -154,6 +154,10 @@ const config: Config = {
               label: "Deno APIs",
               to: "https://docs.deno.com/api/deno/~/Deno",
             },
+            {
+              label: "WinterTC",
+              to: "https://min-common-api.proposal.wintertc.org/",
+            },
           ],
         },
         {
