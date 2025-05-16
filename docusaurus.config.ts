@@ -140,15 +140,23 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Editor",
+          title: "Reference",
           items: [
             {
-              label: "Vim",
-              to: "https://www.vim.org/",
+              label: "Vim help",
+              to: "https://vimhelp.org/",
             },
             {
-              label: "Neovim",
-              to: "https://neovim.io/",
+              label: "Neovim help",
+              to: "https://neovim.io/doc/user/index.html",
+            },
+            {
+              label: "Deno APIs",
+              to: "https://docs.deno.com/api/deno/~/Deno",
+            },
+            {
+              label: "WinterTC",
+              to: "https://min-common-api.proposal.wintertc.org/",
             },
           ],
         },
