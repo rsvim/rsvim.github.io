@@ -1,5 +1,6 @@
 import React from "react";
 
+// Copy from `assets/logo/RSVIM-logo.svg`.
 const Logo = () => (
   <svg
     width="204"
