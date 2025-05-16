@@ -143,15 +143,15 @@ const config: Config = {
           title: "Reference",
           items: [
             {
-              label: "Vim help docs",
+              label: "Vim help",
               to: "https://vimhelp.org/",
             },
             {
-              label: "Neovim help docs",
+              label: "Neovim help",
               to: "https://neovim.io/doc/user/index.html",
             },
             {
-              label: "Deno API reference",
+              label: "Deno APIs",
               to: "https://docs.deno.com/api/deno/~/Deno",
             },
           ],
