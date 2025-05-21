@@ -8,6 +8,8 @@ sidebar_position: 1
 If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/user_manual/get_started), you can also contribute to this document on [GitHub](https://github.com/rsvim/rsvim.github.io).
 :::
 
+With the concept of thinking of Rsvim editor as a specialized javascript-based runtime, calling APIs provided by Rsvim is literally the only way to interact with Rsvim when writing js scripts. For other things such as Vim commands and key mappings, they are only user interfaces implemented by js functions.
+
 This chapter introduces the JavaScript APIs provided by the Rsvim editor. When configuring options or developing plugins, you can think of it as a specialized js runtime implementation similar to [Node.js](https://nodejs.org/en)/[Deno](https://deno.com/), by taking over the control of `stdio`.
 
 Rsvim provides the following APIs:
@@ -36,9 +38,7 @@ Similar to node/deno, Rsvim also provide a set of non-standard APIs to help user
 
 ### 2.1. Editor APIs
 
-Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. With the idea of transforming the Rsvim editor into a scripting language interpreter/runtime/virtual machine, literally scripting with editor APIs is the only way to interact with Rsvim inside the scripts. For others such as ex commands and key mappings, they are only user interfaces.
-
-The editor APIs can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) namespace inside lua with Neovim.
+Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) namespace inside lua with Neovim.
 
 ### 2.2. General Purposed APIs
 
