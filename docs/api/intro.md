@@ -28,7 +28,7 @@ The editor APIs can be accessed via the global object [`Rsvim`](rsvim/classes/Rs
 
 ### 2.2. General APIs
 
-General APIs are similar to the concept of the standard library of many scripting languages. From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [node.js](https://nodejs.org/) and [deno](https://deno.com/). But still, Rsvim focus on editing and text processing, the existence of general APIs serves this purpose as well, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
+General APIs are similar to the concept of the standard library of many scripting languages. From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [Node.js](https://nodejs.org/) and [Deno](https://deno.com/). But still, Rsvim focus on editing and text processing, the existence of general APIs serves this purpose as well, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
 
 The general APIs share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementation keeps the same with [Deno APIs](https://docs.deno.com/api/deno/).
 
