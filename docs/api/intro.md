@@ -4,25 +4,33 @@ sidebar_position: 1
 
 # Introduction
 
-:::warning
-Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used.
-:::
-
-This chapter introduces the JavaScript APIs provided by the Rsvim editor. When configuring options or developing plugins, you can think of it as a specialized js runtime implementation similar to [Node.js](https://nodejs.org/en)/[Deno](https://deno.com/), by taking over the control of `stdio`.
-
 :::tip
 If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/user_manual/get_started), you can also contribute to this document on [GitHub](https://github.com/rsvim/rsvim.github.io).
 :::
 
+This chapter introduces the JavaScript APIs provided by the Rsvim editor. When configuring options or developing plugins, you can think of it as a specialized js runtime implementation similar to [Node.js](https://nodejs.org/en)/[Deno](https://deno.com/), by taking over the control of `stdio`.
+
 Rsvim provides the following APIs:
 
-## 1. JavaScript standard built-in objects
+:::warning
+Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used.
+:::
 
-JavaScript's standard built-in objects are all "global objects", i.e. they are available without importing any external modules. For example `globalThis`, `encodeURI()`, `Number`, `RegExp`, etc. The most accurate and authoritatie documentation is the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/), which is also sticked by the V8 javascript engine embedded in Rsvim.
+## 1. JavaScript Standard Built-in Objects/APIs
 
-This doc site is not going to provide any documentations for these standard built-in objects, please reach out to other resources such as as [MDN | Standard built-in objects - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+JavaScript's standard built-in global objects/APIs are defined by the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/), natively implemented by the V8 engine embedded in Rsvim, i.e. these APIs are available without `import`/`require` any additional/external modules. For example `globalThis`, `encodeURI()`, `Number`, `RegExp`, etc.
 
-## 2. Non-standard runtime APIs
+:::tip
+Reach out to [MDN | Standard built-in objects - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) for detailed built-in global objects/API references.
+:::
+
+## 2. Standardized Web Platform APIs
+
+Besides the ECMAScript standard, a large number of web APIs are also "global objects", provided by most browsers and javascript runtimes (including node and deno). The full list of all web APIs and interfaces can be found in [MDN | Web APIs](https://developer.mozilla.org/en-US/docs/Web/API), and the [WinterCG](https://wintercg.org/) community group come up with the [Minimum Common Web Platform API](https://common-min-api.proposal.wintercg.org/) specification, which defines a minimum set of standard web platform APIs to both browser and non-browser javascript-based runtimes. Consistent with the principles of general APIs, Rsvim only provides a subset of them.
+
+The web APIs are "global objects", and can be accessed without importing any external modules just like javascript standard built-in objects.
+
+## 3. Rsvim Specialized APIs
 
 ECMAScript standard (and V8 engine) only contains a small set, Rsvim editor provides all the other APIs for the javascript runtime. They can be divided into several types: editor related, general purposed and web platform.
 
@@ -32,14 +40,8 @@ Editor APIs are for everything about the Rsvim editor, including windows, buffer
 
 The editor APIs can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) namespace inside lua with Neovim.
 
-### 2.2. General APIs
+### 2.2. General Purposed APIs
 
-General APIs are similar to the concept of the standard library of many scripting languages. From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [Node.js](https://nodejs.org/) and [Deno](https://deno.com/). But still, Rsvim focus on editing and text processing, the existence of general APIs serves this purpose as well, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
+General purposed APIs are similar to the concept of the standard library of many scripting languages. From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [Node.js](https://nodejs.org/) and [Deno](https://deno.com/). But still, Rsvim focus on editing and text processing, the existence of general APIs serves this purpose as well, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
 
 The general APIs share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementation keeps the same with [Deno APIs](https://docs.deno.com/api/deno/).
-
-### 2.3. Web APIs
-
-Besides the ECMAScript standard, a large number of web APIs are also "global objects", provided by most browsers and javascript runtimes (including node and deno). The full list of all web APIs and interfaces can be found in [MDN | Web APIs](https://developer.mozilla.org/en-US/docs/Web/API), and the [WinterCG](https://wintercg.org/) community group come up with the [Minimum Common Web Platform API](https://common-min-api.proposal.wintercg.org/) specification, which defines a minimum set of standard web platform APIs to both browser and non-browser javascript-based runtimes. Consistent with the principles of general APIs, Rsvim only provides a subset of them.
-
-The web APIs are "global objects", and can be accessed without importing any external modules just like javascript standard built-in objects.
