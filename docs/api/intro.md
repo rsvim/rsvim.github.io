@@ -41,5 +41,5 @@ General purposed APIs are similar to the concept of the standard library in many
 These APIs also share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementations follow [Deno APIs](https://docs.deno.com/api/deno/).
 
 :::warning
-Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used.
+Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used. The `Rsvim` is a thin wrapper on it.
 :::
