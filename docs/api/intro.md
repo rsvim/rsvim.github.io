@@ -16,7 +16,7 @@ Rsvim provides the following APIs:
 Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used.
 :::
 
-## 1. JavaScript/ECMAScript Standard Built-in Objects/APIs
+## 1. JavaScript/ECMAScript Standard Built-in Global Objects/APIs
 
 JavaScript/ECMAScript's standard built-in global objects/APIs are defined by the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/), natively implemented by the V8 engine embedded in Rsvim, i.e. these APIs are available without `import`/`require` any additional/external modules. For example `globalThis`, `encodeURI()`, `Number`, `RegExp`, etc.
 
@@ -26,9 +26,9 @@ Reach out to [MDN | Standard built-in objects - JavaScript](https://developer.mo
 
 ## 2. Standardized Web Platform APIs
 
-Besides the ECMAScript standard, a large number of web APIs are also "global objects", provided by most browsers and javascript runtimes (including node and deno). The full list of all web APIs and interfaces can be found in [MDN | Web APIs](https://developer.mozilla.org/en-US/docs/Web/API), and the [WinterCG](https://wintercg.org/) community group come up with the [Minimum Common Web Platform API](https://common-min-api.proposal.wintercg.org/) specification, which defines a minimum set of standard web platform APIs to both browser and non-browser javascript-based runtimes. Consistent with the principles of general APIs, Rsvim only provides a subset of them.
+Besides the ECMAScript standard, a large number of web APIs are also been widely used and implemented by most javascript-based runtimes: chrome/firefox browsers, node/deno runtimes, etc. The full list of all web APIs and interfaces can be found in [MDN | Web APIs](https://developer.mozilla.org/en-US/docs/Web/API), and the [WinterCG](https://wintercg.org/) community group come up with the [Minimum Common Web Platform API](https://common-min-api.proposal.wintercg.org/) specification, which defines a minimum set of standard web platform APIs to both browser and non-browser javascript-based runtimes. Rsvim also follows the WinterCG standards, but (maybe) provide a subset of these APIs due to the development effort.
 
-The web APIs are "global objects", and can be accessed without importing any external modules just like javascript standard built-in objects.
+The web APIs are also "global objects", and can be accessed without `import`/`require` any additional/external modules, just like javascript/ecmascript standard built-in global objects/APIs.
 
 ## 3. Rsvim Specialized APIs
 
