@@ -8,7 +8,9 @@ sidebar_position: 1
 Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used.
 :::
 
-The Rsvim editor provides the following APIs:
+This chapter introduces the JavaScript APIs provided by the Rsvim editor. When configuring options or developing plugins, you can think of it as a specialized js runtime implementation similar to [Node.js](https://nodejs.org/en)/[Deno](https://deno.com/), by taking over the control of `stdio`.
+
+Rsvim provides the following APIs:
 
 ## 1. JavaScript standard built-in objects
 
