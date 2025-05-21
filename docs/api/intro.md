@@ -8,11 +8,9 @@ sidebar_position: 1
 If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/user_manual/get_started), you can also contribute to this document on [GitHub](https://github.com/rsvim/rsvim.github.io).
 :::
 
-As Rsvim is build with [Rust](https://www.rust-lang.org/), using [Tokio](https://tokio.rs/) as async runtime, [Google's V8](https://v8.dev/) engine and [Rusty V8](https://github.com/denoland/rusty_v8) bindings (provided by [Deno team](https://deno.com/)) as script interpreter, it can be seen as a JavaScript-based runtime just like [Node.js](https://nodejs.org/en) and Deno, but specialized for terminal based text editing/processing, by taking over the control of `stdio`. And calling APIs (provided by Rsvim) is literally the only way to interact with Rsvim when writing js scripts. For other things such as Vim commands and key mappings, they are only user interfaces implemented by registered js functions.
+As Rsvim is build with [Rust](https://www.rust-lang.org/), using [Tokio](https://tokio.rs/) as async runtime, [Google's V8](https://v8.dev/) engine and [Rusty V8](https://github.com/denoland/rusty_v8) bindings (provided by [Deno team](https://deno.com/)) as script interpreter, it can be seen as a javascript-based runtime just like [Node.js](https://nodejs.org/en) and Deno, but specialized for terminal based text editing/processing, by taking over the control of `stdio`. And javascript APIs (provided by Rsvim) is literally the only way to interact with Rsvim when writing js scripts. For other things such as Vim commands and key mappings, they are only user interfaces implemented by registered js functions.
 
-This chapter introduces the JavaScript APIs provided by the Rsvim editor. When configuring options or developing plugins, you can think of it as a specialized js runtime implementation similar to [Node.js](https://nodejs.org/en)/[Deno](https://deno.com/), by taking over the control of `stdio`.
-
-Rsvim provides the following APIs:
+This chapter introduces the API references provided by the Rsvim editor.
 
 :::warning
 Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used.
