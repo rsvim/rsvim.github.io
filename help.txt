@@ -1,0 +1,14 @@
+The VIM editor reinvented in Rust+TypeScript.
+
+Usage: rsvim [FILE]...
+
+Arguments:
+  [FILE]...
+          Edit file(s)
+
+Options:
+  -V, --version
+          Print version
+
+  -h, --help
+          Print help (see a summary with '-h')
