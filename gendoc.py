@@ -24,15 +24,19 @@ def remove_dir(p):
             logging.error(f"Failed to remove dir: {p}, error: {e}")
 
 
-def api(name):
+APIS = ["00__web", "01__rsvim"]
+
+
+def api():
     cwd_path = pathlib.Path.cwd()
     rsvim_path = cwd_path / ".." / "rsvim"
     tmp_jsruntime_dir = cwd_path / ".jsruntime"
     tmp_generated_dir = cwd_path / ".generated"
 
-    logging.info(
-        f"Cwd: {cwd_path}, rsvim: {rsvim_path}, tmp jsruntime dir: {tmp_jsruntime_dir}, tmp generated dir: {tmp_generated_dir}"
-    )
+    logging.info(f"CWD: {cwd_path}")
+    logging.info(f"RSVIM: {rsvim_path}")
+    logging.info(f"TMP jsruntime dir: {tmp_jsruntime_dir}")
+    logging.info(f"TMP generated dir: {tmp_generated_dir}")
 
     rsvim_jsruntime_source_path = rsvim_path / "rsvim_core" / "src" / "js" / "runtime"
 
@@ -58,10 +62,11 @@ def api(name):
 
     api_docs_dir = cwd_path / "docs" / "api"
 
-    gen_doc_path = tmp_generated_dir / name
-    api_doc_path = api_docs_dir / name
-    logging.info(f"Copy generated docs from ({gen_doc_path}) to ({api_doc_path})")
-    shutil.copytree(tmp_generated_dir, api_doc_path)
+    for name in APIS:
+        gen_doc_path = tmp_generated_dir / name
+        api_doc_path = api_docs_dir / name
+        logging.info(f"Copy generated docs from ({gen_doc_path}) to ({api_doc_path})")
+        shutil.copytree(tmp_generated_dir, api_doc_path)
 
     # clean up
     remove_dir(tmp_jsruntime_dir)
@@ -85,6 +90,6 @@ if __name__ == "__main__":
     # print(parser)
 
     if parser.subcommand == "api" or parser.subcommand == "a":
-        api(parser.watch)
+        api()
     else:
         logging.error("Missing arguments, use -h/--help for more details.")
