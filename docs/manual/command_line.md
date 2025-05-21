@@ -1,7 +1,7 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Command Line
 
-This section introduces the `rsvim` command line.
+This section introduces the `rsvim` command line options.
