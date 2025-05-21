@@ -16,9 +16,9 @@ Rsvim provides the following APIs:
 Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used.
 :::
 
-## 1. JavaScript Standard Built-in Objects/APIs
+## 1. JavaScript/ECMAScript Standard Built-in Objects/APIs
 
-JavaScript's standard built-in global objects/APIs are defined by the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/), natively implemented by the V8 engine embedded in Rsvim, i.e. these APIs are available without `import`/`require` any additional/external modules. For example `globalThis`, `encodeURI()`, `Number`, `RegExp`, etc.
+JavaScript/ECMAScript's standard built-in global objects/APIs are defined by the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/), natively implemented by the V8 engine embedded in Rsvim, i.e. these APIs are available without `import`/`require` any additional/external modules. For example `globalThis`, `encodeURI()`, `Number`, `RegExp`, etc.
 
 :::tip
 Reach out to [MDN | Standard built-in objects - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) for detailed built-in global objects/API references.
