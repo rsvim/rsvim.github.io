@@ -44,4 +44,4 @@ Editor APIs are for the text editor itself, including windows, buffers, cursors,
 
 General purposed APIs are similar to the concept of the standard library in many programming languages. (From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), ) But Rsvim focus on text editing and processing, the existence of all APIs only serves this purpose, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
 
-The general APIs share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementation keeps the same with [Deno APIs](https://docs.deno.com/api/deno/).
+These APIs also share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementations follow [Deno APIs](https://docs.deno.com/api/deno/).
