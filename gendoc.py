@@ -225,32 +225,69 @@ def release(level, execute):
     os.system(command)
 
 
+def remove_dir(p):
+    if p.exists():
+        try:
+            shutil.rmtree(p)
+        except Exception as e:
+            logging.error(f"Failed to remove dir: {p}, error: {e}")
+
+
+def api_doc(name):
+    cwd_path = pathlib.Path.cwd()
+    rsvim_path = cwd_path / ".." / "rsvim"
+    tmp_jsruntime_dir = cwd_path / ".jsruntime"
+    tmp_generated_dir = cwd_path / ".generated"
+
+    logging.info(
+        f"cwd: {cwd_path}, rsvim: {rsvim_path}, tmp jsruntime dir: {tmp_jsruntime_dir}, tmp generated dir: {tmp_generated_dir}"
+    )
+
+    rsvim_jsruntime_source_path = rsvim_path / "rsvim_core" / "src" / "js" / "runtime"
+
+    if not rsvim_path.exists():
+        logging.error(f"The `rsvim` git repo not found! exit...")
+        return
+    if not rsvim_jsruntime_source_path.exists():
+        logging.error(f"The `rsvim` javascript runtime source code not found! exit...")
+        return
+
+    # clean old
+    remove_dir(tmp_jsruntime_dir)
+    remove_dir(tmp_generated_dir)
+
+    logging.info(
+        f"Copy jsruntime typescripts from ({rsvim_jsruntime_source_path}) to ({tmp_jsruntime_dir})"
+    )
+    shutil.copytree(rsvim_jsruntime_source_path, tmp_jsruntime_dir)
+
+    command = "npm run typedoc"
+    logging.info(command)
+    os.system(command)
+
+    api_docs_dir = cwd_path / "docs" / "api"
+
+    gen_doc_path = tmp_generated_dir / name
+    api_doc_path = api_docs_dir / name
+    logging.info(f"Copy generated docs from ({gen_doc_path}) to ({api_doc_path})")
+    shutil.copytree(tmp_generated_dir, api_doc_path)
+
+    # clean up
+    remove_dir(tmp_jsruntime_dir)
+    remove_dir(tmp_generated_dir)
+
+
 if __name__ == "__main__":
     logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
 
-    parser = argparse.ArgumentParser(
-        description="help running linter/tests when developing rsvim"
-    )
-    parser.add_argument(
-        "-r",
-        "--recache",
-        action="store_true",
-        help="Rebuild all `sccache` caches",
-    )
-    parser.add_argument(
-        "-l",
-        "--no-lld",
-        dest="no_lld",
-        action="store_true",
-        help="Build without `lld` linker",
-    )
+    parser = argparse.ArgumentParser(description="help auto-generate API documents")
 
     subparsers = parser.add_subparsers(dest="subcommand")
 
     clippy_subparser = subparsers.add_parser(
-        "clippy",
-        aliases=["c"],
-        help="Run `cargo clippy` with `RUSTFLAGS=-Dwarnings`",
+        "api",
+        aliases=["a"],
+        help="Generate javascript API references",
     )
     clippy_subparser.add_argument(
         "-w",
