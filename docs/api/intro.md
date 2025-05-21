@@ -38,10 +38,10 @@ Similar to node/deno, Rsvim also provide a set of non-standard APIs to help user
 
 ### 2.1. Editor APIs
 
-Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) namespace inside lua with Neovim.
+Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) global namespace in Neovim's lua.
 
 ### 2.2. General Purposed APIs
 
-General purposed APIs are similar to the concept of the standard library of many scripting languages. From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [Node.js](https://nodejs.org/) and [Deno](https://deno.com/). But still, Rsvim focus on editing and text processing, the existence of general APIs serves this purpose as well, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
+General purposed APIs are similar to the concept of the standard library in many programming languages. (From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), ) But Rsvim focus on text editing and processing, the existence of all APIs only serves this purpose, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
 
 The general APIs share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementation keeps the same with [Deno APIs](https://docs.deno.com/api/deno/).
