@@ -10,8 +10,8 @@ With latest stable rustc/cargo, you can build with:
 cargo install --locked rsvim
 ```
 
-Or build with git source:
+To get the latest updates, build with git `main` branch:
 
 ```bash
-cargo install --git https://github.com/rsvim/rsvim.git
+cargo install --git https://github.com/rsvim/rsvim.git --branch main
 ```
