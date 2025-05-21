@@ -8,4 +8,8 @@ Rsvim is the [Vim](https://www.vim.org/) editor reinvented in Rust+TypeScript, i
 
 As Rsvim is build with [Rust](https://www.rust-lang.org/), using [Tokio](https://tokio.rs/) as async runtime, [Google's V8](https://v8.dev/) engine and [Rusty V8](https://github.com/denoland/rusty_v8) bindings (provided by [Deno team](https://deno.com/)) as script interpreter, it can be seen as a [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)/[TypeScript](https://www.typescriptlang.org/) script runtime just like [Node.js](https://nodejs.org/en) and Deno, but specialized for terminal based text editing/processing, by taking over the control of `stdio`.
 
-This chapter introduces the manuals for Rsvim. If you need JavaScript APIs you can find them in [API References](/docs/api_references/intro). You can contribute to this document on [GitHub](https://github.com/rsvim/rsvim.github.io).
+This chapter introduces the manuals for Rsvim.
+
+:::tip
+If you need JavaScript API references you can find them in [API References](/docs/api_references/intro), you can also contribute to this document on [GitHub](https://github.com/rsvim/rsvim.github.io).
+:::

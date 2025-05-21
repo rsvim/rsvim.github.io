@@ -10,6 +10,10 @@ Rsvim editor exposes the rust implemented APIs to the JavaScript world by bindin
 
 This chapter introduces the JavaScript APIs provided by the Rsvim editor. When configuring options or developing plugins, you can think of it as a specialized js runtime implementation similar to [Node.js](https://nodejs.org/en)/[Deno](https://deno.com/), by taking over the control of `stdio`.
 
+:::tip
+If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/user_manual/get_started), you can also contribute to this document on [GitHub](https://github.com/rsvim/rsvim.github.io).
+:::
+
 Rsvim provides the following APIs:
 
 ## 1. JavaScript standard built-in objects
