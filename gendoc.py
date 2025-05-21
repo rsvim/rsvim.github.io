@@ -52,7 +52,7 @@ def api():
     remove_dir(tmp_generated_dir)
 
     logging.info(
-        f"Copy jsruntime typescripts from ({rsvim_jsruntime_source_path}) to ({tmp_jsruntime_dir})"
+        f"Copy jsruntime sources from ({rsvim_jsruntime_source_path}) to ({tmp_jsruntime_dir})"
     )
     shutil.copytree(rsvim_jsruntime_source_path, tmp_jsruntime_dir)
 
