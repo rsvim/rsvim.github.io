@@ -32,11 +32,11 @@ The web APIs are also "global objects", and can be accessed without `import`/`re
 
 ## 3. Rsvim Specialized APIs
 
-ECMAScript standard (and V8 engine) only contains a small set, Rsvim editor provides all the other APIs for the javascript runtime. They can be divided into several types: editor related, general purposed and web platform.
+Similar to node/deno, Rsvim also provide a set of non-standard APIs to help users manipulating both the editor and the operating system. The APIs can be divided into several groups: editor related, general purposed.
 
 ### 2.1. Editor APIs
 
-Editor APIs are for everything about the Rsvim editor, including windows, buffers, cursors, commands, etc. With the idea of transforming the Rsvim editor into a scripting language interpreter/runtime/virtual machine, literally scripting with editor APIs is the only way to interact with Rsvim inside the scripts. For others such as ex commands and key mappings, they are only user interfaces.
+Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. With the idea of transforming the Rsvim editor into a scripting language interpreter/runtime/virtual machine, literally scripting with editor APIs is the only way to interact with Rsvim inside the scripts. For others such as ex commands and key mappings, they are only user interfaces.
 
 The editor APIs can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) namespace inside lua with Neovim.
 
