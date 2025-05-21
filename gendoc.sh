@@ -28,17 +28,17 @@ fi
 rm -rf $TMP_JSRUNTIME_DIR
 rm -rf $TMP_GENERATED_DIR
 
-echo "copy RSVIM jsruntime source ($RSVIM_JSRUNTIME_SRC_DIR) to $TMP_JSRUNTIME_DIR"
+echo "Copy RSVIM jsruntime source ($RSVIM_JSRUNTIME_SRC_DIR) to $TMP_JSRUNTIME_DIR"
 cp -rf $RSVIM_JSRUNTIME_SRC_DIR $TMP_JSRUNTIME_DIR
 
-echo "npm run typedoc"
+echo "Run: npm run typedoc"
 npm run typedoc
 
 copy_api_doc() {
   local name="$1"
   local api_doc="$API_DOCS_DST_DIR/$name"
   local gen_doc="$TMP_GENERATED_DIR/$name"
-  echo "copy generated docs ($gen_doc) to $API_DOCS_DST_DIR"
+  echo "Copy generated docs ($gen_doc) to $API_DOCS_DST_DIR"
   rm -rf $api_doc
   cp -rf $gen_doc $API_DOCS_DST_DIR
 }
@@ -50,7 +50,7 @@ copy_api_doc "01__rsvim"
 rm -rf $TMP_JSRUNTIME_DIR
 rm -rf $TMP_GENERATED_DIR
 
-echo "git status"
+echo "Run: git status"
 git status
-echo "tree $API_DOCS_DST_DIR"
+echo "Run: tree $API_DOCS_DST_DIR"
 tree $API_DOCS_DST_DIR
