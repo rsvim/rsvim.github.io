@@ -23,5 +23,5 @@ yarn-error.log*
 .idea
 
 # Generated Typedocs
-.jsruntime
-.generated
+jsruntime
+generated-typedocs

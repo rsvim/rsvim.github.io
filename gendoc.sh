@@ -1,15 +1,13 @@
 #!/bin/bash
 
-# Please setup this script with:
-# 1. `npm install -g typedoc`
-# 2. `npm install`
+# set -x
 
 CUR_DIR="${PWD}"
 RSVIM_DIR="${PWD}/../rsvim"
 RSVIM_JSRUNTIME_SRC_DIR="$RSVIM_DIR/rsvim_core/src/js/runtime"
 API_DOCS_DST_DIR="${PWD}/docs/api"
-TMP_JSRUNTIME_DIR="${PWD}/.jsruntime"
-TMP_GENERATED_DIR="${PWD}/.generated"
+TMP_JSRUNTIME_DIR="${PWD}/jsruntime"
+TMP_GENERATED_DIR="${PWD}/generated-typedocs"
 
 echo "CWD:$CUR_DIR"
 echo "RSVIM dir:$RSVIM_DIR"
