@@ -20,5 +20,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Generated Typedocs
-jsruntime
-generated-typedocs
+.jsruntime
+.generated
