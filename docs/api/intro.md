@@ -5,7 +5,7 @@ sidebar_position: 1
 # Introduction
 
 :::tip
-If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/user_manual/get_started), you can also contribute to this document on [GitHub](https://github.com/rsvim/rsvim.github.io).
+If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/user_manual/get_started).
 :::
 
 As Rsvim is build with [Rust](https://www.rust-lang.org/), using [Tokio](https://tokio.rs/) as async runtime, [Google's V8](https://v8.dev/) engine (and [rusty bindings](https://github.com/denoland/rusty_v8) provided by [Deno team](https://deno.com/)) as script interpreter, it can be seen as a javascript-based runtime just like [Node.js](https://nodejs.org/en) and Deno, but specialized for terminal based text editing/processing, by taking over the control of `stdio`. And javascript APIs (provided by Rsvim) is literally the only way to interact with Rsvim when writing js scripts. For other things such as Vim commands and key mappings, they are only user interfaces backed with js functions.
