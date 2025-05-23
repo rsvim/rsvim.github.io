@@ -15,15 +15,15 @@ const FeatureList: FeatureItem[] = [
     description: <>Fully utilizes all CPU cores and never freezes.</>,
   },
   {
-    title: "Friendly",
-    Svg: require("@site/static/img/highspeedtrain.svg").default,
+    title: "Drawable",
+    Svg: require("@site/static/img/palette.svg").default,
     description: (
       <>Powerful TUI engine with widgets, event handlers, layouts, etc.</>
     ),
   },
   {
     title: "Programmable",
-    Svg: require("@site/static/img/keyboard.svg").default,
+    Svg: require("@site/static/img/pencil.svg").default,
     description: (
       <>JavaScript-based runtime with TypeScript support included.</>
     ),
