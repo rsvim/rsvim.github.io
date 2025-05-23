@@ -12,46 +12,33 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Smooth",
     Svg: require("@site/static/img/lightning.svg").default,
-    description: (
-      <>A fast editor that fully utilizes all CPU cores and never freezes.</>
-    ),
+    description: <>Fully utilizes all CPU cores and never freezes.</>,
   },
   {
-    title: "Simple",
+    title: "Friendly",
     Svg: require("@site/static/img/bullettrain.svg").default,
     description: (
-      <>
-        A powerful TUI engine that provides widgets, event handlers, layouts,
-        etc.
-      </>
+      <>Powerful TUI engine with widgets, event handlers, layouts, etc.</>
     ),
   },
   {
     title: "Programmable",
     Svg: require("@site/static/img/keyboard.svg").default,
     description: (
-      <>
-        A consistent scripting runtime with built-in support for type system,
-        async/await, plugin management, etc.
-      </>
+      <>JavaScript-based runtime with TypeScript support included.</>
     ),
   },
   {
     title: "Multiplayer",
     Svg: require("@site/static/img/handshake.svg").default,
     description: (
-      <>
-        An editing service that allows multiple users to access remotely and
-        work together.
-      </>
+      <>Allow multiple users to access remotely and work together.</>
     ),
   },
   {
     title: "Integrable",
     Svg: require("@site/static/img/plug.svg").default,
-    description: (
-      <>A text processing tool that integrates with the shell environment.</>
-    ),
+    description: <>Integrates with the shell environment.</>,
   },
 ];
 
