@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
     description: <>Fully utilizes all CPU cores and never freezes.</>,
   },
   {
-    title: "Drawable",
+    title: "Flexible",
     Svg: require("@site/static/img/palette.svg").default,
     description: (
       <>Powerful TUI engine with widgets, event handlers, layouts, etc.</>
