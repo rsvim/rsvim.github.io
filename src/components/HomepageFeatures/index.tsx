@@ -10,7 +10,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Smooth",
+    title: "Speed",
     Svg: require("@site/static/img/lightning.svg").default,
     description: <>Fully utilizes all CPU cores and never freezes.</>,
   },
