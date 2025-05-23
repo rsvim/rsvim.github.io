@@ -16,7 +16,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Friendly",
-    Svg: require("@site/static/img/bullettrain.svg").default,
+    Svg: require("@site/static/img/highspeedtrain.svg").default,
     description: (
       <>Powerful TUI engine with widgets, event handlers, layouts, etc.</>
     ),
@@ -30,10 +30,8 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Multiplayer",
-    Svg: require("@site/static/img/handshake.svg").default,
-    description: (
-      <>Allow multiple users to access remotely and work together.</>
-    ),
+    Svg: require("@site/static/img/footprints.svg").default,
+    description: <>Multiple users access remotely and work together.</>,
   },
   {
     title: "Integrable",
