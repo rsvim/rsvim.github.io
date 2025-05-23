@@ -11,14 +11,14 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Smooth",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/lightning.svg").default,
     description: (
       <>A fast editor that fully utilizes all CPU cores and never freezes.</>
     ),
   },
   {
     title: "Simple",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/bullettrain.svg").default,
     description: (
       <>
         A powerful TUI engine that provides widgets, event handlers, layouts,
@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Programmable",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("@site/static/img/keyboard.svg").default,
     description: (
       <>
         A consistent scripting runtime with built-in support for type system,
@@ -38,7 +38,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Multiplayer",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("@site/static/img/handshake.svg").default,
     description: (
       <>
         An editing service that allows multiple users to access remotely and
@@ -48,7 +48,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Integrable",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/plug.svg").default,
     description: (
       <>A text processing tool that integrates with the shell environment.</>
     ),
@@ -58,9 +58,9 @@ const FeatureList: FeatureItem[] = [
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx("col col--2")}>
-      {/*<div className="text--center">
+      <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
-      </div>*/}
+      </div>
       <div className="text--center padding-horiz--sm">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
