@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Programmable",
-    Svg: require("@site/static/img/pencil.svg").default,
+    Svg: require("@site/static/img/keyboard.svg").default,
     description: (
       <>JavaScript-based runtime with TypeScript support included.</>
     ),
