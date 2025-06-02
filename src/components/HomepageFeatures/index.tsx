@@ -24,9 +24,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Programmable",
     Svg: require("@site/static/img/keyboard.svg").default,
-    description: (
-      <>JavaScript-based runtime with TypeScript support included.</>
-    ),
+    description: <>JavaScript-based runtime include TypeScript support.</>,
   },
   {
     title: "Multiplayer",
@@ -36,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Integrable",
     Svg: require("@site/static/img/plug.svg").default,
-    description: <>Integrates with the shell environment.</>,
+    description: <>Integrate with the shell environment.</>,
   },
 ];
 
