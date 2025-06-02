@@ -10,48 +10,31 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Smooth",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>A fast editor that fully utilizes all CPU cores and never freezes.</>
-    ),
+    title: "Speed",
+    Svg: require("@site/static/img/lightning.svg").default,
+    description: <>Fully utilizes all CPU cores and never freezes.</>,
   },
   {
-    title: "Simple",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    title: "Flexible",
+    Svg: require("@site/static/img/palette.svg").default,
     description: (
-      <>
-        A powerful TUI engine that provides widgets, event handlers, layouts,
-        etc.
-      </>
+      <>Powerful TUI engine with widgets, event handlers, layouts, etc.</>
     ),
   },
   {
     title: "Programmable",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        A consistent scripting runtime with built-in support for type system,
-        async/await, plugin management, etc.
-      </>
-    ),
+    Svg: require("@site/static/img/keyboard.svg").default,
+    description: <>JavaScript-based runtime include TypeScript support.</>,
   },
   {
     title: "Multiplayer",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        An editing service that allows multiple users to access remotely and
-        work together.
-      </>
-    ),
+    Svg: require("@site/static/img/footprints.svg").default,
+    description: <>Multiple users access remotely and work together.</>,
   },
   {
     title: "Integrable",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>A text processing tool that integrates with the shell environment.</>
-    ),
+    Svg: require("@site/static/img/plug.svg").default,
+    description: <>Integrate with the shell environment.</>,
   },
 ];
 
@@ -61,7 +44,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
       {/*<div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>*/}
-      <div className="text--center padding-horiz--sm">
+      <div className="text--center">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
