@@ -21,7 +21,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <div className="container">
             <div className="row">
-              <div className="col col--2 col--offset-4">
+              <div className="col"></div>
+              <div className="col">
                 <Link
                   className="button button--primary button--lg padding-horiz-sm"
                   to="/docs/user_manual/get_started"
@@ -29,7 +30,7 @@ function HomepageHeader() {
                   Get Started
                 </Link>
               </div>
-              <div className="col col--2">
+              <div className="col">
                 <Link
                   className="button button--secondary button--lg padding-horiz-sm"
                   to="/docs/api_references/intro"
@@ -37,6 +38,7 @@ function HomepageHeader() {
                   API References
                 </Link>
               </div>
+              <div className="col"></div>
             </div>
           </div>
         </div>
