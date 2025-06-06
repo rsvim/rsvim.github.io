@@ -5,7 +5,7 @@ sidebar_position: 1
 # Get Started
 
 :::tip
-If you need JavaScript API references you can find them in [API References](/docs/api_references/intro).
+If you need JavaScript API references you can find them in [API References](/docs/api/intro).
 :::
 
 Rsvim is the Vim editor reinvented in Rust+TypeScript, it behaves almost the same with [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), inherits most of the philosophy and concepts from them.
