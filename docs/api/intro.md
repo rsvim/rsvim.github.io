@@ -5,7 +5,7 @@ sidebar_position: 1
 # Introduction
 
 :::tip
-If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/manual/get_started).
+If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/user_manual/get_started).
 :::
 
 This chapter references all the APIs provided by the Rsvim editor.
