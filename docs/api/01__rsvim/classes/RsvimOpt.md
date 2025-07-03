@@ -1,9 +1,9 @@
-The `Rsvim.opt` object for global editor options.
+The `Rsvim.opt` global object for global editor options.
 
 ## Example
 
 ```javascript
-// Create a variable alias to 'Rsvim.opt'.
+// Create a alias to 'Rsvim.opt'.
 const opt = Rsvim.opt;
 ```
 
@@ -17,7 +17,7 @@ const opt = Rsvim.opt;
 get wrap(): boolean;
 ```
 
-Get the _wrap_ option.
+Get the _wrap_ option. This option is also known as [line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap).
 
 Local to Window.
 
@@ -31,23 +31,16 @@ moved to a part that is not shown, the screen will scroll horizontally.
 The line will be broken in the middle of a word if necessary. See [lineBreak](#linebreak)
 to get the break at a word boundary.
 
-##### See
+##### Default Value
 
- - [Wikipedia - line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap)
- - [Vim: options.txt - 'wrap'](https://vimhelp.org/options.txt.html#%27wrap%27)
+`true`
 
 ##### Example
 
 ```javascript
 // Get the 'wrap' option.
 const value = Rsvim.opt.wrap;
-// Set the 'wrap' option.
-Rsvim.opt.wrap = true;
 ```
-
-##### Default Value
-
-`true`
 
 ##### Returns
 
@@ -63,7 +56,14 @@ Set the _wrap_ option.
 
 ##### Throws
 
-[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+
+##### Example
+
+```javascript
+// Set the 'wrap' option.
+Rsvim.opt.wrap = true;
+```
 
 ##### Parameters
 
@@ -110,36 +110,25 @@ The _wrap_ option.
 get lineBreak(): boolean;
 ```
 
-**`Experimental`**
-
-Get the _line-break_ option.
+Get the _line-break_ option. This options is also known as [word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap).
 
 Local to Window.
 
 If `true` (on), Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
-
 It only affects the way the file is displayed, not its contents.
-If 'breakindent' is set, line is visually indented. Then, the value
-of 'showbreak' is used to put in front of wrapped lines. This option
-is not used when the [wrap](#wrap) option is `false`.
 
-##### See
+This option is not used when the [wrap](#wrap) option is `false`.
 
- - [Wikipedia - word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap)
- - [Vim: options.txt - 'linebreak'](https://vimhelp.org/options.txt.html#%27linebreak%27)
+##### Default Value
+
+`false`
 
 ##### Example
 
 ```javascript
 // Get the 'lineBreak' option.
 const value = Rsvim.opt.lineBreak;
-// Set the 'lineBreak' option.
-Rsvim.opt.lineBreak = true;
 ```
-
-##### Default Value
-
-`false`
 
 ##### Returns
 
@@ -155,7 +144,14 @@ Set the _line-break_ option.
 
 ##### Throws
 
-[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+
+##### Example
+
+```javascript
+// Set the 'lineBreak' option.
+Rsvim.opt.lineBreak = true;
+```
 
 ##### Parameters
 
