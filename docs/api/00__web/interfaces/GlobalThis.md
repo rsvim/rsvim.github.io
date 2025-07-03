@@ -11,7 +11,7 @@ setTimeout(
    args?): number;
 ```
 
-Sets a timer which executes a function or specified piece of code once the timer expires. Also see [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
+Set a timer which executes a function or specified piece of code once the timer expires. Also see [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
 
 #### Parameters
 
@@ -86,7 +86,7 @@ The ID (integer) which identifies the timer created.
 
 #### Throws
 
-[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if callback is not a function value.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if callback is not a function value.
 
 ***
 
@@ -96,7 +96,7 @@ The ID (integer) which identifies the timer created.
 clearTimeout(id): void;
 ```
 
-Cancels a timeout previously established by calling [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
+Cancel a timeout previously established by calling [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
 
 #### Parameters
 
@@ -135,4 +135,4 @@ The ID (integer) which identifies the timer.
 
 #### Throws
 
-[Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if ID is not an integer value.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if ID is not an integer value.

@@ -1,14 +1,11 @@
-The global namespace for `Rsvim` specific, non-standard runtime APIs.
+The `Rsvim` global object, it contains two groups:
 
-## See
-
- - [Vim: help.txt](https://vimhelp.org/)
- - [Neovim docs - Api](https://neovim.io/doc/user/api.html)
- - [Deno APIs](https://docs.deno.com/api/deno/)
+- General APIs.
+- Editor APIs.
 
 ## Editor APIs
 
-These APIs are specific for Rsvim editors such as buffers, windows, key mappings, etc.
+These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 
 <table>
 <thead>
@@ -26,12 +23,12 @@ These APIs are specific for Rsvim editors such as buffers, windows, key mappings
 </td>
 <td>
 
-The `Rsvim.opt` object for global editor options.
+The `Rsvim.opt` global object for global editor options.
 
 **Example**
 
 ```javascript
-// Create a variable alias to 'Rsvim.opt'.
+// Create a alias to 'Rsvim.opt'.
 const opt = Rsvim.opt;
 ```
 
@@ -42,7 +39,7 @@ const opt = Rsvim.opt;
 
 ## Global Object
 
-The global namespace.
+The global object.
 
 <table>
 <thead>
@@ -67,7 +64,7 @@ The `Rsvim` global object, it contains multiple sub fields:
 **Example**
 
 ```javascript
-// Create a variable alias to 'Rsvim'.
+// Create a alias to 'Rsvim'.
 const vim = Rsvim;
 ```
 

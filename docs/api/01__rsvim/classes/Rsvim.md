@@ -5,7 +5,7 @@ The `Rsvim` global object, it contains multiple sub fields:
 ## Example
 
 ```javascript
-// Create a variable alias to 'Rsvim'.
+// Create a alias to 'Rsvim'.
 const vim = Rsvim;
 ```
 
