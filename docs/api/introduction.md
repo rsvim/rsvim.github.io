@@ -10,6 +10,11 @@ If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/use
 
 This chapter references all the APIs provided by the Rsvim editor.
 
+For most general script programming languages such as **python**, they provide builtin types/classes/constants/functions (such as `len`) and standard library (such as `datetime`). Javascript runtimes play a similar role, the difference is the js engine is provided by a third-party library, i.e. the **v8** js engine. The js engine covers the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/) standard (includes some builtin APIs). While the js runtimes provide a standard library, it includes:
+
+- [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API): Most javascript-based runtimes share a compatible web API standard.
+- Specific APIs: Different runtimes provide have their own specific APIs, i.e. browsers such Chrome/Firefox provide the `document` DOM tree APIs, server-side runtimes such as node/deno provide their own APIs to manage the operating systems.
+
 ## 1. ECMAScript Standard Built-in APIs
 
 ECMAScript's standard built-in APIs are defined by the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/), natively implemented by the V8 engine embedded in Rsvim, i.e. these APIs are "global objects" that are available without `import`/`require` any additional/external modules. For example [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), [`encodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)/[`decodeURI()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURI), [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp), etc.
