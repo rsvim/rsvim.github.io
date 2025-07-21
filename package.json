@@ -30,8 +30,8 @@
     "@docusaurus/tsconfig": "^3.8.1",
     "@docusaurus/types": "^3.7.0",
     "typedoc": "^0.28.7",
-    "typedoc-plugin-markdown": "^4.7.0",
-    "typedoc-plugin-mdn-links": "^5.0.3",
+    "typedoc-plugin-markdown": "^4.7.1",
+    "typedoc-plugin-mdn-links": "^5.0.5",
     "typescript": "~5.8.3"
   },
   "browserslist": {
