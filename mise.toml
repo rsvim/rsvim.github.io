@@ -3,7 +3,5 @@ node = "latest"
 "npm:prettier" = "latest"
 "npm:markdownlint" = "latest"
 "npm:typedoc" = "latest"
-"npm:create-docusaurus" = "latest"
-"npm:docusaurus" = "latest"
 
 python = "latest"
