@@ -29,10 +29,10 @@
     "@docusaurus/module-type-aliases": "^3.7.0",
     "@docusaurus/tsconfig": "^3.8.1",
     "@docusaurus/types": "^3.7.0",
-    "typedoc": "^0.28.8",
-    "typedoc-plugin-markdown": "^4.7.1",
-    "typedoc-plugin-mdn-links": "^5.0.6",
-    "typescript": "~5.8.3"
+    "typedoc": "^0.28.9",
+    "typedoc-plugin-markdown": "^4.8.0",
+    "typedoc-plugin-mdn-links": "^5.0.7",
+    "typescript": "~5.9.2"
   },
   "browserslist": {
     "production": [
