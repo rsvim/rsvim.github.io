@@ -59,3 +59,12 @@ After typing "turtle" (last word in 1st line), you press the `<Enter>` key to st
 ```
 
 ## Moving Around
+
+After you return to normal mode, you can move around by using these keys:
+
+- `h` and `left`
+- `j` and `down`
+- `k` and `up`
+- `l` and `right`
+
+At first, it may appear that these commands were chosen at random. After all, who ever heard of using "l" for right? But actually, there is a very good reason for these choices: Moving the cursor is the most common thing you do in an editor, and these keys are on the [home row](https://simple.wikipedia.org/wiki/Home_row) of your right hand.
