@@ -165,3 +165,5 @@ A very intelligent turtle
 That liked using Vim
 Found programming UNIX a hurdle
 ```
+
+## Quit Rsvim
