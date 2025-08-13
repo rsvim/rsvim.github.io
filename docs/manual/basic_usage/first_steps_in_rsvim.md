@@ -57,3 +57,5 @@ After typing "turtle" (last word in 1st line), you press the `<Enter>` key to st
 |                                       |
 +---------------------------------------+
 ```
+
+## Moving Around
