@@ -26,4 +26,4 @@ There are also other buffer types for different purposes.
 
 ## Inserting Text
 
-The Vim (including Neovim/Rsvim) is a model editor, which means the editor behaves differently, depending on which mode you are in, in a certain timing, the editor is only in one certain mode.
+The Vim (including Neovim/Rsvim) is a model editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode.
