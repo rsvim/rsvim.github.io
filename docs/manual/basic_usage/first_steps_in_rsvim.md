@@ -97,4 +97,6 @@ Now you can insert new text, for example by typing:
 iA young <Esc>
 ```
 
-(The 1st character 'i' indicates starting insert mode, the last key `<Esc>` indicates returning back to normal mode)
+:::note
+The 1st character 'i' indicates starting insert mode, the last key `<Esc>` indicates returning back to normal mode
+:::
