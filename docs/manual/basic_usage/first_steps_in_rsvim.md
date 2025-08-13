@@ -25,7 +25,9 @@ Rsvim starts editing a file called "file.txt", because this is a new file, you g
 +---------------------------------------+
 ```
 
-('#' is the cursor position.)
+:::note
+'#' is the cursor position
+:::
 
 When Rsvim starts, it by default opens a file buffer and a window. A file buffer loads the file content from file system into Rsvim's memory, a window is a text view for the binded buffer. If no file name(s) are provided, Rsvim opens an empty file buffer without file name. If the specific file doesn't exist in file system, Rsvim opens an empty file buffer with the specific file name.
 
@@ -44,11 +46,15 @@ iA very intelligent turtle
 Found programming UNIX a hurdle
 ```
 
+:::note
+The 1st character 'i' indicates starting insert mode
+:::
+
 After typing "turtle" (last word in 1st line), you press the `<Enter>` key to start a new line. Finally you press the `<Esc>` key to exit insert mode and go back to normal mode. Now you have 2 lines of text in your Rsvim window:
 
 ```text
 +---------------------------------------+
-|iA very intelligent turtle             |
+|A very intelligent turtle              |
 |Found programming UNIX a hurdle        |
 |                                       |
 |                                       |
@@ -71,4 +77,24 @@ At first, it may appear that these commands were chosen at random. After all, wh
 
 ## Deleting Characters
 
-To delete a character, move the cursor over it and type "i" to start insert, then type "backspace" to delete a character on the left side, or type "delete" to delete a character on the right side. For example, move cursor to the beginning of the 1st line, type "i" to start insert, then type "delete" for 7 times.
+To delete a character, move the cursor over it and type "i" to start insert, then type "backspace" to delete a character on the left side, or type "delete" to delete a character on the right side. For example, move cursor to the beginning of the 1st line, type "i" to start insert, then type "delete" for 7 times to delete "A very ". The result should look like:
+
+```text
++---------------------------------------+
+|intelligent turtle                     |
+|Found programming UNIX a hurdle        |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
++---------------------------------------+
+```
+
+Now you can insert new text, for example by typing:
+
+```text
+iA young <Esc>
+```
+
+(The 1st character 'i' indicates starting insert mode, the last key `<Esc>` indicates returning back to normal mode)
