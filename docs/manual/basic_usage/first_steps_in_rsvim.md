@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # First Steps in Rsvim
 
-## Starting
+## Start
 
 To start Rsvim, open terminal and enter this command:
 
