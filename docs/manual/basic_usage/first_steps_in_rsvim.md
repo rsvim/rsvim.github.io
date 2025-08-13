@@ -130,10 +130,10 @@ a!!!<Esc>
 ```
 
 :::note
-The 1st character `a` indicates starting insert mode with append, the last key `<Esc>` indicates returning back to normal mode
+The 1st character `a` indicates appending, the last key `<Esc>` indicates returning back to normal mode
 :::
 
-The result will look like:
+The result is:
 
 ```text
 and that's not saying much for the turtle!!!
@@ -141,4 +141,27 @@ and that's not saying much for the turtle!!!
 
 ## Opening Up a New Line
 
-The `o` command creates a new, empty line below the cursor and starts insert mode. Then you can insert the text for the new line.
+The `o` command creates a new, empty line below the cursor and starts insert mode. Then you can insert the text for the new line. For example, the cursor is at the beginning of the 1st line:
+
+```text
+A very intelligent turtle
+Found programming UNIX a hurdle
+```
+
+If you now use the `o` command and type new text:
+
+```text
+oThat liked using Vim<Esc>
+```
+
+:::note
+The 1st character `o` indicates opening up a new line, the last key `<Esc>` indicates returning back to normal mode
+:::
+
+The result is:
+
+```text
+A very intelligent turtle
+That liked using Vim
+Found programming UNIX a hurdle
+```
