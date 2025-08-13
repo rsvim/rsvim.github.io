@@ -114,3 +114,11 @@ It starts insert mode (by `i`), and inserts words "A young ", then exits insert 
 |                                       |
 +---------------------------------------+
 ```
+
+## Appending
+
+The `i` command starts inserting under the cursor, while the `a` command starts inserting after the cursor.
+
+## Opening Up a New Line
+
+The `o` command creates a new, empty line below the cursor and starts insert mode. Then you can insert the text for the new line.
