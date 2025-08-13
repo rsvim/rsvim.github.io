@@ -41,3 +41,7 @@ To configure the Search index, please go to [Doc Search](https://docsearch.algol
 ## Versioning
 
 To tag a version, please run command (see [Docusaurus - Versioning](https://docusaurus.io/docs/versioning)): `npm run docusaurus docs:version 0.1.0`.
+
+## Images
+
+To create SVG image, please use [draw.io desktop](https://github.com/jgraph/drawio-desktop/releases).
