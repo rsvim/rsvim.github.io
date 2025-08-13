@@ -26,4 +26,6 @@ There are also other buffer types for different purposes.
 
 ## Inserting Text
 
-The Vim (including Neovim/Rsvim) is a model editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode. The two basic modes are called "Normal" mode and "Insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
+The Vim (including Neovim/Rsvim) is a model editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode. The two basic modes are called "normal" mode and "insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
+
+After Rsvim just started, it will be in normal mode.
