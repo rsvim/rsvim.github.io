@@ -25,3 +25,5 @@ yarn-error.log*
 # Generated Typedocs
 jsruntime
 generated-typedocs
+
+*.svg.bkp
