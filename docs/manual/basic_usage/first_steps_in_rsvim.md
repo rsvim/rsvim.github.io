@@ -160,9 +160,8 @@ The 1st character `o` indicates opening up a new line, the last key `<Esc>` indi
 
 The result is:
 
-```text
+```text {2}
 A very intelligent turtle
-// highlight-next-line
 That liked using Vim
 Found programming UNIX a hurdle
 ```
