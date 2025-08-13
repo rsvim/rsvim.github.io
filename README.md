@@ -1,8 +1,11 @@
 # Welcome to RSVIM Documentation!
 
+## Setup
+
 To setup local environment, please install below dependencies:
 
-1. Latest stable version management tools [mise](https://github.com/jdx/mise), then install multiple command lines with `mise i`.
+1. Install version management tool [mise](https://github.com/jdx/mise).
+2. Run `mise i`.
 
 To start local service, please run below commands:
 
@@ -27,6 +30,4 @@ To sync API docs from [rsvim](https://github.com/rsvim/rsvim), please follow bel
 
 To configure the Search index, please go to [Doc Search](https://docsearch.algolia.com/).
 
-To tag a version, please run below commands (see [Docusaurus - Versioning](https://docusaurus.io/docs/versioning)):
-
-1. `npm run docusaurus docs:version 0.1.0`
+To tag a version, please run command (see [Docusaurus - Versioning](https://docusaurus.io/docs/versioning)): `npm run docusaurus docs:version 0.1.0`.
