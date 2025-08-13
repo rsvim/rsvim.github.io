@@ -100,3 +100,17 @@ iA young <Esc>
 :::note
 The 1st character `i` indicates starting insert mode, the last key `<Esc>` indicates returning back to normal mode
 :::
+
+It starts insert mode (by `i`), and inserts words "A young ", then exits insert mode (by `<Esc>`). The result is:
+
+```text
++---------------------------------------+
+|A young intelligent turtle             |
+|Found programming UNIX a hurdle        |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
++---------------------------------------+
+```
