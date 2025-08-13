@@ -162,6 +162,7 @@ The result is:
 
 ```text
 A very intelligent turtle
+// highlight-next-line
 That liked using Vim
 Found programming UNIX a hurdle
 ```
