@@ -117,7 +117,27 @@ It starts insert mode (by `i`), and inserts words "A young ", then exits insert 
 
 ## Appending
 
-The `i` command starts inserting under the cursor, while the `a` command starts inserting after the cursor.
+The `i` command starts inserting under the cursor, while the `a` command starts inserting after the cursor. For example append "!!!" at the end of this line:
+
+```text
+and that's not saying much for the turtle
+```
+
+Move the cursor to the end of the line, at the last `e` character, then type:
+
+```text
+a!!!<Esc>
+```
+
+:::note
+The 1st character `a` indicates starting insert mode with append, the last key `<Esc>` indicates returning back to normal mode
+:::
+
+The result will look like:
+
+```text
+and that's not saying much for the turtle!!!
+```
 
 ## Opening Up a New Line
 
