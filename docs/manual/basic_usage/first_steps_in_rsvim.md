@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # First Steps in Rsvim
 
+## Starting
+
 To start Rsvim, open terminal and enter this command:
 
 ```bash
@@ -21,3 +23,5 @@ When Rsvim starts, it by default opens a file buffer and a window. A file buffer
 :::tip
 There are also other buffer types for different purposes.
 :::
+
+## Inserting Text
