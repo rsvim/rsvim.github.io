@@ -10,4 +10,4 @@ To start Rsvim, enter this command:
 rsvim file.txt
 ```
 
-![Img1](./assets/manual/first_steps_in_rsvim1.svg)
+![Img1](./assets/first_steps_in_rsvim1.svg)
