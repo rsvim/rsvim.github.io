@@ -12,4 +12,4 @@ Rsvim is the Vim editor reinvented in Rust+TypeScript. It follows main features,
 
 Rsvim is built by the [rsvim](https://github.com/rsvim) community. The project is hosted on [GitHub](https://github.com/rsvim/rsvim). The documentation is hosted on [GitHub Page](https://rsvim.github.io/).
 
-Rsvim is open sourced, licensed under [Vim License](https://github.com/rsvim/rsvim/blob/main/LICENSE.txt), exactly same with the [Vim](https://github.com/vim/vim) project.
+Rsvim is open sourced, licensed under [Vim License](https://github.com/rsvim/rsvim/blob/main/LICENSE.txt), same with the [Vim](https://github.com/vim/vim) project.
