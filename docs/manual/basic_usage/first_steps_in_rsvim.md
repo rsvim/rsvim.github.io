@@ -166,4 +166,4 @@ That liked using Vim
 Found programming UNIX a hurdle
 ```
 
-## Quit Rsvim
+## Quit
