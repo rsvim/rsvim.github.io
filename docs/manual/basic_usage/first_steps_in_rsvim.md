@@ -14,7 +14,16 @@ rsvim file.txt
 
 Rsvim starts editing a file called "file.txt", because this is a new file, you get a blank window. The terminal will look like:
 
-![Img1](./assets/first_steps_in_rsvim1.svg)
+```text
++---------------------------------------+
+|#                                      |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
++---------------------------------------+
+```
 
 ('#' is the cursor position.)
 
@@ -28,4 +37,23 @@ There are also other buffer types for different purposes.
 
 The Vim (including Neovim/Rsvim) is a model editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode. The two basic modes are called "normal" mode and "insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
 
-After Rsvim just started, it will be in normal mode.
+After Rsvim just started, it will be in normal mode. To start insert mode, you type the "i" command ("i" is for "insert"). Then you can insert the text, it will be inserted into the file buffer on current window which the cursor is inside. The file on file system won't be written unless you saved the file buffer. Let's enter the programmer's [limerick](https://vimhelp.org/usr_02.txt.html#02.2):
+
+```text
+iA very intelligent turtle
+Found programming UNIX a hurdle
+```
+
+After typing "turtle" (last word in 1st line), you press the `<Enter>` key to start a new line. Finally you press the `<Esc>` key to exit insert mode and go back to normal mode. Now you have two lines of text in your Rsvim window:
+
+```text
++---------------------------------------+
+|iA very intelligent turtle             |
+|Found programming UNIX a hurdle        |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
+|                                       |
++---------------------------------------+
+```
