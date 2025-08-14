@@ -16,7 +16,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Flexible",
-    Svg: require("@site/static/img/palette.svg").default,
+    Svg: require("@site/static/img/artist_palette.svg").default,
     description: (
       <>Powerful TUI engine with widgets, event handlers, layouts, etc.</>
     ),
