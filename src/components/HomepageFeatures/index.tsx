@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Programmable",
-    Svg: require("@site/static/img/keyboard.svg").default,
+    Svg: require("@site/static/img/musical_keyboard.svg").default,
     description: <>JavaScript-based runtime include TypeScript support.</>,
   },
   {
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Integrable",
-    Svg: require("@site/static/img/plug.svg").default,
+    Svg: require("@site/static/img/electric_plug_red.svg").default,
     description: <>Integrate with the shell environment.</>,
   },
 ];
