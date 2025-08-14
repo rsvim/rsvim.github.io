@@ -16,14 +16,14 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Flexible",
-    Svg: require("@site/static/img/palette.svg").default,
+    Svg: require("@site/static/img/artist_palette.svg").default,
     description: (
       <>Powerful TUI engine with widgets, event handlers, layouts, etc.</>
     ),
   },
   {
     title: "Programmable",
-    Svg: require("@site/static/img/keyboard.svg").default,
+    Svg: require("@site/static/img/musical_keyboard.svg").default,
     description: <>JavaScript-based runtime include TypeScript support.</>,
   },
   {
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Integrable",
-    Svg: require("@site/static/img/plug.svg").default,
+    Svg: require("@site/static/img/electric_plug_red.svg").default,
     description: <>Integrate with the shell environment.</>,
   },
 ];
@@ -41,9 +41,9 @@ const FeatureList: FeatureItem[] = [
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx("col col--2")}>
-      {/*<div className="text--center">
+      <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
-      </div>*/}
+      </div>
       <div className="text--center">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
