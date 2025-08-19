@@ -9,6 +9,94 @@ const opt = Rsvim.opt;
 
 ## Accessors
 
+### lineBreak
+
+#### Get Signature
+
+```ts
+get lineBreak(): boolean;
+```
+
+Get the _line-break_ option. This options is also known as [word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap).
+
+Local to Window.
+
+If `true` (on), Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
+It only affects the way the file is displayed, not its contents.
+
+This option is not used when the [wrap](#wrap) option is `false`.
+
+##### Default Value
+
+`false`
+
+##### Example
+
+```javascript
+// Get the 'lineBreak' option.
+const value = Rsvim.opt.lineBreak;
+```
+
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
+```ts
+set lineBreak(value): void;
+```
+
+Set the _line-break_ option.
+
+##### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+
+##### Example
+
+```javascript
+// Set the 'lineBreak' option.
+Rsvim.opt.lineBreak = true;
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+The _line-break_ option.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
 ### wrap
 
 #### Get Signature
@@ -90,94 +178,6 @@ Rsvim.opt.wrap = true;
 <td>
 
 The _wrap_ option.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-##### Returns
-
-`void`
-
-***
-
-### lineBreak
-
-#### Get Signature
-
-```ts
-get lineBreak(): boolean;
-```
-
-Get the _line-break_ option. This options is also known as [word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap).
-
-Local to Window.
-
-If `true` (on), Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
-It only affects the way the file is displayed, not its contents.
-
-This option is not used when the [wrap](#wrap) option is `false`.
-
-##### Default Value
-
-`false`
-
-##### Example
-
-```javascript
-// Get the 'lineBreak' option.
-const value = Rsvim.opt.lineBreak;
-```
-
-##### Returns
-
-`boolean`
-
-#### Set Signature
-
-```ts
-set lineBreak(value): void;
-```
-
-Set the _line-break_ option.
-
-##### Throws
-
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
-
-##### Example
-
-```javascript
-// Set the 'lineBreak' option.
-Rsvim.opt.lineBreak = true;
-```
-
-##### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`value`
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-The _line-break_ option.
 
 </td>
 </tr>
