@@ -18,6 +18,30 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <tr>
 <td>
 
+[RsvimCmd](classes/RsvimCmd.md)
+
+</td>
+<td>
+
+The `Rsvim.cmd` global object for ex commands.
+
+:::tip
+The "ex command" mostly describes the product function, i.e. when user types ":" in normal mode,
+user can move cursor to command-line and input commands. Rather than referring to the
+["ex commands"](https://vimhelp.org/intro.txt.html#Ex-mode) in Vim editor.
+:::
+
+**Example**
+
+```javascript
+const cmd = Rsvim.cmd;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
 [RsvimOpt](classes/RsvimOpt.md)
 
 </td>
@@ -59,7 +83,8 @@ The global object.
 
 The `Rsvim` global object, it contains multiple sub fields:
 
-- `Rsvim.opt`: Global editor options.
+- `Rsvim.opt`: Global options.
+- `Rsvim.cmd`: Ex commands.
 
 **Example**
 
