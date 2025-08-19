@@ -1,6 +1,7 @@
 The `Rsvim` global object, it contains multiple sub fields:
 
-- `Rsvim.opt`: Global editor options.
+- `Rsvim.opt`: Global options.
+- `Rsvim.cmd`: Ex commands.
 
 ## Example
 
@@ -20,6 +21,23 @@ const vim = Rsvim;
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+
+<a id="cmd"></a> `cmd`
+
+</td>
+<td>
+
+`readonly`
+
+</td>
+<td>
+
+[`RsvimCmd`](RsvimCmd.md)
+
+</td>
+</tr>
 <tr>
 <td>
 
