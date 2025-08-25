@@ -20,15 +20,19 @@ Get current buffer's ID.
 The "current" buffer is the buffer that the window where your cursor is
 located is binded to. See RsvimWin.
 
+:::warning
+When the editor is not initialized, i.e. there's no buffer/window created. It
+will return `null`. Once the editor is initialized, there will always have a
+valid buffer binded to the "current" window (where your cursor is). It will return
+the valid buffer ID.
+:::
+
 #### Returns
 
 `number`
 
-It returns `null` before the editor is
-initialized since there's no buffer/window created. Once the editor is
-initialized, it always returns a valid buffer ID `number`, since there
-will always have a valid buffer binded to the current window (where your
-cursor is).
+It returns a valid buffer ID if the editor is initialized.
+Otherwise it returns `null` if the editor is not initialized.
 
 #### Example
 
@@ -45,6 +49,13 @@ list(): number[];
 ```
 
 List all buffers' IDs.
+
+:::warning
+When the editor is not initialized, i.e. there's no buffer/window created. It
+will return an empty array. Once the editor is initialized, there will have at least 1
+buffer binded to the "current" window (where your cursor is). It will return all the
+buffer IDs as an array.
+:::
 
 #### Returns
 
