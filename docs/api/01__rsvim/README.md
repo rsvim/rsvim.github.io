@@ -18,6 +18,25 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <tr>
 <td>
 
+[RsvimBuf](classes/RsvimBuf.md)
+
+</td>
+<td>
+
+The `Rsvim.buf` global object for buffers.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.buf'.
+const buf = Rsvim.buf;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
 [RsvimCmd](classes/RsvimCmd.md)
 
 </td>
@@ -34,6 +53,7 @@ user can move cursor to command-line and input commands. Rather than referring t
 **Example**
 
 ```javascript
+// Create a alias to 'Rsvim.cmd'.
 const cmd = Rsvim.cmd;
 ```
 
@@ -83,8 +103,9 @@ The global object.
 
 The `Rsvim` global object, it contains multiple sub fields:
 
-- `Rsvim.opt`: Global options.
-- `Rsvim.cmd`: Ex commands.
+- `Rsvim.buf`: Buffers.
+- `Rsvim.cmd`: Commands.
+- `Rsvim.opt`: Options.
 
 **Example**
 
