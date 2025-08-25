@@ -21,7 +21,7 @@ Get the _line-break_ option. This options is also known as [word wrap](https://e
 
 Local to Window.
 
-If `true` (on), Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
+If `true`, Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
 It only affects the way the file is displayed, not its contents.
 
 This option is not used when the [wrap](#wrap) option is `false`.
@@ -111,8 +111,8 @@ Local to Window.
 
 This option changes how text is displayed.
 
-When `true` (on), lines longer than the width of the window will wrap and
-displaying continues on the next line. When `false` (off) lines will not wrap
+When `true`, lines longer than the width of the window will wrap and
+displaying continues on the next line. When `false` lines will not wrap
 and only part of long lines will be displayed. When the cursor is
 moved to a part that is not shown, the screen will scroll horizontally.
 

@@ -9,6 +9,7 @@ user can move cursor to command-line and input commands. Rather than referring t
 ## Example
 
 ```javascript
+// Create a alias to 'Rsvim.cmd'.
 const cmd = Rsvim.cmd;
 ```
 
@@ -17,10 +18,15 @@ const cmd = Rsvim.cmd;
 ### echo()
 
 ```ts
-echo(message): void;
+echo(message): number;
 ```
 
 Echo message to the command-line.
+
+:::warning
+It will not succeed until the editor is initialized since the TUI is still not created.
+When editor is not initialized, it will not print anything to the terminal.
+:::
 
 #### Parameters
 
@@ -29,6 +35,7 @@ Echo message to the command-line.
 <tr>
 <th>Parameter</th>
 <th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -43,16 +50,29 @@ Echo message to the command-line.
 `string`
 
 </td>
+<td>
+
+It accepts string and other primitive types, except `null`
+and `undefined`.
+
+</td>
 </tr>
 </tbody>
 </table>
 
 #### Returns
 
-`void`
+`number`
+
+It returns `0` if echo successfully, otherwise it returns `-1` if failed
+(before the editor is initialized).
+
+#### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if no parameter provided, or the parameter is `null` or `undefined`.
 
 #### Example
 
 ```javascript
-Rsvim.cmd.echo("Hello Rsvim!");
+const result = Rsvim.cmd.echo("Hello Rsvim!");
 ```
