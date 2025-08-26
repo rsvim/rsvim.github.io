@@ -9,6 +9,190 @@ const opt = Rsvim.opt;
 
 ## Accessors
 
+### fileEncoding
+
+#### Get Signature
+
+```ts
+get fileEncoding(): "utf-8";
+```
+
+Get the _file-encoding_ option. Local to Buffer.
+
+Sets the [character encoding](https://en.wikipedia.org/wiki/Character_encoding) for the file of this buffer.
+This will determine which character encoding is used when RSVIM read/write a file from file system.
+
+:::warning
+For now, only **utf-8** encoding is supported.
+:::
+
+##### Default Value
+
+`"utf-8"`
+
+##### Example
+
+```javascript
+// Get the 'file-encoding' option.
+const value = Rsvim.opt.fileEncoding;
+```
+
+##### Returns
+
+`"utf-8"`
+
+#### Set Signature
+
+```ts
+set fileEncoding(value): void;
+```
+
+Set the _file-encoding_ option.
+
+##### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a valid option.
+
+##### Example
+
+```javascript
+// Set the 'file-encoding' option.
+Rsvim.opt.fileEncoding = "utf-8";
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`"utf-8"`
+
+</td>
+<td>
+
+The _file-encoding_ option.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
+### fileFormat
+
+#### Get Signature
+
+```ts
+get fileFormat(): FileFormatOption;
+```
+
+Get the _file-format_ option. Local to Buffer.
+
+Sets the [line end](https://en.wikipedia.org/wiki/Newline) for the file of this buffer. There are 3 kinds of line end:
+- `CRLF`: used by [Windows](https://www.microsoft.com/windows).
+- `LF`: used by [Linux](https://en.wikipedia.org/wiki/Linux) and [Unix](https://en.wikipedia.org/wiki/Unix) (include [MacOS](https://www.apple.com/macos/)).
+- `CR`: used by [classic MacOS](https://en.wikipedia.org/wiki/Classic_Mac_OS). Today's Mac also uses `LF` as line end, you would never use `CR` in most of today's operating systems.
+
+:::note
+In fact it should be named to "line-end", it is called "file-format" just to be consistent
+with Vim's [fileformat](https://vimhelp.org/options.txt.html#%27fileformat%27) option.
+:::
+
+For this API, it has below options:
+- `"dos"`: equivalent to `CRLF` line end.
+- `"unix"`: equivalent to `LF` line end.
+- `"mac"`: equivalent to `CR` line end. You would never use it today.
+
+##### Default Value
+
+`"dos"` for Windows/MS-DOS, `"unix"` for Linux/Unix/MacOS.
+
+##### Example
+
+```javascript
+// Get the 'file-format' option.
+const value = Rsvim.opt.fileFormat;
+```
+
+##### Returns
+
+`FileFormatOption`
+
+#### Set Signature
+
+```ts
+set fileFormat(value): void;
+```
+
+Set the _file-format_ option.
+
+##### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a valid option.
+
+##### Example
+
+```javascript
+// Set the 'file-format' option.
+Rsvim.opt.fileFormat = "unix";
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`FileFormatOption`
+
+</td>
+<td>
+
+The _file-format_ option.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
 ### lineBreak
 
 #### Get Signature
@@ -17,9 +201,8 @@ const opt = Rsvim.opt;
 get lineBreak(): boolean;
 ```
 
-Get the _line-break_ option. This options is also known as [word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap).
-
-Local to Window.
+Get the _line-break_ option. This options is also known as
+[word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Local to [Window](https://developer.mozilla.org/docs/Web/API/Window).
 
 If `true`, Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
 It only affects the way the file is displayed, not its contents.
@@ -97,6 +280,94 @@ The _line-break_ option.
 
 ***
 
+### tabStop
+
+#### Get Signature
+
+```ts
+get tabStop(): number;
+```
+
+Get the _tab-stop_ option. This option is also known as
+[tab-size](https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size).
+Local to Buffer.
+
+This option changes how text is displayed.
+
+Defines how many columns (on the terminal) used to display the
+[horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`). This value should be between `[1,65535]`.
+
+##### Default Value
+
+`8`
+
+##### Example
+
+```javascript
+// Get the 'tab-stop' option.
+const value = Rsvim.opt.tabStop;
+```
+
+##### Returns
+
+`number`
+
+#### Set Signature
+
+```ts
+set tabStop(value): void;
+```
+
+Set the _tab-stop_ option.
+
+##### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a integer value, or the integer value is not between `[1,65535]`.
+
+##### Example
+
+```javascript
+// Set the 'tab-stop' option.
+Rsvim.opt.tabStop = 4;
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The _tab-stop_ option. It only accepts an integer between `[1,65535]`.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
 ### wrap
 
 #### Get Signature
@@ -105,9 +376,8 @@ The _line-break_ option.
 get wrap(): boolean;
 ```
 
-Get the _wrap_ option. This option is also known as [line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap).
-
-Local to Window.
+Get the _wrap_ option. This option is also known as
+[line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Local to [Window](https://developer.mozilla.org/docs/Web/API/Window).
 
 This option changes how text is displayed.
 
