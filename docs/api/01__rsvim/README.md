@@ -23,7 +23,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 </td>
 <td>
 
-The `Rsvim.buf` global object for buffers.
+The `Rsvim.buf` global object for Vim buffers.
 
 **Example**
 
@@ -42,7 +42,7 @@ const buf = Rsvim.buf;
 </td>
 <td>
 
-The `Rsvim.cmd` global object for ex commands.
+The `Rsvim.cmd` global object for Ex commands.
 
 :::tip
 The "ex command" mostly describes the product function, i.e. when user types ":" in normal mode,
@@ -81,6 +81,40 @@ const opt = Rsvim.opt;
 </tbody>
 </table>
 
+## General APIs
+
+These APIs are general for common javascript-based runtime, similar to [Deno APIs](https://docs.deno.com/api/deno/).
+
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+[RsvimRt](classes/RsvimRt.md)
+
+</td>
+<td>
+
+The `Rsvim.rt` global object for editor/runtime/process.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.rt'.
+const rt = Rsvim.rt;
+```
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Global Object
 
 The global object.
@@ -103,9 +137,10 @@ The global object.
 
 The `Rsvim` global object, it contains multiple sub fields:
 
-- `Rsvim.buf`: Buffers.
-- `Rsvim.cmd`: Commands.
-- `Rsvim.opt`: Options.
+- `Rsvim.buf`: Buffer APIs.
+- `Rsvim.cmd`: Ex command APIs.
+- `Rsvim.opt`: Global options.
+- `Rsvim.rt`: Editor/runtime/process APIs.
 
 **Example**
 

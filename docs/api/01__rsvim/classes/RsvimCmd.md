@@ -1,4 +1,4 @@
-The `Rsvim.cmd` global object for ex commands.
+The `Rsvim.cmd` global object for Ex commands.
 
 :::tip
 The "ex command" mostly describes the product function, i.e. when user types ":" in normal mode,

@@ -1,4 +1,4 @@
-The `Rsvim.buf` global object for buffers.
+The `Rsvim.buf` global object for Vim buffers.
 
 ## Example
 
