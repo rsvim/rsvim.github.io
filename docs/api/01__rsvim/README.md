@@ -101,7 +101,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 </td>
 <td>
 
-The `Rsvim.rt` global object for editor/runtime/process.
+The `Rsvim.rt` global object for javascript runtime (editor process).
 
 **Example**
 
@@ -140,7 +140,7 @@ The `Rsvim` global object, it contains multiple sub fields:
 - `Rsvim.buf`: Buffer APIs.
 - `Rsvim.cmd`: Ex command APIs.
 - `Rsvim.opt`: Global options.
-- `Rsvim.rt`: Editor/runtime/process APIs.
+- `Rsvim.rt`: JavaScript runtime (editor process) APIs.
 
 **Example**
 

@@ -1,4 +1,4 @@
-The `Rsvim.rt` global object for editor/runtime/process.
+The `Rsvim.rt` global object for javascript runtime (editor process).
 
 ## Example
 
