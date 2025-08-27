@@ -16,7 +16,7 @@ What distinguishes Rsvim from other two:
 - JavaScript `Promise`, `async`/`await` is natively handled by tokio's async tasks.
 - Multi-file modules and plugins are structured via [ESCM modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html) `import` keyword implementation.
 - TypeScript is parsed and transformed into JavaScript and executed by V8 engine on the fly.
-- (**TODO**) [NPM package](https://www.npmjs.com/) is accepted as a compatible plugin schema; thereby the npm registry can be leveraged to publish/upgrade/distribute all plugins.
+- (**TODO**) [NPM package](https://www.npmjs.com/) is accepted as a compatible plugin schema, thereby the npm registry can be leveraged to publish/upgrade/distribute all plugins.
 
 From one perspective, you can conceptualise javascript and typescript as configuration languages for Rsvim. In another, Rsvim can be treat as a highly specialised javascript-based runtime akin to [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), but purpose-built for text editor: `stdin` for receiving terminal inputs, `stdout` for rendering the interface.
 
