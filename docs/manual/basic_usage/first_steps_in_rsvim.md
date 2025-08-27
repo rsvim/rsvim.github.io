@@ -137,10 +137,10 @@ and that's not saying much for the turtle!!!
 
 ## Opening Up a New Line
 
-The `o` command creates a new, empty line below the cursor and starts insert mode. You can then insert text for the new line. For example, the cursor is at the beginning of the first line:
+The `o` command creates a new, empty line below the cursor and starts insert mode. Then you can insert text for the new line. For example, the cursor is at the beginning of the first line:
 
 ```text
-# very intelligent turtle
+A very intelligent turtle
 Found programming UNIX a hurdle
 ```
 
