@@ -196,14 +196,10 @@ The 1st character `:` indicates starting the "command-line" mode ("ex-command" v
 
 To ensure file system data safety, Rsvim waits for all the ongoing file write operations to complete before actually exiting, however any new write requests will be rejected.
 
-:::tip
-Question:
-
+:::tip[Question]
 You would ask: where is the `:w` and `:q` ex command? Aren't they much shorter and easier for users?
 
-Answer:
-
-Yes, `:w` and `:q` are better than `:js` with super long javascript expressions.
+Yes, `:w` and `:q` are better than `:js` with super long expressions.
 In current version `v0.1.1`, only one builtin ex command `:js` is provided, users are limited to do it in this way.
 
 This is mostly because Rsvim won't embed any builtin plugins, include ex commands (i.e. `:w`, `:q`, etc).
