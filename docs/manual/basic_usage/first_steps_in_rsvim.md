@@ -37,7 +37,7 @@ There are also other buffer types for different purposes.
 
 ## Inserting Text
 
-The Vim (including Neovim/Rsvim) is a model editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode. The 2 basic modes are called "normal" mode and "insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
+The Vim (including Neovim/Rsvim) is a modal editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode. The 2 basic modes are called "normal" mode and "insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
 
 After Rsvim just started, it will be in normal mode. To start insert mode, you type the "i" command ("i" is for "insert"). Then you can insert the text, it will be inserted into the file buffer on current window which the cursor is inside. The file on file system won't be written unless you saved the file buffer. Let's enter the programmer's [limerick](https://vimhelp.org/usr_02.txt.html#02.2):
 
@@ -166,6 +166,32 @@ That liked using Vim
 Found programming UNIX a hurdle
 ```
 
+## Save Your Work
+
+All the editings only change the in-memory text contents inside Rsvim, they will not be saved to file system until you execute. Once you are in normal mode, type the ":" command to start the "command-line" mode.
+
+For example, to save the current contents to file system, you type:
+
+```text
+:js Rsvim.buf.writeSync(Rsvim.buf.current());<Enter>
+```
+
+:::note
+The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
+:::
+
+The `Rsvim.buf.current()` returns the current buffer ID, and `Rsvim.buf.writeSync()` will write the buffer's (specified by the ID) contents to file system.
+
 ## Quit
 
-TODO
+After file is been saved, you can quit Rsvim by typing:
+
+```text
+:js Rsvim.rt.exit();<Enter>
+```
+
+:::note
+The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
+:::
+
+To ensure file system data safety, Rsvim waits for all the ongoing file write operations to complete before actually exiting, however any new write requests will be rejected.
