@@ -8,7 +8,7 @@ sidebar_position: 1
 If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/manual/get_started).
 :::
 
-For most general script programming languages such as **python**, they provide builtin types/classes/functions (such as `len`) and standard library (such as `datetime`). Javascript runtimes play a similar role, the difference is the js engine is provided by a third-party library, i.e. the **V8** js engine. Js engine covers the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/) standard, while js runtimes provide a standard library (and fill in many other gaps), which includes:
+For most general script programming languages such as [python](https://www.python.org/), they provide builtin types/classes/functions (for example [`len`](https://docs.python.org/3/library/functions.html#len) and standard library (for example [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime). Javascript runtime plays a similar role, the difference is the js engine is provided by a third-party library, i.e. the **V8** js engine. Js engine covers the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/) standard, while js runtimes provide a standard library, schedules async tasks within event loop, and fill in many other gaps. The standard library mainly includes:
 
 - [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API): Most popular javascript-based runtimes share a compatible implementations today.
 - Specific APIs: Different runtimes provide have their own specific APIs, i.e. browsers such Chrome/Firefox provide the `document` DOM tree APIs, server-side runtimes such as node/deno provide their own APIs to manage the operating systems.
