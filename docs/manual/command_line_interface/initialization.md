@@ -25,15 +25,6 @@ Then executes the configuration entry script to apply the configurations.
 
 There're several locations to choose:
 
-### `$RSVIM_CONFIG_HOME``
-
-First tries to detect:
-
-1. Whether the `$RSVIM_CONFIG_HOME` environment variable exists as a directory path in file system.
-2. Whether a `rsvim.{js,ts}` file exists in the directory.
-
-If all 3 conditions are satisfied, Rsvim uses this directory as its configuration home, and `rsvim.{js,ts}` as configuration entry.
-
 ### `$XDG_CONFIG_HOME/rsvim`
 
 Then tries to detect the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) as a second choice:
