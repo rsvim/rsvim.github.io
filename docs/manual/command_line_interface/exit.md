@@ -6,7 +6,7 @@ sidebar_position: 3
 
 As Rsvim runs asynchronously just like a HTTP API service, it handles multiple tasks by tokio's async multithreaded runtime. User's keyboard and mouse events are only one of the requests sending to it. When user executes [`:js Rsvim.rt.exit();`](/docs/next/api/rsvim/classes/RsvimRt#exit) command, it just sends a "Exit" request to ask Rsvim to exit.
 
-Rsvim proceeds the steps below in order:
+Rsvim proceeds below steps in order:
 
 ## 1. Wait For Blocked Tasks Complete
 
