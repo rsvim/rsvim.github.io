@@ -168,16 +168,28 @@ Found programming UNIX a hurdle
 
 ## Save Your Work
 
-All the editings only change the in-memory text contents inside Rsvim editor, they will not be saved to file system until you execute. Once you are back to normal mode, type the ":" command to start the "command-line" mode.
+All the editings only change the in-memory text contents inside Rsvim editor, they will not be saved to file system until you execute. Once you are in normal mode, type the ":" command to start the "command-line" mode.
 
 :::tip
 There are actually 3 variants in "command-line" mode:
 
-- Ex command variant: type the ":" to start inserting any commands, end with "\<Enter\>" to send to editor, or type "\<Esc\>" to cancel.
+- Ex command variant: type the ":" to start inserting any commands.
 - Search forward variant: type the "/" to start searching forward in current buffer.
 - Search backward variant: type the "?" to start searching backward in current buffer.
 
 :::
+
+For example, to save the current contents to file system, you type:
+
+```text
+:js Rsvim.buf.writeSync(Rsvim.buf.current());<Enter>
+```
+
+:::note
+The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim editor, and returning back to normal mode
+:::
+
+The `Rsvim.buf.current()` returns the current buffer ID, and `Rsvim.buf.writeSync()` will write the buffer's (specified by the ID) contents to file system.
 
 ## Quit
 
