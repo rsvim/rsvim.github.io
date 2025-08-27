@@ -191,6 +191,10 @@ The 1st character `:` indicates starting the "command-line" mode ("ex-command" v
 
 The `Rsvim.buf.current()` returns the current buffer ID, and `Rsvim.buf.writeSync()` will write the buffer's (specified by the ID) contents to file system.
 
+:::tip
+Checkout [API References](/docs/api/intro) for more APIs.
+:::
+
 ## Quit
 
 After file is been saved, you can quit Rsvim by typing:
