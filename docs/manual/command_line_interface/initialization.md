@@ -15,19 +15,19 @@ Reads the environment variables and initialize all the constant variables inside
 Options and file names from the `rsvim` command line are inspected. Several kinds of use cases are:
 
 - When special options are provided (i.e. `-h`/`--help`, `-V`/`--version`), Rsvim will print some useful information and exit.
-- When file names are provided, Rsvim will read them, create a buffer for each one and associate it to the corresponding file name.
+- When file names are provided, Rsvim will read them, create a buffer for each one and associate it to the corresponding file name. Rsvim chooses the first file as its default buffer, which will be binded with the default window on TUI.
 - If no file name is provided, Rsvim will create a default empty buffer, associated with no file name.
 
 ## 3. Load Configuration Script
 
-Rsvim chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) script file as its configuration entry.
+Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) script file as its configuration entry.
 Then executes the configuration entry script to apply the configurations.
 
-There're several locations for user to choose:
+There're several locations to choose:
 
 ### `$RSVIM_CONFIG_HOME``
 
-Rsvim first tries to detect:
+First tries to detect:
 
 1. Whether the `$RSVIM_CONFIG_HOME` environment variable exists as a directory path in file system.
 2. Whether a `rsvim.{js,ts}` file exists in the directory.
@@ -36,7 +36,7 @@ If all 3 conditions are satisfied, Rsvim uses this directory as its configuratio
 
 ### `$XDG_CONFIG_HOME/rsvim`
 
-Then Rsvim tries to detect the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) as a secondary choice:
+Then tries to detect the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) as a second choice:
 
 1. Whether `$XDG_CONFIG_HOME/rsvim` exists as a directory path in file system.
 2. Whether a `rsvim.{js,ts}` file exists in the directory.
@@ -51,15 +51,19 @@ Then Rsvim tries to detect the [FreeDesktop Directory Specification](https://spe
 
 ### `$HOME/.rsvim`
 
-Then Rsvim tries to detect:
+Then tries to detect:
 
 1. Whether `$HOME/.rsvim` exists as a directory path in file system.
 2. Whether a `rsvim.{js,ts}` file exists in the directory.
 
 ### `.rsvim.{js,ts}`
 
-Finally, if all above locations failed, Rsvim tries to detect:
+Finally, if all above are failed, tries to detect:
 
 1. Whether a `$HOME/.rsvim.{js,ts}` file exists.
 
 If the file exists, Rsvim will use it as configuration entry, use `$HOME/.rsvim` as configuration home, and create a new directory if `$HOME/.rsvim` doesn't exist.
+
+## 4. Initialize TUI
+
+Once all configurations are been set, terminal goes into [raw mode](https://en.wikipedia.org/wiki/Terminal_mode) and create the default window binded with the default buffer. If default buffer is associated with an existing file, the window will print the file contents from the first line.
