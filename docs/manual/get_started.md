@@ -12,7 +12,7 @@ Rsvim is the Vim editor reimplemented in Rust and TypeScript. While honouring th
 
 What distinguishes Rsvim from the other two:
 
-- Given Tokio's async multithreaded runtime, terminal input and output are processed asynchronously with other I/O, network and CPU-bound tasks.
+- Given Tokio's async multithreaded runtime, terminal input is processed asynchronously with other file I/O, network and CPU-bound tasks.
 - Tokio's async tasks natively supports `Promise`, `async`/`await` from JavaScript.
 - Configuration or plugin across multiple files can be structured via [ESCM modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html) `import` keyword implementation.
 - TypeScript can be parsed and transformed into JavaScript and executed on the V8 engine on the fly.
