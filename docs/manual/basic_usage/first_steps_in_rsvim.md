@@ -144,7 +144,7 @@ A very intelligent turtle
 Found programming UNIX a hurdle
 ```
 
-If you now use the `o` command and type some text:
+If you now use the `o` command and type new text:
 
 ```text
 oThat liked using Vim<Esc>
