@@ -199,7 +199,7 @@ To ensure file system data safety, Rsvim waits for all the ongoing file write op
 :::tip
 Question:
 
-You would ask: where is the `:w` and `:q` ex command? Aren't the original Vim's ex commands much shorter and easier for users?
+You would ask: where is the `:w` and `:q` ex command? Aren't they much shorter and easier for users?
 
 Answer:
 
