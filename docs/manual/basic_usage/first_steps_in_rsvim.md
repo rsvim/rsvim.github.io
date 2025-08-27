@@ -179,8 +179,8 @@ For example, to save the current contents to file system, you type:
 :::note
 The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
 
-[`Rsvim.buf.current()`](/docs/api/rsvim/classes/RsvimBuf#current) returns the current buffer ID, and
-[`Rsvim.buf.writeSync()`](/docs/api/rsvim/classes/RsvimBuf#writesync) will write the buffer's (specified by the ID) contents to file system.
+[`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns the current buffer ID, and
+[`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) will write the buffer's (specified by the ID) contents to file system.
 :::
 
 Then you can verify the file content in file system.
