@@ -32,7 +32,7 @@ function HomepageHeader() {
               <div className="col col--2">
                 <Link
                   className="button button--secondary button--lg padding-horiz-sm"
-                  to="/docs/api/intro"
+                  to="/docs/api/introduction"
                 >
                   API References
                 </Link>
