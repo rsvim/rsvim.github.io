@@ -52,7 +52,7 @@ If all above failed, finally tries to detect:
 
 1. Whether a `$HOME/.rsvim.{js,ts}` file exists.
 
-If yes, Rsvim will use it as the configuration entry and `$HOME/.rsvim` as the configuration home, and create a `$HOME/.rsvim` directory if does not exist.
+If yes, Rsvim uses it as the entry point and `$HOME/.rsvim` as the configuration home, and create a directory if `$HOME/.rsvim` doesn't exist.
 
 ## 4. Initializing TUI
 
