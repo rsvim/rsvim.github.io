@@ -178,9 +178,12 @@ For example, to save the current contents to file system, you type:
 
 :::note
 The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
+
+[`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns the current buffer ID, and
+[`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) will write the buffer's (specified by the ID) contents to file system.
 :::
 
-The `Rsvim.buf.current()` returns the current buffer ID, and `Rsvim.buf.writeSync()` will write the buffer's (specified by the ID) contents to file system.
+Then you can verify the file content in file system.
 
 ## Quit
 
@@ -194,4 +197,17 @@ After file is been saved, you can quit Rsvim by typing:
 The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
 :::
 
-To ensure file system data safety, Rsvim waits for all the ongoing file write operations to complete before actually exiting, however any new write requests will be rejected.
+Then you can go on with other works.
+
+:::tip[Question]
+You would ask: where is the `:w` and `:q` ex command? Aren't they much shorter and easier for users?
+
+Yes, `:w` and `:q` are better than `:js` with super long expressions.
+In current version `v0.1.1`, only one builtin ex command `:js` is provided, users are limited to do it in this way.
+
+This is mostly because Rsvim won't embed any builtin plugins, include ex commands (i.e. `:w`, `:q`, etc).
+On the contrary, Rsvim will provide APIs such as `Rsvim.cmd.create()` to allow user create their own ex commands.
+
+As a supplement to the editing experience, Rsvim will provide an official plugin (say, "ex.rsvim") to create all the commands
+that are compatible with Vim/Neovim, include `:w`, `:q`, etc.
+:::
