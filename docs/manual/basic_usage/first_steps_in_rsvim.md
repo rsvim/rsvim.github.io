@@ -126,7 +126,7 @@ a!!!<Esc>
 ```
 
 :::note
-The initial `a` command indicates appending, the last `<Esc>` indicates returning back to normal mode
+The initial `a` indicates appending, the last `<Esc>` indicates returning back to normal mode
 :::
 
 The result is:
