@@ -46,7 +46,7 @@ Found programming UNIX a hurdle
 The initial `i` indicates starting insert mode
 :::
 
-After typing "turtle" (last word in the first line), press `<Enter>` key to start a new line. Finally press `<Esc>` key to exit insert mode and go back to normal mode. Now you should have 2 lines of text in your Rsvim window:
+After typing "turtle" (last word in first line), you press `<Enter>` key to start a new line. Finally you press `<Esc>` key to exit insert mode and go back to normal mode. Now you have 2 lines of text in your window:
 
 ```text
 +---------------------------------------+
