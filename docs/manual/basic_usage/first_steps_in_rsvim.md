@@ -191,13 +191,13 @@ After saving the file, you exit Rsvim by typing:
 The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
 :::
 
-Then you can go on with other works.
+Now you can go on with other works.
 
 :::tip[Question]
-Where are the `:w` and `:q` EX commands? Aren't they much shorter and easier for users?
+Where are the `:w` and `:q` ex commands? Aren't they much shorter and easier for users?
 
 Yes, `:w` and `:q` are better than `:js` with super long expressions.
-Currently (`v0.1.1`), only one builtin ex command `:js` is provided, and the users are limited to do it this way.
+Currently (`v0.1.1`), only one builtin ex command `:js` is provided, users are limited to do it this way.
 
 This is mostly because Rsvim will not embed any builtin plugins, including the EX commands (i.e. `:w`, `:q`, etc).
 On the contrary, Rsvim will provide APIs such as `Rsvim.cmd.create()` to allow user create their own ex commands.
