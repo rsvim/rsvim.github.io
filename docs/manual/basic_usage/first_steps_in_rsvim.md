@@ -94,7 +94,7 @@ iA young <Esc>
 ```
 
 :::note
-The initial `i` command indicates starting insert mode; the last `<Esc>` key indicates returning back to normal mode.
+The initial `i` indicates starting insert mode, the last `<Esc>` key indicates returning back to normal mode
 :::
 
 It starts insert mode (by `i`), and inserts words "A young ", then exits insert mode (by `<Esc>`). The result is:
