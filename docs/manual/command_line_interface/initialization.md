@@ -6,7 +6,7 @@ sidebar_position: 2
 
 At initialization/startup, Rsvim proceeds below steps in order:
 
-## 1. Loading Environment Variables
+## 1. Load Environment Variables
 
 Reads the environment variables and initialize all internal constants.
 
