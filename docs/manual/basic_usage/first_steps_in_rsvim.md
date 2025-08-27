@@ -151,7 +151,7 @@ oThat liked using Vim<Esc>
 ```
 
 :::note
-The initial `o` command indicates opening up a new line; the last `<Esc>` key indicates returning back to normal mode.
+The initial `o` indicates opening up a new line, the last `<Esc>` indicates returning back to normal mode
 :::
 
 The result should be:
