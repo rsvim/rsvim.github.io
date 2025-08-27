@@ -200,7 +200,7 @@ The 1st character `:` indicates starting the "command-line" mode ("ex-command" v
 Then you can go on with other works.
 
 :::tip[Question]
-You would ask: where is the `:w` and `:q` ex command? Aren't they much shorter and easier for users?
+Where is the `:w` and `:q` ex command? Aren't they much shorter and easier for users?
 
 Yes, `:w` and `:q` are better than `:js` with super long expressions.
 In current version `v0.1.1`, only one builtin ex command `:js` is provided, users are limited to do it in this way.
