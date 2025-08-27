@@ -43,7 +43,7 @@ Found programming UNIX a hurdle
 ```
 
 :::note
-The initial `i` command indicates the command to enter insert mode.
+The initial `i` indicates starting insert mode
 :::
 
 After typing "turtle" (last word in the first line), press `<Enter>` key to start a new line. Finally press `<Esc>` key to exit insert mode and go back to normal mode. Now you should have 2 lines of text in your Rsvim window:
