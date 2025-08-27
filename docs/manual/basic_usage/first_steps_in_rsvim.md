@@ -113,7 +113,7 @@ It starts insert mode (by `i`), and inserts words "A young ", then exits insert 
 
 ## Appending
 
-The `i` command starts inserting under the cursor, while the `a` command starts inserting after the cursor. For example, to append "!!!" at the end of this line:
+The `i` command starts inserting under the cursor, while the `a` command starts inserting after the cursor. For example, append "!!!" at the end of this line:
 
 ```text
 and that's not saying much for the turtle
