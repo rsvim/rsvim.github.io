@@ -29,7 +29,7 @@ Rsvim starts editing a file called "file.txt", because this is a new file, you g
 '#' is the cursor position
 :::
 
-When Rsvim starts, it by default opens a file buffer and a window. A file buffer loads the file content from file system into Rsvim's memory, a window is a text view for the binded buffer. If no file name(s) are provided, Rsvim opens an empty file buffer without file name. If the specific file doesn't exist in file system, Rsvim opens an empty file buffer with the specific file name.
+When Rsvim starts, it by default opens a file buffer and a window. A file buffer loads the file content from file system into memory, a window is a text view for the binded buffer. If no file name(s) are provided, Rsvim opens an empty file buffer without file name. If the specific file doesn't exist in file system, Rsvim opens an empty file buffer with the specific file name.
 
 :::tip
 There are also other buffer types for different purposes.
