@@ -26,7 +26,7 @@ Rsvim uses a local directory as its configuration's home, there're several locat
 
 Rsvim first tries to use `$RSVIM_CONFIG_HOME` as its configuration home directory, if the environment variable exists.
 
-If the `$RSVIM_CONFIG_HOME` variable exists, but the directory path doesn't exist in file system, Rsvim will create a new directory for it.
+If the `$RSVIM_CONFIG_HOME` variable exists, but the directory path doesn't exist in file system, Rsvim will create a directory for it.
 
 ### `$XDG_CONFIG_HOME/rsvim`
 
