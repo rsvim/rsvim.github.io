@@ -39,3 +39,18 @@ Then Rsvim tries to detect the [FreeDesktop Directory Specification](https://spe
 
 1. Whether `$XDG_CONFIG_HOME/rsvim` exists as a directory path in file system.
 2. Whether a `rsvim.{js,ts}` file exists in the directory.
+
+:::tip
+
+- On Linux, it is `$HOME/.config/rsvim`.
+- On MacOS, it is `$HOME/Library/Application Support/rsvim`.
+- On Windows, it is `%USERPROFILE%/AppData/Roaming/rsvim`.
+
+:::
+
+### `$HOME/.rsvim`
+
+Finally Rsvim tries to detect:
+
+1. Whether `$XDG_CONFIG_HOME/rsvim` exists as a directory path in file system.
+2. Whether a `rsvim.{js,ts}` file exists in the directory.
