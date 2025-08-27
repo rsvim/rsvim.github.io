@@ -4,25 +4,25 @@ sidebar_position: 2
 
 # Installation
 
-## Download from GitHub Release
+## Download from GitHub Releases
 
-Please download pre-built from GitHub release:
+Pre-builts are available on GitHub Releases:
 
 https://github.com/rsvim/rsvim/releases
 
-To get nightly pre-built, please download the `nightly` pre-release:
+For nightly pre-builts, download the `nightly` pre-release:
 
 https://github.com/rsvim/rsvim/releases/tag/nightly
 
-## Build From Source
+## Build from source
 
-With latest stable rustc/cargo, you can build with:
+With the latest stable `rustc`/`cargo`, build with:
 
 ```bash
 cargo install --locked rsvim
 ```
 
-To get the latest updates, build with git source on `main` branch:
+For the latest updates, build with the `main` branch:
 
 ```bash
 cargo install --locked rsvim --git https://github.com/rsvim/rsvim.git --branch main

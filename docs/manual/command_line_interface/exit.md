@@ -4,17 +4,17 @@ sidebar_position: 3
 
 # Exit
 
-As Rsvim runs asynchronously just like a HTTP API service, it handles multiple tasks by tokio's async/multithreaded runtime. User's keyboard/mouse event is only one of the requests sending to it. When user executes [`:js Rsvim.rt.exit();`](/docs/next/api/rsvim/classes/RsvimRt#exit) command, it actually only sends a "Exit" request to ask Rsvim to exit.
+As Rsvim runs asynchronously just like a HTTP API service, it handles multiple tasks by tokio's async/multithreaded runtime. User's keyboard and mouse events are only one of the requests sending to it. When user executes [`:js Rsvim.rt.exit();`](/docs/next/api/rsvim/classes/RsvimRt#exit) command, it just sends a "Exit" request to ask Rsvim to exit.
 
-Rsvim proceeds below steps in order:
+Rsvim proceeds the steps below in order:
 
-## 1. Wait for Blocked Tasks Complete
+## 1. Wait for blocked tasks complete
 
 All tasks inside Rsvim are split into two kinds:
 
-1. Blocked Tasks: Only a few critical tasks are blocked tasks, such as: write file. To ensure data safety, Rsvim waits for all the ongoing critical tasks to complete before actually exiting, however any new task requests will be rejected.
-2. Detached Tasks: Most other tasks are detached tasks, such as: open file, edit buffer, cursor motion, etc. They will be cancelled and discarded, since the results are no longer important.
+1. Blocked tasks: Only a few critical tasks are blocked tasks, such as: writing file. To ensure data safety, Rsvim waits for all the ongoing critical tasks to complete before actually exiting, however any new task requests will be rejected.
+2. Detached tasks: Most other tasks are detached tasks, such as: opening file, editing buffer, cursor motion, etc. They will be cancelled and discarded, since the results no longer matters.
 
-## 2. Recover Terminal
+## 2. Recover terminal
 
 Terminal goes back to normal mode, and exit the editor process.
