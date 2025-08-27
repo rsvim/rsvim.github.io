@@ -56,6 +56,6 @@ If yes, Rsvim uses it as the entry point and `$HOME/.rsvim` as the configuration
 
 ## 4. Initialize TUI
 
-Once all the configurations have been sourced, terminal goes into [raw mode](https://en.wikipedia.org/wiki/Terminal_mode) and a default window is created, bound with the default buffer.
+Once all configurations are been set, terminal goes into [raw mode](https://en.wikipedia.org/wiki/Terminal_mode) and a default window is created, bound with the default buffer.
 
-If the default buffer is associated with an existing file, the window shows the file content from the first line, with cursor placed at the top-left corner of the window (i.e. the first character of the file content) in normal mode.
+If default buffer is associated with an existing file, the window shows the file content from the first line, cursor is placed at the top-left corner of the window (i.e. the first character of the file content) in normal mode.
