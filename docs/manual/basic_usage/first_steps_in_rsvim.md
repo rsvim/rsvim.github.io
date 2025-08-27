@@ -12,7 +12,7 @@ To start Rsvim, open terminal and enter this command:
 rsvim file.txt
 ```
 
-Rsvim starts editing a file called "file.txt". If this is a new file, you will get a blank window. The terminal will look like:
+Rsvim starts editing a file called "file.txt". Because this is a new file, you get a blank window. The terminal will look like:
 
 ```text
 +---------------------------------------+
@@ -26,7 +26,7 @@ Rsvim starts editing a file called "file.txt". If this is a new file, you will g
 ```
 
 :::note
-'#' is the cursor position.
+'#' is the cursor position
 :::
 
 When Rsvim starts, it by default opens a file buffer and a window. A file buffer loads the file content from the file system into Rsvim's memory. A window is a text view for the binded buffer. With no file(s) provided, Rsvim opens an empty file buffer without file name. If the specific file does not exist in the file system, Rsvim opens an empty file buffer with the specific file name.
