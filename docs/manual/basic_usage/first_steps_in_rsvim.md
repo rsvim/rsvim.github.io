@@ -154,7 +154,7 @@ oThat liked using Vim<Esc>
 The initial `o` indicates opening up a new line, the last `<Esc>` indicates returning back to normal mode
 :::
 
-The result should be:
+The result is:
 
 ```text {2}
 A very intelligent turtle
