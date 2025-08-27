@@ -15,7 +15,7 @@ Reads the environment variables and initialize all internal constants.
 Options and file names from the `rsvim` command line are inspected. Several kinds of use cases are:
 
 - When special options are provided (i.e. `-h`/`--help`, `-V`/`--version`), Rsvim will print some useful information and exit.
-- When file names are provided, Rsvim will read them, create a buffer for each one and associate it to the corresponding file name. Rsvim chooses the first file as its default buffer, which will be bound to the default window on TUI.
+- When file names are provided, Rsvim will read them, create a buffer for each one and associate it to the corresponding file name. Rsvim chooses the first file as its default buffer, which will be bound to the default window when TUI initialize.
 - If no file name is provided, Rsvim will create a default empty buffer, associated with no file name.
 
 ## 3. Loading configuration script
