@@ -8,7 +8,7 @@ As Rsvim runs asynchronously just like a HTTP API service, it handles multiple t
 
 Rsvim proceeds the steps below in order:
 
-## 1. Wait for blocked tasks complete
+## 1. Wait for Blocked Tasks Complete
 
 All tasks inside Rsvim are split into two kinds:
 
