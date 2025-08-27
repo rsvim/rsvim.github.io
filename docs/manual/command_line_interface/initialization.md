@@ -62,4 +62,4 @@ Finally, if all above locations failed, Rsvim tries to detect:
 
 1. Whether a `$HOME/.rsvim.{js,ts}` file exists.
 
-If it exists, Rsvim will use it as configuration entry, use `$HOME/.rsvim` as configuration home, and create a new directory if `$HOME/.rsvim` doesn't exist.
+If the file exists, Rsvim will use it as configuration entry, use `$HOME/.rsvim` as configuration home, and create a new directory if `$HOME/.rsvim` doesn't exist.
