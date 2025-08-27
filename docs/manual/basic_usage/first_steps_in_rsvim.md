@@ -173,8 +173,8 @@ All the editings only change the in-memory buffer content, they will not be save
 :::note
 The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command, and returning back to normal mode
 
-- [`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns the ID of the current buffer
-- [`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) writes the buffer's (specified by the ID) to file system
+- [`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns current buffer ID
+- [`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) writes the buffer (specified by the ID) to file system
   :::
 
 Then you can verify the file content in file system.
