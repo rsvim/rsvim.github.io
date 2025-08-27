@@ -44,7 +44,7 @@ Then Rsvim tries to detect the [FreeDesktop Directory Specification](https://spe
 
 - On Linux, it is `$HOME/.config/rsvim`.
 - On MacOS, it is `$HOME/Library/Application Support/rsvim`.
-- On Windows, it is `%USERPROFILE%/AppData/Roaming/rsvim`.
+- On Windows, it is `%USERPROFILE%\AppData\Roaming\rsvim` (or `%APPDATA%\rsvim`).
 
 :::
 
