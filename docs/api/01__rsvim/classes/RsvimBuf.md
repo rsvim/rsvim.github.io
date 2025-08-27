@@ -18,7 +18,7 @@ current(): number;
 Get current buffer's ID.
 
 The "current" buffer is the buffer that the window where your cursor is
-located is binded to. See RsvimWin.
+located is binded to.
 
 :::warning
 When the editor is not initialized, i.e. there's no buffer/window created. It
