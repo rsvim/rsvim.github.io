@@ -18,15 +18,10 @@ const cmd = Rsvim.cmd;
 ### echo()
 
 ```ts
-echo(message): number;
+echo(message): void;
 ```
 
 Echo message to the command-line.
-
-:::warning
-It will not succeed until the editor is initialized since the TUI is still not created.
-When editor is not initialized, it will not print anything to the terminal.
-:::
 
 #### Parameters
 
@@ -62,10 +57,7 @@ and `undefined`.
 
 #### Returns
 
-`number`
-
-It returns `0` if echo successfully, otherwise it returns `-1` if failed
-(before the editor is initialized).
+`void`
 
 #### Throws
 
@@ -74,5 +66,5 @@ Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 #### Example
 
 ```javascript
-const result = Rsvim.cmd.echo("Hello Rsvim!");
+Rsvim.cmd.echo("Hello Rsvim!");
 ```
