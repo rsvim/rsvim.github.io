@@ -177,7 +177,7 @@ The initial `:` indicates starting the "command-line" mode, the last `<Enter>` i
 - [`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) writes the buffer (specified by ID) to file system synchronously
   :::
 
-Then you can verify the file content in file system.
+Now you verify the file changes in file system.
 
 ## Quit
 
