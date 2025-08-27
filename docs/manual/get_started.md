@@ -14,7 +14,7 @@ What makes Rsvim distinguishes from other two:
 
 - With tokio's async/multithreaded runtime, terminal keyboard/mouse events and contents output are processed asynchronously, along with all various IO, network and CPU bounding tasks.
 - JavaScript's `Promise`, `async`/`await` is builtin supported by tokio's async runtime as well, multiple files configuration are structured via [ESCM modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html) `import` keyword implementation.
-- Typescript can be parsed and transformed into javascripts and executed by V8 engine on the fly.
+- Typescript is parsed and transformed into javascripts and executed by V8 engine on the fly.
 - (**TODO**) [Npm package](https://www.npmjs.com/) is also accepted as a compatible plugin schema, then npm registry can be leveraged to publish/upgrade/distribute all the plugins.
 
 From one perspective, you can think of javascript/typescript as a configuration language for Rsvim. In another, you can think of Rsvim as a javascript-based runtime just like [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), but highly specialized for text editor: `stdin` is for receiving terminal keyboard/mouse events, `stdout` is for rendering text contents.
