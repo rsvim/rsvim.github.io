@@ -19,4 +19,6 @@ What makes Rsvim distinguishes from other two Vim editors:
 
 From one perspective, you can think of javascript/typescript as a configuration language for Rsvim. In another, you can think of Rsvim as a javascript-based runtime just like [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), but highly specialized for text editor: `stdin` is for receiving terminal keyboard/mouse events, `stdout` is for rendering text contents.
 
+100% perfect compatible with existing [Vimscript](https://en.wikipedia.org/wiki/Vimscript) community (for Vim), [Lua](https://neovim.io/doc/user/lua.html) community (for Neovim) is unrealistic, break changes are expected and unavoidable.
+
 Rsvim is built by the [rsvim](https://github.com/rsvim) community. The project is hosted on [GitHub](https://github.com/rsvim/rsvim), documentation is hosted on [GitHub Page](https://rsvim.github.io/). Both Rsvim and its documentation are licensed under [Vim License](https://github.com/rsvim/rsvim/blob/main/LICENSE.txt), same with the [Vim](https://github.com/vim/vim) project.
