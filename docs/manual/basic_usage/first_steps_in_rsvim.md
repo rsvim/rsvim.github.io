@@ -12,7 +12,7 @@ To start Rsvim, open terminal and enter this command:
 rsvim file.txt
 ```
 
-Rsvim starts editing a file called "file.txt". Because this is a new file, you get a blank window. The terminal will look like:
+Rsvim starts editing a file called "file.txt", because this is a new file, you get a blank window. The terminal will look like:
 
 ```text
 +---------------------------------------+
