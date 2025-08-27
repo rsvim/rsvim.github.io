@@ -6,11 +6,11 @@ sidebar_position: 2
 
 ## Download from GitHub Releases
 
-Pre-builts are available on GitHub Releases:
+Download pre-builts from GitHub releases:
 
 https://github.com/rsvim/rsvim/releases
 
-For nightly pre-builts, download the `nightly` pre-release:
+For nightly pre-builts, download the `nightly` tag pre-release:
 
 https://github.com/rsvim/rsvim/releases/tag/nightly
 
