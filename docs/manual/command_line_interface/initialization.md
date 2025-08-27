@@ -6,14 +6,30 @@ sidebar_position: 1
 
 At initialization/startup, Rsvim proceeds below steps in order:
 
-## Load Environment Variables
+## 1. Load Environment Variables
 
-Rsvim reads the environment variables and initialize all the constant variables inside itself.
+Reads the environment variables and initialize all the constant variables inside itself.
 
-## Process Cli Arguments
+## 2. Process Cli Arguments
 
-The options and file names from the `rsvim` command line are inspected. Several kinds of use cases are:
+Options and file names from the `rsvim` command line are inspected. Several kinds of use cases are:
 
 - When special options are provided (i.e. `-h`/`--help`, `-V`/`--version`), Rsvim will print some useful information and exit.
 - When file names are provided, Rsvim will read them, create a buffer for each one and associate it to the corresponding file name.
 - If no file name is provided, Rsvim will create a default empty buffer, associated with no file name.
+
+## 3. Load Configuration Script
+
+Rsvim provides several configuration home locations for user to choose:
+
+### `$RSVIM_CONFIG_HOME`
+
+Rsvim tries to use `$RSVIM_CONFIG_HOME` as its configuration home directory, if the environment variable exists.
+
+If the `$RSVIM_CONFIG_HOME` path doesn't exist in file system, Rsvim will create a new directory for it.
+
+Note: This environment variable has the highest priority among all other options.
+
+### `$XDG_CONFIG_HOME/rsvim`
+
+[FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) is also respected, it uses `$XDG_CONFIG_HOME/rsvim`
