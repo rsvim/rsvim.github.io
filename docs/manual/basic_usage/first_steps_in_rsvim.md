@@ -73,7 +73,7 @@ At first, it may appear that these commands were chosen at random. After all, wh
 
 ## Deleting Characters
 
-To delete a character, move the cursor over it and type "i" to start insert, then type "backspace" to delete a character on the left, or type "delete" to delete a character on the right. For example, move cursor to the beginning of the first line, type "i" to start insert mode, then type "delete" 7 times to delete "A very ". The result should look like:
+To delete a character, move the cursor over it and type "i" to start insert, then type "backspace" to delete a character on the left, or type "delete" to delete a character on the right. For example, move cursor to the beginning of the first line, type "i" to start insert mode, then type "delete" for 7 times to delete "A very ". The result should look like:
 
 ```text
 +---------------------------------------+
