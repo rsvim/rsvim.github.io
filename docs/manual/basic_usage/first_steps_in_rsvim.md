@@ -173,7 +173,7 @@ All the editings only change the in-memory text contents inside Rsvim editor, th
 :::tip
 There are actually 3 variants in "command-line" mode:
 
-- Ex command variant: type the ":" to start inserting any commands, end with "<Enter>" to send to editor, or type "<Esc>" to cancel.
+- Ex command variant: type the ":" to start inserting any commands, end with "\<Enter\>" to send to editor, or type "\<Esc\>" to cancel.
 - Search forward variant: type the "/" to start searching forward in current buffer.
 - Search backward variant: type the "?" to start searching backward in current buffer.
 
