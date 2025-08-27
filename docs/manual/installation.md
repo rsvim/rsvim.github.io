@@ -22,7 +22,7 @@ Build with `cargo`:
 cargo install --locked rsvim
 ```
 
-For the latest updates, build with the `main` branch:
+For the latest updates, build with `main` branch:
 
 ```bash
 cargo install --locked rsvim --git https://github.com/rsvim/rsvim.git --branch main
