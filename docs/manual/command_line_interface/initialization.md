@@ -22,7 +22,7 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 
 Rsvim chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) script file as its configuration entry.
 
-Rsvim will execute the `rsvim.{js,ts}` configuration entry as a normal javascript script.
+Then executes the `rsvim.{js,ts}` configuration entry as a normal javascript script.
 
 There're several locations for user to choose:
 
