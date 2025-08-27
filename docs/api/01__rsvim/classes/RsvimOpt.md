@@ -22,7 +22,7 @@ Get the _expand-tab_ option. Local to Buffer.
 When in insert mode, inserts [spaces](https://en.wikipedia.org/wiki/Whitespace_character) (ASCII `32`)
 instead of a [horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
 
-See [shiftWidth](#shiftwidth) to get the number of spaces when inserting spaces.
+See [shiftWidth](#shiftwidth) to get the number of spaces when inserting.
 
 ##### Default Value
 
