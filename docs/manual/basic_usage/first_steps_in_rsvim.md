@@ -62,7 +62,7 @@ After typing "turtle" (last word in first line), you press `<Enter>` key to star
 
 ## Moving Around
 
-After you return to normal mode, you can move around using these keys:
+After you return to normal mode, you can move around by using these keys:
 
 - `h` and `left`
 - `j` and `down`
