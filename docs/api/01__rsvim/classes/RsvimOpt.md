@@ -188,7 +188,7 @@ The _file-encoding_ option.
 #### Get Signature
 
 ```ts
-get fileFormat(): FileFormatOption;
+get fileFormat(): "dos" | "unix" | "mac";
 ```
 
 Get the _file-format_ option. Local to Buffer.
@@ -221,7 +221,7 @@ const value = Rsvim.opt.fileFormat;
 
 ##### Returns
 
-`FileFormatOption`
+`"dos"` \| `"unix"` \| `"mac"`
 
 #### Set Signature
 
@@ -261,7 +261,7 @@ Rsvim.opt.fileFormat = "unix";
 </td>
 <td>
 
-`FileFormatOption`
+`"dos"` \| `"unix"` \| `"mac"`
 
 </td>
 <td>
