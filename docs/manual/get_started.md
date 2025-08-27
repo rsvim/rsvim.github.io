@@ -10,7 +10,7 @@ JavaScript API references are available in [API References](/docs/api/introducti
 
 Rsvim is the Vim editor reinvented in Rust+TypeScript. It follows main features, concepts and philosophy of [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), developed with [Rust](https://www.rust-lang.org/), [Tokio](https://tokio.rs/) and [V8 JavaScript engine](https://v8.dev/), all components are redesigned/reinvented/reimplemented from scratch in a modern development approach. The most prominent one among many highlights of Rsvim is its first-class citizen support for [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) ([ECMAScript](https://developer.mozilla.org/en-US/docs/Glossary/ECMAScript)) and [TypeScript](https://www.typescriptlang.org/) as configuration script.
 
-What distinguishes Rsvim from the other two:
+What distinguishes Rsvim from other two:
 
 - Given Tokio's async multithreaded runtime, terminal input is processed asynchronously with other file I/O, network and CPU-bound tasks.
 - JavaScript `Promise`, `async`/`await` is natively handled by tokio's async tasks.
