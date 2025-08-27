@@ -8,13 +8,13 @@ As Rsvim runs asynchronously just like a HTTP API service, it handles multiple t
 
 Rsvim proceeds the steps below in order:
 
-## 1. Wait for Blocked Tasks Complete
+## 1. Wait For Blocked Tasks Complete
 
 All tasks inside Rsvim are split into two kinds:
 
-1. Blocked tasks: Only a few critical tasks are blocked tasks, such as: writing file. To ensure data safety, Rsvim waits for all the ongoing critical tasks to complete before actually exiting, however any new task requests will be rejected.
-2. Detached tasks: Most other tasks are detached tasks, such as: opening file, editing buffer, cursor motion, etc. They will be cancelled and discarded, since the results no longer matters.
+1. Blocked tasks: Only a few critical tasks are blocked tasks, such as: write file. To ensure data safety, Rsvim waits for all the ongoing critical tasks to complete before actually exiting, however any new task requests will be rejected.
+2. Detached tasks: Most other tasks are detached tasks, such as: open file, edit buffer, cursor motion, etc. They will be cancelled and discarded, since the results no longer matters.
 
-## 2. Recover terminal
+## 2. Recover Terminal
 
 Terminal goes back to normal mode, and exit the editor process.
