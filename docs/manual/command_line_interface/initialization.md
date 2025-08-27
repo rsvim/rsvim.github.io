@@ -18,7 +18,7 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 - When file names are provided, Rsvim will read them, create a buffer for each one and associate it to the corresponding file name. Rsvim chooses the first file as its default buffer, which will be bound to the default window when TUI initialize.
 - If no file name is provided, Rsvim will create a default empty buffer, associated with no file name.
 
-## 3. Loading configuration script
+## 3. Load Configuration
 
 Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) file as the entry point. This entry script is then executed to apply all configurations.
 
