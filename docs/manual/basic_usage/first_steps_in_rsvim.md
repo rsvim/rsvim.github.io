@@ -69,7 +69,7 @@ After you return to normal mode, you can move around by using these keys:
 - `k` and `up`
 - `l` and `right`
 
-It may appear that these commands were chosen at random. After all, who ever heard of using "l" for right? But actually, there is a very good reason for these choices: Moving the cursor is the most common thing you do in an editor, and these keys are on the [home row](https://simple.wikipedia.org/wiki/Home_row) of your right hand, assuming you are on the QWERTY keyboard layout. In other words, these commands are placed where you can type them the fastest (especially when you type with 10 fingers).
+At first, it may appear that these commands were chosen at random. After all, who ever heard of using "l" for right? But actually, there is a very good reason for these choices: Moving the cursor is the most common thing you do in an editor, and these keys are on the [home row](https://simple.wikipedia.org/wiki/Home_row) of your right hand, assuming you are on the QWERTY keyboard layout. In other words, these commands are placed where you can type them the fastest (especially when you type with 10 fingers).
 
 ## Deleting Characters
 
