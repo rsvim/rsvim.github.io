@@ -10,7 +10,7 @@ At initialization/startup, Rsvim proceeds below steps in order:
 
 Reads the environment variables and initialize all internal constants.
 
-## 2. Processing CLI Arguments
+## 2. Process CLI Arguments
 
 Options and file names from the `rsvim` command line are inspected. Several kinds of use cases are:
 
