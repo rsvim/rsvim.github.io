@@ -164,7 +164,7 @@ Found programming UNIX a hurdle
 
 ## Save Your Work
 
-All the editings only change the in-memory buffer content, they will not be saved to file system until you execute so. For example, once you are in normal mode, to save the current contents to the file system, type:
+All the editings only change the in-memory buffer content, they will not be saved to file system until you execute so. For example, once you are in normal mode, to save the current buffer to file system, type:
 
 ```text
 :js Rsvim.buf.writeSync(Rsvim.buf.current());<Enter>
