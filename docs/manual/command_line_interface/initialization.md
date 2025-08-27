@@ -54,7 +54,7 @@ If all above failed, finally tries to detect:
 
 If yes, Rsvim uses it as the entry point and `$HOME/.rsvim` as the configuration home, and create a directory if `$HOME/.rsvim` doesn't exist.
 
-## 4. Initializing TUI
+## 4. Initialize TUI
 
 Once all the configurations have been sourced, terminal goes into [raw mode](https://en.wikipedia.org/wiki/Terminal_mode) and a default window is created, bound with the default buffer.
 
