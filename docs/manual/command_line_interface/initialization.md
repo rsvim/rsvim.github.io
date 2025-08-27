@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Initialization
@@ -25,8 +25,7 @@ Rsvim provides several configuration home locations for user to choose:
 ### `$RSVIM_CONFIG_HOME`
 
 Rsvim tries to use `$RSVIM_CONFIG_HOME` as its configuration home directory, if the environment variable exists.
-
-If the `$RSVIM_CONFIG_HOME` path doesn't exist in file system, Rsvim will create a new directory for it.
+If the `$RSVIM_CONFIG_HOME` directory doesn't exist in file system, Rsvim will create a new directory for it.
 
 Note: This environment variable has the highest priority among all other options.
 
