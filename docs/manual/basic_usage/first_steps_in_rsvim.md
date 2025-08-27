@@ -203,5 +203,5 @@ Because Rsvim will not embed any builtin plugins, including the ex commands (`:w
 On the contrary, Rsvim will provide APIs such as `Rsvim.cmd.create()` to allow user create their own ex commands.
 
 As a supplement to the editing experience, Rsvim will provide an official plugin (say, "ex.rsvim") to recreate all the commands
-compatible with Vim/Neovim, including `:w`, `:q`, etc.
+compatible with Vim/Neovim, including `:w`, `:q`, `:echo`, etc.
 :::
