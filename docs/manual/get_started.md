@@ -5,21 +5,21 @@ sidebar_position: 1
 # Get Started
 
 :::tip
-If you need JavaScript API references you can find them in [API References](/docs/api/introduction).
+JavaScript API references are available in [API References](/docs/api/introduction).
 :::
 
-Rsvim is the Vim editor reinvented in Rust+TypeScript. It follows main features, concepts and philosophy of [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), developed with [rust](https://www.rust-lang.org/), [tokio](https://tokio.rs/) and [V8](https://v8.dev/) javascript engine. All components are built from scratch and redesigned/reinvented with a modern development approach rather than copy-paste. The most prominent one among the many highlights of Rsvim is: it uses [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (or say, [ECMAScript](https://developer.mozilla.org/en-US/docs/Glossary/ECMAScript)) and [TypeScript](https://www.typescriptlang.org/) as its configuration script languages with first-class citizen support.
+Rsvim is the Vim editor reinvented in Rust+TypeScript. It follows main features, concepts and philosophy of [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), developed with [Rust](https://www.rust-lang.org/), [Tokio](https://tokio.rs/) and [V8 JavaScript engine](https://v8.dev/), all components are redesigned/reinvented/reimplemented from scratch in a modern development approach. The most prominent one among many highlights of Rsvim is its first-class citizen support for [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) ([ECMAScript](https://developer.mozilla.org/en-US/docs/Glossary/ECMAScript)) and [TypeScript](https://www.typescriptlang.org/) as configuration script.
 
-What makes Rsvim distinguishes from other two:
+What distinguishes Rsvim from other two:
 
-- With tokio's async/multithreaded runtime, terminal IO are processed asynchronously, along with all various file IO, network and CPU bounding tasks.
-- JavaScript's `Promise`, `async`/`await` is builtin supported by tokio's async tasks as well.
-- Multi-file packages and plugins are supported via [ECMA modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html), i.e. the `import` keyword implementation.
-- TypeScript is parsed and transformed into javascripts and executed by V8 engine on the fly.
-- (**TODO**) [Npm package](https://www.npmjs.com/) is also accepted as a compatible plugin schema, then npm registry can be leveraged to publish/upgrade/distribute all the plugins.
+- With Tokio's async multithreaded runtime, terminal input is processed asynchronously along with all various file I/O, network and CPU-bound tasks.
+- JavaScript `Promise`, `async`/`await` is natively handled by tokio's async tasks.
+- Multi-file modules and plugins are structured via [ESCM modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html) `import` keyword implementation.
+- TypeScript is parsed and transformed into JavaScript and executed by V8 engine on the fly.
+- (**TODO**) [NPM package](https://www.npmjs.com/) is accepted as a compatible plugin schema, thereby the npm registry can be leveraged to publish/upgrade/distribute all plugins.
 
-From one perspective, you can think of javascript/typescript as a configuration language for Rsvim. In another, you can think of Rsvim as a javascript-based runtime just like [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), but highly specialized for text editor: `stdin` is for receiving terminal keyboard/mouse events, `stdout` is for rendering text contents.
+From one perspective, you can conceptualise javascript and typescript as configuration languages for Rsvim. In another, Rsvim can be treat as a highly specialised javascript-based runtime akin to [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), but purpose-built for text editor: `stdin` for receiving terminal inputs, `stdout` for rendering the interface.
 
-100% perfect compatible with existing [Vimscript](https://en.wikipedia.org/wiki/Vimscript) community (for Vim), [Lua](https://neovim.io/doc/user/lua.html) community (for Neovim) is unrealistic, break changes are expected and unavoidable.
+Perfect compatibility with existing [Vimscript](https://en.wikipedia.org/wiki/Vimscript) community (for Vim) and [Lua](https://neovim.io/doc/user/lua.html) community (for Neovim) is unrealistic, breaking changes are expected and unavoidable.
 
-Rsvim is built by the [rsvim](https://github.com/rsvim) community. The project is hosted on [GitHub](https://github.com/rsvim/rsvim), documentation is hosted on [GitHub Page](https://rsvim.github.io/). Both Rsvim and its documentation are licensed under [Vim License](https://github.com/rsvim/rsvim/blob/main/LICENSE.txt), same with the [Vim](https://github.com/vim/vim) project.
+Rsvim is developed by the [rsvim](https://github.com/rsvim) community. The project is hosted on [GitHub](https://github.com/rsvim/rsvim), with documentation available on [GitHub Pages](https://rsvim.github.io/). Both are licensed under [Vim License](https://github.com/rsvim/rsvim/blob/main/LICENSE.txt) in accordance with the [Vim](https://github.com/vim/vim) project.

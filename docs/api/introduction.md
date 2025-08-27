@@ -5,7 +5,7 @@ sidebar_position: 1
 # Introduction
 
 :::tip
-If you need the Rsvim manuals/usage you can find them in [User Manual](/docs/manual/get_started).
+Manuals and usages are available in [User Manual](/docs/manual/get_started).
 :::
 
 For most general script programming languages such as [python](https://www.python.org/), they provide builtin types/classes/functions (for example [`len`](https://docs.python.org/3/library/functions.html#len) and standard library (for example [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime). Javascript runtime plays a similar role, the difference is the js engine is provided by a third-party library, i.e. the **V8** js engine. Js engine covers the [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/) standard, while js runtimes provide a standard library, schedules async tasks within event loop, and fill in many other gaps. The standard library mainly includes:

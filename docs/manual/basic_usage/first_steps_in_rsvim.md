@@ -33,7 +33,7 @@ When Rsvim starts, it by default opens a file buffer and a window. A file buffer
 
 ## Inserting Text
 
-Rsvim is a modal editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode. The 2 basic modes are called "normal" mode and "insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
+Rsvim is a modal editor, which means the editor behaves differently, depending on which mode you are in. At any given time, the editor would be in exactly one mode. The 2 basic modes are called "normal" mode and "insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
 
 After Rsvim just started, it will be in normal mode. To start insert mode, you type the "i" command ("i" is for "insert"). Then you can insert text, it will be inserted into the file buffer on current window where the cursor is in. The file on file system won't be written unless you saved the file buffer. Let's enter the programmer's [limerick](https://vimhelp.org/usr_02.txt.html#02.2):
 
@@ -43,10 +43,10 @@ Found programming UNIX a hurdle
 ```
 
 :::note
-The 1st character `i` indicates starting insert mode
+The initial `i` indicates starting insert mode
 :::
 
-After typing "turtle" (last word in 1st line), you press the `<Enter>` key to start a new line. Finally you press the `<Esc>` key to exit insert mode and go back to normal mode. Now you have 2 lines of text in your window:
+After typing "turtle" (last word in first line), you press `<Enter>` key to start a new line. Finally you press `<Esc>` key to exit insert mode and go back to normal mode. Now you have 2 lines of text in your window:
 
 ```text
 +---------------------------------------+
@@ -69,11 +69,11 @@ After you return to normal mode, you can move around by using these keys:
 - `k` and `up`
 - `l` and `right`
 
-At first, it may appear that these commands were chosen at random. After all, who ever heard of using "l" for right? But actually, there is a very good reason for these choices: Moving the cursor is the most common thing you do in an editor, and these keys are on the [home row](https://simple.wikipedia.org/wiki/Home_row) of your right hand. In other words, these commands are placed where you can type them the fastest (especially when you type with 10 fingers).
+At first, it may appear that these commands were chosen at random. After all, who ever heard of using "l" for right? But actually, there is a very good reason for these choices: Moving the cursor is the most common thing you do in an editor, and these keys are on the [home row](https://simple.wikipedia.org/wiki/Home_row) of your right hand, assuming you are on the [QWERTY](https://en.wikipedia.org/wiki/QWERTY) keyboard layout. In other words, these commands are placed where you can type them the fastest (especially when you type with 10 fingers).
 
 ## Deleting Characters
 
-To delete a character, move the cursor over it and type "i" to start insert, then type "backspace" to delete a character on the left side, or type "delete" to delete a character on the right side. For example, move cursor to the beginning of the 1st line, type "i" to start insert, then type "delete" for 7 times to delete "A very ". The result should look like:
+To delete a character, move the cursor over it and type "i" to start insert, then type "backspace" to delete a character on the left, or type "delete" to delete a character on the right. For example, move cursor to the beginning of the first line, type "i" to start insert mode, then type "delete" for 7 times to delete "A very ". The result should look like:
 
 ```text
 +---------------------------------------+
@@ -94,7 +94,7 @@ iA young <Esc>
 ```
 
 :::note
-The 1st character `i` indicates starting insert mode, the last key `<Esc>` indicates returning back to normal mode
+The initial `i` indicates starting insert mode, the last `<Esc>` key indicates returning back to normal mode
 :::
 
 It starts insert mode (by `i`), and inserts words "A young ", then exits insert mode (by `<Esc>`). The result is:
@@ -119,14 +119,14 @@ The `i` command starts inserting under the cursor, while the `a` command starts 
 and that's not saying much for the turtle
 ```
 
-Move the cursor to the end of the line, at the last `e` character, then type:
+Move the cursor to the end of the line, at the last `e` character, type:
 
 ```text
 a!!!<Esc>
 ```
 
 :::note
-The 1st character `a` indicates appending, the last key `<Esc>` indicates returning back to normal mode
+The initial `a` indicates appending, the last `<Esc>` indicates returning back to normal mode
 :::
 
 The result is:
@@ -137,7 +137,7 @@ and that's not saying much for the turtle!!!
 
 ## Opening Up a New Line
 
-The `o` command creates a new, empty line below the cursor and starts insert mode. Then you can insert the text for the new line. For example, the cursor is at the beginning of the 1st line:
+The `o` command creates a new, empty line below the cursor and starts insert mode. Then you can insert text for the new line. For example, the cursor is at the beginning of the first line:
 
 ```text
 A very intelligent turtle
@@ -151,7 +151,7 @@ oThat liked using Vim<Esc>
 ```
 
 :::note
-The 1st character `o` indicates opening up a new line, the last key `<Esc>` indicates returning back to normal mode
+The initial `o` indicates opening up a new line, the last `<Esc>` indicates returning back to normal mode
 :::
 
 The result is:
@@ -164,46 +164,44 @@ Found programming UNIX a hurdle
 
 ## Save Your Work
 
-All the editings only change the in-memory text contents inside Rsvim, they will not be saved to file system until you execute. Once you are in normal mode, type the ":" command to start the "command-line" mode.
-
-For example, to save the current contents to file system, you type:
+All the editings only change the in-memory buffer content, they will not be saved to file system until you execute so. For example, once you are in normal mode, to save the current buffer to file system, type:
 
 ```text
 :js Rsvim.buf.writeSync(Rsvim.buf.current());<Enter>
 ```
 
 :::note
-The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
+The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
 
-[`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns the current buffer ID, and
-[`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) will write the buffer's (specified by the ID) contents to file system.
-:::
+- [`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns current buffer ID
+- [`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) writes the buffer (specified by ID) to file system synchronously
+  :::
 
-Then you can verify the file content in file system.
+Now you can verify the file changes in file system.
 
 ## Quit
 
-After file is been saved, you can quit Rsvim by typing:
+After saving the file, you exit Rsvim by typing:
 
 ```text
 :js Rsvim.rt.exit();<Enter>
 ```
 
 :::note
-The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
+The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
 :::
 
-Then you can go on with other works.
+Now you can go on with other works.
 
 :::tip[Question]
-Where is the `:w` and `:q` ex command? Aren't they much shorter and easier for users?
+Where are the `:w` and `:q` ex commands? Aren't they much shorter and easier for users?
 
 Yes, `:w` and `:q` are better than `:js` with super long expressions.
-In current version `v0.1.1`, only one builtin ex command `:js` is provided, users are limited to do it in this way.
+Currently (`v0.1.1`), only one builtin ex command `:js` is provided, users are limited to do it this way.
 
-This is mostly because Rsvim won't embed any builtin plugins, include ex commands (i.e. `:w`, `:q`, etc).
+Because Rsvim will not embed any builtin plugins, including the ex commands (`:w`, `:q`, `:echo`, etc).
 On the contrary, Rsvim will provide APIs such as `Rsvim.cmd.create()` to allow user create their own ex commands.
 
-As a supplement to the editing experience, Rsvim will provide an official plugin (say, "ex.rsvim") to create all the commands
-that are compatible with Vim/Neovim, include `:w`, `:q`, etc.
+As a supplement to the editing experience, Rsvim will provide an official plugin (say, "ex.rsvim") to recreate all the commands
+compatible with Vim/Neovim, including `:w`, `:q`, `:echo`, etc.
 :::
