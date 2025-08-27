@@ -188,7 +188,7 @@ After saving the file, you exit Rsvim by typing:
 ```
 
 :::note
-The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode.
+The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
 :::
 
 Then you can go on with other works.
