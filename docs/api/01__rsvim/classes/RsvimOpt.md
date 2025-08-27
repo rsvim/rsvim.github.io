@@ -9,6 +9,92 @@ const opt = Rsvim.opt;
 
 ## Accessors
 
+### expandTab
+
+#### Get Signature
+
+```ts
+get expandTab(): boolean;
+```
+
+Get the _expand-tab_ option. Local to Buffer.
+
+When in insert mode, inserts [spaces](https://en.wikipedia.org/wiki/Whitespace_character) (ASCII `32`)
+instead of a [horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
+
+See [shiftWidth](#shiftwidth) to get the number of spaces when inserting spaces.
+
+##### Default Value
+
+`false`
+
+##### Example
+
+```javascript
+// Get the 'expand-tab' option.
+const value = Rsvim.opt.expandTab;
+```
+
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
+```ts
+set expandTab(value): void;
+```
+
+Set the _expand-tab_ option.
+
+##### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+
+##### Example
+
+```javascript
+// Set the 'expand-tab' option.
+Rsvim.opt.expandTab = true;
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+The _expand-tab_ option.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
 ### fileEncoding
 
 #### Get Signature
@@ -280,6 +366,92 @@ The _line-break_ option.
 
 ***
 
+### shiftWidth
+
+#### Get Signature
+
+```ts
+get shiftWidth(): number;
+```
+
+Get the _shift-width_ option. Local to Buffer.
+
+When [expandTab](#expandtab) is `true`, the number of spaces that is used when inserts a
+[horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
+
+When [expandTab](#expandtab) is `false`, this option is not been used.
+
+##### Default Value
+
+`8`
+
+##### Example
+
+```javascript
+// Get the 'shift-width' option.
+const value = Rsvim.opt.shiftWidth;
+```
+
+##### Returns
+
+`number`
+
+#### Set Signature
+
+```ts
+set shiftWidth(value): void;
+```
+
+Set the _expand-tab_ option. This value should be between `[1,255]`.
+
+##### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a positive integer that between `[1,255]`.
+
+##### Example
+
+```javascript
+// Set the 'shift-width' option.
+Rsvim.opt.shiftWidth = 4;
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The _expand-tab_ option.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
 ### tabStop
 
 #### Get Signature
@@ -295,7 +467,7 @@ Local to Buffer.
 This option changes how text is displayed.
 
 Defines how many columns (on the terminal) used to display the
-[horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`). This value should be between `[1,65535]`.
+[horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`). This value should be between `[1,255]`.
 
 ##### Default Value
 
@@ -322,7 +494,7 @@ Set the _tab-stop_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a integer value, or the integer value is not between `[1,65535]`.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a positive integer that between `[1,255]`.
 
 ##### Example
 
@@ -355,7 +527,7 @@ Rsvim.opt.tabStop = 4;
 </td>
 <td>
 
-The _tab-stop_ option. It only accepts an integer between `[1,65535]`.
+The _tab-stop_ option. It only accepts an integer between `[1,255]`.
 
 </td>
 </tr>
