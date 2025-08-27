@@ -16,7 +16,7 @@ https://github.com/rsvim/rsvim/releases/tag/nightly
 
 ## Build from source
 
-With the latest stable `rustc`/`cargo`, build with:
+Build with `cargo`:
 
 ```bash
 cargo install --locked rsvim
