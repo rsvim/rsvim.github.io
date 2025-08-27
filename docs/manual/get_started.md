@@ -13,9 +13,9 @@ Rsvim is the Vim editor reinvented in Rust+TypeScript. It follows main features,
 What makes Rsvim distinguishes from other two Vim editors:
 
 - With tokio's async/multithreaded runtime, most IO operations can be processed asynchronously to avoid blocking TUI app.
-- Standard IO streams (`stdin`, `stdout`, `stderr`) are handled by tokio's async/multithreaded runtime, processed asynchronously along with other IO operations and never blocked the TUI app.
-- JavaScript's `Promise`, `async`/`await` is builtin supported by tokio's runtime as well.
-  Typescripts can be parsing and transforming into javascripts and executed by V8 as well.
+- JavaScript's `Promise`, `async`/`await` is builtin supported, async tasks are handled along with terminal keyboard/mouse events and contents output.
+- Most javascript APIs (will) have both **Asynchronous** and **Synchronous** versions, and asynchronous version is highly recommended for plugins development.
+- Typescripts can be parsing and transforming into javascripts and executed by V8 engine as well.
 - The `stdin`, `stdout`, `stderr` is handled by
 
 Rsvim is built by the [rsvim](https://github.com/rsvim) community. The project is hosted on [GitHub](https://github.com/rsvim/rsvim), documentation is hosted on [GitHub Page](https://rsvim.github.io/). Both Rsvim and its documentation are licensed under [Vim License](https://github.com/rsvim/rsvim/blob/main/LICENSE.txt), same with the [Vim](https://github.com/vim/vim) project.
