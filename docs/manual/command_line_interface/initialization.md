@@ -48,7 +48,7 @@ Then tries to detect:
 
 ### `.rsvim.{js,ts}`
 
-If all above have failed, finally tries to detect:
+If all above failed, finally tries to detect:
 
 1. Whether a `$HOME/.rsvim.{js,ts}` file exists.
 
