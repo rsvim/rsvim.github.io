@@ -20,7 +20,7 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 
 ## 3. Load Configuration Script
 
-Rsvim provides several configuration locations for user to choose:
+Rsvim uses a local directory as its configuration's home, there're several locations for user to choose:
 
 ### `$RSVIM_CONFIG_HOME`
 
