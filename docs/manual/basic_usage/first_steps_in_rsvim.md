@@ -170,15 +170,6 @@ Found programming UNIX a hurdle
 
 All the editings only change the in-memory text contents inside Rsvim, they will not be saved to file system until you execute. Once you are in normal mode, type the ":" command to start the "command-line" mode.
 
-:::tip
-There are actually 3 variants in "command-line" mode:
-
-- Ex command variant: type the ":" to start inserting any commands.
-- Search forward variant: type the "/" to start searching forward in current buffer.
-- Search backward variant: type the "?" to start searching backward in current buffer.
-
-:::
-
 For example, to save the current contents to file system, you type:
 
 ```text
