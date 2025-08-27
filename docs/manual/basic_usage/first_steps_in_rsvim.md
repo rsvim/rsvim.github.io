@@ -31,10 +31,6 @@ Rsvim starts editing a file called "file.txt", because this is a new file, you g
 
 When Rsvim starts, it by default opens a file buffer and a window. A file buffer loads the file content from file system into memory, a window is a text view for the binded buffer. If no file name(s) are provided, Rsvim opens an empty file buffer without file name. If the specific file doesn't exist in file system, Rsvim opens an empty file buffer with the specific file name.
 
-:::tip
-There are also other buffer types for different purposes.
-:::
-
 ## Inserting Text
 
 The Vim (including Neovim/Rsvim) is a modal editor, which means the editor behaves differently, depending on which mode you are in. In a certain timing, the editor is in and only in a certain mode. The 2 basic modes are called "normal" mode and "insert" mode. In normal mode, the characters you type are commands. In insert mode, the characters are inserted as text.
