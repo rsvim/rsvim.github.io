@@ -12,7 +12,7 @@ Rsvim proceeds below steps in order:
 
 All tasks inside Rsvim are split into two kinds:
 
-1. Blocked Tasks: Only a few critical tasks are blocked tasks, such as: write file. To ensure file system data safety, Rsvim waits for all the ongoing critical tasks to complete before actually exiting, however any new task requests will be rejected.
+1. Blocked Tasks: Only a few critical tasks are blocked tasks, such as: write file. To ensure data safety, Rsvim waits for all the ongoing critical tasks to complete before actually exiting, however any new task requests will be rejected.
 2. Detached Tasks: Most other tasks are detached tasks, such as: open file, edit buffer, cursor motion, etc. They will be cancelled and discarded, since the results are no longer important.
 
 ## 2. Recover Terminal
