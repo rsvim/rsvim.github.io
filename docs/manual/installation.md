@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Installation
 
-## Pre-Built from GitHub Release
+## Download from GitHub Release
 
 Please download pre-built from GitHub release:
 
