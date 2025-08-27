@@ -8,12 +8,12 @@ sidebar_position: 1
 JavaScript API references are available in [API References](/docs/api/introduction).
 :::
 
-Rsvim is the Vim editor reimplemented in Rust and TypeScript. While honouring the core features, concepts and philosophy of [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), Rsvim is developed with [Rust](https://www.rust-lang.org/), [Tokio](https://tokio.rs/) and [V8 JavaScript engine](https://v8.dev/), with every component redesigned and/or reinvented from scratch in a modern development approach. The jewel in the crown of Rsvim is its first-class support for [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (or say, [ECMAScript](https://developer.mozilla.org/en-US/docs/Glossary/ECMAScript)) and [TypeScript](https://www.typescriptlang.org/) for configuration and scripting.
+Rsvim is the Vim editor reinvented in Rust+TypeScript. While honouring the core features, concepts and philosophy of [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/), Rsvim is developed with [Rust](https://www.rust-lang.org/), [Tokio](https://tokio.rs/) and [V8 JavaScript engine](https://v8.dev/), with every component redesigned and/or reinvented from scratch in a modern development approach. The jewel in the crown of Rsvim is its first-class support for [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (or say, [ECMAScript](https://developer.mozilla.org/en-US/docs/Glossary/ECMAScript)) and [TypeScript](https://www.typescriptlang.org/) for configuration and scripting.
 
 What distinguishes Rsvim from the other two:
 
 - Given Tokio's async multithreaded runtime, terminal input is processed asynchronously with other file I/O, network and CPU-bound tasks.
-- Tokio's async tasks natively supports `Promise`, `async`/`await` from JavaScript.
+- JavaScript `Promise`, `async`/`await` is natively handled by tokio's async tasks.
 - Configuration or plugin across multiple files can be structured via [ESCM modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html) `import` keyword implementation.
 - TypeScript can be parsed and transformed into JavaScript and executed on the V8 engine on the fly.
 - (**TODO**) [NPM package](https://www.npmjs.com/) is also a compatible plugin schema; thereby the npm registry can be leveraged to publish/upgrade/distribute Rsvim plugins.
