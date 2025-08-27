@@ -178,10 +178,12 @@ For example, to save the current contents to file system, you type:
 
 :::note
 The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
-:::
 
 [`Rsvim.buf.current()`](/docs/api/rsvim/classes/RsvimBuf#current) returns the current buffer ID, and
 [`Rsvim.buf.writeSync()`](/docs/api/rsvim/classes/RsvimBuf#writesync) will write the buffer's (specified by the ID) contents to file system.
+:::
+
+Then you can verify the file content in file system.
 
 ## Quit
 
@@ -195,7 +197,7 @@ After file is been saved, you can quit Rsvim by typing:
 The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
 :::
 
-To ensure file system data safety, Rsvim waits for all the ongoing file write operations to complete before actually exiting, however any new write requests will be rejected.
+Then you can go on with other works.
 
 :::tip[Question]
 You would ask: where is the `:w` and `:q` ex command? Aren't they much shorter and easier for users?
