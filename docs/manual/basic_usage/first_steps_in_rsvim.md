@@ -180,7 +180,8 @@ For example, to save the current contents to file system, you type:
 The 1st character `:` indicates starting the "command-line" mode ("ex-command" variant), the last key `<Enter>` indicates confirming the input command, send to Rsvim, and returning back to normal mode
 :::
 
-The `Rsvim.buf.current()` returns the current buffer ID, and `Rsvim.buf.writeSync()` will write the buffer's (specified by the ID) contents to file system.
+[`Rsvim.buf.current()`](docs/api/rsvim/classes/RsvimBuf#current) returns the current buffer ID, and
+[`Rsvim.buf.writeSync()`](docs/api/rsvim/classes/RsvimBuf#writesync) will write the buffer's (specified by the ID) contents to file system.
 
 ## Quit
 
