@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Installation
 
-## Download from GitHub Releases
+## Download From GitHub Releases
 
 Download pre-builts from GitHub releases:
 
@@ -14,7 +14,7 @@ For nightly pre-builts, download the `nightly` tag pre-release:
 
 https://github.com/rsvim/rsvim/releases/tag/nightly
 
-## Build from source
+## Build From Source
 
 Build with `cargo`:
 
