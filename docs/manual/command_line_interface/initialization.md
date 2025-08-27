@@ -20,14 +20,22 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 
 ## 3. Load Configuration Script
 
-Rsvim uses a local directory as its configuration's home, there're several locations for user to choose:
+Rsvim chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) script file as configuration entry.
 
-### `$RSVIM_CONFIG_HOME`
+There're several locations for user to choose:
 
-Rsvim first tries to use `$RSVIM_CONFIG_HOME` as its configuration home directory, if the environment variable exists.
+### `$RSVIM_CONFIG_HOME``
 
-If the `$RSVIM_CONFIG_HOME` variable exists, but the directory path doesn't exist in file system, Rsvim will create a directory for it.
+Rsvim first tries to detect:
+
+1. Whether the `$RSVIM_CONFIG_HOME` environment variable exists as a directory path in file system.
+2. Whether a `rsvim.{js,ts}` file exists in the directory.
+
+If all 3 conditions are satisfied, Rsvim uses this directory as its configuration home, and `rsvim.{js,ts}` as configuration entry.
 
 ### `$XDG_CONFIG_HOME/rsvim`
 
-[FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) is also respected, it uses `$XDG_CONFIG_HOME/rsvim`
+Then Rsvim tries to detect the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) as a secondary choice:
+
+1. Whether `$XDG_CONFIG_HOME/rsvim` exists as a directory path in file system.
+2. Whether a `rsvim.{js,ts}` file exists in the directory.
