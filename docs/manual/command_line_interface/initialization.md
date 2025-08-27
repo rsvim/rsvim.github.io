@@ -20,7 +20,7 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 
 ## 3. Load Configuration
 
-Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) file as the entry point. This entry script is then executed to apply all configurations.
+Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) file as entry point. This script is executed to apply all configurations.
 
 There're several locations to choose:
 
@@ -28,13 +28,14 @@ There're several locations to choose:
 
 Then tries to detect the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) as a second choice:
 
-1. Whether a `$XDG_CONFIG_HOME/rsvim` directory exists in the file system.
+1. Whether a `$XDG_CONFIG_HOME/rsvim` directory exists in file system.
 2. Whether a `rsvim.{js,ts}` file exists in the directory.
 
 :::tip
 
-- On Linux and macOS, this will be `$HOME/.config/rsvim`.
-- On Windows, this will be `%USERPROFILE%\AppData\Roaming\rsvim` (or `%APPDATA%\rsvim`).
+- On Linux, it is `$HOME/.config/rsvim`.
+- On MacOS, it is `$HOME/Library/Application Support/rsvim`.
+- On Windows, it is `%USERPROFILE%\AppData\Roaming\rsvim` (or `%APPDATA%\rsvim`).
 
 :::
 
