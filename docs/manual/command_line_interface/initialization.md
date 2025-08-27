@@ -20,8 +20,7 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 
 ## 3. Load Configuration Script
 
-Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) script file as its configuration entry.
-Then executes the configuration entry script to apply the configurations.
+Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) script file as its configuration entry, then executes the configuration entry script to apply the configurations.
 
 There're several locations to choose:
 
