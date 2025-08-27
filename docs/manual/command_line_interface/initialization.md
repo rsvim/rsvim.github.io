@@ -66,4 +66,4 @@ If the file exists, Rsvim will use it as configuration entry, use `$HOME/.rsvim`
 
 ## 4. Initialize TUI
 
-Once all configurations are been set, terminal goes into [raw mode](https://en.wikipedia.org/wiki/Terminal_mode) and create the default window binded with the default buffer. If default buffer is associated with an existing file, the window will print the file contents from the first line.
+Once all configurations are been set, terminal goes into [raw mode](https://en.wikipedia.org/wiki/Terminal_mode) and create the default window binded with the default buffer. If default buffer is associated with an existing file, the window shows the file contents from the first line.
