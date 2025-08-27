@@ -171,7 +171,7 @@ All the editings only change the in-memory buffer content, they will not be save
 ```
 
 :::note
-The initial `:` command indicates starting the "command-line" mode ("ex-command" variant); the last `<Enter>` key indicates confirming the input EX command, send to Rsvim, and returning back to normal mode.
+The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command, and returning back to normal mode
 
 [`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns the ID of the current buffer, and
 [`Rsvim.buf.writeSync(<id>)`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) writes the buffer's (specified by the ID) contents to file system.
