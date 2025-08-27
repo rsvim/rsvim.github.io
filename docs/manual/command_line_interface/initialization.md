@@ -50,7 +50,15 @@ Then Rsvim tries to detect the [FreeDesktop Directory Specification](https://spe
 
 ### `$HOME/.rsvim`
 
-Finally Rsvim tries to detect:
+Then Rsvim tries to detect:
 
-1. Whether `$XDG_CONFIG_HOME/rsvim` exists as a directory path in file system.
+1. Whether `$HOME/.rsvim` exists as a directory path in file system.
 2. Whether a `rsvim.{js,ts}` file exists in the directory.
+
+### `.rsvim.{js,ts}`
+
+Finally, if all above locations failed, Rsvim tries to detect:
+
+1. Whether a `$HOME/.rsvim.{js,ts}` file exists.
+
+If it exists, Rsvim will use it as configuration entry, use `$HOME/.rsvim` as configuration home, and create a new directory if `$HOME/.rsvim` doesn't exist.
