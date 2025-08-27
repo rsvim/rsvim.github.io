@@ -18,7 +18,7 @@ What distinguishes Rsvim from other two:
 - TypeScript is parsed and transformed into JavaScript and executed by V8 engine on the fly.
 - (**TODO**) [NPM package](https://www.npmjs.com/) is accepted as a compatible plugin schema; thereby the npm registry can be leveraged to publish/upgrade/distribute all plugins.
 
-You can conceptualise javascript and typescript as configuration languages for Rsvim. Alternatively, Rsvim can be treat as a highly specialised javascript-based runtime akin to [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), but purpose-built for text editor: `stdin` for receiving terminal inputs, `stdout` for rendering the interface.
+From one perspective, you can conceptualise javascript and typescript as configuration languages for Rsvim. In another, Rsvim can be treat as a highly specialised javascript-based runtime akin to [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), but purpose-built for text editor: `stdin` for receiving terminal inputs, `stdout` for rendering the interface.
 
 A perfect compatibility with the existing [Vimscript](https://en.wikipedia.org/wiki/Vimscript) community (for Vim) and [Lua](https://neovim.io/doc/user/lua.html) community (for Neovim) would be unrealistic; expect unavoidable breaking changes.
 
