@@ -171,24 +171,24 @@ All the editings only change the in-memory buffer content, they will not be save
 ```
 
 :::note
-The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command, and returning back to normal mode
+The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
 
 - [`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns current buffer ID
 - [`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) writes the buffer (specified by ID) to file system synchronously
   :::
 
-Now you verify the file changes in file system.
+Now you can verify the file changes in file system.
 
 ## Quit
 
-After saving the file, one may exit Rsvim by typing:
+After saving the file, you exit Rsvim by typing:
 
 ```text
 :js Rsvim.rt.exit();<Enter>
 ```
 
 :::note
-The initial `:` command indicates starting the "command-line" mode ("ex-command" variant); the last `<Enter>` key indicates confirming the input EX command, send to Rsvim, and returning back to normal mode.
+The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode.
 :::
 
 Then you can go on with other works.
