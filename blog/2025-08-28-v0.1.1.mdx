@@ -1,0 +1,150 @@
+---
+title: RSVIM v0.1.1 Just Released!
+authors: [linrongbin16]
+tags: [announcement]
+---
+
+After about two and a half years of development, RSVIM finally released its first version: v0.1.1!
+
+<!-- truncate -->
+
+## Introduction
+
+v0.1.1 is a minimal prototype with extremely limited functionality, but still includes several core components of the text editor:
+
+1. Three basic editing modes: normal, insert and command-line.
+2. Scripted user configuration: user can customize their configurations through JavaScript and TypeScript. About 10 basic options are provided.
+3. Text editing: creat and open text file, preview in normal mode, insert text in insert mode, control the editor in command-line mode.
+4. Runtime API: About 5 basic JavaScript APIs are provided, along with the builtin `:js` ex command to allow user to save file and quit.
+
+## Features
+
+Here are some demos and comparison with Vim.
+
+> Demos are recorded with Mac and kitty terminal.
+
+export const ComparisonDemo = ({children, vimUrl, rsvimUrl}) => (
+    <ul style={{
+        width: '100%',
+        display: 'table',
+        tableLayout: 'fixed',
+        borderCollapse: 'collapse',
+        borderStyle: 'none',
+    }}>
+        <li style={{
+            display: 'table-cell',
+            textAlign: 'center',
+            border: 'none',
+        }}>
+            <p>Vim</p>
+            <video width="95%" controls muted>
+                <source src={vimUrl} type="video/mp4"></source>
+            </video>
+            </li>
+        <li style={{
+            display: 'table-cell',
+            textAlign: 'center',
+            border: 'none',
+        }}>
+            <p>Rsvim</p>
+            <video width="95%" controls muted>
+                <source src={rsvimUrl} type="video/mp4"></source>
+            </video>
+        </li>
+    </ul>
+);
+
+### Text File Preview
+
+#### No-Wrap
+
+<ComparisonDemo 
+  vimUrl={"https://github.com/user-attachments/assets/9641ed19-8066-4ce6-a2e7-552c05c76184"}
+  rsvimUrl={"https://github.com/user-attachments/assets/2250fa0b-1f2e-4c81-8743-4ed5b3717a5c"}
+/>
+
+Vim configs:
+
+```vim
+set nowrap
+set noswapfile
+set nonumber
+```
+
+Rsvim configs:
+
+```javascript
+Rsvim.opt.wrap = false;
+```
+
+#### Wrap
+
+<ComparisonDemo 
+  vimUrl={"https://github.com/user-attachments/assets/4ceafa5b-cc26-4487-a455-e840485c2595"}
+  rsvimUrl={"https://github.com/user-attachments/assets/27d4987c-029f-4f8a-859a-dc633191ae7f"}
+/>
+
+Vim configs:
+
+```vim
+set wrap
+set noswapfile
+set nonumber
+```
+
+Rsvim configs:
+
+```javascript
+Rsvim.opt.wrap = true;
+```
+
+#### Wrap with Line-Break
+
+
+<ComparisonDemo 
+  vimUrl={"https://github.com/user-attachments/assets/2bd950c2-738e-4642-b23b-8703074717dc"}
+  rsvimUrl={"https://github.com/user-attachments/assets/4c3c841f-1c95-44d8-8285-a3ba52580652"}
+/>
+
+Vim configs:
+
+```vim
+set wrap
+set linebreak
+set noswapfile
+set nonumber
+```
+
+Rsvim configs:
+
+```javascript
+Rsvim.opt.wrap = true;
+Rsvim.opt.lineBreak = true;
+```
+
+### Text File Editing
+
+<p align="center">
+    <video width="85%" controls muted>
+        <source src="https://github.com/user-attachments/assets/feceebac-37e0-40fa-9903-81ec46930631" type="video/mp4"></source>
+    </video>
+</p>
+
+## Vision
+
+RSVIM has been born with the gene of excellence:
+
+1. Compared with traditional TUI application's input-calculation-output synchronous process, it is more like a HTTP API server that serves you. It runs naturally in an asynchronous multi-threaded runtime, which easily utilizes all CPUs and schedules all IO tasks asynchronously.
+2. Borrowing ideas from GUI and CSS frameworks, the UI widget tree, canvas and (TODO) layout system are built from scratch. Although it is still too simple now, it brings the potential for a truly powerful and flexible UI system.
+3. JavaScript/TypeScript and their community have brought broader prospects and potential to RSVIM. You can think of RSVIM as a javascript-based runtime similar to node and deno (but highly specialized for text editing). In the future, plugins will be a npm package, published and updated directly using the npm registry.
+
+## What's Next
+
+Too many features are still waiting to be implemented and improved. Here are some of the most important next steps I can think of:
+
+1.  Ex commands.
+2.  More UI widgets: statusline, line number, etc.
+3.  Filetype-based syntax highlighting and colorscheme/theme.
+4.  Modular configuration support: multi-file structure and plugins.
+
+Don't hesitate to submit your feedback and ideas in [GitHub issues](https://github.com/rsvim/rsvim/issues) and [RFC](https://github.com/rsvim/rfc)!
