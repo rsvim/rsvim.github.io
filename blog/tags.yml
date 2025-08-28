@@ -1,19 +1,6 @@
-vim:
-  label: vim
-  permalink: https://www.vim.org/
-  description: Vim - the ubiquitous text editor
-
-neovim:
-  label: neovim
-  permalink: https://neovim.io/
-  description: hyperextensible Vim-based text editor
-
-rsvim:
-  label: rsvim
-  permalink: https://github.com/rsvim/rsvim
-  description: The VIM editor reinvented in Rust+TypeScript
-
-vscode:
-  label: vscode
-  permalink: https://code.visualstudio.com/
-  description: Code Editing. Redefined
+announcement:
+  label: announcement
+technical:
+  label: technical
+product:
+  label: product
