@@ -25,7 +25,7 @@ Please reach out to [MDN | Standard built-in objects - JavaScript](https://devel
 
 Besides the ECMA standard, a large number of web APIs are also been widely implemented by most javascript-based runtimes: chrome/firefox browsers, node/deno runtimes, etc. The full list of all web APIs and interfaces can be found in [MDN | Web APIs](https://developer.mozilla.org/en-US/docs/Web/API), and the [WinterTC](https://wintertc.org/) community group come up with the [Minimum Common Web Platform API](https://min-common-api.proposal.wintertc.org/) specification, which defines a minimum set of standard web platform APIs for both browser and non-browser javascript-based runtimes. Rsvim tries to follow WinterTC standard, but (maybe) only covers a subset due to the development effort.
 
-The web APIs are "global objects", and can be accessed without `import`/`require` any additional/external modules, just like ECMAScript standard built-in APIs.
+The web APIs are also "global objects" just like ECMA standard built-in APIs.
 
 ## 3. Rsvim APIs
 
