@@ -197,7 +197,7 @@ Now you can go on with other works.
 Where are the `:w` and `:q` ex commands? Aren't they much shorter and easier for users?
 
 Yes, `:w` and `:q` are better than `:js` with super long expressions.
-Currently (`v0.1.1`), only one builtin ex command `:js` is provided, users are limited to do it this way.
+Currently, only one builtin ex command `:js` is provided, users are limited to do it this way.
 
 Because Rsvim will not embed any builtin plugins, including the ex commands (`:w`, `:q`, `:echo`, etc).
 On the contrary, Rsvim will provide APIs such as `Rsvim.cmd.create()` to allow user create their own ex commands.
