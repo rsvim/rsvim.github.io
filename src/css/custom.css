@@ -11,6 +11,12 @@
   font-weight: 200 900;
 }
 
+code {
+  font-family: "Open Sans";
+  font-weight: 200 900;
+  /* font-size: 90%; */
+}
+
 /* You can override the default Infima variables here. */
 /* The Primary color comes from: https://rustacean.net/assets/rustacean-flat-noshadow.svg. */
 /* rgb(247,76,0), #f74c00 */
