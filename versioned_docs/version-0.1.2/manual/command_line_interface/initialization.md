@@ -1,0 +1,61 @@
+---
+sidebar_position: 2
+---
+
+# Initialization
+
+At initialization/startup, Rsvim proceeds below steps in order:
+
+## 1. Load Environment Variables
+
+Reads the environment variables and initialize all internal constants.
+
+## 2. Process CLI Arguments
+
+Options and file names from the `rsvim` command line are inspected. Several kinds of use cases are:
+
+- When special options are provided (i.e. `-h`/`--help`, `-V`/`--version`), Rsvim will print some useful information and exit.
+- When file names are provided, Rsvim will read them, create a buffer for each one and associate it to the corresponding file name. Rsvim chooses the first file as its default buffer, which will be bound to the default window when TUI initialize.
+- If no file name is provided, Rsvim will create a default empty buffer, associated with no file name.
+
+## 3. Load Configuration
+
+Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) file as entry point. This script is executed to apply all configurations.
+
+There're several locations to choose:
+
+### `$XDG_CONFIG_HOME/rsvim`
+
+Then tries to detect the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) as a second choice:
+
+1. Whether a `$XDG_CONFIG_HOME/rsvim` directory exists in file system.
+2. Whether a `rsvim.{js,ts}` file exists in the directory.
+
+:::tip
+
+- On Linux, it is `$HOME/.config/rsvim`.
+- On MacOS, it is `$HOME/Library/Application Support/rsvim`.
+- On Windows, it is `%USERPROFILE%\AppData\Roaming\rsvim` (or `%APPDATA%\rsvim`).
+
+:::
+
+### `$HOME/.rsvim`
+
+Then tries to detect:
+
+1. Whether a `$HOME/.rsvim` directory exists in file system.
+2. Whether a `rsvim.{js,ts}` file exists in the directory.
+
+### `.rsvim.{js,ts}`
+
+If all above failed, finally tries to detect:
+
+1. Whether a `$HOME/.rsvim.{js,ts}` file exists.
+
+If yes, Rsvim uses it as the entry point and `$HOME/.rsvim` as the configuration home, creates a directory if `$HOME/.rsvim` doesn't exist.
+
+## 4. Initialize TUI
+
+Once all configurations are been set, terminal goes into [raw mode](https://en.wikipedia.org/wiki/Terminal_mode) and a default window is created, bound with the default buffer.
+
+If default buffer is associated with an existing file, the window shows the file content from the first line, cursor is placed at the top-left corner of the window (i.e. the first character of the file content) in normal mode.
