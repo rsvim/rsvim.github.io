@@ -8,19 +8,17 @@
 
 @font-face {
   font-family: "Open Sans";
-  font-weight: 200 900;
+  /* font-weight: 200 900; */
   font-size: 100%;
 }
 
 html {
   font-family: "Open Sans";
-  font-weight: 200 900;
   font-size: 100%;
 }
 
 code {
   font-family: "Open Sans";
-  font-weight: 200 900;
   font-size: 95%;
 }
 
