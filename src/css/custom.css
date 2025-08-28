@@ -4,9 +4,6 @@
  * work well for content-centric websites.
  */
 
-/* Noto Sans */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-/* Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 @font-face {
@@ -17,7 +14,6 @@
 code {
   font-family: "Open Sans";
   font-weight: 200 900;
-  /* font-size: 90%; */
 }
 
 /* You can override the default Infima variables here. */
