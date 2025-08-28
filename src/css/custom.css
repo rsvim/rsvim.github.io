@@ -11,9 +11,16 @@
   font-weight: 200 900;
 }
 
+html {
+  font-family: "Open Sans";
+  font-weight: 200 900;
+  font-size: 100%;
+}
+
 code {
   font-family: "Open Sans";
   font-weight: 200 900;
+  font-size: 95%;
 }
 
 /* You can override the default Infima variables here. */
@@ -28,7 +35,7 @@ code {
   --ifm-color-primary-light: #ff5a11;
   --ifm-color-primary-lighter: #ff631d;
   --ifm-color-primary-lightest: #ff7c42;
-  --ifm-code-font-size: 95%;
+  /* --ifm-code-font-size: 95%; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-heading-font-family: "Open Sans", sans-serif;
   --ifm-font-family-base: "Open Sans", sans-serif;
