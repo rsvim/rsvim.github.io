@@ -6,11 +6,11 @@ tags: [product]
 
 [Vim](https://www.vim.org/) and [Neovim](https://neovim.io/) editors are so popular and loved by developers and text writers all over the world, including me.
 
+<!-- truncate -->
+
 ## History
 
 During the development of Vim led by [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar), there has always been a trend that users want to turn Vim into an IDE by providing all various plugins: file explorer, UI components and icons, code completion, diagnostics, code formatting, etc. Vim uses [vimscript](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Vim_script>) as its first-class citizen to support, but this is somewhat niche and hinders people from creating their own plugins or contributing to the Vim project itself (perhaps it is also related to the documentation and syntax design of vimscript). The conflict between Vim's extensibility and user needs has been growing.
-
-<!-- truncate -->
 
 Then Neovim came along in [2014](<https://en.wikipedia.org/wiki/Vim_(text_editor)#Neovim>). In order to provide richer and more friendly functions, as well as editing experiences closer to IDE, it introduced [lua](https://www.lua.org/) as its script language and [LuaJIT](https://luajit.org/) as its script runtime. This caused a lot of controversy at the beginning, since lua not only brought quite break changes that are no longer compatible with vimscript (as a scripting language designed for Vim, vimscript is indeed more fittable into the editor), and is not as popular among developers as [python](https://www.python.org/) or [javascript](https://en.wikipedia.org/wiki/JavaScript)/[typescript](https://www.typescriptlang.org/). Before the emergence of Neovim and lua, Vim community usually used these external languages to implement complex plugins, such as auto-completion, file explorer, etc. However, the [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) overhead between the editor itself and the language interpreter/runtime cannot be elimiated, and adding an additional language is not out of box.
 
