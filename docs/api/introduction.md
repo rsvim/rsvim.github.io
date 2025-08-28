@@ -29,7 +29,7 @@ The web APIs are also "global objects" just like ECMA standard built-in APIs.
 
 ## 3. Rsvim APIs
 
-Similar to node/deno, Rsvim also provide a set of non-standard APIs to help users manipulating both the editor and the operating system. The APIs can be divided into several groups: editor related, general purposed.
+Similar to node/deno, Rsvim provides a set of APIs to help users manipulating both editor and operating system. The APIs can be divided into two groups: editor related and general purposed.
 
 ### 2.1. Editor APIs
 
