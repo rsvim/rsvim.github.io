@@ -33,13 +33,13 @@ Similar to node/deno, Rsvim provides a set of APIs to help users manipulating bo
 
 ### 2.1. Editor APIs
 
-Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) global namespace in Neovim's lua.
+Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) lua global namespace in Neovim.
 
 ### 2.2. General APIs
 
-General APIs are similar to the concept of the standard library in many programming languages. (From this perspective, there is no functional difference between Rsvim editor and general javascript runtimes such as [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), ) But Rsvim focus on text editing and processing, the existence of all APIs only serves this purpose, they provide functions mainly related to operating system such as file system, network/http, date and time, IPC/RPC and process management, etc. For web and browser related APIs, they will not be provided.
+General APIs are similar to a standard library in other programming languages. But Rsvim focus on text editing, the existence of all APIs only serves this purpose, they are mostly related to file system, network/http, date time, IPC/RPC and child process management, etc. For web and browser related APIs, they will not be provided.
 
-These APIs also share the same global object [`Rsvim`](rsvim/classes/Rsvim), the implementations follow [Deno APIs](https://docs.deno.com/api/deno/).
+These APIs also share the same global object [`Rsvim`](rsvim/classes/Rsvim).
 
 :::warning
 Rsvim editor exposes the rust implemented APIs to the JavaScript world by binding them to the `__InternalRsvimGlobalObject` global object, which should never be directly used. The `Rsvim` is a thin wrapper on it.
