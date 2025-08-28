@@ -23,24 +23,45 @@ Here are some demos and comparison with Vim.
 
 > Demos are recorded with Mac and kitty terminal.
 
+export const ComparisonDemo = ({children, vimUrl, rsvimUrl}) => (
+    <ul style={{
+        width: 100%,
+        display: table,
+        tableLayout: fixed,
+        borderCollapse: collapse,
+        borderStyle: none,
+    }}>
+        <li style={{
+            display: table-cell,
+            textAlign: center,
+            border: none,
+        }}>
+            <p>Vim</p>
+            <video width="95%" controls muted>
+                <source src={vimUrl} type="video/mp4"></source>
+            </video>
+            </li>
+        <li style={{
+            display: table-cell,
+            textAlign: center,
+            border: none,
+        }}>
+            <p>Rsvim</p>
+            <video width="95%" controls muted>
+                <source src={rsvimUrl} type="video/mp4"></source>
+            </video>
+        </li>
+    </ul>
+);
+
 ### Text File Preview
 
 #### No-Wrap
 
-<ul style="width: 100%; display: table; table-layout: fixed; border-collapse: collapse; border-style: none;">
-    <li style="display: table-cell; text-align: center; border: none;">
-        <p>Vim</p>
-        <video width="95%" controls muted>
-            <source src="https://github.com/user-attachments/assets/9641ed19-8066-4ce6-a2e7-552c05c76184" type="video/mp4"></source>
-        </video>
-        </li>
-    <li style="display: table-cell; text-align: center; border: none;">
-        <p>Rsvim</p>
-        <video width="95%" controls muted>
-            <source src="https://github.com/user-attachments/assets/2250fa0b-1f2e-4c81-8743-4ed5b3717a5c" type="video/mp4"></source>
-        </video>
-    </li>
-</ul>
+<ComparisonDemo 
+  vimUrl={"https://github.com/user-attachments/assets/9641ed19-8066-4ce6-a2e7-552c05c76184"}
+  rsvimUrl={"https://github.com/user-attachments/assets/2250fa0b-1f2e-4c81-8743-4ed5b3717a5c"}
+/>
 
 Vim configs:
 
