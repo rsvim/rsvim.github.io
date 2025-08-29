@@ -43,7 +43,7 @@ Found programming UNIX a hurdle
 ```
 
 :::note
-The initial `i` indicates starting insert mode
+The first `i` indicates starting insert mode
 :::
 
 After typing "turtle" (last word in first line), you press `<Enter>` key to start a new line. Finally you press `<Esc>` key to exit insert mode and go back to normal mode. Now you have 2 lines of text in your window:
@@ -94,7 +94,7 @@ iA young <Esc>
 ```
 
 :::note
-The initial `i` indicates starting insert mode, the last `<Esc>` key indicates returning back to normal mode
+The first `i` indicates starting insert mode, the last `<Esc>` key indicates returning back to normal mode
 :::
 
 It starts insert mode (by `i`), and inserts words "A young ", then exits insert mode (by `<Esc>`). The result is:
@@ -126,7 +126,7 @@ a!!!<Esc>
 ```
 
 :::note
-The initial `a` indicates appending, the last `<Esc>` indicates returning back to normal mode
+The first `a` indicates appending, the last `<Esc>` indicates returning back to normal mode
 :::
 
 The result is:
@@ -151,7 +151,7 @@ oThat liked using Vim<Esc>
 ```
 
 :::note
-The initial `o` indicates opening up a new line, the last `<Esc>` indicates returning back to normal mode
+The first `o` indicates opening up a new line, the last `<Esc>` indicates returning back to normal mode
 :::
 
 The result is:
@@ -171,7 +171,7 @@ All the editings only change the in-memory buffer content, they will not be save
 ```
 
 :::note
-The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
+The first `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
 
 - [`Rsvim.buf.current()`](/docs/next/api/rsvim/classes/RsvimBuf#current) returns current buffer ID
 - [`Rsvim.buf.writeSync()`](/docs/next/api/rsvim/classes/RsvimBuf#writesync) writes the buffer (specified by ID) to file system synchronously
@@ -188,7 +188,7 @@ After saving the file, you exit Rsvim by typing:
 ```
 
 :::note
-The initial `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
+The first `:` indicates starting the "command-line" mode, the last `<Enter>` indicates confirming the input ex command and returning back to normal mode
 :::
 
 Now you can go on with other works.
