@@ -231,6 +231,12 @@ const config: Config = {
       return result;
     },
   },
+  future: {
+    experimental_faster: {
+      rspackBundler: true, // required flag
+      rspackPersistentCache: true, // new flag
+    },
+  },
 };
 
 export default config;
