@@ -232,9 +232,13 @@ const config: Config = {
     },
   },
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+    },
     experimental_faster: {
-      rspackBundler: true, // required flag
-      rspackPersistentCache: true, // new flag
+      rspackBundler: true,
+      rspackPersistentCache: true,
+      ssgWorkerThreads: true,
     },
   },
 };
