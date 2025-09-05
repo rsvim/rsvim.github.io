@@ -231,6 +231,16 @@ const config: Config = {
       return result;
     },
   },
+  future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+    },
+    experimental_faster: {
+      rspackBundler: true,
+      rspackPersistentCache: true,
+      ssgWorkerThreads: true,
+    },
+  },
 };
 
 export default config;
