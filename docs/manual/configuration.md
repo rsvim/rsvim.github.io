@@ -224,6 +224,16 @@ export function hello(value) {
 }
 ```
 
+#### `rsvim.js`
+
+```javascript
+import syntax from "syntax";
+
+syntax.hello("Rsvim!");
+```
+
+Rsvim will resolve the module path by looking up to the `package.json`. In this example, the `"syntax"` specifier will map to the `syntax/lib/index.js` file.
+
 For more information, please refer to [NPM Docs - About packages and modules](https://docs.npmjs.com/about-packages-and-modules).
 
 ### Package Dependency
