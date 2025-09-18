@@ -42,4 +42,4 @@ Finally it tries to detect whether below entry file exists:
 
 ## Multi-Files Structure
 
-multi-files structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules).
+Multi-files structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules).
