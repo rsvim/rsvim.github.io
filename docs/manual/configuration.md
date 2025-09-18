@@ -196,22 +196,32 @@ $HOME/.rsvim
 
 #### `syntax/package.json`
 
-```json
+```json5
 {
   "name": "syntax",
   "version": "0.1.0"
   "exports": {
-      ".": "./index.js"
-  }
+      ".": "./lib/index.js"
+  },
+  // Or
+  "main": "./lib/index.js"
 }
 ```
 
-#### `syntax/index.js`
+#### `syntax/lib/index.js`
 
 ```javascript
 import { hello } from "./utils.js";
 
 export default { hello };
+```
+
+#### `syntax/lib/utils.js`
+
+```javascript
+export function hello(value) {
+  Rsvim.cmd.echo(`Hello:${value}`);
+}
 ```
 
 For more information, please refer to [NPM Docs - About packages and modules](https://docs.npmjs.com/about-packages-and-modules).
