@@ -128,7 +128,7 @@ try {
 
 When Rsvim starts, it will schedules the `"./utils.js"` module loading to a background task when running the configuration entry point, then initialize TUI and let user start typing.
 
-Once the `"./utils.js"` module completes its loading (asynchronously), it continues the javascript logic in the left part.
+Once the `"./utils.js"` module completes its loading (asynchronously), it continues to execute the logic in the remaining script.
 
 ### Recommended
 
