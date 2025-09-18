@@ -12,13 +12,7 @@ Rsvim provides meta properties on `import.meta`, same with [node](https://nodejs
 get url(): string;
 ```
 
-Get the url of current script file. See []
-
-See [shiftWidth](#shiftwidth) to get the number of spaces when inserting.
-
-##### Default Value
-
-`false`
+A string representation of fully qualified module URL. When the module is loaded locally, the value will be a file URL, e.g. `file:///path/module.js`.
 
 ##### Example
 
