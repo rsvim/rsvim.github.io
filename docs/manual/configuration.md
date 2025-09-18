@@ -138,11 +138,7 @@ When Rsvim starts, it will schedules the `"./utils.js"` module loading to a back
 
 With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules)!
 
-### Single File Package
-
-Actually, a single file can be a npm package. In the above example in the "Multi-Files Structure" section, every single javascript file is also a npm package.
-
-### Package Without `package.json`
+### Simple Package Without `package.json`
 
 ### Package with `package.json`
 
