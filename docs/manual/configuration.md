@@ -101,7 +101,7 @@ But, there are some limitations about Rsvim, since it is not 100% compatible wit
 
 ### Recommended
 
-Checkout below resources for further reading:
+Recommend below resources for further reading:
 
 - MDN [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) and [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [Node ECMA modules](https://nodejs.org/api/esm.html)
