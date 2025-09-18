@@ -56,7 +56,7 @@ $HOME/.rsvim
 |- utils/echo.js
 ```
 
-`utils/add.js` is:
+#### `utils/add.js`
 
 ```javascript
 export function add(a, b) {
@@ -64,7 +64,7 @@ export function add(a, b) {
 }
 ```
 
-`utils/echo.js` is:
+#### `utils/echo.js`
 
 ```javascript
 export function echo(value) {
@@ -72,7 +72,7 @@ export function echo(value) {
 }
 ```
 
-`utils.js` is:
+#### `utils.js`
 
 ```javascript
 import { echo } from "./utils/echo.js";
@@ -81,7 +81,7 @@ import { add } from "./utils/add.js";
 export default { echo, add };
 ```
 
-`rsvim.js` is:
+#### `rsvim.js`
 
 ```javascript
 import util from "./utils.js";
@@ -140,7 +140,41 @@ With config home directory, you can import a package that containing multiple fi
 
 ### Simple Package
 
-A simple directory that containing a `index.js` (or `index.ts`) script file is a simple package. And we can import the package by its name.
+A simple directory that containing a `index.js` (or `index.ts`) script file is a simple package, we can import the package by its name. For example we have a simple package called `syntax`:
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- syntax/
+   |- index.js
+   |- utils.js
+```
+
+#### `syntax/utils.js`
+
+```javascript
+export function hello(value) {
+  Rsvim.cmd.echo(`Hello:${value}`);
+}
+```
+
+#### `syntax/index.js`
+
+```javascript
+import { hello } from "./utils.js";
+
+export default { hello };
+```
+
+#### `rsvim.js`
+
+```javascript
+import syntax from "syntax";
+
+syntax.hello("Rsvim!");
+```
+
+As you see, a package encapsulates the internal logic and only exposes APIs that users need to care about.
 
 ### NPM Package
 
