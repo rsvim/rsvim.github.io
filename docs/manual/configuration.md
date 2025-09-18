@@ -44,17 +44,51 @@ Finally it tries to detect whether below entry file exists:
 
 Multi-files configuration structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules). There are mainly 2 ways to use the `import` keyword:
 
-### Export
+### Export/Import
 
-The [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) declaration
+The `export` declaration is used to export values from a module. Then exported values can be imported into other modules with `import` declaration (or dynamic import). For example we have below configuration:
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- utils.js
+|- utils/add.js
+|- utils/echo.js
+```
+
+`utils/add.js` is:
 
 ```javascript
-// export default {...};
-import utils from "./utils.js";
-
-// export ...
-import { echo, add, sub, multiple, divide } from "./utils.js";
+export function add(a, b) {
+  return a + b;
+}
 ```
+
+`utils/echo.js` is:
+
+```javascript
+export function echo(value) {
+  Rsvim.cmd.echo(value);
+}
+```
+
+`utils.js` is:
+
+```javascript
+import { echo } from "./utils/echo.js";
+import { add } from "./utils/add.js";
+
+export default { echo, add };
+```
+
+`rsvim.js` is:
+
+```javascript
+import util from "./utils.js";
+util.echo(util.add(1, 2));
+```
+
+After starting Rsvim, it will print the message `3`.
 
 Checkout below resources for further reading:
 
