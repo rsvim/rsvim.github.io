@@ -52,8 +52,9 @@ The `export` declaration is used to export values from a module. Then exported v
 $HOME/.rsvim
 |- rsvim.js
 |- utils.js
-|- utils/add.js
-|- utils/echo.js
+|- utils/
+   |- add.js
+   |- echo.js
 ```
 
 #### `utils/add.js`
