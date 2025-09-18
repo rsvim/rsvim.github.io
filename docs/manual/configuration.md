@@ -135,3 +135,9 @@ Recommend below resources for further reading:
 - MDN [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export), [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [Node ECMA modules](https://nodejs.org/api/esm.html)
 - [Deno modules](https://docs.deno.com/runtime/fundamentals/modules/)
+
+## NPM Package
+
+### Package
+
+With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules).
