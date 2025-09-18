@@ -136,15 +136,15 @@ When Rsvim starts, it will schedules the `"./utils.js"` module loading to a back
 
 ## NPM Package
 
-### Package
+With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules)!
 
-With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules)! A folder containing one or more javascript/typescript script files can be a "npm package".
+### Single File Package
 
-:::tip
-Actually the concept of npm package is even wilder, a single file in above example in the "Multi-Files Structure" section is also a npm package.
-:::
+Actually, a single file can be a npm package. In the above example in the "Multi-Files Structure" section, every single javascript file is also a npm package.
 
-#### Simple Package Without `package.json`
+### Simple Package Without `package.json`
+
+### Package with `package.json`
 
 ### Recommended Reading
 
