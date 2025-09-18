@@ -125,7 +125,7 @@ try {
 }
 ```
 
-When Rsvim starts, it will schedules a `"./utils.js"` module loading task to background, then completes the configuration phase and initializes the TUI and editor. Once the `"./utils.js"` module is loaded (asynchronously), Rsvim will continue to execute the logic in the remaining script.
+When Rsvim starts, it will schedules a `"./utils.js"` module loading task to background, then completes the configuration phase and initializes the TUI and editor. Once the `"./utils.js"` module is loaded, Rsvim will continue to execute code logic in the remaining script.
 
 ## Package
 
