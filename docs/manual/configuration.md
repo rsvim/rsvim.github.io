@@ -88,7 +88,7 @@ import util from "./utils.js";
 util.echo(util.add(1, 2));
 ```
 
-After starting Rsvim, it will print the message `3`.
+When Rsvim starts, it will print the message `3`.
 
 The string value passed to the `import` keyword is called `specifier`, which is a file path relative to current javascript file. You can use an absolute file path as well.
 
@@ -125,6 +125,10 @@ try {
   Rsvim.cmd.echo(e);
 }
 ```
+
+When Rsvim starts, it will schedules the `"./utils.js"` module loading to a background task when running the configuration entry point, then initialize TUI and let user start typing.
+
+Once the `"./utils.js"` module completes its loading (asynchronously), it continues the javascript logic in the left part.
 
 ### Recommended
 
