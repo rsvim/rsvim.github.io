@@ -42,7 +42,7 @@ Finally it tries to detect whether below entry file exists:
 
 ## Multi-Files Structure
 
-Multi-files configuration structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules). There are mainly 2 ways to use the `import` keyword:
+Multi-files configuration structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules).
 
 ### Export/Import
 
