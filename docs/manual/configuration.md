@@ -140,4 +140,10 @@ Recommend below resources for further reading:
 
 ### Package
 
-With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules).
+With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules)! A folder containing one or more javascript/typescript script files can be a "npm package".
+
+:::tip
+
+Actually the concept of npm package is even wilder, a single file in above example in the "Multi-Files Structure" section is also a npm package.
+
+:::
