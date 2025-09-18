@@ -134,9 +134,9 @@ When Rsvim starts, it will schedules the `"./utils.js"` module loading to a back
 - [Node ECMA modules](https://nodejs.org/api/esm.html)
 - [Deno modules](https://docs.deno.com/runtime/fundamentals/modules/)
 
-## NPM Package
+## Package
 
-With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules)!
+With config home directory, you can import a package that containing multiple files.
 
 ### Package Without `package.json`
 
