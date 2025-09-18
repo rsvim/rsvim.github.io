@@ -88,7 +88,16 @@ import util from "./utils.js";
 util.echo(util.add(1, 2));
 ```
 
-After starting Rsvim, it will print the message `3`.
+After starting Rsvim, it will print the message `3`. You can also use absolute file path as well.
+
+But, there are some limitations about Rsvim, since it is not 100% compatible with node:
+
+:::warning[Limitation]
+
+1. Rsvim only supports ES modules, it doesn't support [CommonJS modules](https://nodejs.org/api/modules.html) as node do, the `require` keyword is not implemented.
+2. All the file based `specifier` must contain their file extension, i.e. the file extension cannot be omitted like node.
+
+:::
 
 Checkout below resources for further reading:
 
