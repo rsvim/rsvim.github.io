@@ -42,4 +42,22 @@ Finally it tries to detect whether below entry file exists:
 
 ## Multi-Files Structure
 
-Multi-files structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules).
+Multi-files configuration structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules). There are mainly 2 ways to use the `import` keyword:
+
+### Export
+
+The [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) declaration
+
+```javascript
+// export default {...};
+import utils from "./utils.js";
+
+// export ...
+import { echo, add, sub, multiple, divide } from "./utils.js";
+```
+
+Checkout below resources for further reading:
+
+- MDN [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) and [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [Node ECMA modules](https://nodejs.org/api/esm.html)
+- [Node ECMA modules](https://nodejs.org/api/esm.html)
