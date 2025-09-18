@@ -189,7 +189,7 @@ $HOME/.rsvim
 
 #### `syntax/package.json`
 
-```json {4,8}
+```json {2,4,8}
 {
   "name": "syntax",
   "version": "0.1.0"
