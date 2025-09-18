@@ -93,7 +93,7 @@ When Rsvim starts, it will print the message `3`.
 
 The string value passed to the `import` keyword is called `specifier`. In this example, it is a file path relative to current javascript file. You can use an absolute file path as well. The `import` declaration here is called [static import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import), it runs synchronously.
 
-But, there are some limitations about Rsvim, since it is not 100% compatible with node:
+But, there are some limitations, since Rsvim is not 100% compatible with node:
 
 :::warning[Limitation]
 
