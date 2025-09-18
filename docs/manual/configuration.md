@@ -133,7 +133,7 @@ With config home, you can import a package that containing multiple files.
 
 ### Simple Package
 
-A simple directory that containing a `index.js` (or `index.ts`) file is a simple package, we can import the package by its name. For example we have a simple package called `syntax`:
+A simple directory that containing a `index.js` (or `index.ts`) file is a simple package, we can import the package by the directory name. For example we have a simple package called `syntax`:
 
 ```
 $HOME/.rsvim
