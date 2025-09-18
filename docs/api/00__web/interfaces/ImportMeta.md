@@ -47,11 +47,57 @@ The absolute file path of current module. This property is only provided for loc
 
 ```javascript
 // Unix
-Rsvim.cmd.echo(import.meta.filename); //    /home/alice
+Rsvim.cmd.echo(import.meta.filename); //    /home/alice/.rsvim.js
 // Windows
-Rsvim.cmd.echo(import.meta.filename); //    C:\Users\alice
+Rsvim.cmd.echo(import.meta.filename); //    C:\Users\alice\.rsvim.js
 ```
 
 ##### Returns
 
-`string`
+`string | undefined`
+
+### dirname
+
+#### Get Signature
+
+```ts
+get dirname(): string;
+```
+
+The absolute file path of the directory that containing current module. This property is only provided for local loaded modules, i.e. using `file://` URLs.
+
+##### Example
+
+```javascript
+// Unix
+Rsvim.cmd.echo(import.meta.dirname); //    /home/alice
+// Windows
+Rsvim.cmd.echo(import.meta.dirname); //    C:\Users\alice
+```
+
+##### Returns
+
+`string | undefined`
+
+### main
+
+#### Get Signature
+
+```ts
+get main(): boolean;
+```
+
+Whether current module is the main module that was called when starting Rsvim, i.e. the config entry point of Rsvim. See [Configuration](/docs/manual/configuration).
+
+##### Example
+
+```javascript
+// Unix
+Rsvim.cmd.echo(import.meta.dirname); //    /home/alice
+// Windows
+Rsvim.cmd.echo(import.meta.dirname); //    C:\Users\alice
+```
+
+##### Returns
+
+`string | undefined`
