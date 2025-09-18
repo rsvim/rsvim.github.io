@@ -58,7 +58,7 @@ $HOME/.rsvim
 
 #### `utils/add.js`
 
-```javascript
+```javascript {1}
 export function add(a, b) {
   return a + b;
 }
@@ -66,7 +66,7 @@ export function add(a, b) {
 
 #### `utils/echo.js`
 
-```javascript
+```javascript {1}
 export function echo(value) {
   Rsvim.cmd.echo(value);
 }
@@ -74,7 +74,7 @@ export function echo(value) {
 
 #### `utils.js`
 
-```javascript
+```javascript {1-2,4}
 import { echo } from "./utils/echo.js";
 import { add } from "./utils/add.js";
 
@@ -83,7 +83,7 @@ export default { echo, add };
 
 #### `rsvim.js`
 
-```javascript
+```javascript {1}
 import util from "./utils.js";
 util.echo(util.add(1, 2));
 ```
@@ -107,7 +107,7 @@ But, there are some limitations about Rsvim, since it is not 100% compatible wit
 
 [Dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) is also supported, it allows user loading their configuration script lazily and asynchronously. For example in above example, the `rsvim.js` is:
 
-```javascript
+```javascript {1,12}
 import("./utils.js")
   .then((utils) => {
     util.echo(util.add(1, 2));
@@ -261,9 +261,13 @@ The `"syntax"` specifier will map to `node_modules/syntax/lib/index.js` file, si
 
 ### Specify `package.json` In Your Config Home
 
-### Package Dependency
+With the `node_modules` looking up, you can use `npm` command to manage all your Rsvim configs and plugins, with a single `package.json` file. For example:
 
-Packages help build large and complicated logic, because they encapsulate the internal logic and only expose APIs that users need to care about. Packages can also specify their own dependency packages.
+```
+$HOME/.rsvim
+|- rsvim.js
+|- package.json
+```
 
 ### Recommended Reading
 
