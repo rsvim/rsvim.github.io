@@ -105,7 +105,25 @@ But, there are some limitations about Rsvim, since it is not 100% compatible wit
 
 ### Dynamic Import
 
-[Dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) is also supported, it allows user loading their configuration script lazily and asynchronously.
+[Dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) is also supported, it allows user loading their configuration script lazily and asynchronously. For example in above example, the `rsvim.js` is:
+
+```javascript
+import("./utils.js")
+  .then((utils) => {
+    util.echo(util.add(1, 2));
+  })
+  .catch((e) => {
+    Rsvim.cmd.echo(e);
+  });
+
+// Or
+try {
+  const utils = await import("./utils.js");
+  utils.echo(utils.add(1, 2));
+} catch (e) {
+  Rsvim.cmd.echo(e);
+}
+```
 
 ### Recommended
 
