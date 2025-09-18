@@ -182,6 +182,38 @@ In this example, the `"syntax"` specifier will map to the `syntax/index.js` file
 
 A npm package contains the `package.json` file that describing the meta information. The package name is specified with the `name` field inside the `package.json`, no longer by the directory name. The package entry script is still the `index.js` or `index.ts` by default, but can be override by the `exports` (or `main`) field inside the `package.json`.
 
+For example we recreate the `syntax` package in npm package format:
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- syntax/
+   |- package.json
+   |- lib/
+      |- index.js
+      |- utils.js
+```
+
+#### `syntax/package.json`
+
+```json
+{
+  "name": "syntax",
+  "version": "0.1.0"
+  "exports": {
+      ".": "./index.js"
+  }
+}
+```
+
+#### `syntax/index.js`
+
+```javascript
+import { hello } from "./utils.js";
+
+export default { hello };
+```
+
 For more information, please refer to [NPM Docs - About packages and modules](https://docs.npmjs.com/about-packages-and-modules).
 
 ### Package Dependency
