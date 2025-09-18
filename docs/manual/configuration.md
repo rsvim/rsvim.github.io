@@ -229,7 +229,7 @@ Rsvim will resolve the module path by looking up to the `package.json`. In this 
 
 ### `node_modules` Directory
 
-Rsvim will also try to find packages in the `node_modules` directory in the config home. Recall the above example:
+Rsvim will also try to find packages in the `node_modules` directory under the config home. Recall the above example:
 
 ```
 $HOME/.rsvim
