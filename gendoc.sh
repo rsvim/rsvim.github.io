@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+# set -x
 
 CUR_DIR="${PWD}"
 RSVIM_DIR="${PWD}/../rsvim"
