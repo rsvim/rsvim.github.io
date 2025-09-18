@@ -128,12 +128,6 @@ try {
 
 When Rsvim starts, it will schedules the `"./utils.js"` module loading to a background task when running the configuration entry point, then completes the configuration phase and initializes the TUI. Once the `"./utils.js"` module completes its loading (asynchronously), Rsvim will continue to execute the logic in the remaining script.
 
-### Recommended Reading
-
-- MDN [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export), [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import)
-- [Node ECMA modules](https://nodejs.org/api/esm.html)
-- [Deno modules](https://docs.deno.com/runtime/fundamentals/modules/)
-
 ## Package
 
 With config home directory, you can import a package that containing multiple files.
@@ -288,7 +282,10 @@ In the `package.json`, it specifies all the plugins it needs. Then simply run co
 The plugins in the `package.json` are not real 😁.
 :::
 
-### Recommended Reading
+## Recommended Reading
 
+- MDN [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export), [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import)
+- [Node ECMA modules](https://nodejs.org/api/esm.html)
+- [Deno modules](https://docs.deno.com/runtime/fundamentals/modules/)
 - [Node - An introduction to the npm package manager](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
 - [NPM - About packages and modules](https://docs.npmjs.com/about-packages-and-modules)
