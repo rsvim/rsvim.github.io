@@ -168,7 +168,7 @@ export default { hello };
 
 #### `rsvim.js`
 
-```javascript
+```javascript {1}
 import syntax from "syntax";
 
 syntax.hello("Rsvim!");
@@ -196,7 +196,7 @@ $HOME/.rsvim
 
 #### `syntax/package.json`
 
-```json
+```json {4,8}
 {
   "name": "syntax",
   "version": "0.1.0"
@@ -226,7 +226,7 @@ export function hello(value) {
 
 #### `rsvim.js`
 
-```javascript
+```javascript {1}
 import syntax from "syntax";
 
 syntax.hello("Rsvim!");
@@ -251,7 +251,7 @@ $HOME/.rsvim
 
 #### `rsvim.js`
 
-```javascript
+```javascript {1}
 import syntax from "syntax";
 
 syntax.hello("Rsvim!");
@@ -268,6 +268,25 @@ $HOME/.rsvim
 |- rsvim.js
 |- package.json
 ```
+
+#### `package.json`
+
+```json
+{
+  "type": "module",
+  "dependencies": {
+    "@rsvim/syntax": "^0.1.0",
+    "@rsvim/ex": "^0.1.0"
+    ...
+  }
+}
+```
+
+In the `package.json`, it specifies all the plugins it needs. Then simply run command `npm install` inside the config home, all the plugins will be installed in the `node_modules` directory, and that's all.
+
+:::warning
+The plugins in the `package.json` are not real 😁
+:::
 
 ### Recommended Reading
 
