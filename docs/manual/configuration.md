@@ -29,10 +29,10 @@ For environment variable `$XDG_CONFIG_HOME`, it uses different default value on 
 
 ### `$HOME/.rsvim`
 
-Then tries to detect:
+Then it tries to detect whether both below directory and entry file exist:
 
-1. Whether a `$HOME/.rsvim` directory exists in file system.
-2. Whether a `rsvim.{js,ts}` file exists in the directory.
+- Config home: `$HOME/.rsvim`
+- Config entry: `$HOME/.rsvim/rsvim.{js,ts}`
 
 ### `.rsvim.{js,ts}`
 
