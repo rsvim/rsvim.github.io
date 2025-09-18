@@ -144,10 +144,10 @@ The specifier to be resolved.
 
 `string`
 
-It returns a resolved URL.
+It returns a resolved URL by the specifier.
 
 #### Example
 
 ```javascript
-const bufId = Rsvim.buf.current();
+const url = import.meta.resolve("./utils/echo.js");
 ```
