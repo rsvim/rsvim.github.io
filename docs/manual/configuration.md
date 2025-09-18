@@ -104,7 +104,7 @@ But, there are some limitations, since Rsvim is not 100% compatible with node:
 
 ### Dynamic Import
 
-[Dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) allows user loading a module lazily and asynchronously. For example in above example, the `rsvim.js` is:
+[Dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) allows user loading a module lazily and asynchronously. Recall the above example, let's rewrite the `rsvim.js`:
 
 ```javascript {1,12}
 import("./utils.js")
