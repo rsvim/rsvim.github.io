@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Command Line Interface
 
-This section introduces the command `rsvim`, here are all the arguments and options:
+This section introduces the arguments and options of `rsvim` command line:
 
 ```text
 RSVIM - The VIM editor reinvented in Rust+TypeScript
