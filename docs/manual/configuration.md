@@ -130,8 +130,6 @@ When Rsvim starts, it will schedules the `"./utils.js"` module loading to a back
 
 ### Recommended Reading
 
-Recommend below resources for further reading:
-
 - MDN [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export), [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [Node ECMA modules](https://nodejs.org/api/esm.html)
 - [Deno modules](https://docs.deno.com/runtime/fundamentals/modules/)
@@ -143,7 +141,12 @@ Recommend below resources for further reading:
 With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules)! A folder containing one or more javascript/typescript script files can be a "npm package".
 
 :::tip
-
 Actually the concept of npm package is even wilder, a single file in above example in the "Multi-Files Structure" section is also a npm package.
-
 :::
+
+#### Simple Package Without `package.json`
+
+### Recommended Reading
+
+- [Node - An introduction to the npm package manager](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager)
+- [NPM - About packages and modules](https://docs.npmjs.com/about-packages-and-modules)
