@@ -46,12 +46,10 @@ The absolute file path of current module. This property is only provided for loc
 ##### Example
 
 ```javascript
-// Get the url of current script file.
-const value = import.meta.url;
-const url = new URL(import.meta.url);
-if (url.protocol === "file:") {
-  Rsvim.cmd.echo("this module was loaded locally");
-}
+// Unix
+Rsvim.cmd.echo(import.meta.filename); //    /home/alice
+// Windows
+Rsvim.cmd.echo(import.meta.filename); //    C:\Users\alice
 ```
 
 ##### Returns
