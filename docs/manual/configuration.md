@@ -19,6 +19,8 @@ First it tries the [FreeDesktop Directory Specification](https://specifications.
 
 :::tip
 
+For environment variable `$XDG_CONFIG_HOME`, it has different defaults on different platforms:
+
 - On Linux, it is `$HOME/.config/rsvim`.
 - On MacOS, it is `$HOME/Library/Application Support/rsvim`.
 - On Windows, it is `%USERPROFILE%\AppData\Roaming\rsvim` (or `%APPDATA%\rsvim`).
