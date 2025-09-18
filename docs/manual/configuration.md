@@ -142,7 +142,7 @@ With config home directory, you can directly use a [npm package](https://docs.np
 
 Actually, a single file can be a npm package. In the above example in the "Multi-Files Structure" section, every single javascript file is also a npm package.
 
-### Simple Package Without `package.json`
+### Package Without `package.json`
 
 ### Package with `package.json`
 
