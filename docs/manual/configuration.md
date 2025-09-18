@@ -225,7 +225,7 @@ import syntax from "syntax";
 syntax.hello("Rsvim!");
 ```
 
-Rsvim will resolve the module path by looking up to the `package.json`. In this example, the `"syntax"` specifier will map to the `syntax/lib/index.js` file.
+Rsvim will resolve the module path by looking up to the `package.json`. In this example, the `"syntax"` specifier is resolved to the `syntax/lib/index.js` file.
 
 ### `node_modules` Directory
 
@@ -250,7 +250,7 @@ import syntax from "syntax";
 syntax.hello("Rsvim!");
 ```
 
-The `"syntax"` specifier will map to `node_modules/syntax/lib/index.js` file, since Rsvim will also find packages in the `node_modules` directory.
+The `"syntax"` specifier is resolved to `node_modules/syntax/lib/index.js` file, since Rsvim will also find packages in the `node_modules` directory.
 
 ### Specify `package.json` In Your Config Home
 
