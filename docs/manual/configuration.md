@@ -99,7 +99,7 @@ But, there are some limitations about Rsvim, since it is not 100% compatible wit
 
 :::
 
-## Recommended Resources
+### Recommended
 
 Checkout below resources for further reading:
 
