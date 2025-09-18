@@ -18,7 +18,11 @@ A string representation of fully qualified module URL. When the module is loaded
 
 ```javascript
 // Get the url of current script file.
-const url = import.meta.url;
+const value = import.meta.url;
+const url = new URL(import.meta.url);
+if (url.protocol === "file:") {
+  Rsvim.cmd.echo("this module was loaded locally");
+}
 ```
 
 ##### Returns
