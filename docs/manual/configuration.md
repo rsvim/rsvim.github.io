@@ -176,9 +176,13 @@ syntax.hello("Rsvim!");
 
 The `"syntax"` specifier will map to the `syntax/index.js` file. Without a `package.json`, a package by default tries to find `index.js` or `index.ts` as package entry.
 
-As you see, a package encapsulates the internal logic and only exposes APIs that users need to care about, and thus help build large and complex plugins.
-
 ### NPM Package
+
+A npm package contains the `package.json` file that describing the meta information.
+
+### Package Dependency
+
+Packages help build large and complicated logic, because they encapsulate the internal logic and only expose APIs that users need to care about. Packages can also specify their own dependency packages.
 
 ### Recommended Reading
 
