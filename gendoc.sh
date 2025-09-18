@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# set -x
+set -x
 
 CUR_DIR="${PWD}"
 RSVIM_DIR="${PWD}/../rsvim"
 RSVIM_SRC_DIR="$RSVIM_DIR/rsvim_core/src/js/runtime"
 API_DOC_DIR="${PWD}/docs/api"
-TMP_SRC_DIR="${PWD}/.tmp-src"
+TMP_SRC_DIR="${PWD}/jsruntime"
 TMP_DOC_DIR="${PWD}/.tmp-doc"
 IMPORT_META_DOC="${PWD}/docs/api/00__web/interfaces/ImportMeta.md"
 TMP_IMPORT_META_DOC="${PWD}/.tmp-ImportMeta.md"
