@@ -138,7 +138,9 @@ When Rsvim starts, it will schedules the `"./utils.js"` module loading to a back
 
 With config home directory, you can directly use a [npm package](https://docs.npmjs.com/about-packages-and-modules)!
 
-### Simple Package Without `package.json`
+### Package Without `package.json`
+
+A directory that containing a `index.js` (or `index.ts`) script file is a simple npm package.
 
 ### Package with `package.json`
 
