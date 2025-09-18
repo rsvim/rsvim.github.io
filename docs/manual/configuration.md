@@ -178,7 +178,7 @@ The `"syntax"` specifier will map to the `syntax/index.js` file. Without a `pack
 
 ### NPM Package
 
-A npm package contains the `package.json` file that describing the meta information.
+A npm package contains the `package.json` file that describing the meta information. The package name is specified with the `name` field inside the `package.json`, no longer by the directory name.
 
 ### Package Dependency
 
