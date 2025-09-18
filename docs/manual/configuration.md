@@ -95,7 +95,7 @@ But, there are some limitations about Rsvim, since it is not 100% compatible wit
 :::warning[Limitation]
 
 1. Rsvim only supports ES modules, it doesn't support [CommonJS modules](https://nodejs.org/api/modules.html) as node do, the `require` keyword is not implemented.
-2. All the file based `specifier` must contain their file extension, i.e. the file extension cannot be omitted like node.
+2. File path based `specifier` must contain their file extension, i.e. the file extension cannot be omitted like node.
 
 :::
 
