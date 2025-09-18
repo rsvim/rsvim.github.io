@@ -92,12 +92,62 @@ Whether current module is the main module that was called when starting Rsvim, i
 ##### Example
 
 ```javascript
-// Unix
-Rsvim.cmd.echo(import.meta.dirname); //    /home/alice
-// Windows
-Rsvim.cmd.echo(import.meta.dirname); //    C:\Users\alice
+const isMain = import.meta.main;
 ```
 
 ##### Returns
 
-`string | undefined`
+`boolean`
+
+## Methods
+
+### resolve()
+
+```ts
+resolve(specifier): string;
+```
+
+Resolves the URL for a specifier as if it would be imported using `import(specifier)`.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`specifier`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+The specifier to be resolved.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`string`
+
+It returns a resolved URL.
+
+#### Example
+
+```javascript
+const bufId = Rsvim.buf.current();
+```
