@@ -40,4 +40,6 @@ Finally it tries to detect whether below entry file exists:
 
 - Config entry: `$HOME/.rsvim.{js,ts}`
 
-For the last one, there's no config home directory.
+## Multi-Files Structure
+
+multi-files structure is supported via the `import` keyword implementation, defined by [ES module specification](https://tc39.es/ecma262/#sec-modules).
