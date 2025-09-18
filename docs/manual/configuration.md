@@ -140,7 +140,7 @@ With config home directory, you can import a package that containing multiple fi
 
 ### Simple Package
 
-A simple directory that containing a `index.js` (or `index.ts`) script file is a simple package.
+A simple directory that containing a `index.js` (or `index.ts`) script file is a simple package. And we can import the package by its name.
 
 ### NPM Package
 
