@@ -5,7 +5,7 @@
 CUR_DIR="${PWD}"
 RSVIM_DIR="${PWD}/../rsvim"
 RSVIM_SRC_DIR="$RSVIM_DIR/rsvim_core/src/js/runtime"
-API_DOCS_DST_DIR="${PWD}/docs/api"
+API_DOC_DIR="${PWD}/docs/api"
 TMP_SRC_DIR="${PWD}/.tmp-src"
 TMP_DOC_DIR="${PWD}/.tmp-doc"
 IMPORT_META_DOC="${PWD}/docs/api/00__web/interfaces/ImportMeta.md"
@@ -43,21 +43,23 @@ npm run typedoc
 
 copy_api_doc() {
   local name="$1"
-  local api_doc="$API_DOCS_DST_DIR/$name"
+  local api_doc="$API_DOC_DIR/$name"
   local gen_doc="$TMP_DOC_DIR/$name"
-  echo "Copy generated docs ($gen_doc) to $API_DOCS_DST_DIR"
+  echo "Copy generated docs ($gen_doc) to $API_DOC_DIR"
   rm -rf $api_doc
-  cp -rf $gen_doc $API_DOCS_DST_DIR
+  cp -rf $gen_doc $API_DOC_DIR
 }
 
 copy_api_doc "00__web"
 copy_api_doc "01__rsvim"
+cp $TMP_IMPORT_META_DOC $IMPORT_META_DOC
 
 # cleanup
 rm -rf $TMP_SRC_DIR
 rm -rf $TMP_DOC_DIR
+rm -rf $TMP_IMPORT_META_DOC
 
 echo "Run: git status"
 git status
-echo "Run: tree $API_DOCS_DST_DIR"
-tree $API_DOCS_DST_DIR
+echo "Run: tree $API_DOC_DIR"
+tree $API_DOC_DIR
