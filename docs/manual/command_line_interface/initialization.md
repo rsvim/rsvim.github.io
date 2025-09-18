@@ -27,7 +27,7 @@ Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim
 - `$HOME/.rsvim.{js,ts}`
 
 :::tip
-Please see [Configuration](/docs/manual/configuration) for more details.
+Checkout [Configuration](/docs/manual/configuration) for more details.
 :::
 
 ## 4. Initialize TUI
