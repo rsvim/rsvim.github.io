@@ -138,11 +138,11 @@ When Rsvim starts, it will schedules the `"./utils.js"` module loading to a back
 
 With config home directory, you can import a package that containing multiple files.
 
-### Package Without `package.json`
+### Simple Package
 
 A directory that containing a `index.js` (or `index.ts`) script file is a simple npm package.
 
-### Package with `package.json`
+### NPM Package
 
 ### Recommended Reading
 
