@@ -60,4 +60,4 @@ Checkout below resources for further reading:
 
 - MDN [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) and [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [Node ECMA modules](https://nodejs.org/api/esm.html)
-- [Node ECMA modules](https://nodejs.org/api/esm.html)
+- [Deno modules](https://docs.deno.com/runtime/fundamentals/modules/)
