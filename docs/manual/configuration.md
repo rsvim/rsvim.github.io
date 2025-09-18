@@ -169,7 +169,7 @@ syntax.hello("Rsvim!");
 
 Rsvim will look for the `syntax` package in its config home by the directory name, and resolves the entry script path.
 
-In this example, the `"syntax"` specifier is resolved to the `syntax/index.js` file. Without a `package.json`, a package by default tries to find `index.js` or `index.ts` as a package entry.
+In this example, the `"syntax"` specifier is resolved to the `syntax/index.js` file. Without a `package.json`, a package by default tries to find `index.js` or `index.ts` as its package entry.
 
 ### NPM Package
 
