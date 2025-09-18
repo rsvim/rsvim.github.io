@@ -12,7 +12,7 @@ At startup, Rsvim chooses a local directory as its configuration home, and a `rs
 
 ### `$XDG_CONFIG_HOME/rsvim`
 
-First detect [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) as a second choice:
+First detect [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/):
 
 1. Whether a `$XDG_CONFIG_HOME/rsvim` directory exists in file system.
 2. Whether a `rsvim.{js,ts}` file exists in the directory.

@@ -20,7 +20,7 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 
 ## 3. Load Configuration
 
-Detect the configuration home, and entry point `rsvim.js` (or `rsvim.ts`). The entry point script is executed to apply all configurations. There're several options to choose:
+Detect the configuration home and entry point `rsvim.js` (or `rsvim.ts`). The entry point script is executed to apply all configurations. There're several options to choose:
 
 - `$XDG_CONFIG_HOME/rsvim` (config home) and `$XDG_CONFIG_HOME/rsvim/rsvim.{js,ts}` (config entry)
 - `$HOME/.rsvim` (config home) and `$HOME/.rsvim/rsvim.{js,ts}` (config entry)
