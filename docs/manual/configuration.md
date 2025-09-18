@@ -129,7 +129,7 @@ When Rsvim starts, it will schedules a `"./utils.js"` module loading task to bac
 
 ## Package
 
-With config home directory, you can import a package that containing multiple files.
+With config home, you can import a package that containing multiple files.
 
 ### Simple Package
 
