@@ -36,8 +36,8 @@ Then it tries to detect whether both below directory and entry file exist:
 
 ### `.rsvim.{js,ts}`
 
-If all above failed, finally tries to detect:
+Finally it tries to detect whether below entry file exists:
 
-1. Whether a `$HOME/.rsvim.{js,ts}` file exists.
+- Config entry: `$HOME/.rsvim.{js,ts}`
 
-If yes, Rsvim uses it as the entry point and `$HOME/.rsvim` as the configuration home, creates a directory if `$HOME/.rsvim` doesn't exist.
+For the last one, there's no config home directory.
