@@ -174,7 +174,9 @@ import syntax from "syntax";
 syntax.hello("Rsvim!");
 ```
 
-The `"syntax"` specifier will map to the `syntax/index.js` file. Without a `package.json`, a package by default tries to find `index.js` or `index.ts` as package entry.
+Rsvim will look for the `syntax` package in its config home by the directory name, and resolves the entry script path.
+
+In this example, the `"syntax"` specifier will map to the `syntax/index.js` file. Without a `package.json`, a package by default tries to find `index.js` or `index.ts` as a package entry.
 
 ### NPM Package
 
