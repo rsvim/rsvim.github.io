@@ -285,7 +285,7 @@ $HOME/.rsvim
 In the `package.json`, it specifies all the plugins it needs. Then simply run command `npm install` inside the config home, all the plugins will be installed in the `node_modules` directory, and that's all.
 
 :::warning
-The plugins in the `package.json` are not real 😁
+The plugins in the `package.json` are not real 😁.
 :::
 
 ### Recommended Reading
