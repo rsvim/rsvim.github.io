@@ -22,8 +22,8 @@ Options and file names from the `rsvim` command line are inspected. Several kind
 
 Chooses a local directory as its configuration home, and a `rsvim.js` (or `rsvim.ts`) file as entry point. This script is executed to apply all configurations. There're several options to choose:
 
-- `$XDG_CONFIG_HOME/rsvim`
-- `$HOME/.rsvim`
+- `$XDG_CONFIG_HOME/rsvim` and `$XDG_CONFIG_HOME/rsvim/rsvim.{js,ts}`
+- `$HOME/.rsvim` and `$HOME/.rsvim/rsvim.{js,ts}`
 - `$HOME/.rsvim.{js,ts}`
 
 :::tip
