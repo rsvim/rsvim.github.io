@@ -173,7 +173,7 @@ In this example, the `"syntax"` specifier is resolved to the `syntax/index.js` f
 
 ### NPM Package
 
-A npm package contains the `package.json` file that describing the meta information. The package name is specified with the `name` field inside the `package.json`, no longer by the directory name. The package entry script is still the `index.js` or `index.ts` by default, but can be override by the `exports` (or `main`) field inside the `package.json`.
+A npm package contains the `package.json` file that describing meta information. The package name is specified with the `name` field inside the `package.json`, no longer by the directory name. The package entry script is still the `index.js` or `index.ts` by default, but can be override by the `exports` (or `main`) field inside the `package.json`.
 
 For example we recreate the `syntax` package in npm package format:
 
