@@ -128,7 +128,7 @@ syntax.setup();
 ex.setup();
 ```
 
-In the `package.json`, it specifies all the plugins for your needs. Then simply run command `npm install` inside the config home, all plugins will be installed in the `node_modules` directory, and that's all.
+The `package.json` specifies all the plugins with semantic version support. Run the `npm install` command inside the config home, all plugins will be installed in the `node_modules` directory, and that's all.
 
 And in your config entry file `rsvim.js`, you can just import these packages just like node/deno!
 
