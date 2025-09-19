@@ -12,7 +12,7 @@ As mentioned in [Configuration](./#homersvimjsts), the entry point `$HOME/.rsvim
 
 A simple package is a directory that containing a `index.js` (or `index.ts`) script file, Rsvim can import the package by the directory name.
 
-## Package `syntax` Example
+## Example
 
 For example we have a simple package called `syntax`:
 
