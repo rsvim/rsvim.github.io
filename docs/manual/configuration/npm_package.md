@@ -60,7 +60,7 @@ import syntax from "syntax";
 syntax.hello("Rsvim!");
 ```
 
-Rsvim will resolve the module name by the `"name"` field in `package.json`, no longer by the package's directory name. It means you can provide a different directory name from the `"name"` in `package.json`.
+Rsvim will resolve the module name by the `"name"` field in `package.json`, no longer by the package's directory name. It means you can provide a different directory name.
 
 Rsvim will resolve the module path by looking into the `package.json` file.
 
