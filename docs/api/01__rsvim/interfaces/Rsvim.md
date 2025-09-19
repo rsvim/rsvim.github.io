@@ -87,7 +87,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-[`RsvimRt`](../classes/RsvimRt.md)
+[`RsvimRt`](RsvimRt.md)
 
 </td>
 </tr>

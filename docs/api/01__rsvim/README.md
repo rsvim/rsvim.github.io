@@ -23,8 +23,6 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 </td>
 <td>
 
-**`Hideconstructor`**
-
 The `Rsvim.buf` global object for Vim buffers.
 
 **Example**
@@ -44,8 +42,6 @@ const buf = Rsvim.buf;
 </td>
 <td>
 
-**`Hideconstructor`**
-
 The `Rsvim.buf` global object for Vim buffers.
 
 **Example**
@@ -64,8 +60,6 @@ const buf = Rsvim.buf;
 
 </td>
 <td>
-
-**`Hideconstructor`**
 
 The `Rsvim.cmd` global object for Ex commands.
 
@@ -92,8 +86,6 @@ const cmd = Rsvim.cmd;
 </td>
 <td>
 
-**`Hideconstructor`**
-
 The `Rsvim.cmd` global object for Ex commands.
 
 :::tip
@@ -119,8 +111,6 @@ const cmd = Rsvim.cmd;
 </td>
 <td>
 
-**`Hideconstructor`**
-
 The `Rsvim.opt` global object for global editor options.
 
 **Example**
@@ -139,8 +129,6 @@ const opt = Rsvim.opt;
 
 </td>
 <td>
-
-**`Hideconstructor`**
 
 The `Rsvim.opt` global object for global editor options.
 
@@ -163,7 +151,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -171,7 +159,26 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <tr>
 <td>
 
-[RsvimRt](classes/RsvimRt.md)
+[RsvimRt](interfaces/RsvimRt.md)
+
+</td>
+<td>
+
+The `Rsvim.rt` global object for javascript runtime (editor process).
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.rt'.
+const rt = Rsvim.rt;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimRtImpl](classes/RsvimRtImpl.md)
 
 </td>
 <td>

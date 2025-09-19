@@ -82,7 +82,7 @@ new RsvimImpl(): RsvimImpl;
 </td>
 <td>
 
-[`RsvimRt`](RsvimRt.md)
+[`RsvimRtImpl`](RsvimRtImpl.md)
 
 </td>
 </tr>

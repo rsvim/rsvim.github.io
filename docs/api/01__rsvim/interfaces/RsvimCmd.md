@@ -1,5 +1,3 @@
-**`Hideconstructor`**
-
 The `Rsvim.cmd` global object for Ex commands.
 
 :::tip

@@ -1,5 +1,3 @@
-**`Hideconstructor`**
-
 The `Rsvim.opt` global object for global editor options.
 
 ## Example
