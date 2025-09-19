@@ -12,13 +12,28 @@ The `Rsvim` global object, it contains multiple sub fields:
 const vim = Rsvim;
 ```
 
+## Implements
+
+- [`Rsvim`](../interfaces/Rsvim.md)
+
+## Constructors
+
+### Constructor
+
+```ts
+new RsvimImpl(): RsvimImpl;
+```
+
+#### Returns
+
+`RsvimImpl`
+
 ## Properties
 
 <table>
 <thead>
 <tr>
 <th>Property</th>
-<th>Modifier</th>
 <th>Type</th>
 </tr>
 </thead>
@@ -31,12 +46,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-`readonly`
-
-</td>
-<td>
-
-[`RsvimBuf`](RsvimBuf.md)
+[`RsvimBufImpl`](RsvimBufImpl.md)
 
 </td>
 </tr>
@@ -48,12 +58,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-`readonly`
-
-</td>
-<td>
-
-[`RsvimCmd`](RsvimCmd.md)
+[`RsvimCmdImpl`](RsvimCmdImpl.md)
 
 </td>
 </tr>
@@ -65,12 +70,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-`readonly`
-
-</td>
-<td>
-
-[`RsvimOpt`](../classes/RsvimOpt.md)
+[`RsvimOpt`](RsvimOpt.md)
 
 </td>
 </tr>
@@ -82,12 +82,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-`readonly`
-
-</td>
-<td>
-
-[`RsvimRt`](../classes/RsvimRt.md)
+[`RsvimRt`](RsvimRt.md)
 
 </td>
 </tr>

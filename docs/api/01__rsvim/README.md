@@ -39,10 +39,60 @@ const buf = Rsvim.buf;
 <tr>
 <td>
 
-[RsvimCmd](classes/RsvimCmd.md)
+[RsvimBufImpl](classes/RsvimBufImpl.md)
 
 </td>
 <td>
+
+**`Hideconstructor`**
+
+The `Rsvim.buf` global object for Vim buffers.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.buf'.
+const buf = Rsvim.buf;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimCmd](interfaces/RsvimCmd.md)
+
+</td>
+<td>
+
+**`Hideconstructor`**
+
+The `Rsvim.cmd` global object for Ex commands.
+
+:::tip
+The "ex command" mostly describes the product function, i.e. when user types ":" in normal mode,
+user can move cursor to command-line and input commands. Rather than referring to the
+["ex commands"](https://vimhelp.org/intro.txt.html#Ex-mode) in Vim editor.
+:::
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.cmd'.
+const cmd = Rsvim.cmd;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimCmdImpl](classes/RsvimCmdImpl.md)
+
+</td>
+<td>
+
+**`Hideconstructor`**
 
 The `Rsvim.cmd` global object for Ex commands.
 
@@ -124,7 +174,7 @@ The global object.
 <table>
 <thead>
 <tr>
-<th>Interface</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -133,6 +183,30 @@ The global object.
 <td>
 
 [Rsvim](interfaces/Rsvim.md)
+
+</td>
+<td>
+
+The `Rsvim` global object, it contains multiple sub fields:
+
+- `Rsvim.buf`: Buffer APIs.
+- `Rsvim.cmd`: Ex command APIs.
+- `Rsvim.opt`: Global options.
+- `Rsvim.rt`: JavaScript runtime (editor process) APIs.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim'.
+const vim = Rsvim;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimImpl](classes/RsvimImpl.md)
 
 </td>
 <td>
