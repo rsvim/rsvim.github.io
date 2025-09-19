@@ -6,7 +6,7 @@ sidebar_position: 4
 
 A [npm package](https://docs.npmjs.com/about-packages-and-modules) contains the `package.json` file that describes the meta information for the package.
 
-The package name is specified with the `name` field inside the `package.json`, no longer by the directory name. The package entry script is still the `index.js` or `index.ts` by default, but can be override by the `exports` (or `main`) field inside the `package.json`.
+The package name is specified with the `name` field in `package.json`, no longer by the directory name. The entry point is still `index.js` or `index.ts` by default, but can be override by the `exports` or `main` field in `package.json`.
 
 For example we recreate the `syntax` package in npm package format:
 
