@@ -220,7 +220,8 @@ const config: Config = {
           title: "Rsvim APIs",
           sidebar_position: 2,
         };
-      } else if (params.filePath.endsWith("00__web/README.md")) {
+      }
+      if (params.filePath.endsWith("00__web/README.md")) {
         result.frontMatter = {
           title: "Web APIs",
           sidebar_position: 3,

@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Exit
 
-As Rsvim runs asynchronously just like a HTTP API service, it handles multiple tasks by tokio's async multi-threaded runtime. User's keyboard and mouse events are only one of the requests sending to it. When user executes [`:js Rsvim.rt.exit();`](/docs/next/api/rsvim/classes/RsvimRt#exit) command, it just sends a "Exit" request to ask Rsvim to exit.
+As Rsvim runs asynchronously just like a HTTP API service, it handles multiple tasks by tokio's async multi-threaded runtime. User's keyboard and mouse events are only one of the requests sending to it. When user executes [`:js Rsvim.rt.exit();`](/docs/api/rsvim/classes/RsvimRt#exit) command, it just sends a "Exit" request to ask Rsvim to exit.
 
 Rsvim proceeds below steps in order:
 
