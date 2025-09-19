@@ -40,8 +40,10 @@ Then it tries to find whether below directory and entry file exist:
 - Config home: `$HOME/.rsvim`
 - Config entry: `$HOME/.rsvim/rsvim.{js,ts}`
 
-### `.rsvim.{js,ts}`
+### `$HOME/.rsvim.{js,ts}`
 
 Finally it tries to find whether below entry file exists:
 
 - Config entry: `$HOME/.rsvim.{js,ts}`
+
+For the last location, it doesn't have a config home actually. This will affect the "package" resolving for Rsvim, please refer to [Simple Package](./simple_package.md) for more details.
