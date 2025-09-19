@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-## Package
+# Package
 
 With config home, you can import a package that containing multiple files.
 
-### Simple Package
+## Simple Package
 
 A simple directory that containing a `index.js` (or `index.ts`) file is a simple package, we can import the package by the directory name. For example we have a simple package called `syntax`:
 
@@ -18,7 +18,7 @@ $HOME/.rsvim
    |- utils.js
 ```
 
-#### `syntax/utils.js`
+### `syntax/utils.js`
 
 ```javascript
 export function hello(value) {
@@ -26,7 +26,7 @@ export function hello(value) {
 }
 ```
 
-#### `syntax/index.js`
+### `syntax/index.js`
 
 ```javascript
 import { hello } from "./utils.js";
@@ -34,7 +34,7 @@ import { hello } from "./utils.js";
 export default { hello };
 ```
 
-#### `rsvim.js`
+### `rsvim.js`
 
 ```javascript {1}
 import syntax from "syntax";
@@ -46,7 +46,7 @@ Rsvim will look for the `syntax` package in its config home by the directory nam
 
 In this example, the `"syntax"` specifier is resolved to the `syntax/index.js` file. Without a `package.json`, a package by default tries to find `index.js` or `index.ts` as its package entry.
 
-### NPM Package
+## NPM Package
 
 A npm package contains the `package.json` file that describing meta information. The package name is specified with the `name` field inside the `package.json`, no longer by the directory name. The package entry script is still the `index.js` or `index.ts` by default, but can be override by the `exports` (or `main`) field inside the `package.json`.
 
@@ -62,7 +62,7 @@ $HOME/.rsvim
       |- utils.js
 ```
 
-#### `syntax/package.json`
+### `syntax/package.json`
 
 ```json {2,4,8}
 {
@@ -76,7 +76,7 @@ $HOME/.rsvim
 }
 ```
 
-#### `syntax/lib/index.js`
+### `syntax/lib/index.js`
 
 ```javascript
 import { hello } from "./utils.js";
@@ -84,7 +84,7 @@ import { hello } from "./utils.js";
 export default { hello };
 ```
 
-#### `syntax/lib/utils.js`
+### `syntax/lib/utils.js`
 
 ```javascript
 export function hello(value) {
@@ -92,7 +92,7 @@ export function hello(value) {
 }
 ```
 
-#### `rsvim.js`
+### `rsvim.js`
 
 ```javascript {1}
 import syntax from "syntax";
@@ -102,7 +102,7 @@ syntax.hello("Rsvim!");
 
 Rsvim will resolve the module path by looking up to the `package.json`. In this example, the `"syntax"` specifier is resolved to the `syntax/lib/index.js` file.
 
-### `node_modules` Directory
+## `node_modules` Directory
 
 Rsvim will also try to find packages in the `node_modules` directory under config home. Let's rewrite the above example:
 
@@ -117,7 +117,7 @@ $HOME/.rsvim
          |- utils.js
 ```
 
-#### `rsvim.js`
+### `rsvim.js`
 
 ```javascript {1}
 import syntax from "syntax";
@@ -127,7 +127,7 @@ syntax.hello("Rsvim!");
 
 The `"syntax"` specifier is resolved to `node_modules/syntax/lib/index.js` file, since Rsvim will also find packages in the `node_modules` directory.
 
-### Specify `package.json` In Your Config Home
+## Specify `package.json` In Your Config Home
 
 With the `node_modules` looking up, you can use `npm` command to manage all your Rsvim configs and plugins, with a single `package.json` file. For example:
 

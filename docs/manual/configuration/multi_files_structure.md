@@ -2,11 +2,11 @@
 sidebar_position: 2
 ---
 
-## Multi-Files Structure
+# Multi-Files Structure
 
 Multi-files configuration structure is supported via the [ES modules](https://tc39.es/ecma262/#sec-modules).
 
-### Export/Import
+## Export/Import
 
 The `export` declaration is used to export values from a module. Then exported values can be imported into other modules with `import` declaration (or dynamic import). For example we have below configuration:
 
@@ -19,7 +19,7 @@ $HOME/.rsvim
    |- echo.js
 ```
 
-#### `utils/add.js`
+### `utils/add.js`
 
 ```javascript {1}
 export function add(a, b) {
@@ -27,7 +27,7 @@ export function add(a, b) {
 }
 ```
 
-#### `utils/echo.js`
+### `utils/echo.js`
 
 ```javascript {1}
 export function echo(value) {
@@ -35,7 +35,7 @@ export function echo(value) {
 }
 ```
 
-#### `utils.js`
+### `utils.js`
 
 ```javascript {1-2,4}
 import { echo } from "./utils/echo.js";
@@ -44,7 +44,7 @@ import { add } from "./utils/add.js";
 export default { echo, add };
 ```
 
-#### `rsvim.js`
+### `rsvim.js`
 
 ```javascript {1}
 import util from "./utils.js";
@@ -64,7 +64,7 @@ But, there are some limitations, since Rsvim is not 100% compatible with node:
 
 :::
 
-### Dynamic Import
+## Dynamic Import
 
 [Dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import) allows user loading a module lazily and asynchronously. Recall the above example, let's rewrite the `rsvim.js`:
 
