@@ -12,6 +12,10 @@ At startup, Rsvim chooses a local directory as its config home, and a `rsvim.js`
 
 The entry point script will be executed to apply all configurations.
 
+## Candidate Locations
+
+Rsvim will find its config home in following 3 locations in turn, it will pick up the first one that meets the requirements.
+
 ### `$XDG_CONFIG_HOME/rsvim`
 
 First it tries the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/), detect whether both below directory and entry file exist:
