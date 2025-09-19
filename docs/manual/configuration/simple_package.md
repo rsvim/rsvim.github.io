@@ -52,4 +52,4 @@ Rsvim will look for the `"syntax"` package in its config home by the directory n
 
 In simple package, entry point is by default resolved to the `index.js` or `index.ts` script file. In this example, the `"syntax"` specifier is resolved to the `syntax/index.js` file.
 
-Without a `package.json`, a package by default tries to find `index.js` or `index.ts` as its package entry.
+Once the package contains a `package.json` file, it becomes a [NPM package](./npm_package.md).
