@@ -8,7 +8,9 @@ A [npm package](https://docs.npmjs.com/about-packages-and-modules) contains the 
 
 The package name is specified with the `name` field in `package.json`, no longer by the directory name. The entry point is still `index.js` or `index.ts` by default, but can be override by the `exports` or `main` field in `package.json`.
 
-For example we recreate the `syntax` package in npm package format:
+## Example
+
+For example let's recreate the `syntax` package (in [Simple Package](./simple_package.md#example)) in npm package format:
 
 ```
 $HOME/.rsvim
@@ -58,4 +60,6 @@ import syntax from "syntax";
 syntax.hello("Rsvim!");
 ```
 
-Rsvim will resolve the module path by looking up to the `package.json`. In this example, the `"syntax"` specifier is resolved to the `syntax/lib/index.js` file.
+Rsvim will resolve the module path by looking into the `package.json` file.
+
+In this example, the `"syntax"` specifier is resolved to the `syntax/lib/index.js` file.
