@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Rsvim uses javascript/typescript scripts to configure its behavior, script drives everything.
 
-## Config Home and Entry Point
+## Config Home and Entry
 
 At startup, Rsvim chooses a local directory as its config home, and a `rsvim.js` (or `rsvim.ts`) file under that directory as the entry point.
 
