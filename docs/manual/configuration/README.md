@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Rsvim uses javascript/typescript scripts to configure its behavior, script drives everything.
 
-## Config Home and Entry
+## Config Home and Entry Point
 
 At startup, Rsvim chooses a local directory as its config home, and a `rsvim.js` (or `rsvim.ts`) file under that directory as the entry point.
 
@@ -14,11 +14,11 @@ The entry point script will be executed to apply all configurations.
 
 ## Candidate Locations
 
-Rsvim will find its config home in following 3 locations in turn, it will pick up the first one that meets the requirements.
+Rsvim tries to find its config home in following 3 locations in turn, it will pick up the first one that meets the requirements.
 
 ### `$XDG_CONFIG_HOME/rsvim`
 
-First it tries to detect whether the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) directory and entry file exist:
+First it tries to find whether the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) directory and entry file exist:
 
 - Config home: `$XDG_CONFIG_HOME/rsvim`
 - Config entry: `$XDG_CONFIG_HOME/rsvim/rsvim.{js,ts}`
@@ -35,13 +35,13 @@ For environment variable `$XDG_CONFIG_HOME`, it has different default value on d
 
 ### `$HOME/.rsvim`
 
-Then it tries to detect whether both below directory and entry file exist:
+Then it tries to find whether below directory and entry file exist:
 
 - Config home: `$HOME/.rsvim`
 - Config entry: `$HOME/.rsvim/rsvim.{js,ts}`
 
 ### `.rsvim.{js,ts}`
 
-Finally it tries to detect whether below entry file exists:
+Finally it tries to find whether below entry file exists:
 
 - Config entry: `$HOME/.rsvim.{js,ts}`
