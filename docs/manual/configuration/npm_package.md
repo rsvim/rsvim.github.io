@@ -3,3 +3,57 @@ sidebar_position: 4
 ---
 
 # NPM Package
+
+A npm package contains the `package.json` file that describing meta information. The package name is specified with the `name` field inside the `package.json`, no longer by the directory name. The package entry script is still the `index.js` or `index.ts` by default, but can be override by the `exports` (or `main`) field inside the `package.json`.
+
+For example we recreate the `syntax` package in npm package format:
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- syntax/
+   |- package.json
+   |- lib/
+      |- index.js
+      |- utils.js
+```
+
+### `syntax/package.json`
+
+```json {2,4,8}
+{
+  "name": "syntax",
+  "version": "0.1.0"
+  "exports": {
+      ".": "./lib/index.js"
+  },
+  // Or
+  "main": "./lib/index.js"
+}
+```
+
+### `syntax/lib/index.js`
+
+```javascript
+import { hello } from "./utils.js";
+
+export default { hello };
+```
+
+### `syntax/lib/utils.js`
+
+```javascript
+export function hello(value) {
+  Rsvim.cmd.echo(`Hello:${value}`);
+}
+```
+
+### `rsvim.js`
+
+```javascript {1}
+import syntax from "syntax";
+
+syntax.hello("Rsvim!");
+```
+
+Rsvim will resolve the module path by looking up to the `package.json`. In this example, the `"syntax"` specifier is resolved to the `syntax/lib/index.js` file.
