@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Multi-files configuration structure is supported via the [ES modules](https://tc39.es/ecma262/#sec-modules), i.e. through the `export` and `import` declarations.
 
-## Export/Import
+## Static Import
 
 The `export` declaration is used to export values from a module. Then exported values can be imported into other modules with `import` declaration (or dynamic import). For example we have below configuration:
 
