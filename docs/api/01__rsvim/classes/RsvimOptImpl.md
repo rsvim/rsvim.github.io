@@ -1,3 +1,5 @@
+**`Hideconstructor`**
+
 The `Rsvim.opt` global object for global editor options.
 
 ## Example
@@ -6,6 +8,22 @@ The `Rsvim.opt` global object for global editor options.
 // Create a alias to 'Rsvim.opt'.
 const opt = Rsvim.opt;
 ```
+
+## Implements
+
+- [`RsvimOpt`](../interfaces/RsvimOpt.md)
+
+## Constructors
+
+### Constructor
+
+```ts
+new RsvimOptImpl(): RsvimOptImpl;
+```
+
+#### Returns
+
+`RsvimOptImpl`
 
 ## Accessors
 
@@ -22,7 +40,7 @@ Get the _expand-tab_ option. Local to buffer.
 When in insert mode, inserts [spaces](https://en.wikipedia.org/wiki/Whitespace_character) (ASCII `32`)
 instead of a [horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
 
-See [shiftWidth](#shiftwidth) to get the number of spaces when inserting.
+See [shiftWidth](../interfaces/RsvimOpt.md#shiftwidth) to get the number of spaces when inserting.
 
 ##### Default Value
 
@@ -45,17 +63,22 @@ const value = Rsvim.opt.expandTab;
 set expandTab(value): void;
 ```
 
-Set the _expand-tab_ option.
+Get the _expand-tab_ option. Local to buffer.
 
-##### Throws
+When in insert mode, inserts [spaces](https://en.wikipedia.org/wiki/Whitespace_character) (ASCII `32`)
+instead of a [horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+See [shiftWidth](../interfaces/RsvimOpt.md#shiftwidth) to get the number of spaces when inserting.
+
+##### Default Value
+
+`false`
 
 ##### Example
 
 ```javascript
-// Set the 'expand-tab' option.
-Rsvim.opt.expandTab = true;
+// Get the 'expand-tab' option.
+const value = Rsvim.opt.expandTab;
 ```
 
 ##### Parameters
@@ -65,7 +88,6 @@ Rsvim.opt.expandTab = true;
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -80,11 +102,6 @@ Rsvim.opt.expandTab = true;
 `boolean`
 
 </td>
-<td>
-
-The _expand-tab_ option.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -92,6 +109,10 @@ The _expand-tab_ option.
 ##### Returns
 
 `void`
+
+#### Implementation of
+
+[`RsvimOpt`](../interfaces/RsvimOpt.md).[`expandTab`](../interfaces/RsvimOpt.md#expandtab)
 
 ***
 
@@ -133,17 +154,24 @@ const value = Rsvim.opt.fileEncoding;
 set fileEncoding(value): void;
 ```
 
-Set the _file-encoding_ option.
+Get the _file-encoding_ option. Local to buffer.
 
-##### Throws
+Sets the [character encoding](https://en.wikipedia.org/wiki/Character_encoding) for the file of this buffer.
+This will determine which character encoding is used when RSVIM read/write a file from file system.
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a valid option.
+:::warning
+For now, only **utf-8** encoding is supported.
+:::
+
+##### Default Value
+
+`"utf-8"`
 
 ##### Example
 
 ```javascript
-// Set the 'file-encoding' option.
-Rsvim.opt.fileEncoding = "utf-8";
+// Get the 'file-encoding' option.
+const value = Rsvim.opt.fileEncoding;
 ```
 
 ##### Parameters
@@ -153,7 +181,6 @@ Rsvim.opt.fileEncoding = "utf-8";
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -168,11 +195,6 @@ Rsvim.opt.fileEncoding = "utf-8";
 `"utf-8"`
 
 </td>
-<td>
-
-The _file-encoding_ option.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -180,6 +202,10 @@ The _file-encoding_ option.
 ##### Returns
 
 `void`
+
+#### Implementation of
+
+[`RsvimOpt`](../interfaces/RsvimOpt.md).[`fileEncoding`](../interfaces/RsvimOpt.md#fileencoding)
 
 ***
 
@@ -233,17 +259,36 @@ const value = Rsvim.opt.fileFormat;
 set fileFormat(value): void;
 ```
 
-Set the _file-format_ option.
+Get the _file-format_ option. Local to buffer.
 
-##### Throws
+Sets the [line end](https://en.wikipedia.org/wiki/Newline) for the buffer. There are 3 kinds of line end:
+- `CRLF`: used by [Windows](https://www.microsoft.com/windows).
+- `LF`: used by [Linux](https://en.wikipedia.org/wiki/Linux) and [Unix](https://en.wikipedia.org/wiki/Unix) (include [MacOS](https://www.apple.com/macos/)).
+- `CR`: used by [classic MacOS](https://en.wikipedia.org/wiki/Classic_Mac_OS).
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a valid option.
+:::warning
+Today's Mac also uses `LF` as line end, you should never use `CR` any more.
+:::
+
+:::note
+In fact this option should be named to "line-end", "file-format" is just to be consistent
+with Vim's [fileformat](https://vimhelp.org/options.txt.html#%27fileformat%27).
+:::
+
+For this option, it has below choices:
+- `"dos"`: equivalent to `CRLF` line end.
+- `"unix"`: equivalent to `LF` line end.
+- `"mac"`: equivalent to `CR` line end.
+
+##### Default Value
+
+`"dos"` for Windows/MS-DOS, `"unix"` for Linux/Unix/MacOS.
 
 ##### Example
 
 ```javascript
-// Set the 'file-format' option.
-Rsvim.opt.fileFormat = "unix";
+// Get the 'file-format' option.
+const value = Rsvim.opt.fileFormat;
 ```
 
 ##### Parameters
@@ -253,7 +298,6 @@ Rsvim.opt.fileFormat = "unix";
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -268,11 +312,6 @@ Rsvim.opt.fileFormat = "unix";
 `"dos"` \| `"unix"` \| `"mac"`
 
 </td>
-<td>
-
-The _file-format_ option.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -280,6 +319,10 @@ The _file-format_ option.
 ##### Returns
 
 `void`
+
+#### Implementation of
+
+[`RsvimOpt`](../interfaces/RsvimOpt.md).[`fileFormat`](../interfaces/RsvimOpt.md#fileformat)
 
 ***
 
@@ -297,7 +340,7 @@ Get the _line-break_ option. This options is also known as
 If `true`, Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
 It only affects the way the file is displayed, not its contents.
 
-This option is not used when the [wrap](#wrap) option is `false`.
+This option is not used when the [wrap](../interfaces/RsvimOpt.md#wrap) option is `false`.
 
 ##### Default Value
 
@@ -320,17 +363,23 @@ const value = Rsvim.opt.lineBreak;
 set lineBreak(value): void;
 ```
 
-Set the _line-break_ option.
+Get the _line-break_ option. This options is also known as
+[word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Local to window.
 
-##### Throws
+If `true`, Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
+It only affects the way the file is displayed, not its contents.
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+This option is not used when the [wrap](../interfaces/RsvimOpt.md#wrap) option is `false`.
+
+##### Default Value
+
+`false`
 
 ##### Example
 
 ```javascript
-// Set the 'lineBreak' option.
-Rsvim.opt.lineBreak = true;
+// Get the 'lineBreak' option.
+const value = Rsvim.opt.lineBreak;
 ```
 
 ##### Parameters
@@ -340,7 +389,6 @@ Rsvim.opt.lineBreak = true;
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -355,11 +403,6 @@ Rsvim.opt.lineBreak = true;
 `boolean`
 
 </td>
-<td>
-
-The _line-break_ option.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -367,6 +410,10 @@ The _line-break_ option.
 ##### Returns
 
 `void`
+
+#### Implementation of
+
+[`RsvimOpt`](../interfaces/RsvimOpt.md).[`lineBreak`](../interfaces/RsvimOpt.md#linebreak)
 
 ***
 
@@ -380,10 +427,10 @@ get shiftWidth(): number;
 
 Get the _shift-width_ option. Local to buffer.
 
-When [expandTab](#expandtab) is `true`, the number of spaces that is used when inserts a
+When [expandTab](../interfaces/RsvimOpt.md#expandtab) is `true`, the number of spaces that is used when inserts a
 [horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
 
-When [expandTab](#expandtab) is `false`, this option is not been used.
+When [expandTab](../interfaces/RsvimOpt.md#expandtab) is `false`, this option is not been used.
 
 ##### Default Value
 
@@ -406,17 +453,22 @@ const value = Rsvim.opt.shiftWidth;
 set shiftWidth(value): void;
 ```
 
-Set the _expand-tab_ option. This value should be between `[1,255]`.
+Get the _shift-width_ option. Local to buffer.
 
-##### Throws
+When [expandTab](../interfaces/RsvimOpt.md#expandtab) is `true`, the number of spaces that is used when inserts a
+[horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a positive integer that between `[1,255]`.
+When [expandTab](../interfaces/RsvimOpt.md#expandtab) is `false`, this option is not been used.
+
+##### Default Value
+
+`8`
 
 ##### Example
 
 ```javascript
-// Set the 'shift-width' option.
-Rsvim.opt.shiftWidth = 4;
+// Get the 'shift-width' option.
+const value = Rsvim.opt.shiftWidth;
 ```
 
 ##### Parameters
@@ -426,7 +478,6 @@ Rsvim.opt.shiftWidth = 4;
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -441,11 +492,6 @@ Rsvim.opt.shiftWidth = 4;
 `number`
 
 </td>
-<td>
-
-The _expand-tab_ option.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -453,6 +499,10 @@ The _expand-tab_ option.
 ##### Returns
 
 `void`
+
+#### Implementation of
+
+[`RsvimOpt`](../interfaces/RsvimOpt.md).[`shiftWidth`](../interfaces/RsvimOpt.md#shiftwidth)
 
 ***
 
@@ -494,17 +544,24 @@ const value = Rsvim.opt.tabStop;
 set tabStop(value): void;
 ```
 
-Set the _tab-stop_ option.
+Get the _tab-stop_ option. This option is also known as
+[tab-size](https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size).
+Local to buffer.
 
-##### Throws
+This option changes how text is displayed.
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a positive integer that between `[1,255]`.
+Defines how many columns (on the terminal) used to display the
+[horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`). This value should be between `[1,255]`.
+
+##### Default Value
+
+`8`
 
 ##### Example
 
 ```javascript
-// Set the 'tab-stop' option.
-Rsvim.opt.tabStop = 4;
+// Get the 'tab-stop' option.
+const value = Rsvim.opt.tabStop;
 ```
 
 ##### Parameters
@@ -514,7 +571,6 @@ Rsvim.opt.tabStop = 4;
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -529,11 +585,6 @@ Rsvim.opt.tabStop = 4;
 `number`
 
 </td>
-<td>
-
-The _tab-stop_ option. It only accepts an integer between `[1,255]`.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -541,6 +592,10 @@ The _tab-stop_ option. It only accepts an integer between `[1,255]`.
 ##### Returns
 
 `void`
+
+#### Implementation of
+
+[`RsvimOpt`](../interfaces/RsvimOpt.md).[`tabStop`](../interfaces/RsvimOpt.md#tabstop)
 
 ***
 
@@ -562,7 +617,7 @@ displaying continues on the next line. When `false` lines will not wrap
 and only part of long lines will be displayed. When the cursor is
 moved to a part that is not shown, the screen will scroll horizontally.
 
-The line will be broken in the middle of a word if necessary. See [lineBreak](#linebreak)
+The line will be broken in the middle of a word if necessary. See [lineBreak](../interfaces/RsvimOpt.md#linebreak)
 to get the break at a word boundary.
 
 ##### Default Value
@@ -586,17 +641,28 @@ const value = Rsvim.opt.wrap;
 set wrap(value): void;
 ```
 
-Set the _wrap_ option.
+Get the _wrap_ option. This option is also known as
+[line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Local to window.
 
-##### Throws
+This option changes how text is displayed.
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+When `true`, lines longer than the width of the window will wrap and
+displaying continues on the next line. When `false` lines will not wrap
+and only part of long lines will be displayed. When the cursor is
+moved to a part that is not shown, the screen will scroll horizontally.
+
+The line will be broken in the middle of a word if necessary. See [lineBreak](../interfaces/RsvimOpt.md#linebreak)
+to get the break at a word boundary.
+
+##### Default Value
+
+`true`
 
 ##### Example
 
 ```javascript
-// Set the 'wrap' option.
-Rsvim.opt.wrap = true;
+// Get the 'wrap' option.
+const value = Rsvim.opt.wrap;
 ```
 
 ##### Parameters
@@ -606,7 +672,6 @@ Rsvim.opt.wrap = true;
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -621,11 +686,6 @@ Rsvim.opt.wrap = true;
 `boolean`
 
 </td>
-<td>
-
-The _wrap_ option.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -633,3 +693,7 @@ The _wrap_ option.
 ##### Returns
 
 `void`
+
+#### Implementation of
+
+[`RsvimOpt`](../interfaces/RsvimOpt.md).[`wrap`](../interfaces/RsvimOpt.md#wrap)

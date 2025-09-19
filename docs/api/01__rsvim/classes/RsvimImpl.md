@@ -70,7 +70,7 @@ new RsvimImpl(): RsvimImpl;
 </td>
 <td>
 
-[`RsvimOpt`](RsvimOpt.md)
+[`RsvimOptImpl`](RsvimOptImpl.md)
 
 </td>
 </tr>

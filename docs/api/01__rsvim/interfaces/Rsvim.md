@@ -70,7 +70,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-[`RsvimOpt`](../classes/RsvimOpt.md)
+[`RsvimOpt`](RsvimOpt.md)
 
 </td>
 </tr>

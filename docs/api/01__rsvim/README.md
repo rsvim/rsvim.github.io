@@ -114,10 +114,33 @@ const cmd = Rsvim.cmd;
 <tr>
 <td>
 
-[RsvimOpt](classes/RsvimOpt.md)
+[RsvimOpt](interfaces/RsvimOpt.md)
 
 </td>
 <td>
+
+**`Hideconstructor`**
+
+The `Rsvim.opt` global object for global editor options.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.opt'.
+const opt = Rsvim.opt;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimOptImpl](classes/RsvimOptImpl.md)
+
+</td>
+<td>
+
+**`Hideconstructor`**
 
 The `Rsvim.opt` global object for global editor options.
 
