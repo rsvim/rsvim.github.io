@@ -46,6 +46,6 @@ Finally it tries to find whether below entry file exists:
 
 - Config entry: `$HOME/.rsvim.{js,ts}`
 
-For the last location, it doesn't have a config home at all. This will disable the "package" resolving for Rsvim, while "file" based modules are still available though.
+For the last location, it doesn't have a config home at all. This will disable package resolving for Rsvim, while file-based modules are still available though.
 
-Please refer to [Simple Package](./simple_package.md) for more details about "packages", and [Multi-Files Structure](./multi_files_structure.md) for "file modules".
+Please refer to [Simple Package](./simple_package.md) for more details about packages, and [Multi-Files Structure](./multi_files_structure.md) for file modules.
