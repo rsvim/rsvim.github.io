@@ -14,7 +14,7 @@ The entry point script will be executed to apply all configurations.
 
 ## Candidate Locations
 
-Rsvim tries to find its config home in following 3 locations in turn, it will pick up the first one that meets the requirements.
+Rsvim tries to find its config home in following 3 locations in turn, picks up the first one that meets the requirements.
 
 ### `$XDG_CONFIG_HOME/rsvim`
 
