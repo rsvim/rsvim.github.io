@@ -63,3 +63,75 @@ syntax.hello("Rsvim!");
 Rsvim will resolve the module name by the `"name"` field in `package.json`, no longer by the package's directory name. It means you can provide a different directory name.
 
 Rsvim will resolve the module path by looking into the `package.json` file. In this example, the `"syntax"` specifier is resolved to the `syntax/lib/index.js` file, because `package.json` specifies the entry point with `"exports": {".": "./lib/index.js"}`.
+
+## Node Modules
+
+Rsvim also tries to find npm packages in the `node_modules` directory under config home.
+
+Let's rewrite the `syntax` example (in [NPM Package](./npm_package.md#example)):
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- node_modules/
+   |- syntax/
+      |- package.json
+      |- lib/
+         |- index.js
+         |- utils.js
+```
+
+### `rsvim.js`
+
+```javascript {1}
+import syntax from "syntax";
+
+syntax.hello("Rsvim!");
+```
+
+> Other files are the same...
+
+The `"syntax"` specifier is resolved to `node_modules/syntax/lib/index.js` file, since Rsvim also tries to find npm packages in the `node_modules` directory under its config home.
+
+## Add `package.json` in Config Home
+
+With the `node_modules` looking up, now you can directly use the [npm manager](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager) to manage all your Rsvim configs and plugins, with a single `package.json` file.
+
+For example your config home is:
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- package.json
+```
+
+### `package.json`
+
+```json
+{
+  "type": "module",
+  "dependencies": {
+    "@rsvim/syntax": "^0.1.0",
+    "@rsvim/ex": "^0.1.0"
+    ...
+  }
+}
+```
+
+### `rsvim.js`
+
+```json
+import syntax from "@rsvim/syntax";
+import ex from "@rsvim/ex";
+
+syntax.setup();
+ex.setup();
+```
+
+In the `package.json`, it specifies all the plugins for your needs. Then simply run command `npm install` inside the config home, all plugins will be installed in the `node_modules` directory, and that's all.
+
+And in your config entry file `rsvim.js`, you can just import these packages just like node/deno!
+
+:::warning
+The plugins in the `package.json` are not real 😁 (at least for now).
+:::
