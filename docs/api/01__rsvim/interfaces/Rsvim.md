@@ -53,7 +53,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-[`RsvimCmd`](RsvimCmd.md)
+[`RsvimCmd`](../classes/RsvimCmd.md)
 
 </td>
 </tr>
@@ -70,7 +70,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-[`RsvimOpt`](RsvimOpt.md)
+[`RsvimOpt`](../classes/RsvimOpt.md)
 
 </td>
 </tr>
@@ -87,7 +87,7 @@ const vim = Rsvim;
 </td>
 <td>
 
-[`RsvimRt`](RsvimRt.md)
+[`RsvimRt`](../classes/RsvimRt.md)
 
 </td>
 </tr>

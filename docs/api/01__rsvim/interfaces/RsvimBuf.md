@@ -1,3 +1,5 @@
+**`Hideconstructor`**
+
 The `Rsvim.buf` global object for Vim buffers.
 
 ## Example

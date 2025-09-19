@@ -10,7 +10,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -18,10 +18,12 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <tr>
 <td>
 
-[RsvimBuf](classes/RsvimBuf.md)
+[RsvimBuf](interfaces/RsvimBuf.md)
 
 </td>
 <td>
+
+**`Hideconstructor`**
 
 The `Rsvim.buf` global object for Vim buffers.
 
@@ -122,7 +124,7 @@ The global object.
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Interface</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -130,7 +132,7 @@ The global object.
 <tr>
 <td>
 
-[Rsvim](classes/Rsvim.md)
+[Rsvim](interfaces/Rsvim.md)
 
 </td>
 <td>
