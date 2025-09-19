@@ -46,4 +46,4 @@ Finally it tries to find whether below entry file exists:
 
 - Config entry: `$HOME/.rsvim.{js,ts}`
 
-For the last location, it doesn't have a config home actually. This will affect the "package" resolving for Rsvim, please refer to [Simple Package](./simple_package.md) for more details.
+For the last location, it doesn't have a config home. This will affect the "package" resolving for Rsvim, please refer to [Simple Package](./simple_package.md) for more details.
