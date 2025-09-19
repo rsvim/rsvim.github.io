@@ -6,7 +6,7 @@ sidebar_position: 3
 
 With config home, you can import a package that containing multiple files.
 
-:::tip
+:::warning
 As mentioned in [Configuration](./#homersvimjsts), the entry point `$HOME/.rsvim.{js,ts}` doesn't have a config home, thus it cannot import any packages.
 :::
 
