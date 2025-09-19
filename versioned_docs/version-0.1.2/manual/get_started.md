@@ -14,7 +14,7 @@ What distinguishes Rsvim from other two:
 
 - With Tokio's async multi-threaded runtime, terminal input is processed asynchronously along with all various file I/O, network and CPU-bound tasks.
 - JavaScript `Promise`, `async`/`await` is natively handled by tokio's async tasks.
-- Multi-file modules and plugins are structured via [ESCM modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html) `import` keyword implementation.
+- Multi-file modules and plugins are structured via [ESCM modules](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html) `import` declaration implementation.
 - TypeScript is parsed and transformed into JavaScript and executed by V8 engine on the fly.
 - (**TODO**) [NPM package](https://www.npmjs.com/) is accepted as a compatible plugin schema, thereby the npm registry can be leveraged to publish/upgrade/distribute all plugins.
 

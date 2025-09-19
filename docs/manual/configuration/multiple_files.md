@@ -2,11 +2,11 @@
 sidebar_position: 2
 ---
 
-# Multi-Files Structure
+# Multiple Files
 
-Multi-files configuration structure is supported via the [ES modules](https://tc39.es/ecma262/#sec-modules).
+Multi-files configuration structure is supported via the [ES modules](https://tc39.es/ecma262/#sec-modules), i.e. through the `export` and `import` declarations.
 
-## Export/Import
+## Static Import
 
 The `export` declaration is used to export values from a module. Then exported values can be imported into other modules with `import` declaration (or dynamic import). For example we have below configuration:
 
@@ -53,13 +53,13 @@ util.echo(util.add(1, 2));
 
 When Rsvim starts, it will print the message `3`.
 
-The string value passed to the `import` keyword is called `specifier`. In this example, it is a file path relative to current javascript file. You can use an absolute file path as well. The `import` declaration here is called [static import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import), it runs synchronously.
+The string value passed to the `import` is called `specifier`. In this example, it is a file path relative to current javascript file. You can use an absolute file path as well. The `import` declaration here is called [static import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import), it runs synchronously.
 
 But, there are some limitations, since Rsvim is not 100% compatible with node:
 
 :::warning[Limitation]
 
-1. Rsvim only supports ES modules, it doesn't support [CommonJS modules](https://nodejs.org/api/modules.html) as node do, the `require` keyword is not implemented.
+1. Rsvim only supports ES modules, it doesn't support [CommonJS modules](https://nodejs.org/api/modules.html) as node do, `require` is not implemented.
 2. File path based `specifier` must contain the file extension, it cannot be omitted like node.
 
 :::
@@ -88,3 +88,24 @@ try {
 ```
 
 When Rsvim starts, it will schedules a `"./utils.js"` module loading task to background, then completes the configuration phase and initializes the TUI and editor. Once the `"./utils.js"` module is loaded, Rsvim will continue to execute code logic in the remaining script.
+
+## Working with `$HOME/.rsvim.{js,ts}`
+
+When working with the `$HOME/.rsvim.{js,ts}` entry, you can still import modules through either relative file path or absolute file path. The recommended way is to put all your configuration files under the `$HOME/.rsvim` directory, which is close to it.
+
+For example:
+
+```
+$HOME
+|- .rsvim.js
+|- .rsvim/
+   |- utils.js
+```
+
+### `.rsvim.js`
+
+```javascript {1}
+import utils from "./.rsvim/utils.js";
+```
+
+The specifier `"./.rsvim/utils.js"` is exactly the file path relative to the config entry `$HOME/.rsvim.js`.

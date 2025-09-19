@@ -6,11 +6,11 @@ sidebar_position: 3
 
 With config home, you can import a package that containing multiple files.
 
-:::tip
-As mentioned in [Configuration](./#homersvimjsts), the entry point `$HOME/.rsvim.{js,ts}` doesn't have a config home, thus it cannot have any packages.
+:::warning
+As mentioned in [Configuration](./#homersvimjsts), the entry point `$HOME/.rsvim.{js,ts}` doesn't have a config home, it cannot import any packages.
 :::
 
-A simple package is a directory that containing a `index.js` (or `index.ts`) script file, Rsvim can import the package by the directory name.
+A simple package is a directory that containing a `index.js` (or `index.ts`) script (but without a `package.json` file), Rsvim can import the package by the directory name.
 
 ## Example
 
