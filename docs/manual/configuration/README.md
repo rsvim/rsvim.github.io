@@ -18,14 +18,14 @@ Rsvim will find its config home in following 3 locations in turn, it will pick u
 
 ### `$XDG_CONFIG_HOME/rsvim`
 
-First it tries the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/), detect whether both below directory and entry file exist:
+First it tries to detect whether the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) directory and entry file exist:
 
 - Config home: `$XDG_CONFIG_HOME/rsvim`
 - Config entry: `$XDG_CONFIG_HOME/rsvim/rsvim.{js,ts}`
 
 :::tip
 
-For environment variable `$XDG_CONFIG_HOME`, it uses different default value on different platforms:
+For environment variable `$XDG_CONFIG_HOME`, it has different default value on different platforms:
 
 - On Linux, it is `$HOME/.config/rsvim`.
 - On MacOS, it is `$HOME/Library/Application Support/rsvim`.

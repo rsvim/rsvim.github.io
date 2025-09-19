@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Package
+# Simple Package
 
 With config home, you can import a package that containing multiple files.
 
