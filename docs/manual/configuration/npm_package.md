@@ -89,7 +89,7 @@ import syntax from "syntax";
 syntax.hello("Rsvim!");
 ```
 
-> Other files are the same...
+> Other files are still the same...
 
 The `"syntax"` specifier is resolved to `node_modules/syntax/lib/index.js` file, since Rsvim also tries to find npm packages in the `node_modules` directory under its config home.
 
