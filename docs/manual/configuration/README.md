@@ -37,14 +37,14 @@ For environment variable `$XDG_CONFIG_HOME`, it has different default value on d
 
 Then it tries to find whether below directory and entry file exist:
 
-- Config home: `$HOME/.rsvim/`
-- Config entry: `$HOME/.rsvim/rsvim.{js,ts}`
+- Config home: `~/.rsvim/`
+- Config entry: `~/.rsvim/rsvim.{js,ts}`
 
 ### `~/.rsvim.{js,ts}`
 
 Finally it tries to find whether below entry file exists:
 
-- Config entry: `$HOME/.rsvim.{js,ts}`
+- Config entry: `~/.rsvim.{js,ts}`
 
 For the last location, it doesn't have a config home at all. This will disable package resolving for Rsvim, while file-based modules are still available though.
 
