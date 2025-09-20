@@ -89,9 +89,9 @@ try {
 
 When Rsvim starts, it will schedules a `"./utils.js"` module loading task to background, then completes the configuration phase and initializes the TUI and editor. Once the `"./utils.js"` module is loaded, Rsvim will continue to execute code logic in the remaining script.
 
-## Working with `$HOME/.rsvim.{js,ts}`
+## Working with `~/.rsvim.{js,ts}`
 
-When working with the `$HOME/.rsvim.{js,ts}` entry, you can still import modules through either relative file path or absolute file path. The recommended way is to put all your configuration files under the `$HOME/.rsvim` directory, which is close to it.
+When working with the `~/.rsvim.{js,ts}` entry, you can still import modules through either relative file path or absolute file path. A recommended way is to put all your configuration files under the `~/.rsvim/` directory.
 
 For example:
 
@@ -108,4 +108,4 @@ $HOME
 import utils from "./.rsvim/utils.js";
 ```
 
-The specifier `"./.rsvim/utils.js"` is exactly the file path relative to the config entry `$HOME/.rsvim.js`.
+The specifier `"./.rsvim/utils.js"` is exactly the file path relative to the config entry `~/.rsvim.js`.

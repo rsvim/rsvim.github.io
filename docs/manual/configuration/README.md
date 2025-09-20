@@ -16,11 +16,11 @@ The entry point script will be executed to apply all configurations.
 
 Rsvim tries to find its config home in following 3 locations in turn, picks the first that meets the requirements.
 
-### `$XDG_CONFIG_HOME/rsvim`
+### `$XDG_CONFIG_HOME/rsvim/`
 
 First it tries to find whether the [FreeDesktop Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/) directory and entry file exist:
 
-- Config home: `$XDG_CONFIG_HOME/rsvim`
+- Config home: `$XDG_CONFIG_HOME/rsvim/`
 - Config entry: `$XDG_CONFIG_HOME/rsvim/rsvim.{js,ts}`
 
 :::tip
@@ -33,18 +33,18 @@ For environment variable `$XDG_CONFIG_HOME`, it has different default value on d
 
 :::
 
-### `$HOME/.rsvim`
+### `~/.rsvim/`
 
 Then it tries to find whether below directory and entry file exist:
 
-- Config home: `$HOME/.rsvim`
-- Config entry: `$HOME/.rsvim/rsvim.{js,ts}`
+- Config home: `~/.rsvim/`
+- Config entry: `~/.rsvim/rsvim.{js,ts}`
 
-### `$HOME/.rsvim.{js,ts}`
+### `~/.rsvim.{js,ts}`
 
 Finally it tries to find whether below entry file exists:
 
-- Config entry: `$HOME/.rsvim.{js,ts}`
+- Config entry: `~/.rsvim.{js,ts}`
 
 For the last location, it doesn't have a config home at all. This will disable package resolving for Rsvim, while file-based modules are still available though.
 
