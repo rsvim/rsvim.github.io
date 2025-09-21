@@ -2,6 +2,55 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 
 ## Methods
 
+### clearInterval()
+
+```ts
+clearInterval(id): void;
+```
+
+Cancel a repeated scheduler previously established by calling [setInterval](https://developer.mozilla.org/docs/Web/API/Window/setInterval).
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`id`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The ID (integer) which identifies the schedule.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`void`
+
+#### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if ID is not an integer.
+
+***
+
 ### clearTimeout()
 
 ```ts
@@ -47,7 +96,95 @@ The ID (integer) which identifies the timer.
 
 #### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if ID is not an integer value.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if ID is not an integer.
+
+***
+
+### setInterval()
+
+```ts
+setInterval(
+   callback, 
+   delay?, ...
+   args?): number;
+```
+
+Set a repeated scheduler that calls a function, with a fixed time delay between each call. Also see [setInterval](https://developer.mozilla.org/docs/Web/API/Window/setInterval).
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+(...`args`) => `void`
+
+</td>
+<td>
+
+A function to be executed every `delay` milliseconds.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`delay?`
+
+</td>
+<td>
+
+`number`
+
+</td>
+<td>
+
+The milliseconds that the scheduler should delay in between execution of the function. By default 1.
+
+</td>
+</tr>
+<tr>
+<td>
+
+...`args?`
+
+</td>
+<td>
+
+`any`[]
+
+</td>
+<td>
+
+Additional arguments which are passed through to the function.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`number`
+
+The ID (integer) which identifies the scheduler created.
+
+#### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is not a number.
 
 ***
 
@@ -56,7 +193,7 @@ Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 ```ts
 setTimeout(
    callback, 
-   delay, ...
+   delay?, ...
    args?): number;
 ```
 
@@ -93,7 +230,7 @@ A function to be executed after the timer expires.
 <tr>
 <td>
 
-`delay`
+`delay?`
 
 </td>
 <td>
@@ -103,7 +240,7 @@ A function to be executed after the timer expires.
 </td>
 <td>
 
-The milliseconds that the timer should wait before the function is executed.
+The milliseconds that the timer should wait before the function is executed. By default 1.
 
 </td>
 </tr>
