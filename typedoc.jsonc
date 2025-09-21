@@ -8,7 +8,7 @@
   "out": "./generated-typedocs",
   "skipErrorChecking": true,
   // "typedoc" plugins
-  "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
+  "plugin": ["typedoc-plugin-markdown"],
   // "typedoc-plugin-markdown" options
   "hidePageHeader": true,
   "hideBreadcrumbs": true,
