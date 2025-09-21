@@ -109,7 +109,7 @@ setInterval(
    args?): number;
 ```
 
-Set a repeated timer that calls a function, with a fixed time delay between each call. Also see [setInterval](https://developer.mozilla.org/docs/Web/API/Window/setInterval).
+Set a repeated timer that calls a function, with a fixed time delay between each call.
 
 #### Parameters
 
@@ -197,7 +197,7 @@ setTimeout(
    args?): number;
 ```
 
-Set a timer which executes a function or specified piece of code once the timer expires. Also see [setTimeout](https://developer.mozilla.org/docs/Web/API/Window/setTimeout).
+Set a timer which executes a function or specified piece of code once the timer expires.
 
 #### Parameters
 
@@ -272,4 +272,4 @@ The ID (integer) which identifies the timer created.
 
 #### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if callback is not a function value.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is not a number.

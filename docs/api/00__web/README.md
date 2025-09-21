@@ -3,7 +3,7 @@ The [WinterTC](https://wintertc.org/) compatible web platform APIs.
 ## See
 
  - [Minimum Common Web Platform API](https://common-min-api.proposal.wintertc.org/)
- - [MDN | Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
+ - [MDN | Web APIs](https://developer.mozilla.org/docs/Web/API)
 
 ## Interfaces
 

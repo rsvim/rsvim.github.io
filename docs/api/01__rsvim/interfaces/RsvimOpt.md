@@ -49,7 +49,7 @@ Set the _expand-tab_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not a boolean.
 
 ##### Example
 
@@ -137,7 +137,7 @@ Set the _file-encoding_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a valid option.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is invalid.
 
 ##### Example
 
@@ -237,7 +237,7 @@ Set the _file-format_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a valid option.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is invalid.
 
 ##### Example
 
@@ -324,7 +324,7 @@ Set the _line-break_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not a boolean.
 
 ##### Example
 
@@ -410,7 +410,7 @@ Set the _expand-tab_ option. This value should be between `[1,255]`.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a positive integer that between `[1,255]`.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not an integer, or [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if value is not between `[1,255]`.
 
 ##### Example
 
@@ -498,7 +498,7 @@ Set the _tab-stop_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a positive integer that between `[1,255]`.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not an integer, or [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if not a positive integer between `[1,255]`.
 
 ##### Example
 
@@ -590,7 +590,7 @@ Set the _wrap_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is not a boolean value.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not a boolean.
 
 ##### Example
 
