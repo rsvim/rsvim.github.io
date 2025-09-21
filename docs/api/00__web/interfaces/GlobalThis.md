@@ -8,7 +8,7 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 clearInterval(id): void;
 ```
 
-Cancel a repeated scheduler previously established by calling [setInterval](https://developer.mozilla.org/docs/Web/API/Window/setInterval).
+Cancel a repeated timer previously established by calling [setInterval](https://developer.mozilla.org/docs/Web/API/Window/setInterval).
 
 #### Parameters
 
@@ -109,7 +109,7 @@ setInterval(
    args?): number;
 ```
 
-Set a repeated scheduler that calls a function, with a fixed time delay between each call. Also see [setInterval](https://developer.mozilla.org/docs/Web/API/Window/setInterval).
+Set a repeated timer that calls a function, with a fixed time delay between each call. Also see [setInterval](https://developer.mozilla.org/docs/Web/API/Window/setInterval).
 
 #### Parameters
 
@@ -152,7 +152,7 @@ A function to be executed every `delay` milliseconds.
 </td>
 <td>
 
-The milliseconds that the scheduler should delay in between execution of the function. By default 1.
+The milliseconds that the timer should delay in between execution of the function. By default 1.
 
 </td>
 </tr>
@@ -180,7 +180,7 @@ Additional arguments which are passed through to the function.
 
 `number`
 
-The ID (integer) which identifies the scheduler created.
+The ID (integer) which identifies the timer created.
 
 #### Throws
 
