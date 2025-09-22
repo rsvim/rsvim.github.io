@@ -42,7 +42,7 @@ Echo message to the command-line.
 </td>
 <td>
 
-`string`
+`any`
 
 </td>
 <td>
@@ -61,7 +61,7 @@ and `undefined`.
 
 #### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if no parameter provided, or the parameter is `null` or `undefined`.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the parameter is `null` or `undefined` or no parameter provided.
 
 #### Example
 
