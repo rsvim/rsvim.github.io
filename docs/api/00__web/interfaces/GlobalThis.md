@@ -183,7 +183,7 @@ Dispatch an uncaught exception. Similar to synchronous version of `setTimeout(()
 </td>
 <td>
 
-Anything to be thrown. This API will not throw any exception, if `error` is not provided, then it will be set to "unknown".
+Anything to be thrown.
 
 </td>
 </tr>
