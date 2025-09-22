@@ -100,6 +100,102 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ***
 
+### queueMicrotask()
+
+```ts
+queueMicrotask(callback): void;
+```
+
+A microtask is a short function which is executed after the function or module which created it exits and
+only if the JavaScript execution stack is empty, but before returning control to the event loop being used
+to drive the script's execution environment.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+() => `void`
+
+</td>
+<td>
+
+A function to be executed.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`void`
+
+#### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function.
+
+***
+
+### reportError()
+
+```ts
+reportError(error): void;
+```
+
+Dispatch an uncaught exception. Similar to synchronous version of `setTimeout(() => {throw error;}, 0);`.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`error`
+
+</td>
+<td>
+
+`any`
+
+</td>
+<td>
+
+Anything to be thrown. This API will not throw any exception, if `error` is not provided, then it will be set to "unknown".
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`void`
+
+***
+
 ### setInterval()
 
 ```ts
