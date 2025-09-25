@@ -18,6 +18,10 @@
 
 File encoding option.
 
+**See**
+
+[RsvimOpt.fileEncoding](../../interfaces/RsvimOpt.md#fileencoding)
+
 </td>
 </tr>
 <tr>
@@ -29,6 +33,10 @@ File encoding option.
 <td>
 
 File format option.
+
+**See**
+
+[RsvimOpt.fileFormat](../../interfaces/RsvimOpt.md#fileformat)
 
 </td>
 </tr>
