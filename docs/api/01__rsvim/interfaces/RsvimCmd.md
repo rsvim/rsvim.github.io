@@ -72,7 +72,7 @@ The command name that is going to create. Only letters (both lowercase `a-z` and
 </td>
 <td>
 
-The backend function that implements the command logic. It accepts an `ctx` parameter that contains all the information when user is running the command, such as `bang`, arguments, buffer ID, etc.
+The backend function that implements the command logic. It accepts an `ctx` parameter that contains all the information when user is running the command, such as `bang`, arguments, buffer ID, etc. See [RsvimCmd.CommandCallback](../namespaces/RsvimCmd/type-aliases/CommandCallback.md).
 
 </td>
 </tr>
@@ -89,7 +89,7 @@ The backend function that implements the command logic. It accepts an `ctx` para
 </td>
 <td>
 
-The command attributes, it controls the command related behavior, such as `bang`, `nargs`, `bufId`, etc.
+The command attributes, it controls the command related behavior, such as `bang`, `nargs`, etc. This parameter can be omitted, it will use the default attributes, see [RsvimCmd.CommandAttributes](../namespaces/RsvimCmd/type-aliases/CommandAttributes.md).
 
 </td>
 </tr>
@@ -106,7 +106,7 @@ The command attributes, it controls the command related behavior, such as `bang`
 </td>
 <td>
 
-&hyphen;
+The command options, it controls how a command is created, such as `force`, etc. This parameter can be omitted, it will use the default options, see [RsvimCmd.CreateCommandOptions](../namespaces/RsvimCmd/type-aliases/CreateCommandOptions.md).
 
 </td>
 </tr>
@@ -117,14 +117,24 @@ The command attributes, it controls the command related behavior, such as `bang`
 
 [`CommandCallback`](../namespaces/RsvimCmd/type-aliases/CommandCallback.md)
 
+It returns `undefined` is the command is newly created, or an object with `attr`, `opts` and `callback`fields that was defined the same command name previously.
+
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if name is not a `null` or `undefined` or no parameter provided.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameters are invalid.
 
 #### Example
 
 ```javascript
-Rsvim.cmd.echo("Hello Rsvim!");
+function write(ctx: any): void {
+  try {
+    const bytes = Rsvim.buf.writeSync(bufId);
+    Rsvim.cmd.echo(`Buffer ${bufId} has been saved, ${bytes} bytes written`);
+  } catch (e) {
+    Rsvim.cmd.echo(`Error: failed to save buffer ${bufId}, exception: ${e}`);
+  }
+}
+Rsvim.cmd.create("write", write);
 ```
 
 ***

@@ -3,7 +3,6 @@ type CommandCallback = (ctx) => void;
 ```
 
 Command callback function, this is the backend logic that implements a user ex command.
-,
 
 ## Parameters
 
@@ -33,3 +32,8 @@ Command callback function, this is the backend logic that implements a user ex c
 ## Returns
 
 `void`
+
+## See
+
+[RsvimCmd.create](../../../interfaces/RsvimCmd.md#create)
+,

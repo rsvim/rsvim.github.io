@@ -18,6 +18,10 @@
 
 Command attributes.
 
+**See**
+
+[RsvimCmd.create](../../interfaces/RsvimCmd.md#create)
+
 </td>
 </tr>
 <tr>
@@ -30,6 +34,10 @@ Command attributes.
 
 Command options when creating a command.
 
+**See**
+
+[RsvimCmd.create](../../interfaces/RsvimCmd.md#create)
+
 </td>
 </tr>
 <tr>
@@ -41,6 +49,10 @@ Command options when creating a command.
 <td>
 
 Command callback function, this is the backend logic that implements a user ex command.
+
+**See**
+
+[RsvimCmd.create](../../interfaces/RsvimCmd.md#create)
 ,
 
 </td>
