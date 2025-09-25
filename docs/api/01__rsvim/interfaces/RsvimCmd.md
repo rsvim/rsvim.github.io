@@ -15,6 +15,120 @@ const cmd = Rsvim.cmd;
 
 ## Methods
 
+### create()
+
+```ts
+create(
+   name, 
+   callback, 
+   attr?, 
+   opts?): CommandCallback;
+```
+
+Create a user ex command with a callback function.
+
+:::warning
+The only builtin command from Rsvim is the `js` command, which cannot be override.
+:::
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`name`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+The command name that is going to create. Only letters (both lowercase `a-z` and uppercase `A-Z`), digits (`0-9`) and underscore (`_`) are allowed to be used as a command name. And a command name must begin with either a letter or underscore, digit is not allowed.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`CommandCallback`](../namespaces/RsvimCmd/type-aliases/CommandCallback.md)
+
+</td>
+<td>
+
+The backend function that implements the command logic. It accepts an `ctx` parameter that contains all the information when user is running the command, such as `bang`, arguments, buffer ID, etc.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`attr?`
+
+</td>
+<td>
+
+[`CommandAttributes`](../namespaces/RsvimCmd/type-aliases/CommandAttributes.md)
+
+</td>
+<td>
+
+The command attributes, it controls the command related behavior, such as `bang`, `nargs`, `bufId`, etc.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`CreateCommandOptions`](../namespaces/RsvimCmd/type-aliases/CreateCommandOptions.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`CommandCallback`](../namespaces/RsvimCmd/type-aliases/CommandCallback.md)
+
+#### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if name is not a `null` or `undefined` or no parameter provided.
+
+#### Example
+
+```javascript
+Rsvim.cmd.echo("Hello Rsvim!");
+```
+
+***
+
 ### echo()
 
 ```ts
