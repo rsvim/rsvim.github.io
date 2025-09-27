@@ -18,7 +18,9 @@ optional force: boolean;
 
 Whether force override the command if there's already an existing one.
 
-By default is `true`
+#### Default Value
+
+`true`
 
 ***
 
@@ -31,3 +33,7 @@ optional alias: string;
 Command alias, i.e. short name.
 
 For example, the `w` is alias for `write`.
+
+#### Default Value
+
+`undefined`

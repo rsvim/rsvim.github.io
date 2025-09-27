@@ -18,7 +18,9 @@ optional bang: boolean;
 
 Whether the command can take a `!` modifier, for example: `:w!`, `:qall!`.
 
-By default is `false`
+#### Default Value
+
+`false`
 ,
 
 ***
@@ -37,5 +39,7 @@ Whether The command can take any arguments, and how many it can take:
 - `?`: 0 or 1 arguments are allowed.
 - `+`: At least 1 arguments are required.
 
-By default is `"0"`
+#### Default Value
+
+`0`
 ,
