@@ -226,17 +226,9 @@ const config: Config = {
           title: "Web APIs",
           sidebar_position: 3,
         };
-      } else if (
-        params.filePath.endsWith("01__rsvim/namespaces/RsvimCmd/README.md")
-      ) {
+      } else if (params.filePath.endsWith("namespaces/RsvimCmd/README.md")) {
         result.frontMatter = {
           title: "RsvimCmd",
-        };
-      } else if (
-        params.filePath.endsWith("01__rsvim/namespaces/RsvimOpt/README.md")
-      ) {
-        result.frontMatter = {
-          title: "RsvimOpt",
         };
       }
 
