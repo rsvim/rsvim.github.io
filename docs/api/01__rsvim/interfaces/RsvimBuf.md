@@ -22,7 +22,7 @@ located is binded to.
 
 :::warning
 When the editor is not initialized, i.e. there's no buffer/window created. It
-will return `null`. Once the editor is initialized, there will always have a
+will return `undefined`. Once the editor is initialized, there will always have a
 valid buffer binded to the "current" window (where your cursor is). It will return
 the valid buffer ID.
 :::
@@ -32,7 +32,7 @@ the valid buffer ID.
 `number`
 
 It returns a valid buffer ID if the editor is initialized.
-Otherwise it returns `null` if the editor is not initialized.
+Otherwise it returns `undefined` if the editor is not initialized.
 
 #### Example
 
@@ -120,7 +120,7 @@ have been written to the file, if written successfully.
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the `bufId` parameter is not an integer, or [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to write buffer contents to file system.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the parameter is invalid, or [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to write buffer to file system.
 
 #### Example
 

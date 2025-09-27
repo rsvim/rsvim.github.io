@@ -248,7 +248,7 @@ A function to be executed every `delay` milliseconds.
 </td>
 <td>
 
-The milliseconds that the timer should delay in between execution of the function. By default 1.
+The milliseconds that the timer should delay in between execution of the function. This parameter can be omitted, by default is 1.
 
 </td>
 </tr>
@@ -280,7 +280,7 @@ The ID (integer) which identifies the timer created.
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is not a number.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.
 
 ***
 
@@ -336,7 +336,7 @@ A function to be executed after the timer expires.
 </td>
 <td>
 
-The milliseconds that the timer should wait before the function is executed. By default 1.
+The milliseconds that the timer should wait before the function is executed. This parameter can be omitted, by default is 1.
 
 </td>
 </tr>
@@ -368,4 +368,4 @@ The ID (integer) which identifies the timer created.
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is not a number.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.
