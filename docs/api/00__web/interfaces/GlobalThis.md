@@ -280,7 +280,7 @@ The ID (integer) which identifies the timer created.
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is not a number.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.
 
 ***
 
@@ -368,4 +368,4 @@ The ID (integer) which identifies the timer created.
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is not a number.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.

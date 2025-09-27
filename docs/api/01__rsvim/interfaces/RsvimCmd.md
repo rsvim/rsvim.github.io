@@ -21,14 +21,14 @@ const cmd = Rsvim.cmd;
 create(
    name, 
    callback, 
-   attr?, 
-   opts?): CommandCallback;
+   attributes?, 
+   options?): CommandDefinition;
 ```
 
-Create a user ex command with a callback function.
+Create a ex command with a callback function.
 
 :::warning
-The only builtin command from Rsvim is the `js` command, which cannot be override.
+The only builtin command `js` cannot be override.
 :::
 
 #### Parameters
@@ -55,7 +55,7 @@ The only builtin command from Rsvim is the `js` command, which cannot be overrid
 </td>
 <td>
 
-The command name that is going to create. Only letters (both lowercase `a-z` and uppercase `A-Z`), digits (`0-9`) and underscore (`_`) are allowed to be used as a command name. And a command name must begin with either a letter or underscore, digit is not allowed.
+Command name that is going to create. Only letters (`a-z` and `A-Z`), digits (`0-9`), underscore (`_`) and exclamation (`!`) are allowed in a command name. Command name must not begin with a digit.
 
 </td>
 </tr>
@@ -72,14 +72,14 @@ The command name that is going to create. Only letters (both lowercase `a-z` and
 </td>
 <td>
 
-The backend function that implements the command logic. It accepts an `ctx` parameter that contains all the information when user is running the command, such as `bang`, arguments, buffer ID, etc. See [RsvimCmd.CommandCallback](../namespaces/RsvimCmd/type-aliases/CommandCallback.md).
+The backend logic that implements the command. It accepts an `ctx` parameter that contains all the information when user is running it. See [RsvimCmd.CommandCallback](../namespaces/RsvimCmd/type-aliases/CommandCallback.md).
 
 </td>
 </tr>
 <tr>
 <td>
 
-`attr?`
+`attributes?`
 
 </td>
 <td>
@@ -89,24 +89,24 @@ The backend function that implements the command logic. It accepts an `ctx` para
 </td>
 <td>
 
-The command attributes, it controls the command related behavior, such as `bang`, `nargs`, etc. This parameter can be omitted, it will use the default attributes, see [RsvimCmd.CommandAttributes](../namespaces/RsvimCmd/type-aliases/CommandAttributes.md).
+Attributes that control the command behavior. This parameter can be omitted, it will use the default attributes, see [RsvimCmd.CommandAttributes](../namespaces/RsvimCmd/type-aliases/CommandAttributes.md).
 
 </td>
 </tr>
 <tr>
 <td>
 
-`opts?`
+`options?`
 
 </td>
 <td>
 
-[`CreateCommandOptions`](../namespaces/RsvimCmd/type-aliases/CreateCommandOptions.md)
+[`CommandOptions`](../namespaces/RsvimCmd/type-aliases/CommandOptions.md)
 
 </td>
 <td>
 
-The command options, it controls how a command is created, such as `force`, etc. This parameter can be omitted, it will use the default options, see [RsvimCmd.CreateCommandOptions](../namespaces/RsvimCmd/type-aliases/CreateCommandOptions.md).
+Options that control how the command is created. This parameter can be omitted, it will use the default options, see [RsvimCmd.CommandOptions](../namespaces/RsvimCmd/type-aliases/CommandOptions.md).
 
 </td>
 </tr>
@@ -115,9 +115,9 @@ The command options, it controls how a command is created, such as `force`, etc.
 
 #### Returns
 
-[`CommandCallback`](../namespaces/RsvimCmd/type-aliases/CommandCallback.md)
+[`CommandDefinition`](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md)
 
-It returns `undefined` is the command is newly created, or an object with `attr`, `opts` and `callback`fields that was defined the same command name previously.
+It returns `undefined` is the command is newly created, or a command definition that was defined previously.
 
 #### Throws
 
@@ -171,8 +171,7 @@ Echo message to the command-line.
 </td>
 <td>
 
-It accepts string and other primitive types, except `null`
-and `undefined`.
+It accepts string and other primitive types, except `null` and `undefined`.
 
 </td>
 </tr>
@@ -191,4 +190,96 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ```javascript
 Rsvim.cmd.echo("Hello Rsvim!");
+```
+
+***
+
+### list()
+
+```ts
+list(): CommandDefinition[];
+```
+
+List all registered ex commands.
+
+:::warning
+The builtin `js` command will not be listed here.
+:::
+
+#### Returns
+
+[`CommandDefinition`](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md)[]
+
+Returns all registered ex commands, except the `js` command.
+
+#### Example
+
+```javascript
+Rsvim.cmd.list().forEach((cmd) => {
+  Rsvim.cmd.echo(`Command: ${cmd.name}`);
+});
+```
+
+***
+
+### remove()
+
+```ts
+remove(name): CommandDefinition;
+```
+
+Remove an ex command by name.
+
+:::warning
+The only builtin command `js` cannot be removed.
+:::
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`name`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+The command name to be removed.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`CommandDefinition`](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md)
+
+Returns the removed [RsvimCmd.CommandDefinition](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md), or `undefined` if no command is been removed.
+
+#### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if name is not a string.
+
+#### Example
+
+```javascript
+Rsvim.cmd.list().forEach((cmd) => {
+  // Remove all registered commands.
+  Rsvim.cmd.remove(cmd.name);
+});
 ```

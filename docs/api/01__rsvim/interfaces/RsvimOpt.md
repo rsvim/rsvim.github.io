@@ -137,7 +137,7 @@ Set the _file-encoding_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is invalid.
+Throws [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if value is an invalid option.
 
 ##### Example
 
@@ -237,7 +237,7 @@ Set the _file-format_ option.
 
 ##### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if value is invalid.
+Throws [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if value is an invalid option.
 
 ##### Example
 
@@ -406,11 +406,11 @@ const value = Rsvim.opt.shiftWidth;
 set shiftWidth(value): void;
 ```
 
-Set the _expand-tab_ option. This value should be between `[1,255]`.
+Set the _expand-tab_ option. It only accepts an integer between `[1,255]`, if the value is out of range, it will be bound to this range.
 
 ##### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not an integer, or [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if value is not between `[1,255]`.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not an integer.
 
 ##### Example
 
@@ -494,11 +494,11 @@ const value = Rsvim.opt.tabStop;
 set tabStop(value): void;
 ```
 
-Set the _tab-stop_ option.
+Set the _tab-stop_ option. It only accepts an integer between `[1,255]`, if the value is out of range, it will be bound to this range.
 
 ##### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not an integer, or [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if not a positive integer between `[1,255]`.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not an integer.
 
 ##### Example
 
@@ -531,7 +531,7 @@ Rsvim.opt.tabStop = 4;
 </td>
 <td>
 
-The _tab-stop_ option. It only accepts an integer between `[1,255]`.
+The _tab-stop_ option.
 
 </td>
 </tr>

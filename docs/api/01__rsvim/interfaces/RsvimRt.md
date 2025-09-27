@@ -47,7 +47,7 @@ to complete before actually exiting, however any new write requests will be reje
 <td>
 
 The editor process exit with this exit code. This parameter can be omitted,
-by default it uses `0` to indicate no error happens.
+by default uses `0` to indicate no error.
 
 </td>
 </tr>
@@ -60,7 +60,7 @@ by default it uses `0` to indicate no error happens.
 
 #### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if `exitCode` parameter is neither a integer nor `undefined`.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if `exitCode` is neither an integer nor `undefined`.
 
 #### Example
 

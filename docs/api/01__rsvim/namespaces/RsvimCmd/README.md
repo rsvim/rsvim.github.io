@@ -27,7 +27,7 @@ Command attributes.
 <tr>
 <td>
 
-[CreateCommandOptions](type-aliases/CreateCommandOptions.md)
+[CommandOptions](type-aliases/CommandOptions.md)
 
 </td>
 <td>
@@ -54,6 +54,18 @@ Command callback function, this is the backend logic that implements a user ex c
 
 [RsvimCmd.create](../../interfaces/RsvimCmd.md#create)
 ,
+
+</td>
+</tr>
+<tr>
+<td>
+
+[CommandDefinition](type-aliases/CommandDefinition.md)
+
+</td>
+<td>
+
+Command definition.
 
 </td>
 </tr>
