@@ -28,7 +28,7 @@ create(
 Create a ex command with a callback function.
 
 :::warning
-The only builtin command `js` cannot be override.
+The builtin command `js` cannot be override.
 :::
 
 #### Parameters
@@ -231,7 +231,7 @@ remove(name): CommandDefinition;
 Remove an ex command by name.
 
 :::warning
-The only builtin command `js` cannot be removed.
+The builtin command `js` cannot be removed.
 :::
 
 #### Parameters
