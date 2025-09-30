@@ -20,7 +20,6 @@ const config: Config = {
   projectName: "rsvim", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -206,6 +205,10 @@ const config: Config = {
   markdown: {
     format: "mdx",
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+      onBrokenMarkdownImages: "warn",
+    },
     // Add front matters for generated typedoc APIs.
     parseFrontMatter: async (params: {
       filePath: string;
