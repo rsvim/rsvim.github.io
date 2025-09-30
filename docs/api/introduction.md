@@ -4,10 +4,6 @@ sidebar_position: 1
 
 # Introduction
 
-:::tip
-Manuals and usages are available in [User Manual](/docs/manual/get_started).
-:::
-
 For most general script programming languages such as [python](https://www.python.org/), builtin types/classes/functions (for example [`len`](https://docs.python.org/3/library/functions.html#len)) and standard library (for example [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime)) are shipped with interpreters. Javascript runtime plays a similar role, the difference is the js engine is provided by a third-party library, i.e. the **V8** js engine. Js engine covers [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/) standard, while js runtime provides a standard library, schedules async tasks within event loop, fills in many other gaps. The standard library mainly includes:
 
 - [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API): Most popular javascript-based runtimes share a compatible implementations today.
