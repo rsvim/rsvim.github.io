@@ -115,45 +115,6 @@ const rt = Rsvim.rt;
 </tbody>
 </table>
 
-## Global Object
-
-The global object.
-
-<table>
-<thead>
-<tr>
-<th>Interface</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-[Rsvim](interfaces/Rsvim.md)
-
-</td>
-<td>
-
-The `Rsvim` global object, it contains multiple sub fields:
-
-- `Rsvim.buf`: Buffer APIs.
-- `Rsvim.cmd`: Ex command APIs.
-- `Rsvim.opt`: Global options.
-- `Rsvim.rt`: JavaScript runtime (editor process) APIs.
-
-**Example**
-
-```javascript
-// Create a alias to 'Rsvim'.
-const vim = Rsvim;
-```
-
-</td>
-</tr>
-</tbody>
-</table>
-
 ## Other
 
 <table>
