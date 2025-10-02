@@ -1,11 +1,5 @@
 The `Rsvim.cmd` global object for Ex commands.
 
-:::tip
-The "ex command" mostly describes the product function, i.e. when user types ":" in normal mode,
-user can move cursor to command-line and input commands. Rather than referring to the
-["ex commands"](https://vimhelp.org/intro.txt.html#Ex-mode) in Vim editor.
-:::
-
 ## Example
 
 ```javascript
@@ -117,11 +111,11 @@ Options that control how the command is created. This parameter can be omitted, 
 
 [`CommandDefinition`](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md)
 
-It returns `undefined` is the command is newly created, or a command definition that was defined previously.
+It returns `undefined` is the command is newly created. Or it returns a command definition that was defined previously.
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameters are invalid. Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if command name or alias already exists, but `force` option is not set to override existing command forcibly.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameters are invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if command name or alias already exists, but `force` option is not set to override existing command forcibly.
 
 #### Example
 
@@ -197,10 +191,10 @@ Rsvim.cmd.echo("Hello Rsvim!");
 ### list()
 
 ```ts
-list(): CommandDefinition[];
+list(): string[];
 ```
 
-List all registered ex commands.
+List all registered ex command names.
 
 :::warning
 The builtin `js` command will not be listed here.
@@ -208,16 +202,68 @@ The builtin `js` command will not be listed here.
 
 #### Returns
 
-[`CommandDefinition`](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md)[]
+`string`[]
 
-Returns all registered ex commands, except the `js` command.
+Returns all registered ex command names, except the `js` command.
 
 #### Example
 
 ```javascript
-Rsvim.cmd.list().forEach((cmd) => {
-  Rsvim.cmd.echo(`Command: ${cmd.name}`);
+Rsvim.cmd.list().forEach((name) => {
+  Rsvim.cmd.echo(`Command: ${name}`);
 });
+```
+
+***
+
+### get()
+
+```ts
+get(name): CommandDefinition;
+```
+
+Get ex command definition by name.
+
+:::warning
+The builtin `js` command cannot be get.
+:::
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`name`
+
+</td>
+<td>
+
+`string`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`CommandDefinition`](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md)
+
+Returns command definition by its name, except the `js` command.
+
+#### Example
+
+```javascript
+const def = Rsvim.cmd.get("write");
+Rsvim.cmd.echo(`Command: ${def.name}`);
 ```
 
 ***
