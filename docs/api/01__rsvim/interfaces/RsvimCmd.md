@@ -117,11 +117,11 @@ Options that control how the command is created. This parameter can be omitted, 
 
 [`CommandDefinition`](../namespaces/RsvimCmd/type-aliases/CommandDefinition.md)
 
-It returns `undefined` is the command is newly created, or a command definition that was defined previously.
+It returns `undefined` is the command is newly created. Or it returns a command definition that was defined previously.
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameters are invalid. Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if command name or alias already exists, but `force` option is not set to override existing command forcibly.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameters are invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if command name or alias already exists, but `force` option is not set to override existing command forcibly.
 
 #### Example
 
