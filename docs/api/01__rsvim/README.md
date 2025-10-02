@@ -10,7 +10,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <table>
 <thead>
 <tr>
-<th>Interface</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -56,6 +56,18 @@ user can move cursor to command-line and input commands. Rather than referring t
 // Create a alias to 'Rsvim.cmd'.
 const cmd = Rsvim.cmd;
 ```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimCmd](namespaces/RsvimCmd/README.md)
+
+</td>
+<td>
+
+The `Rsvim.cmd` global object for Ex commands.
 
 </td>
 </tr>
@@ -109,31 +121,6 @@ The `Rsvim.rt` global object for javascript runtime (editor process).
 // Create a alias to 'Rsvim.rt'.
 const rt = Rsvim.rt;
 ```
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## Other
-
-<table>
-<thead>
-<tr>
-<th>Namespace</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-[RsvimCmd](namespaces/RsvimCmd/README.md)
-
-</td>
-<td>
-
-&hyphen;
 
 </td>
 </tr>

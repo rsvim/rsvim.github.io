@@ -1,3 +1,5 @@
+The `Rsvim.cmd` global object for Ex commands.
+
 ## Type Aliases
 
 <table>
