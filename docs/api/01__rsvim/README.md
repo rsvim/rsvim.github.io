@@ -10,7 +10,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <table>
 <thead>
 <tr>
-<th>Interface</th>
+<th>Class</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -18,7 +18,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <tr>
 <td>
 
-[RsvimBuf](interfaces/RsvimBuf.md)
+[RsvimBuf](classes/RsvimBuf.md)
 
 </td>
 <td>
@@ -37,7 +37,7 @@ const buf = Rsvim.buf;
 <tr>
 <td>
 
-[RsvimCmd](interfaces/RsvimCmd.md)
+[RsvimCmd](classes/RsvimCmd.md)
 
 </td>
 <td>
@@ -56,7 +56,7 @@ const cmd = Rsvim.cmd;
 <tr>
 <td>
 
-[RsvimOpt](interfaces/RsvimOpt.md)
+[RsvimOpt](classes/RsvimOpt.md)
 
 </td>
 <td>
@@ -82,7 +82,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <table>
 <thead>
 <tr>
-<th>Interface</th>
+<th>Class</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -90,7 +90,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <tr>
 <td>
 
-[RsvimFs](interfaces/RsvimFs.md)
+[RsvimFs](classes/RsvimFs.md)
 
 </td>
 <td>
@@ -109,7 +109,7 @@ const fs = Rsvim.fs;
 <tr>
 <td>
 
-[RsvimRt](interfaces/RsvimRt.md)
+[RsvimRt](classes/RsvimRt.md)
 
 </td>
 <td>
@@ -135,7 +135,7 @@ The global object.
 <table>
 <thead>
 <tr>
-<th>Interface</th>
+<th>Class</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -143,18 +143,12 @@ The global object.
 <tr>
 <td>
 
-[Rsvim](interfaces/Rsvim.md)
+[Rsvim](classes/Rsvim.md)
 
 </td>
 <td>
 
-The `Rsvim` global object, it contains multiple sub fields:
-
-- `Rsvim.buf`: Buffer APIs.
-- `Rsvim.cmd`: Ex command APIs.
-- `Rsvim.fs`: File system APIs.
-- `Rsvim.opt`: Global options.
-- `Rsvim.rt`: JavaScript runtime (editor process) APIs.
+The `Rsvim` global object.
 
 **Example**
 

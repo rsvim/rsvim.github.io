@@ -8,7 +8,7 @@ Note: It is the same with [std::fs::OpenOptions](https://doc.rust-lang.org/std/f
 
 ## See
 
-[RsvimFs.open](../../../interfaces/RsvimFs.md#open)
+[RsvimFs.open](../../../classes/RsvimFs.md#open)
 
 ## Properties
 

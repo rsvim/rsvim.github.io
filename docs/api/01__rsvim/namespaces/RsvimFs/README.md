@@ -20,7 +20,7 @@ The File object that access to an open file on filesystem.
 
 **See**
 
-[RsvimFs.open](../../interfaces/RsvimFs.md#open)
+[RsvimFs.open](../../classes/RsvimFs.md#open)
 
 </td>
 </tr>
@@ -51,7 +51,7 @@ Note: It is the same with [std::fs::OpenOptions](https://doc.rust-lang.org/std/f
 
 **See**
 
-[RsvimFs.open](../../interfaces/RsvimFs.md#open)
+[RsvimFs.open](../../classes/RsvimFs.md#open)
 
 </td>
 </tr>
