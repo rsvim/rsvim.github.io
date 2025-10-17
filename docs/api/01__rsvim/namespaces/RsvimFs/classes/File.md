@@ -1,5 +1,9 @@
 The File object that access to an open file on filesystem.
 
+## See
+
+[RsvimFs.open](../../../interfaces/RsvimFs.md#open)
+
 ## Methods
 
 ### close()
