@@ -90,6 +90,25 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <tr>
 <td>
 
+[RsvimFs](interfaces/RsvimFs.md)
+
+</td>
+<td>
+
+The `Rsvim.fs` global object for file system and file IO.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.fs'.
+const fs = Rsvim.fs;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
 [RsvimRt](interfaces/RsvimRt.md)
 
 </td>
@@ -162,6 +181,18 @@ const vim = Rsvim;
 <td>
 
 [RsvimCmd](namespaces/RsvimCmd/README.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimFs](namespaces/RsvimFs/README.md)
 
 </td>
 <td>

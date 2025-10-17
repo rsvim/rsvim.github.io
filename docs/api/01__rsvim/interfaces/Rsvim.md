@@ -60,6 +60,23 @@ const vim = Rsvim;
 <tr>
 <td>
 
+<a id="fs"></a> `fs`
+
+</td>
+<td>
+
+`readonly`
+
+</td>
+<td>
+
+[`RsvimFs`](RsvimFs.md)
+
+</td>
+</tr>
+<tr>
+<td>
+
 <a id="opt"></a> `opt`
 
 </td>
