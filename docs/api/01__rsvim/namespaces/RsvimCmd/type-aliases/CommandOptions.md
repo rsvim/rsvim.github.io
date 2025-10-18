@@ -6,7 +6,7 @@ Command options when creating a command.
 
 ## See
 
-[RsvimCmd.create](../../../interfaces/RsvimCmd.md#create)
+[RsvimCmd.create](../../../classes/RsvimCmd.md#create)
 
 ## Properties
 

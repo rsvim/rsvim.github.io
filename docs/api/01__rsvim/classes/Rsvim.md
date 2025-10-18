@@ -1,9 +1,4 @@
-The `Rsvim` global object, it contains multiple sub fields:
-
-- `Rsvim.buf`: Buffer APIs.
-- `Rsvim.cmd`: Ex command APIs.
-- `Rsvim.opt`: Global options.
-- `Rsvim.rt`: JavaScript runtime (editor process) APIs.
+The `Rsvim` global object.
 
 ## Example
 
@@ -54,6 +49,23 @@ const vim = Rsvim;
 <td>
 
 [`RsvimCmd`](RsvimCmd.md)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="fs"></a> `fs`
+
+</td>
+<td>
+
+`readonly`
+
+</td>
+<td>
+
+[`RsvimFs`](RsvimFs.md)
 
 </td>
 </tr>

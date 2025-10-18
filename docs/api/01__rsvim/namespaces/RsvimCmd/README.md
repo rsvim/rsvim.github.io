@@ -20,7 +20,7 @@ Command attributes.
 
 **See**
 
-[RsvimCmd.create](../../interfaces/RsvimCmd.md#create)
+[RsvimCmd.create](../../classes/RsvimCmd.md#create)
 
 </td>
 </tr>
@@ -36,7 +36,7 @@ Command options when creating a command.
 
 **See**
 
-[RsvimCmd.create](../../interfaces/RsvimCmd.md#create)
+[RsvimCmd.create](../../classes/RsvimCmd.md#create)
 
 </td>
 </tr>
@@ -52,7 +52,7 @@ Command callback function, this is the backend logic that implements a user ex c
 
 **See**
 
-[RsvimCmd.create](../../interfaces/RsvimCmd.md#create)
+[RsvimCmd.create](../../classes/RsvimCmd.md#create)
 ,
 
 </td>

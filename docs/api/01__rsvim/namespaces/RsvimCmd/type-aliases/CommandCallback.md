@@ -35,5 +35,5 @@ Command callback function, this is the backend logic that implements a user ex c
 
 ## See
 
-[RsvimCmd.create](../../../interfaces/RsvimCmd.md#create)
+[RsvimCmd.create](../../../classes/RsvimCmd.md#create)
 ,

@@ -233,6 +233,10 @@ const config: Config = {
         result.frontMatter = {
           title: "RsvimCmd",
         };
+      } else if (params.filePath.endsWith("namespaces/RsvimFs/README.md")) {
+        result.frontMatter = {
+          title: "RsvimFs",
+        };
       }
 
       // console.log(result);
