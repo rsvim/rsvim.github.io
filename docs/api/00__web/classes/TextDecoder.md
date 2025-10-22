@@ -89,7 +89,7 @@ Decoder encoding, this argument can be omitted, by default is "utf-8".
 </td>
 <td>
 
-\{ `fatal`: `boolean`; `ignoreBOM`: `boolean`; \}
+\{ `fatal?`: `boolean`; `ignoreBOM?`: `boolean`; \}
 
 </td>
 <td>
