@@ -139,6 +139,10 @@ Decode options, this argument can be omitted, by default is `{fatal: false, igno
 
 `TextDecoder`
 
+#### See
+
+[Node.js - WHATWG supported encodings](https://nodejs.org/api/util.html#whatwg-supported-encodings)
+
 #### Throws
 
 Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if encoding is not a string or options is invalid. Throw [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if encoding is invalid or not support.
