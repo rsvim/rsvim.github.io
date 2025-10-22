@@ -1,5 +1,42 @@
 The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global object.
 
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="textencoder"></a> `TextEncoder`
+
+</td>
+<td>
+
+*typeof* [`TextEncoder`](../classes/TextEncoder.md)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="textdecoder"></a> `TextDecoder`
+
+</td>
+<td>
+
+*typeof* [`TextDecoder`](../classes/TextDecoder.md)
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Methods
 
 ### clearInterval()
