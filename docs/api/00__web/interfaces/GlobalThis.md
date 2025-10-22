@@ -7,6 +7,7 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 <tr>
 <th>Property</th>
 <th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -21,6 +22,11 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 *typeof* [`TextEncoder`](../classes/TextEncoder.md)
 
 </td>
+<td>
+
+Encode string text into bytes array, it only supports "utf-8" encoding.
+
+</td>
 </tr>
 <tr>
 <td>
@@ -31,6 +37,11 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 <td>
 
 *typeof* [`TextDecoder`](../classes/TextDecoder.md)
+
+</td>
+<td>
+
+Decode bytes array into string text, with specified encoding.
 
 </td>
 </tr>

@@ -1,4 +1,4 @@
-Encode string text into bytes, it only supports "utf-8" string.
+Encode string text into bytes, it only supports "utf-8" encoding.
 
 ## See
 

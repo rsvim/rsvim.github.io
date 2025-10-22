@@ -23,7 +23,7 @@ The [WinterTC](https://wintertc.org/) compatible web platform APIs.
 </td>
 <td>
 
-Encode string text into bytes, it only supports "utf-8" string.
+Encode string text into bytes, it only supports "utf-8" encoding.
 
 **See**
 
