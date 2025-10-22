@@ -26,7 +26,7 @@ new TextEncoder(): TextEncoder;
 get encoding(): string;
 ```
 
-Get encoding, this will always returns "utf-8".
+The encoding used by encoder, this always returns "utf-8".
 
 ##### Returns
 
@@ -91,7 +91,7 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 encodeInto(src, dest): object;
 ```
 
-Encode string text into [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
+Encode string text into [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array). Note: For now only `Uint8Array` is supported.
 
 #### Parameters
 

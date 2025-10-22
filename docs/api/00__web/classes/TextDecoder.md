@@ -94,7 +94,7 @@ Decoder encoding, this argument can be omitted, by default is "utf-8".
 </td>
 <td>
 
-Decode options, this argument can be omitted, by default is `{fatal: false, ignoreBOM: false}`.
+Decode options, this parameter can be omitted, by default is `{fatal: false, ignoreBOM: false}`.
 
 </td>
 </tr>
@@ -147,15 +147,63 @@ Decode options, this argument can be omitted, by default is `{fatal: false, igno
 
 Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if encoding is not a string or options is invalid. Throw [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if encoding is invalid or not support.
 
-## Methods
+## Accessors
 
-### encode()
+### encoding
+
+#### Get Signature
 
 ```ts
-encode(input): Uint8Array;
+get encoding(): string;
 ```
 
-Encode string text to [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
+The encoding used by decoder.
+
+##### Returns
+
+`string`
+
+***
+
+### fatal
+
+#### Get Signature
+
+```ts
+get fatal(): boolean;
+```
+
+Whether throw [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) when decoding error because the data is malformed.
+
+##### Returns
+
+`boolean`
+
+***
+
+### ignoreBOM
+
+#### Get Signature
+
+```ts
+get ignoreBOM(): string;
+```
+
+Whether ignore unicode "Byte-Order-Mark" (BOM) when decoding the data.
+
+##### Returns
+
+`string`
+
+## Methods
+
+### decode()
+
+```ts
+decode(input, options?): string;
+```
+
+Decode [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) bytes array to string text. Note: For now only `Uint8Array` is supported.
 
 #### Parameters
 
@@ -176,12 +224,46 @@ Encode string text to [Uint8Array](https://developer.mozilla.org/docs/Web/JavaSc
 </td>
 <td>
 
-`string`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 </td>
 <td>
 
-Text that need encode.
+Bytes array that need decode.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`options?`
+
+</td>
+<td>
+
+\{ `stream?`: `boolean`; \}
+
+</td>
+<td>
+
+Decode options, this parameter can be omitted, by default is `{stream: false}`. When decode a stream data (e.g. read from tcp network) while reading it and cannot determine the end of bytes, should set `stream` option to `true`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`options.stream?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+&hyphen;
 
 </td>
 </tr>
@@ -190,113 +272,14 @@ Text that need encode.
 
 #### Returns
 
-[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-
-Encoded uint8 bytes array.
-
-#### Throws
-
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if input is not a string.
-
-***
-
-### encodeInto()
-
-```ts
-encodeInto(src, dest): object;
-```
-
-Encode string text into [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`src`
-
-</td>
-<td>
-
 `string`
 
-</td>
-<td>
+Decoded string text.
 
-Text that need encode.
+#### See
 
-</td>
-</tr>
-<tr>
-<td>
-
-`dest`
-
-</td>
-<td>
-
-[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-
-</td>
-<td>
-
-Destination that receives the encoded uint8 bytes array .
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`object`
-
-Encode result, "read": the read Unicode code units from `src`, "written": the written UTF-8/uint8 bytes to `dest`.
-
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`read`
-
-</td>
-<td>
-
-`number`
-
-</td>
-</tr>
-<tr>
-<td>
-
-`written`
-
-</td>
-<td>
-
-`number`
-
-</td>
-</tr>
-</tbody>
-</table>
+[TextDecoder](https://developer.mozilla.org/docs/Web/API/TextDecoder)
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if src is not a string, or dest is not a [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if input is not a Uint8Array, or options is invalid, or the data is malformed and `fatal` option is set.
