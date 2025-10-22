@@ -9,12 +9,20 @@
 @font-face {
   font-family: "Open Sans", sans-serif;
   font-size: 100%;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* font-variation-settings: "wdth" 100; */
   /* font-weight: 200 900; */
 }
 
 html {
   font-family: "Open Sans", sans-serif;
   font-size: 100%;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* font-variation-settings: "wdth" 100; */
   /* font-weight: 200 900; */
 }
 
