@@ -19,7 +19,7 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 </td>
 <td>
 
-*typeof* [`TextEncoder`](../classes/TextEncoder.md)
+[`TextEncoder`](../classes/TextEncoder.md)
 
 </td>
 <td>
@@ -36,7 +36,7 @@ Encode string text into bytes array, it only supports "utf-8" encoding.
 </td>
 <td>
 
-*typeof* [`TextDecoder`](../classes/TextDecoder.md)
+[`TextDecoder`](../classes/TextDecoder.md)
 
 </td>
 <td>

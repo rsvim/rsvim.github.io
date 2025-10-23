@@ -5,6 +5,31 @@ The [WinterTC](https://wintertc.org/) compatible web platform APIs.
  - [Minimum Common Web Platform API](https://common-min-api.proposal.wintertc.org/)
  - [MDN | Web APIs](https://developer.mozilla.org/docs/Web/API)
 
+## Namespaces
+
+<table>
+<thead>
+<tr>
+<th>Namespace</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+[GlobalThis](namespaces/GlobalThis/README.md)
+
+</td>
+<td>
+
+The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global object.
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Classes
 
 <table>

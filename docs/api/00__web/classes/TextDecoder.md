@@ -145,7 +145,7 @@ Decode options, this parameter can be omitted, by default is `{fatal: false, ign
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if encoding is not a string or options is invalid. Throw [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if encoding is invalid or not support.
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if encoding is not a string or options is invalid. Throw [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if encoding is unknown or not support.
 
 ## Accessors
 
@@ -186,14 +186,14 @@ Whether throw [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Refe
 #### Get Signature
 
 ```ts
-get ignoreBOM(): string;
+get ignoreBOM(): boolean;
 ```
 
 Whether ignore unicode "Byte-Order-Mark" (BOM) when decoding the data.
 
 ##### Returns
 
-`string`
+`boolean`
 
 ## Methods
 
@@ -203,7 +203,7 @@ Whether ignore unicode "Byte-Order-Mark" (BOM) when decoding the data.
 decode(input, options?): string;
 ```
 
-Decode [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) bytes array to string text. Note: For now only `Uint8Array` is supported.
+Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), [TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [DataView](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView).
 
 #### Parameters
 
@@ -224,12 +224,12 @@ Decode [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 </td>
 <td>
 
-[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+`any`
 
 </td>
 <td>
 
-Bytes array that need decode.
+Bytes array.
 
 </td>
 </tr>

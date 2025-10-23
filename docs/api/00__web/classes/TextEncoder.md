@@ -91,7 +91,7 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 encodeInto(src, dest): object;
 ```
 
-Encode string text into [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array). Note: For now only `Uint8Array` is supported.
+Encode string text into [Uint8Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
 
 #### Parameters
 
@@ -134,7 +134,7 @@ Text that need encode.
 </td>
 <td>
 
-Destination that receives the encoded uint8 bytes array .
+Destination that receives the encoded uint8 bytes array.
 
 </td>
 </tr>
