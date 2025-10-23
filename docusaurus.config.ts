@@ -233,6 +233,10 @@ const config: Config = {
         result.frontMatter = {
           title: "RsvimCmd",
         };
+      } else if (params.filePath.endsWith("RsvimFs/README.md")) {
+        result.frontMatter = {
+          title: "RsvimFs",
+        };
       } else if (params.filePath.endsWith("GlobalThis/README.md")) {
         result.frontMatter = {
           title: "GlobalThis",

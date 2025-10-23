@@ -9,7 +9,7 @@ Decode bytes array into string text.
 ### Constructor
 
 ```ts
-new TextDecoder(encoding?, options?): TextDecoder;
+new TextDecoder(encoding, options): TextDecoder;
 ```
 
 Create a TextDecoder instance with specified encoding.
@@ -60,6 +60,7 @@ Per the [WHATWG Encoding Standard](https://encoding.spec.whatwg.org/), the encod
 <tr>
 <th>Parameter</th>
 <th>Type</th>
+<th>Default value</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -67,7 +68,7 @@ Per the [WHATWG Encoding Standard](https://encoding.spec.whatwg.org/), the encod
 <tr>
 <td>
 
-`encoding?`
+`encoding`
 
 </td>
 <td>
@@ -77,14 +78,19 @@ Per the [WHATWG Encoding Standard](https://encoding.spec.whatwg.org/), the encod
 </td>
 <td>
 
-Decoder encoding, this argument can be omitted, by default is "utf-8".
+`"utf-8"`
+
+</td>
+<td>
+
+Decoder encoding, by default is "utf-8".
 
 </td>
 </tr>
 <tr>
 <td>
 
-`options?`
+`options`
 
 </td>
 <td>
@@ -94,7 +100,12 @@ Decoder encoding, this argument can be omitted, by default is "utf-8".
 </td>
 <td>
 
-Decode options, this parameter can be omitted, by default is `{fatal: false, ignoreBOM: false}`.
+`...`
+
+</td>
+<td>
+
+Decode options, by default is `{fatal: false, ignoreBOM: false}`.
 
 </td>
 </tr>
@@ -107,6 +118,11 @@ Decode options, this parameter can be omitted, by default is `{fatal: false, ign
 <td>
 
 `boolean`
+
+</td>
+<td>
+
+`undefined`
 
 </td>
 <td>
@@ -124,6 +140,11 @@ Decode options, this parameter can be omitted, by default is `{fatal: false, ign
 <td>
 
 `boolean`
+
+</td>
+<td>
+
+`undefined`
 
 </td>
 <td>
@@ -200,7 +221,7 @@ Whether ignore unicode "Byte-Order-Mark" (BOM) when decoding the data.
 ### decode()
 
 ```ts
-decode(input): string;
+decode(input, options): string;
 ```
 
 Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), [TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [DataView](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView).
@@ -229,7 +250,41 @@ Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](http
 </td>
 <td>
 
-Bytes array.
+Bytes array, by default is `new Uint8Array()`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`options`
+
+</td>
+<td>
+
+\{ `stream?`: `boolean`; \}
+
+</td>
+<td>
+
+Decode options, by default is `{stream: false}`. When decode a stream data (e.g. read from tcp network) while reading it and cannot determine the end of bytes, should set `stream` option to `true`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`options.stream?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+&hyphen;
 
 </td>
 </tr>

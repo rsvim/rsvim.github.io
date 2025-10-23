@@ -296,7 +296,7 @@ A function to be executed every `delay` milliseconds.
 </td>
 <td>
 
-The milliseconds that the timer should delay in between execution of the function. This parameter can be omitted, by default is 1.
+The milliseconds that the timer should delay in between execution of the function, by default is `1`.
 
 </td>
 </tr>
@@ -384,7 +384,7 @@ A function to be executed after the timer expires.
 </td>
 <td>
 
-The milliseconds that the timer should wait before the function is executed. This parameter can be omitted, by default is 1.
+The milliseconds that the timer should wait before the function is executed, by default is `1`.
 
 </td>
 </tr>
