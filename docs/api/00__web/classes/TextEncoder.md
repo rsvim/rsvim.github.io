@@ -143,14 +143,15 @@ Destination that receives the encoded uint8 bytes array.
 
 #### Returns
 
-Encode result, it contains two numbers: "read" and "written".
+`object`
+
+Encode result, it contains two numbers: the "read" Unicode code units from src string, and the "written" UTF-8 bytes into the dest buffer.
 
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -165,11 +166,6 @@ Encode result, it contains two numbers: "read" and "written".
 `number`
 
 </td>
-<td>
-
-The read Unicode code units.
-
-</td>
 </tr>
 <tr>
 <td>
@@ -180,11 +176,6 @@ The read Unicode code units.
 <td>
 
 `number`
-
-</td>
-<td>
-
-The written UTF-8 bytes.
 
 </td>
 </tr>
