@@ -200,7 +200,7 @@ Whether ignore unicode "Byte-Order-Mark" (BOM) when decoding the data.
 ### decode()
 
 ```ts
-decode(input, options?): string;
+decode(input): string;
 ```
 
 Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), [TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [DataView](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView).
@@ -230,40 +230,6 @@ Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](http
 <td>
 
 Bytes array.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`options?`
-
-</td>
-<td>
-
-\{ `stream?`: `boolean`; \}
-
-</td>
-<td>
-
-Decode options, this parameter can be omitted, by default is `{stream: false}`. When decode a stream data (e.g. read from tcp network) while reading it and cannot determine the end of bytes, should set `stream` option to `true`.
-
-</td>
-</tr>
-<tr>
-<td>
-
-`options.stream?`
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-&hyphen;
 
 </td>
 </tr>
