@@ -16,7 +16,7 @@ open(path, options?): Promise<File>;
 ```
 
 Open a file and resolve to an instance of [RsvimFs.File](../namespaces/RsvimFs/classes/File.md). The file does not need to previously exist if using the `create` or `createNew` open options.
-The caller have to close the file to prevent resource leaking, see close.
+The caller have to close the file to prevent resource leaking, see [RsvimFs.File.close](../namespaces/RsvimFs/classes/File.md#close).
 
 #### Parameters
 
