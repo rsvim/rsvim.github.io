@@ -1,3 +1,8 @@
+---
+title: Web API
+sidebar_position: 3
+---
+
 The [WinterTC](https://wintertc.org/) compatible web platform APIs.
 
 ## See
