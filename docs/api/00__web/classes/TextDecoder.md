@@ -155,7 +155,9 @@ if (new TextDecoder().decode(bytes) !== "𝓽𝓮𝔁𝓽") {
 
 #### See
 
-[Node.js - WHATWG supported encodings](https://nodejs.org/api/util.html#whatwg-supported-encodings)
+ - [Node.js - WHATWG supported encodings](https://nodejs.org/api/util.html#whatwg-supported-encodings)
+ - [encoding_rs - Relationship with Windows Code Pages](https://docs.rs/encoding_rs/latest/encoding_rs/#relationship-with-windows-code-pages)
+ - [encoding_rs - Supported Encodings](https://docs.rs/encoding_rs/latest/encoding_rs/#statics)
 
 #### Throws
 
