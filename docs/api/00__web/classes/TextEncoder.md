@@ -16,6 +16,12 @@ new TextEncoder(): TextEncoder;
 
 `TextEncoder`
 
+#### Example
+
+```javascript
+const encoder = new TextEncoder();
+```
+
 ## Accessors
 
 ### encoding
@@ -78,6 +84,12 @@ Text that need encode.
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 Encoded uint8 bytes array.
+
+#### Example
+
+```javascript
+const encodedBytes = new TextEncoder().encode("Hello, World!");
+```
 
 #### Throws
 

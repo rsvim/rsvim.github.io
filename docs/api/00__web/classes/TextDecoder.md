@@ -9,7 +9,7 @@ Decode bytes array into string text.
 ### Constructor
 
 ```ts
-new TextDecoder(encoding, options): TextDecoder;
+new TextDecoder(encoding?, options?): TextDecoder;
 ```
 
 Create a TextDecoder instance with specified encoding.
@@ -60,7 +60,6 @@ Per the [WHATWG Encoding Standard](https://encoding.spec.whatwg.org/), the encod
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Default value</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -68,7 +67,7 @@ Per the [WHATWG Encoding Standard](https://encoding.spec.whatwg.org/), the encod
 <tr>
 <td>
 
-`encoding`
+`encoding?`
 
 </td>
 <td>
@@ -78,19 +77,14 @@ Per the [WHATWG Encoding Standard](https://encoding.spec.whatwg.org/), the encod
 </td>
 <td>
 
-`"utf-8"`
-
-</td>
-<td>
-
-Decoder encoding, by default is "utf-8".
+(Optional) Decoder encoding, by default is "utf-8".
 
 </td>
 </tr>
 <tr>
 <td>
 
-`options`
+`options?`
 
 </td>
 <td>
@@ -100,12 +94,7 @@ Decoder encoding, by default is "utf-8".
 </td>
 <td>
 
-`...`
-
-</td>
-<td>
-
-Decode options, by default is `{fatal: false, ignoreBOM: false}`.
+(Optional) Decode options, by default is `{fatal: false, ignoreBOM: false}`.
 
 </td>
 </tr>
@@ -118,11 +107,6 @@ Decode options, by default is `{fatal: false, ignoreBOM: false}`.
 <td>
 
 `boolean`
-
-</td>
-<td>
-
-`undefined`
 
 </td>
 <td>
@@ -144,11 +128,6 @@ Decode options, by default is `{fatal: false, ignoreBOM: false}`.
 </td>
 <td>
 
-`undefined`
-
-</td>
-<td>
-
 &hyphen;
 
 </td>
@@ -159,6 +138,20 @@ Decode options, by default is `{fatal: false, ignoreBOM: false}`.
 #### Returns
 
 `TextDecoder`
+
+#### Example
+
+```javascript
+const bytes = new Uint8Array([
+  0xf0, 0x9d, 0x93, 0xbd,
+  0xf0, 0x9d, 0x93, 0xae,
+  0xf0, 0x9d, 0x94, 0x81,
+  0xf0, 0x9d, 0x93, 0xbd
+]);
+if (new TextDecoder().decode(bytes) !== "𝓽𝓮𝔁𝓽") {
+  Rsvim.cmd.echo("Failed to decode");
+}
+```
 
 #### See
 
@@ -221,7 +214,7 @@ Whether ignore unicode "Byte-Order-Mark" (BOM) when decoding the data.
 ### decode()
 
 ```ts
-decode(input, options): string;
+decode(input?, options?): string;
 ```
 
 Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), [TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [DataView](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView).
@@ -240,7 +233,7 @@ Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](http
 <tr>
 <td>
 
-`input`
+`input?`
 
 </td>
 <td>
@@ -250,14 +243,14 @@ Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](http
 </td>
 <td>
 
-Bytes array, by default is `new Uint8Array()`.
+(Optional) Bytes array, by default is `new Uint8Array()`.
 
 </td>
 </tr>
 <tr>
 <td>
 
-`options`
+`options?`
 
 </td>
 <td>
@@ -267,7 +260,7 @@ Bytes array, by default is `new Uint8Array()`.
 </td>
 <td>
 
-Decode options, by default is `{stream: false}`. When decode a stream data (e.g. read from tcp network) while reading it and cannot determine the end of bytes, should set `stream` option to `true`.
+(Optional) Decode options, by default is `{stream: false}`. When decode a stream data (e.g. read from tcp network) while reading it and cannot determine the end of bytes, should set `stream` option to `true`.
 
 </td>
 </tr>
@@ -296,6 +289,21 @@ Decode options, by default is `{stream: false}`. When decode a stream data (e.g.
 `string`
 
 Decoded string text.
+
+#### Example
+
+```javascript
+// Single pass, non-stream
+const str1 = new TextDecoder().decode(new Uint8Array([1,2,3,4]));
+
+// Stream
+const decoder = new TextDecoder();
+let str2 = "";
+str2 += decoder.decode(new Uint8Array([1]), {stream: true});
+str2 += decoder.decode(new Uint8Array([2,3]), {stream: true});
+str2 += decoder.decode(new Uint8Array([4]), {stream: true});
+str2 += decoder.decode(undefined, {stream: false}); // Flush buffer and finish decoding.
+```
 
 #### See
 

@@ -12,7 +12,7 @@ const fs = Rsvim.fs;
 ### open()
 
 ```ts
-open(path, options): Promise<File>;
+open(path, options?): Promise<File>;
 ```
 
 Open a file and resolve to an instance of [RsvimFs.File](../namespaces/RsvimFs/classes/File.md). The file does not need to previously exist if using the `create` or `createNew` open options.
@@ -49,7 +49,7 @@ File path.
 <tr>
 <td>
 
-`options`
+`options?`
 
 </td>
 <td>
@@ -59,7 +59,7 @@ File path.
 </td>
 <td>
 
-Open options, by default is `{read: true}`. See [RsvimFs.OpenOptions](../namespaces/RsvimFs/type-aliases/OpenOptions.md).
+(Optional) Open options, by default is `{read: true}`. See [RsvimFs.OpenOptions](../namespaces/RsvimFs/type-aliases/OpenOptions.md).
 
 </td>
 </tr>

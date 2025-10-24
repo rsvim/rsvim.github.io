@@ -12,7 +12,7 @@ const rt = Rsvim.rt;
 ### exit()
 
 ```ts
-exit(exitCode): void;
+exit(exitCode?): void;
 ```
 
 Exit editor.
@@ -29,7 +29,6 @@ to complete before actually exiting, however any new write requests will be reje
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Default value</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -37,7 +36,7 @@ to complete before actually exiting, however any new write requests will be reje
 <tr>
 <td>
 
-`exitCode`
+`exitCode?`
 
 </td>
 <td>
@@ -47,12 +46,7 @@ to complete before actually exiting, however any new write requests will be reje
 </td>
 <td>
 
-`0`
-
-</td>
-<td>
-
-The editor process exit with this exit code, by default with code `0`.
+(Optional) The editor process exit with this exit code, by default with code `0`.
 
 </td>
 </tr>
