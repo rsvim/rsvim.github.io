@@ -185,7 +185,9 @@ const vim = Rsvim;
 </td>
 <td>
 
-&hyphen;
+---
+title: RsvimCmd
+---
 
 </td>
 </tr>
