@@ -1,5 +1,53 @@
 The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global object.
 
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="textencoder"></a> `TextEncoder`
+
+</td>
+<td>
+
+[`TextEncoder`](../classes/TextEncoder.md)
+
+</td>
+<td>
+
+Encode string text into bytes array, it only supports "utf-8" encoding.
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="textdecoder"></a> `TextDecoder`
+
+</td>
+<td>
+
+[`TextDecoder`](../classes/TextDecoder.md)
+
+</td>
+<td>
+
+Decode bytes array into string text, with specified encoding.
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Methods
 
 ### clearInterval()
@@ -248,7 +296,7 @@ A function to be executed every `delay` milliseconds.
 </td>
 <td>
 
-The milliseconds that the timer should delay in between execution of the function. This parameter can be omitted, by default is 1.
+(Optional) The milliseconds that the timer should delay in between execution of the function, by default is `1`.
 
 </td>
 </tr>
@@ -265,7 +313,7 @@ The milliseconds that the timer should delay in between execution of the functio
 </td>
 <td>
 
-Additional arguments which are passed through to the function.
+(Optional) Additional arguments which are passed through to the function.
 
 </td>
 </tr>
@@ -336,7 +384,7 @@ A function to be executed after the timer expires.
 </td>
 <td>
 
-The milliseconds that the timer should wait before the function is executed. This parameter can be omitted, by default is 1.
+(Optional) The milliseconds that the timer should wait before the function is executed, by default is `1`.
 
 </td>
 </tr>
@@ -353,7 +401,7 @@ The milliseconds that the timer should wait before the function is executed. Thi
 </td>
 <td>
 
-Additional arguments which are passed through to the function.
+(Optional) Additional arguments which are passed through to the function.
 
 </td>
 </tr>

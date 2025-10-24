@@ -59,7 +59,7 @@ File path.
 </td>
 <td>
 
-Open options, this option can be omitted, by default it is `{read: true}`. See [RsvimFs.OpenOptions](../namespaces/RsvimFs/type-aliases/OpenOptions.md).
+(Optional) Open options, by default is `{read: true}`. See [RsvimFs.OpenOptions](../namespaces/RsvimFs/type-aliases/OpenOptions.md).
 
 </td>
 </tr>

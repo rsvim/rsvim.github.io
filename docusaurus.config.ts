@@ -229,13 +229,17 @@ const config: Config = {
           title: "Web APIs",
           sidebar_position: 3,
         };
-      } else if (params.filePath.endsWith("namespaces/RsvimCmd/README.md")) {
+      } else if (params.filePath.endsWith("RsvimCmd/README.md")) {
         result.frontMatter = {
           title: "RsvimCmd",
         };
-      } else if (params.filePath.endsWith("namespaces/RsvimFs/README.md")) {
+      } else if (params.filePath.endsWith("RsvimFs/README.md")) {
         result.frontMatter = {
           title: "RsvimFs",
+        };
+      } else if (params.filePath.endsWith("GlobalThis/README.md")) {
+        result.frontMatter = {
+          title: "GlobalThis",
         };
       }
 

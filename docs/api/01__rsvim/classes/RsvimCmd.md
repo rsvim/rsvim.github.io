@@ -83,7 +83,7 @@ The backend logic that implements the command. It accepts an `ctx` parameter tha
 </td>
 <td>
 
-Attributes that control the command behavior. This parameter can be omitted, it will use the default attributes, see [RsvimCmd.CommandAttributes](../namespaces/RsvimCmd/type-aliases/CommandAttributes.md).
+(Optional) Attributes that control the command behavior, by default is `{bang:false, nargs:"0"}`, see [RsvimCmd.CommandAttributes](../namespaces/RsvimCmd/type-aliases/CommandAttributes.md).
 
 </td>
 </tr>
@@ -100,7 +100,7 @@ Attributes that control the command behavior. This parameter can be omitted, it 
 </td>
 <td>
 
-Options that control how the command is created. This parameter can be omitted, it will use the default options, see [RsvimCmd.CommandOptions](../namespaces/RsvimCmd/type-aliases/CommandOptions.md).
+(Optional) Options that control how the command is created, by default is `{force:true}`, see [RsvimCmd.CommandOptions](../namespaces/RsvimCmd/type-aliases/CommandOptions.md).
 
 </td>
 </tr>

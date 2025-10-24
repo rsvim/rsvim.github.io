@@ -46,8 +46,7 @@ to complete before actually exiting, however any new write requests will be reje
 </td>
 <td>
 
-The editor process exit with this exit code. This parameter can be omitted,
-by default uses `0` to indicate no error.
+(Optional) The editor process exit with this exit code, by default with code `0`.
 
 </td>
 </tr>
