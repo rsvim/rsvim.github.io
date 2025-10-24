@@ -1,3 +1,8 @@
+---
+title: Rsvim APIs
+sidebar_position: 2
+---
+
 The `Rsvim` global object, it contains two groups:
 
 - General APIs.

@@ -8,11 +8,7 @@
   "out": "./generated-typedocs",
   "skipErrorChecking": true,
   // "typedoc" plugins
-  "plugin": [
-    "typedoc-plugin-markdown",
-    "typedoc-plugin-mdn-links",
-    "typedoc-plugin-frontmatter",
-  ],
+  "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
   // "typedoc-plugin-markdown" options
   "hidePageHeader": true,
   "hideBreadcrumbs": true,
@@ -27,6 +23,4 @@
   "useCodeBlocks": true,
   "expandObjects": false,
   "expandParameters": false,
-  // "typedoc-plugin-frontmatter" options
-  "frontmatterCommentTags": ["title"],
 }

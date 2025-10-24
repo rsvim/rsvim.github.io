@@ -209,43 +209,6 @@ const config: Config = {
       onBrokenMarkdownLinks: "warn",
       onBrokenMarkdownImages: "warn",
     },
-    // Add front matters for generated typedoc APIs.
-    parseFrontMatter: async (params: {
-      filePath: string;
-      fileContent: string;
-      defaultParseFrontMatter: DefaultParseFrontMatter;
-    }) => {
-      // console.log(`params.filePath:${params.filePath}`);
-      const result = await params.defaultParseFrontMatter(params);
-
-      // Set front matter
-      if (params.filePath.endsWith("01__rsvim/README.md")) {
-        result.frontMatter = {
-          title: "Rsvim APIs",
-          sidebar_position: 2,
-        };
-      } else if (params.filePath.endsWith("00__web/README.md")) {
-        result.frontMatter = {
-          title: "Web APIs",
-          sidebar_position: 3,
-        };
-      } else if (params.filePath.endsWith("RsvimCmd/README.md")) {
-        result.frontMatter = {
-          title: "RsvimCmd",
-        };
-      } else if (params.filePath.endsWith("RsvimFs/README.md")) {
-        result.frontMatter = {
-          title: "RsvimFs",
-        };
-      } else if (params.filePath.endsWith("GlobalThis/README.md")) {
-        result.frontMatter = {
-          title: "GlobalThis",
-        };
-      }
-
-      // console.log(result);
-      return result;
-    },
   },
   future: {
     v4: {
