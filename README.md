@@ -6,6 +6,7 @@ To setup local environment, please install below dependencies:
 
 1. Install [mise](https://github.com/jdx/mise).
 2. Run `mise i`.
+3. (Optional) Set npm cache folder with `npm config set cache ./.npm --global`, then verify with `npm --global cache verify`.
 
 ### Deployment
 
