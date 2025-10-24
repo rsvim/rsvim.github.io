@@ -28,6 +28,10 @@ The [WinterTC](https://wintertc.org/) compatible web platform APIs.
 </td>
 <td>
 
+---
+title: GlobalThis
+---
+
 The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global object.
 
 </td>
