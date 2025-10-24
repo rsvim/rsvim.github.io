@@ -1,5 +1,5 @@
 ---
-title: Rsvim APIs
+title: Rsvim API
 sidebar_position: 2
 ---
 
@@ -185,9 +185,7 @@ const vim = Rsvim;
 </td>
 <td>
 
----
-title: RsvimCmd
----
+&hyphen;
 
 </td>
 </tr>
@@ -199,9 +197,7 @@ title: RsvimCmd
 </td>
 <td>
 
----
-title: RsvimFs
----
+&hyphen;
 
 </td>
 </tr>
