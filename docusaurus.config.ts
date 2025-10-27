@@ -193,6 +193,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: [
         "powershell",
+        "bash",
         "python",
         "rust",
         "javascript",
