@@ -130,7 +130,7 @@ Read bytes into buffer.
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`number`\>
 
-It resolves to either the number of bytes read during the operation or EOF (`0`) if there was no more to read.
+It resolves to either the number of bytes read during the operation or `0`(EOF) if there was no more to read.
 
 #### Throws
 
