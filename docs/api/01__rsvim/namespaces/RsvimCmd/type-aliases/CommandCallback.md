@@ -1,5 +1,5 @@
 ```ts
-type CommandCallback = (ctx) => void;
+type CommandCallback = (ctx) => Promise<void>;
 ```
 
 Command callback function, this is the backend logic that implements a user ex command.
@@ -31,7 +31,7 @@ Command callback function, this is the backend logic that implements a user ex c
 
 ## Returns
 
-`void`
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
 
 ## See
 

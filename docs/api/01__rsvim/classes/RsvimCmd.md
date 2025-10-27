@@ -66,7 +66,7 @@ Command name that is going to create. Only letters (`a-z` and `A-Z`), digits (`0
 </td>
 <td>
 
-The backend logic that implements the command. It accepts an `ctx` parameter that contains all the information when user is running it. See [RsvimCmd.CommandCallback](../namespaces/RsvimCmd/type-aliases/CommandCallback.md).
+Async callback function that implements the command. It accepts an `ctx` parameter that contains all the information when user is running it. See [RsvimCmd.CommandCallback](../namespaces/RsvimCmd/type-aliases/CommandCallback.md).
 
 </td>
 </tr>
@@ -120,7 +120,7 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 #### Example
 
 ```javascript
-function write(ctx: any): void {
+function write(ctx: any): Promise<void> {
   try {
     const bytes = Rsvim.buf.writeSync(bufId);
     Rsvim.cmd.echo(`Buffer ${bufId} has been saved, ${bytes} bytes written`);
