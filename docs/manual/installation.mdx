@@ -24,7 +24,7 @@ You can download pre-built binary from GitHub release page:
   </TabItem>
   <TabItem value="windows" label="windows">
     ```powershell
-    curl -fsSL https://github.com/rsvim/rsvim/releases/latest/download/rsvim-x86_64-pc-windows-msvc.tar.gz -o rsvim.tar.gz
+    Invoke-WebRequest -Uri https://github.com/rsvim/rsvim/releases/latest/download/rsvim-x86_64-pc-windows-msvc.tar.gz -OutFile rsvim.tar.gz
     ```
   </TabItem>
 </Tabs>
@@ -45,7 +45,7 @@ For nightly pre-builts, download the `nightly` tag pre-release:
   </TabItem>
   <TabItem value="windows" label="windows">
     ```powershell
-    curl -fsSL https://github.com/rsvim/rsvim/releases/tag/nightly/download/rsvim-x86_64-pc-windows-msvc.tar.gz -o rsvim.tar.gz
+    Invoke-WebRequest -Uri https://github.com/rsvim/rsvim/releases/tag/nightly/download/rsvim-x86_64-pc-windows-msvc.tar.gz -OutFile rsvim.tar.gz
     ```
   </TabItem>
 </Tabs>
