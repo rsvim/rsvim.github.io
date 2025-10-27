@@ -4,11 +4,15 @@ sidebar_position: 2
 
 # Installation
 
-## Download From GitHub Releases
+## Download
 
-Download pre-builts from GitHub releases:
+### GitHub Release
 
+You can download pre-built binary from GitHub release page:
+
+```
 https://github.com/rsvim/rsvim/releases
+```
 
 For nightly pre-builts, download the `nightly` tag pre-release:
 
