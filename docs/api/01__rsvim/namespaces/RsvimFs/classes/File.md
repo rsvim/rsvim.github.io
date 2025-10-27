@@ -130,7 +130,11 @@ Read bytes into buffer.
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`number`\>
 
-It resolves to either the number of bytes read during the operation or EOF (`null`) if there was no more to read.
+It resolves to either the number of bytes read during the operation or EOF (`0`) if there was no more to read.
+
+#### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if buf is not a Uint8Array.
 
 #### Example
 
@@ -185,6 +189,10 @@ Same with [read](#read).
 #### Returns
 
 `number`
+
+Same with [read](#read).
+
+#### Throws
 
 Same with [read](#read).
 
@@ -246,7 +254,11 @@ Read bytes into buffer.
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`number`\>
 
-It resolves to either the number of bytes written during the operation or `null` if there was nothing to write.
+It resolves to either the number of bytes written during the operation or `0` if there was nothing to write.
+
+#### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if buf is not a Uint8Array.
 
 #### Example
 
@@ -300,6 +312,10 @@ Same with [write](#write).
 #### Returns
 
 `number`
+
+Same with [write](#write).
+
+#### Throws
 
 Same with [write](#write).
 
