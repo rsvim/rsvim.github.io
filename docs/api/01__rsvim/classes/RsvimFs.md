@@ -70,7 +70,7 @@ File path.
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`File`](../namespaces/RsvimFs/classes/File.md)\>
 
-It returns a [Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to an instance of [RsvimFs.File](../namespaces/RsvimFs/classes/File.md).
+It resolves to an instance of [RsvimFs.File](../namespaces/RsvimFs/classes/File.md).
 
 #### Throws
 
