@@ -29,7 +29,7 @@ Similar to node/deno, Rsvim provides a set of APIs to help users manipulating bo
 
 ### 2.1. Editor APIs
 
-Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object `Rsvim`, similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) lua global namespace in Neovim.
+Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) lua global namespace in Neovim.
 
 ### 2.2. General APIs
 
