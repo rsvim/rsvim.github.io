@@ -120,7 +120,7 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 #### Example
 
 ```javascript
-function write(ctx: any): Promise<void> {
+async function write(ctx: any): void {
   try {
     const bytes = Rsvim.buf.writeSync(bufId);
     Rsvim.cmd.echo(`Buffer ${bufId} has been saved, ${bytes} bytes written`);

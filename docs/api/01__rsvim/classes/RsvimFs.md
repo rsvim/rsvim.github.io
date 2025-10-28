@@ -144,11 +144,11 @@ Same with [open](#open).
 
 [`File`](../namespaces/RsvimFs/classes/File.md)
 
-It returns a [RsvimFs.File](../namespaces/RsvimFs/classes/File.md).
+Same with [open](#open).
 
 #### Throws
 
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameters are invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to open/create the file.
+Same with [open](#open).
 
 #### Example
 
