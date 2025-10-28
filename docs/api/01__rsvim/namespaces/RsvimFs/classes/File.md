@@ -179,8 +179,6 @@ Sync version of [read](#read).
 </td>
 <td>
 
-Same with [read](#read).
-
 </td>
 </tr>
 </tbody>
@@ -190,11 +188,7 @@ Same with [read](#read).
 
 `number`
 
-Same with [read](#read).
-
 #### Throws
-
-Same with [read](#read).
 
 #### Example
 
@@ -302,8 +296,6 @@ Sync version of [write](#write).
 </td>
 <td>
 
-Same with [write](#write).
-
 </td>
 </tr>
 </tbody>
@@ -313,11 +305,7 @@ Same with [write](#write).
 
 `number`
 
-Same with [write](#write).
-
 #### Throws
-
-Same with [write](#write).
 
 #### Example
 

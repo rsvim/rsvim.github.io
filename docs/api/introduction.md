@@ -4,10 +4,10 @@ sidebar_position: 1
 
 # Introduction
 
-For most general script programming languages such as [python](https://www.python.org/), builtin types/classes/functions (for example [`len`](https://docs.python.org/3/library/functions.html#len)) and standard library (for example [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime)) are shipped with interpreters. Javascript runtime plays a similar role, the difference is the js engine is provided by a third-party library, i.e. the **V8** js engine. Js engine covers [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/) standard, while js runtime provides a standard library, schedules async tasks within event loop, fills in many other gaps. The standard library mainly includes:
+For most general script programming languages such as [python](https://www.python.org/), builtin types/classes/functions (e.g. [`len`](https://docs.python.org/3/library/functions.html#len)) and standard library (e.g. [`datetime`](https://docs.python.org/3/library/datetime.html#module-datetime)) are shipped with interpreters. JavaScript runtime plays a similar role, the difference is that the js language is defined by [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/) standard and implemented by many open source projects, [V8](https://v8.dev/) js engine is the most prestigious one. While js runtime provides a standard library, schedules async tasks and fills in many other gaps. The standard library mainly includes:
 
 - [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API): Most popular javascript-based runtimes share a compatible implementations today.
-- Runtime APIs: Different runtimes provide have their own specific APIs, i.e. browsers such Chrome/Firefox provide the `document` DOM tree APIs, server-side runtimes such as node/deno provide their own APIs to manage the operating systems.
+- Specific APIs: Different runtimes provide have their own specific APIs, i.e. browsers such Chrome/Firefox provide the `document` DOM tree APIs, server-side runtimes such as node/deno provide their own APIs to manage the operating systems.
 
 This chapter references all the APIs provided by the Rsvim editor.
 
@@ -29,7 +29,7 @@ Similar to node/deno, Rsvim provides a set of APIs to help users manipulating bo
 
 ### 2.1. Editor APIs
 
-Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object `Rsvim`, similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) lua global namespace in Neovim.
+Editor APIs are for the text editor itself, including windows, buffers, cursors, commands, etc. They can be accessed via the global object [`Rsvim`](rsvim/classes/Rsvim), similar to the [`vim`](https://neovim.io/doc/user/lua.html#Lua) lua global namespace in Neovim.
 
 ### 2.2. General APIs
 

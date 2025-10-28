@@ -3,12 +3,7 @@ title: Web API
 sidebar_position: 3
 ---
 
-The [WinterTC](https://wintertc.org/) compatible web platform APIs.
-
-## See
-
- - [Minimum Common Web Platform API](https://common-min-api.proposal.wintertc.org/)
- - [MDN | Web APIs](https://developer.mozilla.org/docs/Web/API)
+The [WinterTC](https://min-common-api.proposal.wintertc.org/) compatible web platform APIs. Also see [MDN | Web APIs](https://developer.mozilla.org/docs/Web/API).
 
 ## Namespaces
 

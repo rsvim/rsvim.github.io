@@ -116,8 +116,6 @@ The sync version of [open](#open).
 </td>
 <td>
 
-Same with [open](#open).
-
 </td>
 </tr>
 <tr>
@@ -133,8 +131,6 @@ Same with [open](#open).
 </td>
 <td>
 
-Same with [open](#open).
-
 </td>
 </tr>
 </tbody>
@@ -144,11 +140,7 @@ Same with [open](#open).
 
 [`File`](../namespaces/RsvimFs/classes/File.md)
 
-It returns a [RsvimFs.File](../namespaces/RsvimFs/classes/File.md).
-
 #### Throws
-
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameters are invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to open/create the file.
 
 #### Example
 
