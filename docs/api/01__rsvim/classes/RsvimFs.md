@@ -116,8 +116,6 @@ The sync version of [open](#open).
 </td>
 <td>
 
-Same with [open](#open).
-
 </td>
 </tr>
 <tr>
@@ -133,8 +131,6 @@ Same with [open](#open).
 </td>
 <td>
 
-Same with [open](#open).
-
 </td>
 </tr>
 </tbody>
@@ -144,11 +140,7 @@ Same with [open](#open).
 
 [`File`](../namespaces/RsvimFs/classes/File.md)
 
-Same with [open](#open).
-
 #### Throws
-
-Same with [open](#open).
 
 #### Example
 
