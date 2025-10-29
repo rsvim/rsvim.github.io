@@ -45,17 +45,17 @@ def generate_typedoc():
     os.system(command)
 
 
-def place_typedoc_for(filename: str):
-    gen_doc = GHPAGE_DOC / filename
-    api_doc = GHPAGE_API / filename
+def place_typedoc_for(dirname: str):
+    gen_doc = GHPAGE_DOC / dirname
+    api_doc = GHPAGE_API / dirname
     logging.info(f"Copy generated typedoc from {gen_doc} to {api_doc}")
     shutil.rmtree(api_doc)
     shutil.copytree(gen_doc, api_doc)
 
 
 def place_typedoc():
-    for filename in ["00__web", "01__rsvim"]:
-        place_typedoc_for(filename)
+    for dirname in ["00__web", "01__rsvim"]:
+        place_typedoc_for(dirname)
     logging.info(
         f"Swap IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP}) back to IMPORT_META_DOC ({IMPORT_META_DOC})"
     )
