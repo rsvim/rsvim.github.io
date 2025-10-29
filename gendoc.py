@@ -44,6 +44,12 @@ def prepare_dirs():
     shutil.copytree(IMPORT_META_DOC, IMPORT_META_DOC_SWAP)
 
 
+def generate_typedoc():
+    command = "npm run typedoc"
+    logging.info(f"Run: {command}")
+    os.system(command)
+
+
 if __name__ == "__main__":
     logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
     logging.info(f"CWD:{CWD}")
