@@ -1,11 +1,11 @@
 {
   // "typedoc" options
   "name": "Rsvim",
-  "entryPoints": ["./runtime/*.ts"],
+  "entryPoints": ["./.runtime/*.ts"],
   "exclude": [],
   "disableSources": false,
   "sort": ["source-order", "alphabetical", "visibility"],
-  "out": "./typedoc",
+  "out": "./.typedoc",
   "skipErrorChecking": false,
   // "typedoc" plugins
   "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
