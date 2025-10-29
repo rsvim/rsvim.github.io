@@ -21,6 +21,21 @@ IMPORT_META_DOC = CWD / "docs" / "api" / "00__web" / "interfaces" / "ImportMeta.
 IMPORT_META_DOC_SWAP = CWD / ".ImportMeta.md.swap"
 
 
+def precheck():
+    if not RSVIM_SRC.exists():
+        logging.error(f"RSVIM_SRC ({RSVIM_SRC}) doesn't exist, exit...")
+        exit(1)
+
+
+def prepare_dirs():
+    if GHPAGE_SRC.exists():
+        shutil.rmtree(GHPAGE_SRC)
+    if GHPAGE_DOC.exists():
+        shutil.rmtree(GHPAGE_DOC)
+    if IMPORT_META_DOC_SWAP.exists():
+        shutil.rmtree(IMPORT_META_DOC_SWAP)
+
+
 if __name__ == "__main__":
     logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
     logging.info(f"CWD:{CWD}")
