@@ -39,7 +39,7 @@ def prepare_dirs():
     logging.info(
         f"Temporarily swap IMPORT_META_DOC ({IMPORT_META_DOC}) to IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP})"
     )
-    shutil.copytree(IMPORT_META_DOC, IMPORT_META_DOC_SWAP)
+    shutil.copyfile(IMPORT_META_DOC, IMPORT_META_DOC_SWAP)
 
 
 def generate_typedoc():
@@ -62,7 +62,7 @@ def place_typedoc():
     logging.info(
         f"Swap IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP}) back to IMPORT_META_DOC ({IMPORT_META_DOC})"
     )
-    shutil.copytree(IMPORT_META_DOC_SWAP, IMPORT_META_DOC)
+    shutil.copyfile(IMPORT_META_DOC_SWAP, IMPORT_META_DOC)
 
 
 def postcheck():
