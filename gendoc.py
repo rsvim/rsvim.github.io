@@ -47,7 +47,7 @@ def generate_typedoc():
 
 def place_typedoc_for(dirname: str):
     gen_doc = GHPAGE_DOC / dirname
-    api_doc = GHPAGE_API / dirname
+    api_doc = GHPAGE_API
     logging.info(f"Copy generated typedoc from {gen_doc} to {api_doc}")
     shutil.rmtree(api_doc)
     shutil.copytree(gen_doc, api_doc)
