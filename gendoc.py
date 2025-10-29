@@ -19,6 +19,7 @@ GHPAGE_SRC_FILES = [GHPAGE_SRC / filename for filename in RSVIM_SRC_FILENAMES]
 GHPAGE_DOC = CWD / "typedoc"
 IMPORT_META_DOC = CWD / "docs" / "api" / "00__web" / "interfaces" / "ImportMeta.md"
 IMPORT_META_DOC_SWAP = CWD / ".ImportMeta.md.swap"
+GHPAGE_API = CWD / "docs" / "api"
 
 
 def precheck():
@@ -39,7 +40,7 @@ def prepare_dirs():
     )
     shutil.copytree(RSVIM_SRC, GHPAGE_SRC)
     logging.info(
-        f"Temporarily save IMPORT_META_DOC ({IMPORT_META_DOC}) to IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP})"
+        f"Temporarily swap IMPORT_META_DOC ({IMPORT_META_DOC}) to IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP})"
     )
     shutil.copytree(IMPORT_META_DOC, IMPORT_META_DOC_SWAP)
 
@@ -48,6 +49,23 @@ def generate_typedoc():
     command = "npm run typedoc"
     logging.info(f"Run: {command}")
     os.system(command)
+
+
+def place_typedoc_for(filename: str):
+    gen_doc = GHPAGE_DOC / filename
+    api_doc = GHPAGE_API / filename
+    logging.info(f"Copy generated typedoc from {gen_doc} to {api_doc}")
+    shutil.rmtree(api_doc)
+    shutil.copytree(gen_doc, api_doc)
+
+
+def place_typedoc():
+    for filename in RSVIM_SRC_FILENAMES:
+        place_typedoc_for(filename)
+    logging.info(
+        f"Swap IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP}) back to IMPORT_META_DOC ({IMPORT_META_DOC})"
+    )
+    shutil.copytree(IMPORT_META_DOC_SWAP, IMPORT_META_DOC)
 
 
 if __name__ == "__main__":
