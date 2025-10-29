@@ -18,7 +18,4 @@ To setup local environment, please install below dependencies:
   2. Run the `./gendoc.py` script to generate all API docs.
 - To configure searching index, please go to [Doc Search](https://docsearch.algolia.com/).
 - To tag a version, please run command: `npm run docusaurus docs:version 0.1.0` (see [Docusaurus - Versioning](https://docusaurus.io/docs/versioning)).
-
-### Images
-
-To create SVG image, please use [draw.io desktop](https://github.com/jgraph/drawio-desktop/releases).
+- To create SVG image, please use [draw.io desktop](https://github.com/jgraph/drawio-desktop/releases).
