@@ -1,8 +1,8 @@
 {
   // "typedoc" options
   "name": "Rsvim",
-  "entryPoints": ["./jsruntime/*.ts"],
-  "exclude": ["./jsruntime/*.d.ts", "./jsruntime/*infra.ts"],
+  "entryPoints": ["./runtime/*.ts"],
+  "exclude": [],
   "disableSources": true,
   "sort": ["source-order", "alphabetical", "visibility"],
   "out": "./generated-typedocs",
