@@ -68,6 +68,12 @@ def place_typedoc():
     shutil.copytree(IMPORT_META_DOC_SWAP, IMPORT_META_DOC)
 
 
+def postcheck():
+    command = "git status"
+    logging.info(f"Run: {command}")
+    os.system(command)
+
+
 if __name__ == "__main__":
     logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
     logging.info(f"CWD:{CWD}")
@@ -76,3 +82,9 @@ if __name__ == "__main__":
     logging.info(f"GHPAGE_SRC:{GHPAGE_SRC}")
     logging.info(f"GHPAGE_SRC_FILES:{GHPAGE_SRC_FILES}")
     logging.info(f"GHPAGE_DOC:{GHPAGE_DOC}")
+
+    precheck()
+    prepare_dirs()
+    generate_typedoc()
+    place_typedoc()
+    postcheck()
