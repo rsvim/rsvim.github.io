@@ -232,6 +232,14 @@ const config: Config = {
         result.frontMatter = {
           title: "RsvimOpt",
         };
+      } else if (params.filePath.endsWith("TextEncoder/README.md")) {
+        result.frontMatter = {
+          title: "TextEncoder",
+        };
+      } else if (params.filePath.endsWith("TextDecoder/README.md")) {
+        result.frontMatter = {
+          title: "TextDecoder",
+        };
       } else if (params.filePath.endsWith("GlobalThis/README.md")) {
         result.frontMatter = {
           title: "GlobalThis",
