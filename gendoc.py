@@ -12,7 +12,7 @@ RSVIM_SRC = CWD.parent / "rsvim" / "runtime"
 GHPAGE_SRC = CWD / "runtime"
 GHPAGE_DOC = CWD / "typedoc"
 IMPORT_META_DOC = CWD / "docs" / "api" / "00__web" / "interfaces" / "ImportMeta.md"
-IMPORT_META_DOC_SWAP = CWD / ".ImportMeta.md.swap"
+IMPORT_META_DOC_SWAP = CWD / "ImportMeta.md.swap"
 GHPAGE_API = CWD / "docs" / "api"
 
 
