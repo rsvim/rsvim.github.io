@@ -9,8 +9,8 @@ from pathlib import Path
 
 CWD = Path(os.getcwd())
 RSVIM_SRC = CWD.parent / "rsvim" / "runtime"
-GHPAGE_SRC = CWD / ".runtime"
-GHPAGE_DOC = CWD / ".typedoc"
+GHPAGE_SRC = CWD / "runtime"
+GHPAGE_DOC = CWD / "typedoc"
 IMPORT_META_DOC = CWD / "docs" / "api" / "00__web" / "interfaces" / "ImportMeta.md"
 IMPORT_META_DOC_SWAP = CWD / ".ImportMeta.md.swap"
 GHPAGE_API = CWD / "docs" / "api"
@@ -34,7 +34,7 @@ def prepare_dirs():
     )
     shutil.copytree(RSVIM_SRC, GHPAGE_SRC)
     logging.info(
-        f"Temporarily swap IMPORT_META_DOC ({IMPORT_META_DOC}) to IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP})"
+        f"Swap IMPORT_META_DOC ({IMPORT_META_DOC}) to IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP})"
     )
     shutil.copyfile(IMPORT_META_DOC, IMPORT_META_DOC_SWAP)
 
