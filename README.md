@@ -5,26 +5,14 @@
 To setup local environment, please install below dependencies:
 
 1. Install [mise](https://github.com/jdx/mise).
-2. Run `mise i`.
-3. (Optional) Set npm cache folder with `npm config set cache ./.npm --global`, then verify with `npm --global cache verify`.
+2. Run `mise i` to install python, node and other npm cli tools.
+3. Run `npm i` to install npm dependencies, including docusaurus.
 
-### Deployment
+### Development
 
-To start local service, please run below commands:
-
-1. `npm install`
-2. `npm run start`
-
-To build production docs, please run below commands:
-
-1. `npm run build`
-2. `npm run serve`
-
-### Format
-
-To format docs, please install below formatters:
-
-- [`prettier`](https://prettier.io/)
+- To start local service, please run command `npm start`.
+- To build production artifacts, please run command `npm run build`.
+- To format source code and docs, please run `prettier -w .`.
 
 ### Generate API Docs
 
