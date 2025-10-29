@@ -34,6 +34,10 @@ def prepare_dirs():
         shutil.rmtree(GHPAGE_DOC)
     if IMPORT_META_DOC_SWAP.exists():
         shutil.rmtree(IMPORT_META_DOC_SWAP)
+    logging.info(
+        f"Copy runtime typescripts from RSVIM_SRC ({RSVIM_SRC}) to GHPAGE_SRC ({GHPAGE_SRC})"
+    )
+    shutil.copytree(RSVIM_SRC, GHPAGE_SRC)
 
 
 if __name__ == "__main__":
