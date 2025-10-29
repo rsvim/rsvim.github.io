@@ -41,7 +41,7 @@ def prepare_dirs():
     logging.info(
         f"Temporarily save IMPORT_META_DOC ({IMPORT_META_DOC}) to IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP})"
     )
-    shutil.copytree(RSVIM_SRC, GHPAGE_SRC)
+    shutil.copytree(IMPORT_META_DOC, IMPORT_META_DOC_SWAP)
 
 
 if __name__ == "__main__":
