@@ -4,7 +4,6 @@
 
 import logging
 import os
-import shutil
 from pathlib import Path
 
 CWD = Path(os.getcwd())
@@ -27,12 +26,6 @@ def prepare_dirs():
         command = f"rm -rf {to_be_removed}"
         logging.info(f"Remove: {command}")
         os.system(command)
-    # if GHPAGE_SRC.exists():
-    #     shutil.rmtree(GHPAGE_SRC)
-    # if GHPAGE_DOC.exists():
-    #     shutil.rmtree(GHPAGE_DOC)
-    # if IMPORT_META_DOC_SWAP.exists():
-    #     IMPORT_META_DOC_SWAP.unlink()
     for to_be_copied in [
         (RSVIM_SRC, GHPAGE_SRC),
         (IMPORT_META_DOC, IMPORT_META_DOC_SWAP),
@@ -40,28 +33,12 @@ def prepare_dirs():
         command = f"cp -rf {to_be_copied[0]} {to_be_copied[1]}"
         logging.info(f"Copy: {command}")
         os.system(command)
-    # logging.info(
-    #     f"Copy runtime typescripts from RSVIM_SRC ({RSVIM_SRC}) to GHPAGE_SRC ({GHPAGE_SRC})"
-    # )
-    # shutil.copytree(RSVIM_SRC, GHPAGE_SRC)
-    # logging.info(
-    #     f"Swap IMPORT_META_DOC ({IMPORT_META_DOC}) to IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP})"
-    # )
-    # shutil.copyfile(IMPORT_META_DOC, IMPORT_META_DOC_SWAP)
 
 
 def generate_typedoc():
     command = "npm run typedoc"
     logging.info(f"Run: {command}")
     os.system(command)
-
-
-# def place_typedoc_for(dirname: str):
-#     gen_doc = GHPAGE_DOC / dirname
-#     api_doc = GHPAGE_API
-#     logging.info(f"Copy generated typedoc from {gen_doc} to {api_doc}")
-#     shutil.rmtree(api_doc)
-#     shutil.copytree(gen_doc, api_doc)
 
 
 def place_typedoc():
@@ -74,17 +51,10 @@ def place_typedoc():
         command = f"cp -rf {gen_doc} {api_doc}"
         logging.info(f"Copy: {command}")
         os.system(command)
-        # logging.info(f"Copy generated typedoc from {gen_doc} to {api_doc}")
-        # shutil.rmtree(api_doc)
-        # shutil.copytree(gen_doc, api_doc)
 
     command = f"cp {IMPORT_META_DOC_SWAP} {IMPORT_META_DOC}"
     logging.info(f"Copy: {command}")
     os.system(command)
-    # logging.info(
-    #     f"Swap IMPORT_META_DOC_SWAP ({IMPORT_META_DOC_SWAP}) back to IMPORT_META_DOC ({IMPORT_META_DOC})"
-    # )
-    # shutil.copyfile(IMPORT_META_DOC_SWAP, IMPORT_META_DOC)
 
 
 def postcheck():
