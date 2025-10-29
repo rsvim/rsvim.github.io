@@ -2,11 +2,8 @@
 
 # Formatted with ruff.
 
-import argparse
 import logging
 import os
-import pathlib
-import platform
 import shutil
 from pathlib import Path
 
