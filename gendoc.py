@@ -67,7 +67,7 @@ def generate_typedoc():
 def place_typedoc():
     for dirname in ["00__web", "01__rsvim"]:
         gen_doc = GHPAGE_DOC / dirname
-        api_doc = GHPAGE_API
+        api_doc = GHPAGE_API / dirname
         command = f"rm -rf {api_doc}"
         logging.info(f"Remove: {command}")
         os.system(command)
