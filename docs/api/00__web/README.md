@@ -23,7 +23,7 @@ The [WinterTC](https://min-common-api.proposal.wintertc.org/) compatible web pla
 </td>
 <td>
 
-The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global object.
+&hyphen;
 
 </td>
 </tr>
