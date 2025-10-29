@@ -17,7 +17,7 @@ To setup local environment, please install below dependencies:
   1. Clone [rsvim](https://github.com/rsvim/rsvim) repo in the sibling position with _this_ repo under the same parent directory.
   2. Run the `./gendoc.py` script to generate all API docs.
 - To configure searching index, please go to [Doc Search](https://docsearch.algolia.com/).
-- To tag a version, please run command: `npm run docusaurus docs:version 0.1.0`. See [Docusaurus - Versioning](https://docusaurus.io/docs/versioning).
+- To tag a version, please run command: `npm run docusaurus docs:version 0.1.0` (see [Docusaurus - Versioning](https://docusaurus.io/docs/versioning)).
 
 ### Images
 
