@@ -200,17 +200,5 @@ const vim = Rsvim;
 
 </td>
 </tr>
-<tr>
-<td>
-
-[RsvimOpt](namespaces/RsvimOpt/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
 </tbody>
 </table>
