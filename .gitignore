@@ -26,6 +26,6 @@ yarn-error.log*
 # Generated Typedocs
 runtime
 typedoc
-ImportMeta.md.swap
+.ImportMeta.md
 
 *.svg.bkp
