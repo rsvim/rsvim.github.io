@@ -3,7 +3,7 @@
   "name": "Rsvim",
   "entryPoints": ["./runtime/*.ts"],
   "exclude": [],
-  "disableSources": false,
+  "disableSources": true,
   "sort": ["source-order", "alphabetical", "visibility"],
   "out": "./typedoc",
   "skipErrorChecking": true,
