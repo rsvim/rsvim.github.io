@@ -11,10 +11,12 @@ import shutil
 from pathlib import Path
 
 CWD = Path(os.getcwd())
-RSVIM_DIR = CWD.parent / "rsvim"
+RSVIM_SRC_DIR = CWD.parent / "rsvim" / "runtime"
+RSVIM_SRC = [RSVIM_SRC_DIR / s for s in ["00__web.ts", "01__rsvim.ts"]]
 
 
 if __name__ == "__main__":
     logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
     logging.info(f"CWD:{CWD}")
-    logging.info(f"RSVIM_DIR:{RSVIM_DIR}")
+    logging.info(f"RSVIM_SRC_DIR:{RSVIM_SRC_DIR}")
+    logging.info(f"RSVIM_SRC:{RSVIM_SRC}")
