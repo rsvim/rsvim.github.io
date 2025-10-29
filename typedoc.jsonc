@@ -3,10 +3,10 @@
   "name": "Rsvim",
   "entryPoints": ["./runtime/*.ts"],
   "exclude": [],
-  "disableSources": true,
+  "disableSources": false,
   "sort": ["source-order", "alphabetical", "visibility"],
-  "out": "./generated-typedocs",
-  "skipErrorChecking": true,
+  "out": "./typedoc",
+  "skipErrorChecking": false,
   // "typedoc" plugins
   "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
   // "typedoc-plugin-markdown" options
