@@ -17,6 +17,8 @@ RSVIM_SRC_FILES = [RSVIM_SRC / filename for filename in RSVIM_SRC_FILENAMES]
 GHPAGE_SRC = CWD / "runtime"
 GHPAGE_SRC_FILES = [GHPAGE_SRC / filename for filename in RSVIM_SRC_FILENAMES]
 GHPAGE_DOC = CWD / "typedoc"
+IMPORT_META_DOC = CWD / "docs" / "api" / "00__web" / "interfaces" / "ImportMeta.md"
+IMPORT_META_DOC_SWAP = CWD / ".ImportMeta.md.swap"
 
 
 if __name__ == "__main__":
