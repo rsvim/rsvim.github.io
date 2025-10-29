@@ -12,7 +12,7 @@ from pathlib import Path
 
 CWD = Path(os.getcwd())
 RSVIM_SRC_DIR = CWD.parent / "rsvim" / "runtime"
-RSVIM_SRC = [RSVIM_SRC_DIR / f for f in ["00__web.ts", "01__rsvim.ts"]]
+RSVIM_SRC = [RSVIM_SRC_DIR / filename for filename in ["00__web.ts", "01__rsvim.ts"]]
 
 
 if __name__ == "__main__":
