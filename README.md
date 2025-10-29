@@ -13,13 +13,9 @@ To setup local environment, please install below dependencies:
 - To start local service, please run command `npm start`.
 - To build production artifacts, please run command `npm run build`.
 - To format source code and docs, please run `prettier -w .`.
-
-### Generate API Docs
-
-To sync API docs from [rsvim](https://github.com/rsvim/rsvim), please follow below steps:
-
-1. Clone the `rsvim` repo along with _this_ repo under the same directory.
-2. Run `./gendoc.sh` scripts to sync all API docs.
+- To sync API docs from [rsvim](https://github.com/rsvim/rsvim), please follow below steps:
+  1. Clone [rsvim](https://github.com/rsvim/rsvim) repo in the sibling position with _this_ repo under the same parent directory.
+  2. Run the `./gendoc.py` script to generate all API docs.
 
 ### Search
 
