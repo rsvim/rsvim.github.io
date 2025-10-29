@@ -23,52 +23,62 @@ Here are some demos and comparison with Vim.
 
 > Demos are recorded with Mac and kitty terminal.
 
-export const ComparisonDemo = ({children, vimUrl, rsvimUrl}) => (
-    <ul style={{
-        width: '100%',
-        display: 'table',
-        tableLayout: 'fixed',
-        borderCollapse: 'collapse',
-        borderStyle: 'none',
-    }}>
-        <li style={{
-            display: 'table-cell',
-            textAlign: 'center',
-            border: 'none',
-        }}>
-            <p>Vim</p>
-            <video width="95%" controls muted>
-                <source src={vimUrl} type="video/mp4"></source>
-            </video>
-            </li>
-        <li style={{
-            display: 'table-cell',
-            textAlign: 'center',
-            border: 'none',
-        }}>
-            <p>Rsvim</p>
-            <video width="95%" controls muted>
-                <source src={rsvimUrl} type="video/mp4"></source>
-            </video>
-        </li>
-    </ul>
+export const ComparisonDemo = ({ children, vimUrl, rsvimUrl }) => (
+  <ul
+    style={{
+      width: "100%",
+      display: "table",
+      tableLayout: "fixed",
+      borderCollapse: "collapse",
+      borderStyle: "none",
+    }}
+  >
+    <li
+      style={{
+        display: "table-cell",
+        textAlign: "center",
+        border: "none",
+      }}
+    >
+      <p>Vim</p>
+      <video width="95%" controls muted>
+        <source src={vimUrl} type="video/mp4"></source>
+      </video>
+    </li>
+    <li
+      style={{
+        display: "table-cell",
+        textAlign: "center",
+        border: "none",
+      }}
+    >
+      <p>Rsvim</p>
+      <video width="95%" controls muted>
+        <source src={rsvimUrl} type="video/mp4"></source>
+      </video>
+    </li>
+  </ul>
 );
 
-export const Demo = ({children, rsvimUrl}) => (
-    <p align="center">
-        <video width="85%" controls muted>
-            <source src={rsvimUrl} type="video/mp4"></source>
-        </video>
-    </p>
+export const Demo = ({ children, rsvimUrl }) => (
+  <p align="center">
+    <video width="85%" controls muted>
+      <source src={rsvimUrl} type="video/mp4"></source>
+    </video>
+  </p>
 );
 
 ### Preview
 
 #### No-Wrap
 
-<ComparisonDemo 
-  vimUrl={"https://github.com/user-attachments/assets/9641ed19-8066-4ce6-a2e7-552c05c76184"}
-  rsvimUrl={"https://github.com/user-attachments/assets/2250fa0b-1f2e-4c81-8743-4ed5b3717a5c"}
+<ComparisonDemo
+  vimUrl={
+    "https://github.com/user-attachments/assets/9641ed19-8066-4ce6-a2e7-552c05c76184"
+  }
+  rsvimUrl={
+    "https://github.com/user-attachments/assets/2250fa0b-1f2e-4c81-8743-4ed5b3717a5c"
+  }
 />
 
 Vim configs:
@@ -87,9 +97,13 @@ Rsvim.opt.wrap = false;
 
 #### Wrap
 
-<ComparisonDemo 
-  vimUrl={"https://github.com/user-attachments/assets/4ceafa5b-cc26-4487-a455-e840485c2595"}
-  rsvimUrl={"https://github.com/user-attachments/assets/27d4987c-029f-4f8a-859a-dc633191ae7f"}
+<ComparisonDemo
+  vimUrl={
+    "https://github.com/user-attachments/assets/4ceafa5b-cc26-4487-a455-e840485c2595"
+  }
+  rsvimUrl={
+    "https://github.com/user-attachments/assets/27d4987c-029f-4f8a-859a-dc633191ae7f"
+  }
 />
 
 Vim configs:
@@ -108,10 +122,13 @@ Rsvim.opt.wrap = true;
 
 #### Wrap with Line-Break
 
-
-<ComparisonDemo 
-  vimUrl={"https://github.com/user-attachments/assets/2bd950c2-738e-4642-b23b-8703074717dc"}
-  rsvimUrl={"https://github.com/user-attachments/assets/4c3c841f-1c95-44d8-8285-a3ba52580652"}
+<ComparisonDemo
+  vimUrl={
+    "https://github.com/user-attachments/assets/2bd950c2-738e-4642-b23b-8703074717dc"
+  }
+  rsvimUrl={
+    "https://github.com/user-attachments/assets/4c3c841f-1c95-44d8-8285-a3ba52580652"
+  }
 />
 
 Vim configs:
@@ -134,8 +151,11 @@ Rsvim.opt.lineBreak = true;
 
 This screen recording will demo how to open and edit a file, save content and quit.
 
-<Demo rsvimUrl={"https://github.com/user-attachments/assets/feceebac-37e0-40fa-9903-81ec46930631"} />
-
+<Demo
+  rsvimUrl={
+    "https://github.com/user-attachments/assets/feceebac-37e0-40fa-9903-81ec46930631"
+  }
+/>
 
 ## Vision
 
