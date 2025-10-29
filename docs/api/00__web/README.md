@@ -18,6 +18,30 @@ The [WinterTC](https://min-common-api.proposal.wintertc.org/) compatible web pla
 <tr>
 <td>
 
+[TextEncoder](namespaces/TextEncoder/README.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+[TextDecoder](namespaces/TextDecoder/README.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
 [GlobalThis](namespaces/GlobalThis/README.md)
 
 </td>
