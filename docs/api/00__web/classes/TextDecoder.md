@@ -240,7 +240,7 @@ Decode a bytes array to string text. The bytes array can be a [ArrayBuffer](http
 </td>
 <td>
 
-`any`
+ \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [`TypedArray`](../namespaces/GlobalThis/type-aliases/TypedArray.md) \| [`DataView`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView)\<`ArrayBufferLike`\>
 
 </td>
 <td>
