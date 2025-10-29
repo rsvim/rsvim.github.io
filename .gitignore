@@ -24,7 +24,8 @@ yarn-error.log*
 .idea
 
 # Generated Typedocs
-jsruntime
-generated-typedocs
+.runtime
+.typedoc
+.ImportMeta.md.swap
 
 *.svg.bkp
