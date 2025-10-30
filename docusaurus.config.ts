@@ -222,7 +222,7 @@ const config: Config = {
       const PathSuffixes = {
         "RsvimCmd/README.md": "RsvimCmd",
         "RsvimFs/README.md": "RsvimFs",
-        "RsvimOpt/README.md": "RsvimFs",
+        "RsvimOpt/README.md": "RsvimOpt",
         "TextEncoder/README.md": "TextEncoder",
         "TextDecoder/README.md": "TextDecoder",
       };
