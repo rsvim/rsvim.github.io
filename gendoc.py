@@ -24,20 +24,20 @@ def precheck():
 def prepare_dirs():
     for to_be_removed in [GHPAGE_SRC, GHPAGE_DOC, IMPORT_META_DOC_SWAP]:
         command = f"rm -rf {to_be_removed}"
-        logging.info(f"Remove: {command}")
+        logging.info(command)
         os.system(command)
     for to_be_copied in [
         (RSVIM_SRC, GHPAGE_SRC),
         (IMPORT_META_DOC, IMPORT_META_DOC_SWAP),
     ]:
         command = f"cp -rf {to_be_copied[0]} {to_be_copied[1]}"
-        logging.info(f"Copy: {command}")
+        logging.info(command)
         os.system(command)
 
 
 def generate_typedoc():
     command = "npm run typedoc"
-    logging.info(f"Run: {command}")
+    logging.info(command)
     os.system(command)
 
 
@@ -46,20 +46,20 @@ def place_typedoc():
         gen_doc = GHPAGE_DOC / dirname
         api_doc = GHPAGE_API / dirname
         command = f"rm -rf {api_doc}"
-        logging.info(f"Remove: {command}")
+        logging.info(command)
         os.system(command)
         command = f"cp -rf {gen_doc} {api_doc}"
-        logging.info(f"Copy: {command}")
+        logging.info(command)
         os.system(command)
 
     command = f"cp {IMPORT_META_DOC_SWAP} {IMPORT_META_DOC}"
-    logging.info(f"Copy: {command}")
+    logging.info(command)
     os.system(command)
 
 
 def postcheck():
     command = "git status"
-    logging.info(f"Run: {command}")
+    logging.info(command)
     os.system(command)
 
 
