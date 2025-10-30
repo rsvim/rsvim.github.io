@@ -18,12 +18,36 @@ The [WinterTC](https://min-common-api.proposal.wintertc.org/) compatible web pla
 <tr>
 <td>
 
+[TextEncoder](namespaces/TextEncoder/README.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+[TextDecoder](namespaces/TextDecoder/README.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
 [GlobalThis](namespaces/GlobalThis/README.md)
 
 </td>
 <td>
 
-The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global object.
+&hyphen;
 
 </td>
 </tr>

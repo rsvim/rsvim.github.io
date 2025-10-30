@@ -11,12 +11,14 @@
 <tr>
 <td>
 
-[TypedArray](type-aliases/TypedArray.md)
+[EncodeIntoResult](type-aliases/EncodeIntoResult.md)
 
 </td>
 <td>
 
-[TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+**See**
+
+[TextEncoder](../../classes/TextEncoder.md)
 
 </td>
 </tr>

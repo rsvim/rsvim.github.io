@@ -16,7 +16,9 @@
 </td>
 <td>
 
-&hyphen;
+**See**
+
+[RsvimOpt.fileEncoding](../../classes/RsvimOpt.md#fileencoding)
 
 </td>
 </tr>
@@ -28,7 +30,9 @@
 </td>
 <td>
 
-&hyphen;
+**See**
+
+[RsvimOpt.fileFormat](../../classes/RsvimOpt.md#fileformat)
 
 </td>
 </tr>
