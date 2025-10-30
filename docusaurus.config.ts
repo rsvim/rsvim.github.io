@@ -219,31 +219,22 @@ const config: Config = {
       // console.log(`params.filePath:${params.filePath}`);
       const result = await params.defaultParseFrontMatter(params);
 
-      // Set front matter
-      if (params.filePath.endsWith("RsvimCmd/README.md")) {
-        result.frontMatter = {
-          title: "RsvimCmd",
-        };
-      } else if (params.filePath.endsWith("RsvimFs/README.md")) {
-        result.frontMatter = {
-          title: "RsvimFs",
-        };
-      } else if (params.filePath.endsWith("RsvimOpt/README.md")) {
-        result.frontMatter = {
-          title: "RsvimOpt",
-        };
-      } else if (params.filePath.endsWith("TextEncoder/README.md")) {
-        result.frontMatter = {
-          title: "TextEncoder",
-        };
-      } else if (params.filePath.endsWith("TextDecoder/README.md")) {
-        result.frontMatter = {
-          title: "TextDecoder",
-        };
-      } else if (params.filePath.endsWith("GlobalThis/README.md")) {
-        result.frontMatter = {
-          title: "GlobalThis",
-        };
+      const PathSuffixes = {
+        "RsvimCmd/README.md": "RsvimCmd",
+        "RsvimFs/README.md": "RsvimFs",
+        "RsvimOpt/README.md": "RsvimOpt",
+        "TextEncoder/README.md": "TextEncoder",
+        "TextDecoder/README.md": "TextDecoder",
+      };
+
+      // Set frontmatter by path suffix
+      for (const [suffix, title] of Object.entries(PathSuffixes)) {
+        if (params.filePath.endsWith(suffix)) {
+          result.frontMatter = {
+            title: title,
+          };
+          break;
+        }
       }
 
       // console.log(result);
