@@ -4,6 +4,8 @@ type CommandCallback = (ctx) => Promise<void>;
 
 Command callback function, this is the backend logic that implements a user ex command.
 
+It accepts a `ctx` parameter that indicates runtime information when the command is executed.
+
 ## Parameters
 
 <table>
@@ -22,7 +24,7 @@ Command callback function, this is the backend logic that implements a user ex c
 </td>
 <td>
 
-`any`
+[`CommandContext`](CommandContext.md)
 
 </td>
 </tr>
@@ -35,5 +37,6 @@ Command callback function, this is the backend logic that implements a user ex c
 
 ## See
 
-[RsvimCmd.create](../../../classes/RsvimCmd.md#create)
+ - [RsvimCmd.create](../../../classes/RsvimCmd.md#create)
+ - [CommandContext](CommandContext.md)
 ,
