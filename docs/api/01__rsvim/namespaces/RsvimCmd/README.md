@@ -50,9 +50,12 @@ Command options when creating a command.
 
 Command callback function, this is the backend logic that implements a user ex command.
 
+It accepts a `ctx` parameter that indicates runtime information when the command is executed.
+
 **See**
 
-[RsvimCmd.create](../../classes/RsvimCmd.md#create)
+ - [RsvimCmd.create](../../classes/RsvimCmd.md#create)
+ - [CommandContext](type-aliases/CommandContext.md)
 ,
 
 </td>
@@ -66,6 +69,20 @@ Command callback function, this is the backend logic that implements a user ex c
 <td>
 
 Command definition.
+
+</td>
+</tr>
+<tr>
+<td>
+
+[CommandContext](type-aliases/CommandContext.md)
+
+</td>
+<td>
+
+Command runtime context.
+
+When a command is been execute, runtime information will be passed to the command callback function.
 
 </td>
 </tr>

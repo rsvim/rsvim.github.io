@@ -120,9 +120,9 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 #### Example
 
 ```javascript
-async function write(ctx: any): void {
+async function write(ctx: RsvimCmd.CommandContext): void {
   try {
-    const bytes = Rsvim.buf.writeSync(bufId);
+    const bytes = Rsvim.buf.writeSync(ctx.currentBufferId);
 
     // Call other async APIs
     const file = await Rsvim.fs.open("message.txt");
