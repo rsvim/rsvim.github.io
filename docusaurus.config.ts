@@ -182,7 +182,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © 2024 RSVIM. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} RSVIM. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
