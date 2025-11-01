@@ -150,7 +150,7 @@ const config: Config = {
               to: "https://neovim.io/doc/user/index.html",
             },
             {
-              label: "Deno APIs",
+              label: "Deno API",
               to: "https://docs.deno.com/api/deno/~/Deno",
             },
             {
@@ -179,14 +179,10 @@ const config: Config = {
               label: "RFC",
               href: "https://github.com/rsvim/rfc",
             },
-            {
-              label: "GitHub",
-              href: "https://github.com/rsvim/rsvim",
-            },
           ],
         },
       ],
-      copyright: `Copyright © 2024 RSVIM. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} RSVIM. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
