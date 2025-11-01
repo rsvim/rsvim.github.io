@@ -150,7 +150,7 @@ const config: Config = {
               to: "https://neovim.io/doc/user/index.html",
             },
             {
-              label: "Deno APIs",
+              label: "Deno API",
               to: "https://docs.deno.com/api/deno/~/Deno",
             },
             {
