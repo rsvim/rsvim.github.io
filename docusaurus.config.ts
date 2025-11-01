@@ -179,10 +179,6 @@ const config: Config = {
               label: "RFC",
               href: "https://github.com/rsvim/rfc",
             },
-            {
-              label: "GitHub",
-              href: "https://github.com/rsvim/rsvim",
-            },
           ],
         },
       ],
