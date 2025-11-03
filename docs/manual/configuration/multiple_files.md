@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Multiple Files
 
-Multi-files configuration structure is supported via the [ES modules](https://tc39.es/ecma262/#sec-modules), i.e. through the `export` and `import` declarations.
+Multi-files configuration structure is supported via the [ES modules](https://tc39.es/ecma262/#sec-modules), e.g. through the `export` and `import` declarations.
 
 ## Static Import
 
