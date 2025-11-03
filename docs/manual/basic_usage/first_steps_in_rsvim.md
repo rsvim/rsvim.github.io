@@ -194,14 +194,9 @@ The first `:` indicates starting the "command-line" mode, the last `<Enter>` ind
 Now you can go on with other works.
 
 :::tip[Question]
-Where are the `:w` and `:q` ex commands? Aren't they much shorter and easier for users?
+Where are the `:w` and `:q` ex commands?
 
-Yes, `:w` and `:q` are better than `:js` with super long expressions.
-Currently, only one builtin ex command `:js` is provided, users are limited to do it this way.
+The only builtin command in Rsvim is `js`, there are no other builtin commands in Rsvim. But we provide the [ex.rsvim](https://github.com/rsvim/ex.rsvim) plugin _officially_, which implements Vim's builtin ex commands for Rsvim and try to provide a compatible user experience in command-line.
 
-Because Rsvim will not embed any builtin plugins, including the ex commands (`:w`, `:q`, `:echo`, etc).
-On the contrary, Rsvim will provide APIs such as `Rsvim.cmd.create()` to allow user create their own ex commands.
-
-As a supplement to the editing experience, Rsvim will provide an official plugin (say, "ex.rsvim") to recreate all the commands
-compatible with Vim/Neovim, including `:w`, `:q`, `:echo`, etc.
+Please refer to [Plugin](docs/manual/configuration/plugin.md) for installing plugins for Rsvim.
 :::
