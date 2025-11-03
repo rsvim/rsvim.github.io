@@ -120,7 +120,7 @@ $HOME/.rsvim
 
 ### `rsvim.js`
 
-```json
+```javascript
 import syntax from "@rsvim/syntax";
 import ex from "@rsvim/ex";
 
