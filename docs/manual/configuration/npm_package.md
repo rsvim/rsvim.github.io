@@ -92,5 +92,3 @@ syntax.hello("Rsvim!");
 > Other files are still the same...
 
 The `"syntax"` specifier is resolved to `node_modules/syntax/lib/index.js` file.
-
-Now you are ready to install plugins.
