@@ -18,9 +18,60 @@ cd $XDG_CONFIG_HOME/rsvim
 cd $HOME/.rsvim
 ```
 
+In this section, assume you use `$HOME/.rsvim` as Rsvim config home, now let's use [ex.rsvim](https://github.com/rsvim/ex.rsvim) as an example to show how to install and use a plugin.
+
 ## Git
 
-With `git` command, 
+### Download
+
+With `git` command, you can download (e.g. `git clone`) the package from GitHub to your config home:
+
+```bash
+git clone https://github.com/rsvim/ex.rsvim ex.rsvim
+```
+
+Once done, your config home directory structure will be look like:
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- ex.rsvim   <-- `ex.rsvim` downloaded here
+   |- lib/
+      |- index.js
+      |- ...
+   |- src/
+      |- index.ts
+      |- ...
+   |- types/
+      |- index.d.ts
+      |- ...
+   |- README.md
+   |- LICENSE.txt
+   |- package.json
+   |- package-lock.json
+   |- ...
+```
+
+### Initialization
+
+The "ex.rsvim" plugin export the default "ex" module with the initialization method `setup`. Let's initialize the "ex.rsvim" plugin in your config entry script:
+
+```javascript {1}
+import ex from "ex.rsvim";
+
+ex.setup();
+```
+
+Since Rsvim can recognize the npm package in its config home directory, it will load the plugin entry `$HOME/.rsvim/ex.rsvim/lib/index.js`, which is specified in its `package.json` file:
+
+```json
+{
+  "exports": "./lib/index.js",
+  ...
+}
+```
+
+This plugin implements Vim's builtin [ex commands](https://vimhelp.org/index.txt.html#index.txt) (such as `write`, `quit`) to provide a compatible user experiences. And you don't need to use [the annoying `js` command](docs/manual/basic_usage/first_steps_in_rsvim#quit) any more.
 
 ## Npm `package.json`
 
