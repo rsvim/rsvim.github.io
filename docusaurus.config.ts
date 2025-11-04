@@ -130,7 +130,8 @@ const config: Config = {
         },
         {
           href: "https://github.com/rsvim/rsvim",
-          label: "GitHub",
+          // label: "GitHub",
+          className: "header-github-link",
           position: "right",
         },
       ],
