@@ -8,7 +8,7 @@ A plugin is still the same thing we mentioned in previous sections, e.g. a singl
 
 Difference is the concept: "module" or "package" is how you structure your configurations, while "plugin" is how these configurations are shared and distributed among the community and users.
 
-BTW, you need to go to Rsvim config home directory before installing any plugins:
+You also need to go to Rsvim config home directory before installing any plugins:
 
 ```bash
 # use $XDG_CONFIG_HOME
