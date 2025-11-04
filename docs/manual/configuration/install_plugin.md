@@ -8,6 +8,22 @@ A plugin is still the same thing we mentioned in previous sections, e.g. a singl
 
 Difference is the concept: "module" or "package" is how you structure your configurations, while "plugin" is how these configurations are shared and distributed among the community and users.
 
+BTW, you need to go to Rsvim config home directory before installing any plugins:
+
+```bash
+# use $XDG_CONFIG_HOME
+cd $XDG_CONFIG_HOME/rsvim
+
+# or use $HOME
+cd $HOME/.rsvim
+```
+
+## Git
+
+With `git` command, 
+
+## Npm `package.json`
+
 ## Add `package.json` in Config Home
 
 With the `node_modules` looking up, now you can directly use the [npm manager](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager) to manage all your Rsvim configs and plugins, with a single `package.json` file.
