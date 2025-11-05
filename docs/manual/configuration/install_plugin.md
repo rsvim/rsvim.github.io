@@ -77,6 +77,7 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 
 ## Npm `package.json`
 
+ex.rsvim also publishes as a npm scoped package [`@rsvim/ex.rsvim`](https://www.npmjs.com/package/@rsvim/ex.rsvim), under the official scope `@rsvim`.
 
 
 ## Add `package.json` in Config Home
