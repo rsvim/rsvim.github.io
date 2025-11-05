@@ -173,7 +173,6 @@ One more thing worth to mention is: A plugin can be installed via both `git` and
 ```mermaid
 graph BT;
     $HOME/.rsvim/rsvim.js-->A;
-    $HOME/.rsvim/rsvim.js-->B;
     A-->B["@scope/B"];
 ```
 
