@@ -170,7 +170,7 @@ graph BT;
 
 ### Problem
 
-Let's suppose both `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A.git` and `https://github.com/rsvim/B.git`, and you install it with git:
+Suppose both `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A` and `https://github.com/rsvim/B`, and you install it with git:
 
 ```bash
 git clone https://github.com/rsvim/A A
