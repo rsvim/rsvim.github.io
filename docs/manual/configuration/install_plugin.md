@@ -142,7 +142,7 @@ $HOME/.rsvim
   "type": "module",
   "dependencies": {
     "@rsvim/syntax": "^0.1.0",
-    "@rsvim/ex": "^0.1.0"
+    "@rsvim/ex": "^0.2.0"
     ...
   }
 }
@@ -163,5 +163,5 @@ The `package.json` specifies all the plugins with semantic version support. Run 
 The config entry `rsvim.js` can just import these npm packages just like node/deno!
 
 :::warning
-The plugins in the `package.json` may not be real 😁 (at least for now).
+Not all plugins in the `package.json` are really existed 😁 (at least for now).
 :::
