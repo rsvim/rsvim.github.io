@@ -172,8 +172,8 @@ One more thing worth to mention is: A plugin can be installed via both `git` and
 
 ```mermaid
 graph BT;
-    $HOME/.rsvim/rsvim.js-->A;
-    A-->B["@scope/B"];
+    $HOME/.rsvim/rsvim.js-->A["@rsvim/A"];
+    A-->B["@rsvim/B"];
 ```
 
 Let's suppose `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A.git` and `https://github.com/rsvim/B.git`, and you install it with git:
