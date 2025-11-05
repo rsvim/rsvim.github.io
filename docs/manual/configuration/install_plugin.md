@@ -210,3 +210,32 @@ const value = B.add(1, 2);
 ```
 
 In the 1st line, `A` try to import package `B` as a npm package, but you actually install `A` and `B` by git, not npm. Thus `A` can never find its dependency `B`.
+
+To solve this problem, you must run `git clone` with its npm scoped package name:
+
+```bash
+git clone https://github.com/rsvim/A @rsvim/A
+git clone https://github.com/rsvim/B @rsvim/B
+```
+
+Now your config home looks like:
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- @rsvim/
+   |- A/
+      |- lib/
+         |- index.js
+         |- ...
+      |- package.json
+      |- ...
+   |- B/
+      |- lib/
+         |- index.js
+         |- ...
+      |- package.json
+      |- ...
+```
+
+And now `A/lib/index.js` can find its dependency `B`!
