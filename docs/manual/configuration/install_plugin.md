@@ -176,7 +176,7 @@ graph BT;
     A-->B["@rsvim/B"];
 ```
 
-### First Install
+### Problem
 
 Let's suppose both `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A.git` and `https://github.com/rsvim/B.git`, and you install it with git:
 
@@ -204,8 +204,6 @@ $HOME/.rsvim
    |- ...
 ```
 
-### Problem
-
 Now, here's our problem, in `A/lib/index.js`, it tries to call a method from `B`:
 
 ```javascript {1}
@@ -216,7 +214,7 @@ const value = B.add(1, 2);
 
 In the 1st line, `A` try to import package `B` as a npm package, but you actually install `A` and `B` by git, not npm. Thus `A` can never find its dependency `B`.
 
-### Second Install
+### Solution
 
 To solve this problem, you must run `git clone` with its npm scoped package name:
 
