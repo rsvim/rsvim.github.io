@@ -223,7 +223,7 @@ git clone https://github.com/rsvim/A @rsvim/A
 git clone https://github.com/rsvim/B @rsvim/B
 ```
 
-Now your config home looks like:
+And your config home looks like:
 
 ```
 $HOME/.rsvim
@@ -243,4 +243,4 @@ $HOME/.rsvim
       |- ...
 ```
 
-And now `A/lib/index.js` can find its dependency `B`!
+Now `A/lib/index.js` can find its dependency `B`!
