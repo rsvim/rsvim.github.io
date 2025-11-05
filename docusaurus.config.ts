@@ -56,6 +56,7 @@ const config: Config = {
   themes: [
     ["@docusaurus/theme-search-algolia", { id: "1" }],
     ["@docusaurus/theme-search-algolia", { id: "2" }],
+    "@docusaurus/theme-mermaid",
   ],
 
   themeConfig: {
@@ -130,7 +131,8 @@ const config: Config = {
         },
         {
           href: "https://github.com/rsvim/rsvim",
-          label: "GitHub",
+          // label: "GitHub",
+          className: "header-github-link",
           position: "right",
         },
       ],
