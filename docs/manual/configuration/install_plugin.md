@@ -216,7 +216,7 @@ const value = B.add(1, 2);
 
 In the 1st line, `A` try to import package `B` as a npm package, but you actually install `A` and `B` by git, not npm. Thus `A` can never find its dependency `B`.
 
-### Install Again
+### Second Install
 
 To solve this problem, you must run `git clone` with its npm scoped package name:
 
