@@ -25,7 +25,10 @@ function HomepageHeader() {
           >
             Get Started
           </Link>
-          <Link className="button button--info" to="/docs/api/introduction">
+          <Link
+            className="button button--secondary button--active"
+            to="/docs/api/introduction"
+          >
             API References
           </Link>
           <span className={styles.indexCtasGitHubButtonWrapper}>
