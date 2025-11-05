@@ -8,4 +8,4 @@ This section introduces several points to note and tips about creating a Rsvim p
 
 ## Development
 
-
+If a single javascript/typescript file is just enough, 
