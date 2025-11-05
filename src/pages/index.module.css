@@ -34,13 +34,6 @@
   }
 }
 
-/* .buttons { */
-/*   display: flex; */
-/*   align-items: center; */
-/*   justify-content: center; */
-/*   gap: 1em; */
-/* } */
-
 .indexCtas {
   --ifm-button-size-multiplier: 1.6;
   display: flex;
@@ -67,7 +60,3 @@
 .indexCtasGitHubButton {
   overflow: hidden;
 }
-
-/* .indexCtaTryNowButton:hover { */
-/*   color: var(--ifm-color-primary); */
-/* } */
