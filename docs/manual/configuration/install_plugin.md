@@ -75,7 +75,7 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 }
 ```
 
-## Npm `package.json`
+## Npm
 
 ### Download
 
@@ -113,7 +113,7 @@ ex.setup();
 
 You will have to use npm package name instead of a directory name.
 
-## Add `package.json` in Config Home
+## Manage plugins with `package.json`
 
 With the `node_modules` looking up, now you can directly use the [npm manager](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager) to manage all your Rsvim configs and plugins, with a single `package.json` file.
 
