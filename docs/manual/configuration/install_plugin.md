@@ -212,7 +212,7 @@ import B from "@rsvim/B";
 const value = B.add(1, 2);
 ```
 
-In the 1st line, `A` try to import package `B` as a npm package, but you actually install `A` and `B` by git, not npm. Thus `A` can never find its dependency `B`.
+In the 1st line, `A` try to import package `B` as a npm package, but it actually can never find `B`.
 
 ### Solution
 
@@ -243,4 +243,4 @@ $HOME/.rsvim
       |- ...
 ```
 
-Now `A/lib/index.js` can find its dependency `B`!
+Now `A/lib/index.js` can find `B`!
