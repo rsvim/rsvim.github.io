@@ -111,7 +111,7 @@ import ex from "@rsvim/ex.rsvim";
 ex.setup();
 ```
 
-You will have to use npm package name, instead of a directory name.
+You will have to use npm package name instead of a directory name.
 
 
 ## Add `package.json` in Config Home
