@@ -56,9 +56,9 @@ $HOME/.rsvim
    |- ...
 ```
 
-### Initialization
+### Setup
 
-ex.rsvim exports its default module with a initialization method `setup`. Let's initialize the "ex.rsvim" plugin in your config entry script:
+ex.rsvim exports its default module with a initialization method `setup`. Let's setup the "ex.rsvim" plugin in your config entry script:
 
 ```javascript
 import ex from "ex.rsvim";
@@ -76,6 +76,8 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 ```
 
 ## Npm `package.json`
+
+### Download
 
 ex.rsvim also publishes as a npm scoped package [`@rsvim/ex.rsvim`](https://www.npmjs.com/package/@rsvim/ex.rsvim), under the official scope `@rsvim`. Thus we can install it with `npm`:
 
@@ -96,6 +98,19 @@ $HOME/.rsvim
          |- types/
          |- ...
 ```
+
+### Setup
+
+But the setup is a little different from git clones, in your config entry script it becomes:
+
+```javascript {1}
+import ex from "@rsvim/ex.rsvim";
+
+ex.setup();
+```
+
+You will have to use npm package name, instead of directory name.
+
 
 
 ## Add `package.json` in Config Home
