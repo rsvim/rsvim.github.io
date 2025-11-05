@@ -115,7 +115,7 @@ You will have to use npm package name instead of a directory name.
 
 ## Manage Your Plugins with `package.json`
 
-With the `node_modules` looking up, now you can directly use `npm` to manage all your plugins, even your own Rsvim configurations, with a single `package.json` file.
+With the `node_modules` looking up, now you can directly use `npm` to manage all your plugins, even your own Rsvim configurations (your `$HOME/.rsvim` can also be treated as a npm package), with a single `package.json` file.
 
 For example your config home is:
 
