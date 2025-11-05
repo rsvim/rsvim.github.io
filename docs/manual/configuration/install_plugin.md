@@ -204,7 +204,7 @@ import B from "@rsvim/B";
 const value = B.add(1, 2);
 ```
 
-In the 1st line, `A` try to import package `B` as a npm package, but it can never find `B`.
+In the 1st line, `A` try to import package `B` as a npm scoped package, but it can never find `B`.
 
 ### Solution
 
