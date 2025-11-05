@@ -34,7 +34,7 @@ With `git` command, you can download (e.g. `git clone`) the package from GitHub 
 git clone https://github.com/rsvim/ex.rsvim ex.rsvim
 ```
 
-Once done, your config home directory structure will be look like:
+Once complete, your config home directory structure will be look like:
 
 ```
 $HOME/.rsvim
