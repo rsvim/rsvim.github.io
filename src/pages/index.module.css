@@ -68,6 +68,6 @@
   overflow: hidden;
 }
 
-.indexCtaTryNowButton:hover {
-  color: var(--ifm-color-primary);
-}
+/* .indexCtaTryNowButton:hover { */
+/*   color: var(--ifm-color-primary); */
+/* } */
