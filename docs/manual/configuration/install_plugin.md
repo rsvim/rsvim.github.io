@@ -58,9 +58,9 @@ $HOME/.rsvim
 
 ### Initialization
 
-The "ex.rsvim" plugin export the default "ex" module with the initialization method `setup`. Let's initialize the "ex.rsvim" plugin in your config entry script:
+ex.rsvim exports its default module with a initialization method `setup`. Let's initialize the "ex.rsvim" plugin in your config entry script:
 
-```javascript {1}
+```javascript
 import ex from "ex.rsvim";
 
 ex.setup();
@@ -76,6 +76,8 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 ```
 
 ## Npm `package.json`
+
+
 
 ## Add `package.json` in Config Home
 
