@@ -26,20 +26,18 @@ The "ex.rsvim" plugin implements Vim's builtin [ex commands](https://vimhelp.org
 
 ## Git
 
-### Download
-
-With `git` command, you can download (e.g. `git clone`) the package from GitHub to your config home:
+First `git clone` the GitHub repository to your config home:
 
 ```bash
 git clone https://github.com/rsvim/ex.rsvim ex.rsvim
 ```
 
-Once complete, your config home directory structure will be look like:
+Your config home directory structure will become:
 
 ```
 $HOME/.rsvim
 |- rsvim.js
-|- ex.rsvim/   <-- `ex.rsvim` downloaded here
+|- ex.rsvim/   <-- `ex.rsvim` here
    |- lib/
       |- index.js
       |- ...
@@ -56,9 +54,7 @@ $HOME/.rsvim
    |- ...
 ```
 
-### Setup
-
-ex.rsvim exports its default module with a initialization method `setup`. Let's setup the "ex.rsvim" plugin in your config entry script:
+ex.rsvim exports a initialization method `setup`. Let's setup the "ex.rsvim" plugin in your config entry script:
 
 ```javascript
 import ex from "ex.rsvim";
@@ -77,31 +73,29 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 
 ## Npm
 
-### Download
-
-ex.rsvim also publishes as a npm scoped package [`@rsvim/ex.rsvim`](https://www.npmjs.com/package/@rsvim/ex.rsvim), under the official scope `@rsvim`. Thus we can install it with `npm`:
+ex.rsvim also publishes as a npm scoped package [`@rsvim/ex.rsvim`](https://www.npmjs.com/package/@rsvim/ex.rsvim), under the official scope `@rsvim`. Thus we can also install it with `npm`:
 
 ```bash
 npm install @rsvim/ex.rsvim
 ```
 
-After complete, your config home directory becomes:
+Your config home directory will become:
 
 ```
 $HOME/.rsvim
 |- rsvim.js
-|- package.json      <-- npm will create a `package.json` file
-|- package-lock.json <-- also create a `package-lock.json` file
+|- package.json      <-- create a `package.json` file
+|- package-lock.json <-- and a `package-lock.json` file
 |- node_modules/
    |- @rsvim/
-      |- ex.rsvim/   <-- `ex.rsvim` downloaded here
+      |- ex.rsvim/   <-- `ex.rsvim` here
          |- lib/
          |- src/
          |- types/
          |- ...
 ```
 
-And the newly created `package.json` file looks like:
+The newly created `package.json` file will look like:
 
 ```json
 {
@@ -111,9 +105,7 @@ And the newly created `package.json` file looks like:
 }
 ```
 
-### Setup
-
-The setup is a little different from git clones, your config entry script becomes:
+The setup part is a little different from git clones, your config entry script becomes:
 
 ```javascript {1}
 import ex from "@rsvim/ex.rsvim";
