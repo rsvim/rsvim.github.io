@@ -8,7 +8,7 @@ A plugin is still the same thing we mentioned in previous sections, e.g. a singl
 
 Difference is the concept: "module" or "package" is how you structure your configurations, while "plugin" is how these configurations are shared and distributed among the community and users.
 
-You also need to go to Rsvim config home directory before installing any plugins:
+You need to go to Rsvim config home directory before installing any plugins:
 
 ```bash
 # use $XDG_CONFIG_HOME
@@ -20,26 +20,24 @@ cd $HOME/.rsvim
 
 In this section, assume you use `$HOME/.rsvim` as Rsvim config home, now let's use [ex.rsvim](https://github.com/rsvim/ex.rsvim) as an example to show how to install and use a plugin.
 
-:::note[About]
-The "ex.rsvim" plugin implements Vim's builtin [ex commands](https://vimhelp.org/index.txt.html#index.txt) (such as `write`, `quit`) to provide a compatible user experiences. And you don't need to use [the annoying `js` command](/docs/manual/basic_usage/first_steps_in_rsvim#quit) any more.
+:::note
+The "ex.rsvim" plugin implements Vim's builtin [ex commands](https://vimhelp.org/index.txt.html#index.txt) (such as `write`, `quit`) to provide a compatible user experience in command-line. And you don't need to use [the annoying `js` command](/docs/manual/basic_usage/first_steps_in_rsvim#quit) any more.
 :::
 
 ## Git
 
-### Download
-
-With `git` command, you can download (e.g. `git clone`) the package from GitHub to your config home:
+First `git clone` the GitHub repository to your config home:
 
 ```bash
 git clone https://github.com/rsvim/ex.rsvim ex.rsvim
 ```
 
-Once complete, your config home directory structure will be look like:
+Your config home directory structure will become:
 
 ```
 $HOME/.rsvim
 |- rsvim.js
-|- ex.rsvim/   <-- `ex.rsvim` downloaded here
+|- ex.rsvim/   <-- `ex.rsvim` here
    |- lib/
       |- index.js
       |- ...
@@ -56,9 +54,7 @@ $HOME/.rsvim
    |- ...
 ```
 
-### Setup
-
-ex.rsvim exports its default module with a initialization method `setup`. Let's setup the "ex.rsvim" plugin in your config entry script:
+ex.rsvim exports a initialization method `setup`. Let's setup the "ex.rsvim" plugin in your config entry script:
 
 ```javascript
 import ex from "ex.rsvim";
@@ -77,31 +73,29 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 
 ## Npm
 
-### Download
-
-ex.rsvim also publishes as a npm scoped package [`@rsvim/ex.rsvim`](https://www.npmjs.com/package/@rsvim/ex.rsvim), under the official scope `@rsvim`. Thus we can install it with `npm`:
+ex.rsvim also publishes as a npm scoped package [`@rsvim/ex.rsvim`](https://www.npmjs.com/package/@rsvim/ex.rsvim), under the official scope `@rsvim`. Thus we can also install it with `npm`:
 
 ```bash
 npm install @rsvim/ex.rsvim
 ```
 
-After complete, your config home directory becomes:
+Your config home directory will become:
 
 ```
 $HOME/.rsvim
 |- rsvim.js
-|- package.json      <-- npm will create a `package.json` file
-|- package-lock.json <-- also create a `package-lock.json` file
+|- package.json      <-- create a `package.json` file
+|- package-lock.json <-- and a `package-lock.json` file
 |- node_modules/
    |- @rsvim/
-      |- ex.rsvim/   <-- `ex.rsvim` downloaded here
+      |- ex.rsvim/   <-- `ex.rsvim` here
          |- lib/
          |- src/
          |- types/
          |- ...
 ```
 
-And the newly created `package.json` file looks like:
+The newly created `package.json` file will look like:
 
 ```json
 {
@@ -111,9 +105,7 @@ And the newly created `package.json` file looks like:
 }
 ```
 
-### Setup
-
-The setup is a little different from git clones, your config entry script becomes:
+The setup part is a little different from git clones, your config entry script becomes:
 
 ```javascript {1}
 import ex from "@rsvim/ex.rsvim";
@@ -163,7 +155,7 @@ The `package.json` specifies all the plugins with semantic version support. Run 
 The config entry `rsvim.js` can just import these npm packages like node/deno!
 
 :::warning
-Not all plugins in the `package.json` are really existed 😁 (at least for now).
+Not all plugins in the `package.json` really exist 😁 (at least for now).
 :::
 
 ## Scoped Package Name Problem
@@ -178,7 +170,7 @@ graph BT;
 
 ### Problem
 
-Let's suppose both `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A.git` and `https://github.com/rsvim/B.git`, and you install it with git:
+Suppose both `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A` and `https://github.com/rsvim/B`, and you install it with git:
 
 ```bash
 git clone https://github.com/rsvim/A A
@@ -212,7 +204,7 @@ import B from "@rsvim/B";
 const value = B.add(1, 2);
 ```
 
-In the 1st line, `A` try to import package `B` as a npm package, but you actually install `A` and `B` by git, not npm. Thus `A` can never find its dependency `B`.
+In the 1st line, `A` try to import package `B` as a npm scoped package, but it can never find `B`.
 
 ### Solution
 
@@ -243,4 +235,4 @@ $HOME/.rsvim
       |- ...
 ```
 
-Now `A/lib/index.js` can find its dependency `B`!
+Now `A/lib/index.js` can find `B`!
