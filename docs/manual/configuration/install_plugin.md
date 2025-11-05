@@ -113,7 +113,7 @@ ex.setup();
 
 You will have to use npm package name instead of a directory name.
 
-## Manage plugins with `package.json`
+## Manage Your Plugins with `package.json`
 
 With the `node_modules` looking up, now you can directly use the [npm manager](https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager) to manage all your Rsvim configs and plugins, with a single `package.json` file.
 
