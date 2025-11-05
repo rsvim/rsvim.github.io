@@ -39,7 +39,7 @@ Once complete, your config home directory structure will be look like:
 ```
 $HOME/.rsvim
 |- rsvim.js
-|- ex.rsvim   <-- `ex.rsvim` downloaded here
+|- ex.rsvim/   <-- `ex.rsvim` downloaded here
    |- lib/
       |- index.js
       |- ...
@@ -94,7 +94,7 @@ $HOME/.rsvim
 |- package-lock.json <-- also create a `package-lock.json` file
 |- node_modules/
    |- @rsvim/
-      |- ex.rsvim    <-- `ex.rsvim` downloaded here
+      |- ex.rsvim/   <-- `ex.rsvim` downloaded here
          |- lib/
          |- src/
          |- types/
@@ -166,14 +166,47 @@ The config entry `rsvim.js` can just import these npm packages like node/deno!
 Not all plugins in the `package.json` are really existed 😁 (at least for now).
 :::
 
-## In-direct Dependencies and Package Name Issue
+## Scoped Package Name Issue
 
-One more thing worth to mention is: As our plugin ecosystem grows, many plugins can reply on the same dependency. For example:
+One more thing worth to mention is: A plugin can be installed via both `git` and `npm`, and plugins can have their own dependencies. You may encounter the scoped package name issue. For example:
 
 ```mermaid
 graph BT;
     $HOME/.rsvim/rsvim.js-->A;
     $HOME/.rsvim/rsvim.js-->B;
-    A-->C;
-    B-->C;
+    A-->B["@scope/B"];
 ```
+
+Let's suppose `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A.git` and `https://github.com/rsvim/B.git`, and you install it with git:
+
+```bash
+git clone https://github.com/rsvim/A A
+git clone https://github.com/rsvim/B B
+```
+
+```
+$HOME/.rsvim
+|- rsvim.js
+|- A/
+   |- lib/
+      |- index.js
+      |- ...
+   |- package.json
+   |- ...
+|- B/
+   |- lib/
+      |- index.js
+      |- ...
+   |- package.json
+   |- ...
+```
+
+Now, here's our problem. In `A/lib/index.js`, it try to call a method from `B`:
+
+```javascript {1}
+import B from "@rsvim/B";
+
+const value = B.add(1, 2);
+```
+
+In the 1st line, `A` try to import package `B` as a npm package, but you actually install `A` and `B` by git, not npm. Thus `A` can never find its dependency `B`.
