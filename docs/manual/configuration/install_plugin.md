@@ -206,7 +206,7 @@ $HOME/.rsvim
 
 ### The Problem
 
-Now, here's our problem. In `A/lib/index.js`, it try to call a method from `B`:
+Now, here's our problem, in `A/lib/index.js`, it try to call a method from `B`:
 
 ```javascript {1}
 import B from "@rsvim/B";
