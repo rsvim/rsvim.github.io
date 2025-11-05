@@ -71,7 +71,7 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 }
 ```
 
-This plugin implements Vim's builtin [ex commands](https://vimhelp.org/index.txt.html#index.txt) (such as `write`, `quit`) to provide a compatible user experiences. And you don't need to use [the annoying `js` command](docs/manual/basic_usage/first_steps_in_rsvim#quit) any more.
+This plugin implements Vim's builtin [ex commands](https://vimhelp.org/index.txt.html#index.txt) (such as `write`, `quit`) to provide a compatible user experiences. And you don't need to use [the annoying `js` command](/docs/manual/basic_usage/first_steps_in_rsvim#quit) any more.
 
 ## Npm `package.json`
 
