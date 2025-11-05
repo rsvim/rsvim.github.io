@@ -6,6 +6,6 @@ sidebar_position: 6
 
 This section introduces several points to note and tips about creating a Rsvim plugin.
 
-## Development
+## File Structure
 
 If a single javascript/typescript file is just enough, 
