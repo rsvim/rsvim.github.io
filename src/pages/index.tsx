@@ -20,17 +20,26 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.indexCtas}>
           <Link
-            className="button button--primary button-lg"
+            className="button button--primary"
             to="/docs/manual/get_started"
           >
             Get Started
           </Link>
           <Link
-            className="button button--secondary button-lg"
+            className="button button--secondary button--active"
             to="/docs/api/introduction"
           >
             API References
           </Link>
+          <span className={styles.indexCtasGitHubButtonWrapper}>
+            <iframe
+              className={styles.indexCtasGitHubButton}
+              src="https://ghbtns.com/github-btn.html?user=rsvim&amp;repo=rsvim&amp;type=star&amp;count=true&amp;size=large"
+              width={160}
+              height={30}
+              title="GitHub Stars"
+            />
+          </span>
         </div>
       </div>
     </header>
@@ -38,7 +47,7 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+  // const { siteConfig } = useDocusaurusContext();
   return (
     <Layout title={`Home`} description="Home">
       <HomepageHeader />
