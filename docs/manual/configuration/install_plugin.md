@@ -103,7 +103,7 @@ $HOME/.rsvim
 
 ### Setup
 
-The setup is a little different from git clones, in your config entry script it becomes:
+The setup is a little different from git clones, your config entry script becomes:
 
 ```javascript {1}
 import ex from "@rsvim/ex.rsvim";
