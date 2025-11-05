@@ -168,4 +168,18 @@ Not all plugins in the `package.json` are really existed 😁 (at least for now)
 
 ## In-direct Dependencies and Package Name Issue
 
-One more thing worth to mention is: As our plugin ecosystem grows, many plugins can reply on the same dependency.
+One more thing worth to mention is: As our plugin ecosystem grows, many plugins can reply on the same dependency. For example:
+
+```
+               +-----+
+               |  A  |
+               +-----+
+                
+               +-----+
+               |  A  |
+               +-----+
+
+         +-------------------------+
+         | `$HOME/.rsvim/rsvim.js` |
+         +-------------------------+
+```

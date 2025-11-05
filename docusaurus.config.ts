@@ -56,6 +56,7 @@ const config: Config = {
   themes: [
     ["@docusaurus/theme-search-algolia", { id: "1" }],
     ["@docusaurus/theme-search-algolia", { id: "2" }],
+    "@docusaurus/theme-mermaid",
   ],
 
   themeConfig: {
