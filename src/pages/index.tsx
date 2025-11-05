@@ -26,7 +26,7 @@ function HomepageHeader() {
             Get Started
           </Link>
           <Link
-            className="button button--secondary button--active"
+            className="button button--secondary"
             to="/docs/api/introduction"
           >
             API References
