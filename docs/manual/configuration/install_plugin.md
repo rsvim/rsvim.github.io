@@ -166,9 +166,9 @@ The config entry `rsvim.js` can just import these npm packages like node/deno!
 Not all plugins in the `package.json` are really existed 😁 (at least for now).
 :::
 
-## Scoped Package Name Issue
+## Scoped Package Name Problem
 
-One more thing worth to mention is: A plugin can be installed via both `git` and `npm`, and plugins can have their own dependencies. You may encounter the scoped package name issue. For example:
+One more thing worth to mention is: A plugin can be installed via both `git` and `npm`, and plugins can have their own dependencies. You may encounter the scoped package name problem. For example:
 
 ```mermaid
 graph BT;
@@ -176,12 +176,16 @@ graph BT;
     A-->B["@rsvim/B"];
 ```
 
-Let's suppose `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A.git` and `https://github.com/rsvim/B.git`, and you install it with git:
+### First Install
+
+Let's suppose both `A` and `B` are hosted on GitHub as `https://github.com/rsvim/A.git` and `https://github.com/rsvim/B.git`, and you install it with git:
 
 ```bash
 git clone https://github.com/rsvim/A A
 git clone https://github.com/rsvim/B B
 ```
+
+And your config home becomes:
 
 ```
 $HOME/.rsvim
@@ -199,6 +203,8 @@ $HOME/.rsvim
    |- package.json
    |- ...
 ```
+
+### The Problem
 
 Now, here's our problem. In `A/lib/index.js`, it try to call a method from `B`:
 
