@@ -82,10 +82,10 @@ Since Rsvim can recognize the npm package in its config home directory, it will 
 ex.rsvim also publishes as a npm scoped package [`@rsvim/ex.rsvim`](https://www.npmjs.com/package/@rsvim/ex.rsvim), under the official scope `@rsvim`. Thus we can install it with `npm`:
 
 ```bash
-npm install @rsvim/ex.rsvim --save-dev
+npm install @rsvim/ex.rsvim
 ```
 
-After complete, your config home directory will become:
+After complete, your config home directory becomes:
 
 ```
 $HOME/.rsvim
@@ -99,6 +99,16 @@ $HOME/.rsvim
          |- src/
          |- types/
          |- ...
+```
+
+And the newly created `package.json` file looks like:
+
+```json
+{
+  "dependencies": {
+    "@rsvim/ex.rsvim": "^0.2.0"
+  }
+}
 ```
 
 ### Setup
