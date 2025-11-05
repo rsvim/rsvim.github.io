@@ -171,7 +171,7 @@ Not all plugins in the `package.json` are really existed 😁 (at least for now)
 One more thing worth to mention is: As our plugin ecosystem grows, many plugins can reply on the same dependency. For example:
 
 ```mermaid
-graph DT;
+graph BT;
     $HOME/.rsvim/rsvim.js-->A;
     $HOME/.rsvim/rsvim.js-->B;
     A-->C;
