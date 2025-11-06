@@ -69,7 +69,7 @@ Specify the input ts code for `tsc`, output js code, and optional `.d.ts` declar
 
 For other options, please refer to [ex.rsvim's tsconfig.json](https://github.com/rsvim/ex.rsvim/blob/main/tsconfig.json) as an example.
 
-#### `package.json`
+### `package.json`
 
 It specifies npm package configurations:
 
