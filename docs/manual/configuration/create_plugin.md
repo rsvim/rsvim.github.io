@@ -23,11 +23,11 @@ A recommended project structure is:
 |- tsconfig.json
 ```
 
-:::tip
-1. `dist/` folder is for generated `.js` files.
-2. `src/` folder is for typescript `.ts` source code files.
-3. `types/` folder is optional for generated `.d.ts` declaration files. This is only used when you want to export typescript types (as a dependency for other plugins).
-:::
+1. `dist/` directory is for generated `.js` files.
+2. `src/` directory is for typescript `.ts` source code files.
+3. `types/` directory is optional for generated `.d.ts` declaration files. This is only used when you want to export typescript types (as a dependency for other plugins).
+4. `package.json` file is for npm package configurations.
+5. `tsconfig.json` file is for typescript compiler options.
 
 ### `tsconfig.json`
 
