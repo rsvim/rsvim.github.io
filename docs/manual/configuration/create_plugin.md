@@ -119,9 +119,11 @@ So Rsvim also provides type declarations for itself, e.g. the [`@rsvim/types`](h
 Run `npm install @rsvim/types --save-dev` to install the `@rsvim/types` package as a development dependency. The `package.json` file will become:
 
 ```json
+{
     "devDependencies": {
         "@rsvim/types": "^0.2.0"
     }
+}
 ```
 
 And add below options to `tsconfig.json` to introduce it to typescript compiler:
