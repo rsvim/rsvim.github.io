@@ -71,18 +71,27 @@ For other options, please refer to [ex.rsvim's tsconfig.json](https://github.com
 
 ### `package.json`
 
-It specifies npm package configurations:
+#### ES Module
+
+Always set `"type"` to `"module"` to indicate this is a ES Module, because Rsvim only support ES Modules (e.g. the `import` keyword), Common JS is not supported, you cannot use the `require` keyword like node.
 
 ```json
 {
     "type": "module",
+}
+```
+
+#### Package Entry
+
+```json
+{
     "exports": "./dist/index.js",
     "types": "./types/index.d.ts",
 }
 ```
 
-:::warning
-1. Set `"type"` to `"module"` to indicate this is a ES Module, because Rsvim only support ES Modules (e.g. the `import` keyword), Common JS is not supported, you cannot use the `require` keyword like node.
-2. Set `"type"` to `"module"` to indicate this is a ES Module, because Rsvim only support ES Modules (e.g. the `import` keyword), Common JS is not supported, you cannot use the `require` keyword like node.
-:::
-
+1. `"exports": "./dist/index.js"` indicates the `./dist/index.js` file is the entry for this npm package. Thus when user imports this plugin with:
+   ```javascript
+   import your_plugin from "your_plugin";
+   ```
+   User actually gets the `your_plugin/dist/index.js` file.
