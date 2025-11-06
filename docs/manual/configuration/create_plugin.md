@@ -65,6 +65,9 @@ Specify the input ts code for `tsc`, output js code, and optional `.d.ts` declar
 3. `"outDir": "./dist/"` indicates put the generated `.js` files into `./dist/` directory.
 4. `"rootDir": "./src/"` indicates typescript `.ts` source code files are in `./src/` directory.
 
+#### Other Options
+
+For other options, please refer to [ex.rsvim - tsconfig.json](https://github.com/rsvim/ex.rsvim/blob/main/tsconfig.json) as an example.
 
 #### `package.json`
 
