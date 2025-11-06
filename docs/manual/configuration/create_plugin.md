@@ -16,9 +16,9 @@ A recommended project structure is:
 
 ```
 ./your_plugin
-|- dist/     <-- Generated .js files
-|- src/      <-- Source code .ts files
-|- types/    <-- (Optional) Generated declaration .d.ts files
+|- dist/
+|- src/
+|- types/
 |- package.json
 |- tsconfig.json
 ```
