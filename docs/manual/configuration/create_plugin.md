@@ -32,6 +32,7 @@ A recommended project structure is:
 }
 ```
 
-There are 3 fields worth to notice:
+:::warning
+1. Set `"type"` to `"module"` to indicate this is a ES Module, because Rsvim only support ES Modules (e.g. the `import` keyword), Common JS is not supported, you cannot use the `require` keyword like node.
+:::
 
-1. Set `"type"` to `"module"` because Rsvim only support ES Modules, Common JS is not supported, e.g. you cannot use the `require` keyword like node.
