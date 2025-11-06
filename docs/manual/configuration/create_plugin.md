@@ -94,7 +94,7 @@ It indicates the `./dist/index.js` file is the entry for this npm package. Thus 
 import your_plugin from "your_plugin";
 ```
 
-User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know about the `your_plugin/src/index.ts` typescript source code. Here typescript is just a language compiler and js files are the compiled output.
+User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know about the `your_plugin/src/index.ts`. Here ts files are just source code, while js files are the compiled output that really work with the js runtime.
 
 ### Types Declaration
 
@@ -108,9 +108,9 @@ This is optional, it indicates your plugin's declaration types, this is useful i
 
 ## `@rsvim/types`
 
-Once start writing code, you will soon find that your typescript LSP doesn't work, e.g. it cannot provide any code-completion or lint information for you. This is because typescript doesn't know Rsvim runtime yet.
+Once start writing code, you will soon find that typescript LSP doesn't work, e.g. it cannot provide any code-completion or lint information for you. This is because typescript doesn't know Rsvim runtime yet.
 
-So Rsvim also provides type declarations for itself, e.g. the [`@rsvim/types`](https://www.npmjs.com/package/@rsvim/types) npm package. It doesn't provide any APIs or modules, but only types declarations. Because Rsvim by default exports the `Rsvim` global object and other Web APIs (such as `setTimeout`, `TextEncoder`, etc).
+So Rsvim provides type declarations for itself, e.g. the [`@rsvim/types`](https://www.npmjs.com/package/@rsvim/types) npm package. It doesn't include any APIs or modules, but only types declarations.
 
 ### Latest Stable
 
