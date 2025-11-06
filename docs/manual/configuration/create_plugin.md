@@ -57,10 +57,10 @@ Specify the input ts code for `tsc`, output js code, and optional `.d.ts` declar
 }
 ```
 
-:::tip
 1. `"declaration": true` indicates generate the `.d.ts` files when running `tsc` command.
-1. `"declarationDir": "./types/"` indicates put the generated `.d.ts` files into the `./types` folder.
-:::
+2. `"declarationDir": "./types/"` indicates put the generated `.d.ts` files into `./types` directory.
+3. `"outDir": "./dist/"` indicates put the generated `.js` files into `./dist/` directory.
+4. `"rootDir": "./src/"` indicates typescript `.ts` source code files are in `./src/` directory.
 
 
 #### `package.json`
