@@ -25,7 +25,7 @@ A recommended project structure is:
 
 ### `tsconfig.json`
 
-#### Code-Generation Standard
+#### Code-Generation
 
 Rsvim uses almost the latest V8 engine, which sticks to the latest ECMA standard, thus "esnext" is recommended to generate modern js code. We don't need to assume any technical debt.
 
