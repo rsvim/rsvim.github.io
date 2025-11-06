@@ -94,7 +94,7 @@ It indicates the `./dist/index.js` file is the entry for this npm package. Thus 
 import your_plugin from "your_plugin";
 ```
 
-User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know about the `your_plugin/src/index.ts` typescript source code. Here typescript is just source code, while js files are the compiled output that working with the js runtime.
+User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know about the `your_plugin/src/index.ts`. Here ts files are just source code, while js files are the compiled output that really work with the js runtime.
 
 ### Types Declaration
 
