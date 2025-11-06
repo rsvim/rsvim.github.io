@@ -95,3 +95,4 @@ Always set `"type"` to `"module"` to indicate this is a ES Module, because Rsvim
    import your_plugin from "your_plugin";
    ```
    User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know about the `your_plugin/src/index.ts` typescript source code. Here typescript is just a language compiler and js files are the compiled output.
+2. `"types": "./types/index.d.ts"` optionally indicates declaration types, this is useful if your plugin is a dependency for other plugins.
