@@ -113,3 +113,21 @@ This is optional, it indicates your plugin's declaration types, this is useful i
 Once start writing code, you will soon find that your typescript LSP doesn't work, e.g. it cannot provide any code-completion or lint information for you. This is because typescript doesn't know Rsvim runtime yet.
 
 So Rsvim also provides type declarations for itself, e.g. the [`@rsvim/types`](https://www.npmjs.com/package/@rsvim/types) npm package. It doesn't provide any APIs or modules, but only types declarations. Because Rsvim by default exports the `Rsvim` global object and other Web APIs (such as `setTimeout`, `TextEncoder`, etc).
+
+#### Latest Stable
+
+Run `npm install @rsvim/types --save-dev` to install the `@rsvim/types` package as a development dependency. The `package.json` file will become:
+
+```json
+    "devDependencies": {
+        "@rsvim/types": "^0.2.0"
+    }
+```
+
+And add below options to `tsconfig.json` to introduce it to typescript compiler:
+
+```json
+{
+    "typeRoots": ["./node_modules/@rsvim"],
+}
+```
