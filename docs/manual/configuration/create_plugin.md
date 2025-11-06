@@ -185,3 +185,5 @@ And `@rsvim/types` npm versions are:
 - v0.3.10
 
 All the `@rsvim/types@v0.2.x` npm packages will be compatible with `rsvim@v0.2.x` cargo crates. All the `@rsvim/types@v0.3.x` npm packages will be compatible with `rsvim@v0.3.x` cargo crates.
+
+Usually npm package can have a higher release frequency than cargo crate.
