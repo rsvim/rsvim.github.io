@@ -161,4 +161,27 @@ And add below options to `tsconfig.json`:
 
 #### Legacy Version
 
-For legacy versions, 
+Rsvim publishes the `@rsvim/types` with a compatible major/minor version policy, it is, the `@rsvim/types` will have a same major/minor version with Rsvim's cargo version, but the patch version can be different.
+
+For example now we have Rsvim cargo versions:
+
+- v0.2.0
+- v0.2.1
+- v0.3.0
+- v0.3.1
+- v0.3.2
+
+And `@rsvim/types` npm versions are:
+
+- v0.2.0
+- v0.2.1
+- v0.2.2
+- ......
+- v0.2.59
+- v0.3.0
+- v0.3.1
+- v0.3.2
+- ......
+- v0.3.10
+
+All the `@rsvim/types@v0.2.x` npm packages will be compatible with `rsvim@v0.2.x` cargo crates. All the `@rsvim/types@v0.3.x` npm packages will be compatible with `rsvim@v0.3.x` cargo crates.
