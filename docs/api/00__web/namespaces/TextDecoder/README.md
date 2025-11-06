@@ -11,7 +11,7 @@
 <tr>
 <td>
 
-[Options](type-aliases/Options.md)
+[DecodeOptions](type-aliases/DecodeOptions.md)
 
 </td>
 <td>
@@ -25,7 +25,7 @@
 <tr>
 <td>
 
-[DecodeOptions](type-aliases/DecodeOptions.md)
+[Options](type-aliases/Options.md)
 
 </td>
 <td>

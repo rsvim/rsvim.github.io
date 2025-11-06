@@ -22,7 +22,7 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 <tr>
 <td>
 
-[TextEncoder](namespaces/TextEncoder/README.md)
+[TextDecoder](namespaces/TextDecoder/README.md)
 
 </td>
 <td>
@@ -34,7 +34,7 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 <tr>
 <td>
 
-[TextDecoder](namespaces/TextDecoder/README.md)
+[TextEncoder](namespaces/TextEncoder/README.md)
 
 </td>
 <td>
@@ -59,22 +59,6 @@ The [globalThis](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glo
 <tr>
 <td>
 
-[TextEncoder](classes/TextEncoder.md)
-
-</td>
-<td>
-
-Encode string text into bytes, it only supports "utf-8" encoding.
-
-**See**
-
-[TextEncoder](https://developer.mozilla.org/docs/Web/API/TextEncoder)
-
-</td>
-</tr>
-<tr>
-<td>
-
 [TextDecoder](classes/TextDecoder.md)
 
 </td>
@@ -85,6 +69,22 @@ Decode bytes array into string text.
 **See**
 
 [TextDecoder](https://developer.mozilla.org/docs/Web/API/TextDecoder)
+
+</td>
+</tr>
+<tr>
+<td>
+
+[TextEncoder](classes/TextEncoder.md)
+
+</td>
+<td>
+
+Encode string text into bytes, it only supports "utf-8" encoding.
+
+**See**
+
+[TextEncoder](https://developer.mozilla.org/docs/Web/API/TextEncoder)
 
 </td>
 </tr>
@@ -145,22 +145,6 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 <tr>
 <td>
 
-[setInterval](functions/setInterval.md)
-
-</td>
-<td>
-
-Set a repeated timer that calls a function, with a fixed time delay between each call.
-
-**Throws**
-
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.
-
-</td>
-</tr>
-<tr>
-<td>
-
 [clearTimeout](functions/clearTimeout.md)
 
 </td>
@@ -171,22 +155,6 @@ Cancel a timeout previously established by calling [setTimeout](functions/setTim
 **Throws**
 
 Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if ID is not an integer.
-
-</td>
-</tr>
-<tr>
-<td>
-
-[setTimeout](functions/setTimeout.md)
-
-</td>
-<td>
-
-Set a timer which executes a function or specified piece of code once the timer expires.
-
-**Throws**
-
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.
 
 </td>
 </tr>
@@ -217,6 +185,38 @@ Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 <td>
 
 Dispatch an uncaught exception. Similar to synchronous version of `setTimeout(() => {throw error;}, 0);`.
+
+</td>
+</tr>
+<tr>
+<td>
+
+[setInterval](functions/setInterval.md)
+
+</td>
+<td>
+
+Set a repeated timer that calls a function, with a fixed time delay between each call.
+
+**Throws**
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.
+
+</td>
+</tr>
+<tr>
+<td>
+
+[setTimeout](functions/setTimeout.md)
+
+</td>
+<td>
+
+Set a timer which executes a function or specified piece of code once the timer expires.
+
+**Throws**
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if callback is not a function, or delay is neither a number or undefined.
 
 </td>
 </tr>

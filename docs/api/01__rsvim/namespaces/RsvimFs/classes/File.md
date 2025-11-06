@@ -31,6 +31,31 @@ if (!file.isDisposed()) {
 
 ## Methods
 
+### \[dispose\]()
+
+```ts
+dispose: void;
+```
+
+Close the file with `using` without `close` API.
+
+#### Returns
+
+`void`
+
+#### Example
+
+```javascript
+using file = await Rsvim.fs.open("README.md");
+// do work with the `file` object
+```
+
+#### See
+
+[close](#close)
+
+***
+
 ### close()
 
 ```ts
@@ -55,31 +80,6 @@ file.close();
 using file = await Rsvim.fs.open("README.md");
 // do work with the `file` object
 ```
-
-***
-
-### \[dispose\]()
-
-```ts
-dispose: void;
-```
-
-Close the file with `using` without `close` API.
-
-#### Returns
-
-`void`
-
-#### Example
-
-```javascript
-using file = await Rsvim.fs.open("README.md");
-// do work with the `file` object
-```
-
-#### See
-
-[close](#close)
 
 ***
 

@@ -27,22 +27,6 @@ Command attributes.
 <tr>
 <td>
 
-[CommandOptions](type-aliases/CommandOptions.md)
-
-</td>
-<td>
-
-Command options when creating a command.
-
-**See**
-
-[RsvimCmd.create](../../classes/RsvimCmd.md#create)
-
-</td>
-</tr>
-<tr>
-<td>
-
 [CommandCallback](type-aliases/CommandCallback.md)
 
 </td>
@@ -63,6 +47,20 @@ It accepts a `ctx` parameter that indicates runtime information when the command
 <tr>
 <td>
 
+[CommandContext](type-aliases/CommandContext.md)
+
+</td>
+<td>
+
+Command runtime context.
+
+When a command is been execute, runtime information will be passed to the command callback function.
+
+</td>
+</tr>
+<tr>
+<td>
+
 [CommandDefinition](type-aliases/CommandDefinition.md)
 
 </td>
@@ -75,14 +73,16 @@ Command definition.
 <tr>
 <td>
 
-[CommandContext](type-aliases/CommandContext.md)
+[CommandOptions](type-aliases/CommandOptions.md)
 
 </td>
 <td>
 
-Command runtime context.
+Command options when creating a command.
 
-When a command is been execute, runtime information will be passed to the command callback function.
+**See**
+
+[RsvimCmd.create](../../classes/RsvimCmd.md#create)
 
 </td>
 </tr>
