@@ -106,4 +106,4 @@ User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know a
 }
 ```
 
-This is optional, it indicates declaration types, this is useful if your plugin is a dependency for other plugins.
+This is optional, it indicates your plugin's declaration types, this is useful if your plugin is a dependency for other plugins.
