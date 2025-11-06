@@ -184,6 +184,12 @@ And `@rsvim/types` npm versions are:
 - ......
 - v0.3.10
 
-All the `@rsvim/types@v0.2.x` npm packages will be compatible with `rsvim@v0.2.x` cargo crates. All the `@rsvim/types@v0.3.x` npm packages will be compatible with `rsvim@v0.3.x` cargo crates.
+All the `@rsvim/types@v0.2.x` npm packages will be compatible with `rsvim@v0.2.x` cargo crates. All the `@rsvim/types@v0.3.x` npm packages will be compatible with `rsvim@v0.3.x` cargo crates. Usually npm package can have a higher release frequency than cargo crate.
 
-Usually npm package can have a higher release frequency than cargo crate.
+So, you can just install a latest compatible version of `@rsvim/types` for your Rsvim binary:
+
+```bash
+npm install @rsvim/types@v0.2 --save-dev
+```
+
+In above example, we install the last `v0.2.x` npm package for Rsvim v0.2.
