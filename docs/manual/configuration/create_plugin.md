@@ -23,9 +23,11 @@ A recommended project structure is:
 |- tsconfig.json
 ```
 
-#### `tsconfig.json`
+### `tsconfig.json`
 
-It specifies typescript compiler options for `tsc`:
+#### Code-Generation Standard
+
+Rsvim uses almost the latest V8 engine, which sticks to the latest ECMA standard, thus "esnext" is recommended to generate modern js code. We don't need to assume any technical debt.
 
 ```json
 {
@@ -35,8 +37,6 @@ It specifies typescript compiler options for `tsc`:
     "target": "esnext",
 }
 ```
-
-Rsvim uses almost the latest V8 engine, which sticks to the latest ECMA standard, thus recommend to use the "esnext" standard to generated modern js code. We don't need to assume any technical debt.
 
 #### `package.json`
 
