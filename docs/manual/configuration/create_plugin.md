@@ -36,7 +36,7 @@ It specifies typescript compiler options for `tsc`:
 }
 ```
 
-Rsvim uses almost the latest V8 engine, which sticks to the latest ECMA standard, thus recommend to use the "esnext" standard to generated modern js code.
+Rsvim uses almost the latest V8 engine, which sticks to the latest ECMA standard, thus recommend to use the "esnext" standard to generated modern js code. We don't need to assume any technical debt.
 
 #### `package.json`
 
