@@ -73,26 +73,37 @@ For other options, please refer to [ex.rsvim's tsconfig.json](https://github.com
 
 #### ES Module
 
-Always set `"type"` to `"module"` to indicate this is a ES Module, because Rsvim only support ES Modules (e.g. the `import` keyword), Common JS is not supported, you cannot use the `require` keyword like node.
-
 ```json
 {
     "type": "module",
 }
 ```
 
+Always set `"type"` to `"module"` to indicate this is a ES Module, because Rsvim only support ES Modules (e.g. the `import` keyword), Common JS is not supported, you cannot use the `require` keyword like node.
+
+
 #### Package Entry
 
 ```json
 {
     "exports": "./dist/index.js",
+}
+```
+
+It indicates the `./dist/index.js` file is the entry for this npm package. Thus when user imports this plugin with:
+
+```javascript
+import your_plugin from "your_plugin";
+```
+
+User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know about the `your_plugin/src/index.ts` typescript source code. Here typescript is just a language compiler and js files are the compiled output.
+
+#### Types Declaration
+
+```json
+{
     "types": "./types/index.d.ts",
 }
 ```
 
-1. `"exports": "./dist/index.js"` indicates the `./dist/index.js` file is the entry for this npm package. Thus when user imports this plugin with:
-   ```javascript
-   import your_plugin from "your_plugin";
-   ```
-   User actually gets `your_plugin/dist/index.js` file, and Rsvim will never know about the `your_plugin/src/index.ts` typescript source code. Here typescript is just a language compiler and js files are the compiled output.
-2. `"types": "./types/index.d.ts"` optionally indicates declaration types, this is useful if your plugin is a dependency for other plugins.
+This is optional, it indicates declaration types, this is useful if your plugin is a dependency for other plugins.
