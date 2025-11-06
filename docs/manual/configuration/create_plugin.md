@@ -25,7 +25,7 @@ A recommended project structure is:
 
 ### `tsconfig.json`
 
-#### Code-Generation
+#### Code Generation
 
 Rsvim uses almost the latest V8 engine, which sticks to the latest ECMA standard, thus "esnext" is recommended to generate modern js code. We don't need to assume any technical debt.
 
@@ -37,6 +37,25 @@ Rsvim uses almost the latest V8 engine, which sticks to the latest ECMA standard
     "target": "esnext",
 }
 ```
+
+#### Input and Output
+
+Specify the input ts code for `tsc`, output js code, and optional `.d.ts` declaration files if you want to exports some typescript types (as a dependency for other plugins).
+
+```json
+{
+    "declaration": true,             <-- Generate `.d.ts` declarations
+    "declarationDir": "./types/",    <-- Put generated `.d.ts` declarations to ./types folder
+    "outDir": "./dist/",          
+    "rootDir": "./src/",
+}
+```
+
+:::tip
+1. `"declaration": true` indicates generate the `.d.ts` files when running `tsc` command.
+1. `"declarationDir": "./types/"` indicates put the generated `.d.ts` files into the `./types` folder.
+:::
+
 
 #### `package.json`
 
