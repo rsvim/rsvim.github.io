@@ -17,8 +17,11 @@ A recommended project structure is:
 ```
 ./your_plugin
 |- dist/
+   |- index.js
 |- src/
+   |- index.ts
 |- types/
+   |- index.d.ts
 |- package.json
 |- tsconfig.json
 ```
