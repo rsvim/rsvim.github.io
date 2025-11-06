@@ -4,7 +4,7 @@
   "entryPoints": ["./runtime/*.ts"],
   "exclude": [],
   "disableSources": true,
-  "sort": ["source-order", "alphabetical", "visibility"],
+  "sort": ["kind", "static-first", "alphabetical", "visibility"],
   "out": "./typedoc",
   "skipErrorChecking": false,
   // "typedoc" plugins
