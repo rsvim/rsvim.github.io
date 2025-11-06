@@ -6,10 +6,10 @@ Command definition.
 
 ## Properties
 
-### name
+### attributes
 
 ```ts
-name: string;
+attributes: CommandAttributes;
 ```
 
 ***
@@ -22,10 +22,10 @@ callback: CommandCallback;
 
 ***
 
-### attributes
+### name
 
 ```ts
-attributes: CommandAttributes;
+name: string;
 ```
 
 ***

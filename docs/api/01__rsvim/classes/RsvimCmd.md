@@ -195,34 +195,6 @@ Rsvim.cmd.echo("Hello Rsvim!");
 
 ***
 
-### list()
-
-```ts
-list(): string[];
-```
-
-List all registered ex command names.
-
-:::warning
-The builtin `js` command will not be listed here.
-:::
-
-#### Returns
-
-`string`[]
-
-Returns all registered ex command names, except the `js` command.
-
-#### Example
-
-```javascript
-Rsvim.cmd.list().forEach((name) => {
-  Rsvim.cmd.echo(`Command: ${name}`);
-});
-```
-
-***
-
 ### get()
 
 ```ts
@@ -271,6 +243,34 @@ Returns command definition by its name, except the `js` command.
 ```javascript
 const def = Rsvim.cmd.get("write");
 Rsvim.cmd.echo(`Command: ${def.name}`);
+```
+
+***
+
+### list()
+
+```ts
+list(): string[];
+```
+
+List all registered ex command names.
+
+:::warning
+The builtin `js` command will not be listed here.
+:::
+
+#### Returns
+
+`string`[]
+
+Returns all registered ex command names, except the `js` command.
+
+#### Example
+
+```javascript
+Rsvim.cmd.list().forEach((name) => {
+  Rsvim.cmd.echo(`Command: ${name}`);
+});
 ```
 
 ***

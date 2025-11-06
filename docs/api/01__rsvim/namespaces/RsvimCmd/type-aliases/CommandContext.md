@@ -8,16 +8,6 @@ When a command is been execute, runtime information will be passed to the comman
 
 ## Properties
 
-### bang
-
-```ts
-bang: boolean;
-```
-
-Whether the command is executed with a bang "!".
-
-***
-
 ### args
 
 ```ts
@@ -25,6 +15,16 @@ args: string[];
 ```
 
 Arguments that are passed to the command when executed.
+
+***
+
+### bang
+
+```ts
+bang: boolean;
+```
+
+Whether the command is executed with a bang "!".
 
 ***
 
