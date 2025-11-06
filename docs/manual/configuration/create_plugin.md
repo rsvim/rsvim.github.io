@@ -23,6 +23,12 @@ A recommended project structure is:
 |- tsconfig.json
 ```
 
+:::tip
+1. `dist/` folder is for generated `.js` files.
+2. `src/` folder is for typescript `.ts` source code files.
+3. `types/` folder is optional for generated `.d.ts` declaration files. This is only used when you want to export typescript types (as a dependency for other plugins).
+:::
+
 ### `tsconfig.json`
 
 #### Code Generation
@@ -44,9 +50,9 @@ Specify the input ts code for `tsc`, output js code, and optional `.d.ts` declar
 
 ```json
 {
-    "declaration": true,             <-- Generate `.d.ts` declarations
-    "declarationDir": "./types/",    <-- Put generated `.d.ts` declarations to ./types folder
-    "outDir": "./dist/",          
+    "declaration": true,
+    "declarationDir": "./types/",
+    "outDir": "./dist/",
     "rootDir": "./src/",
 }
 ```
