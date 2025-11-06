@@ -133,3 +133,32 @@ And add below options to `tsconfig.json` to introduce it to typescript compiler:
     "typeRoots": ["./node_modules/@rsvim"],
 }
 ```
+
+#### Nightly/Main
+
+If you want to use build a plugin that working on nightly or main branch of Rsvim, you will have to copy the [`types`](https://github.com/rsvim/rsvim/tree/main/types) directory in Rsvim to `./src/@rsvim/types` directory in your local project:
+
+```
+./your_plugin
+|- dist/
+   |- index.js
+|- src/
+   |- index.ts
+   |- @rsvim/types/   <-- Copied here
+|- types/
+   |- index.d.ts
+|- package.json
+|- tsconfig.json
+```
+
+And add below options to `tsconfig.json`:
+
+```json
+{
+    "typeRoots": ["./src/types/@rsvim"],
+}
+```
+
+#### Legacy Version
+
+For legacy versions, 
