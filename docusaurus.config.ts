@@ -166,7 +166,7 @@ const config: Config = {
           items: [
             {
               label: "Discord",
-              href: "https://discord.com/invite/MSVJEGsC",
+              href: "https://discord.gg/5KtRUCAByB",
             },
           ],
         },
