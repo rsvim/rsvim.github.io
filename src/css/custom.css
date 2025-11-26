@@ -9,25 +9,15 @@
 @font-face {
   font-family: "Open Sans", sans-serif;
   font-size: 100%;
-  /* font-optical-sizing: auto; */
-  /* font-weight: 400; */
-  /* font-style: normal; */
-  /* font-variation-settings: "width" 100; */
 }
 
 html {
   font-family: "Open Sans", sans-serif;
   font-size: 100%;
-  /* font-optical-sizing: auto; */
-  /* font-weight: 400; */
-  /* font-style: normal; */
-  /* font-variation-settings: "width" 100; */
 }
 
 code {
   /* font-family: "Noto Sans"; */
-  /* font-size: 100%; */
-  /* font-weight: 200 900; */
   vertical-align: baseline;
 }
 
@@ -46,8 +36,8 @@ code {
   --ifm-color-primary-lightest: #ff8249;
   /* --ifm-code-font-size: 95%; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-heading-font-family: "Noto Sans", sans-serif;
-  --ifm-font-family-base: "Noto Sans", sans-serif;
+  --ifm-heading-font-family: "Open Sans", sans-serif;
+  --ifm-font-family-base: "Open Sans", sans-serif;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -60,8 +50,8 @@ code {
   --ifm-color-primary-lighter: #ff6823;
   --ifm-color-primary-lightest: #ff8249;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-heading-font-family: "Noto Sans", sans-serif;
-  --ifm-font-family-base: "Noto Sans", sans-serif;
+  --ifm-heading-font-family: "Open Sans", sans-serif;
+  --ifm-font-family-base: "Open Sans", sans-serif;
 
   svg path[fill="black"] {
     fill: #fff;
