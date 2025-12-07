@@ -68,7 +68,7 @@ Rsvim will resolve the module path by looking into the `package.json` file. In t
 
 Rsvim also tries to find npm packages in the `node_modules` directory under config home.
 
-Let's rewrite the `syntax` example (in the [above](#example)):
+Let's rewrite the `syntax` example in the above:
 
 ```
 $HOME/.rsvim
