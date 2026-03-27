@@ -179,6 +179,8 @@ Sync version of [read](#read).
 </td>
 <td>
 
+&hyphen;
+
 </td>
 </tr>
 </tbody>
@@ -295,6 +297,8 @@ Sync version of [write](#write).
 
 </td>
 <td>
+
+&hyphen;
 
 </td>
 </tr>

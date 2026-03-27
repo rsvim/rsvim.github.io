@@ -11,7 +11,7 @@ type Options = object;
 ### fatal?
 
 ```ts
-optional fatal: boolean;
+optional fatal?: boolean;
 ```
 
 ***
@@ -19,5 +19,5 @@ optional fatal: boolean;
 ### ignoreBOM?
 
 ```ts
-optional ignoreBOM: boolean;
+optional ignoreBOM?: boolean;
 ```
