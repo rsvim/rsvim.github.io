@@ -2,7 +2,7 @@
 function setInterval(
    callback, 
    delay?, ...
-   args?): number;
+   args): number;
 ```
 
 Set a repeated timer that calls a function, with a fixed time delay between each call.

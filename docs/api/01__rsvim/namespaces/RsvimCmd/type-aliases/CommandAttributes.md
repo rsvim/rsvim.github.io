@@ -13,7 +13,7 @@ Command attributes.
 ### bang?
 
 ```ts
-optional bang: boolean;
+optional bang?: boolean;
 ```
 
 Whether the command can take a `!` modifier, for example: `:w!`, `:qall!`.
@@ -28,7 +28,7 @@ Whether the command can take a `!` modifier, for example: `:w!`, `:qall!`.
 ### nargs?
 
 ```ts
-optional nargs: "0" | "1" | "*" | "+" | "?";
+optional nargs?: "0" | "1" | "*" | "+" | "?";
 ```
 
 Whether The command can take any arguments, and how many it can take:

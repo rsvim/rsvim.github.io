@@ -11,5 +11,5 @@ type DecodeOptions = object;
 ### stream?
 
 ```ts
-optional stream: boolean;
+optional stream?: boolean;
 ```

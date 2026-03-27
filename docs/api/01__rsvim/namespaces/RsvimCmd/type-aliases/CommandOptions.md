@@ -13,7 +13,7 @@ Command options when creating a command.
 ### alias?
 
 ```ts
-optional alias: string;
+optional alias?: string;
 ```
 
 Command alias, i.e. short name.
@@ -29,7 +29,7 @@ For example, the `w` is alias for `write`.
 ### force?
 
 ```ts
-optional force: boolean;
+optional force?: boolean;
 ```
 
 Whether force override the command if there's already an existing one.

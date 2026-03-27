@@ -21,7 +21,7 @@ const vim = Rsvim;
 <tr>
 <td>
 
-<a id="buf"></a> `buf`
+<a id="property-buf"></a> `buf`
 
 </td>
 <td>
@@ -38,7 +38,7 @@ const vim = Rsvim;
 <tr>
 <td>
 
-<a id="cmd"></a> `cmd`
+<a id="property-cmd"></a> `cmd`
 
 </td>
 <td>
@@ -55,7 +55,7 @@ const vim = Rsvim;
 <tr>
 <td>
 
-<a id="fs"></a> `fs`
+<a id="property-fs"></a> `fs`
 
 </td>
 <td>
@@ -72,7 +72,7 @@ const vim = Rsvim;
 <tr>
 <td>
 
-<a id="opt"></a> `opt`
+<a id="property-opt"></a> `opt`
 
 </td>
 <td>
@@ -89,7 +89,7 @@ const vim = Rsvim;
 <tr>
 <td>
 
-<a id="rt"></a> `rt`
+<a id="property-rt"></a> `rt`
 
 </td>
 <td>

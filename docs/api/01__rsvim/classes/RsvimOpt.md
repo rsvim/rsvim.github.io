@@ -29,7 +29,7 @@ const opt = Rsvim.opt;
 get expandTab(): boolean;
 ```
 
-Get the _expand-tab_ option. Global local to buffer.
+Get the _expand-tab_ option. Local to buffer.
 
 When in insert mode, inserts [spaces](https://en.wikipedia.org/wiki/Whitespace_character) (ASCII `32`)
 instead of a [horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
@@ -115,7 +115,7 @@ The _expand-tab_ option.
 get fileEncoding(): "utf-8";
 ```
 
-Get the _file-encoding_ option. Global local to buffer.
+Get the _file-encoding_ option. Local to buffer.
 
 Sets the [character encoding](https://en.wikipedia.org/wiki/Character_encoding) for the file of this buffer.
 This will determine which character encoding is used when RSVIM read/write a file from file system.
@@ -203,7 +203,7 @@ The _file-encoding_ option.
 get fileFormat(): "dos" | "unix" | "mac";
 ```
 
-Get the _file-format_ option. Global local to buffer.
+Get the _file-format_ option. Local to buffer.
 
 Sets the [line end](https://en.wikipedia.org/wiki/Newline) for the buffer. There are 3 kinds of line end:
 - `CRLF`: used by [Windows](https://www.microsoft.com/windows).
@@ -212,11 +212,6 @@ Sets the [line end](https://en.wikipedia.org/wiki/Newline) for the buffer. There
 
 :::warning
 Today's Mac also uses `LF` as line end, you should never use `CR` any more.
-:::
-
-:::note
-In fact this option should be named to "line-end", "file-format" is just to be consistent
-with Vim's [fileformat](https://vimhelp.org/options.txt.html#%27fileformat%27).
 :::
 
 For this option, it has below choices:
@@ -295,6 +290,93 @@ The _file-format_ option.
 
 ***
 
+### fixEndOfLine
+
+#### Get Signature
+
+```ts
+get fixEndOfLine(): boolean;
+```
+
+Get the _fix-end-of-line_ option. Local to buffer.
+
+WHen writing a file and this options is enabled, `EOL` (`LF`, `CR`, `CRLF`) at the end of file will be restored if missing. Disable this option if you want to preserve the situation from the original file.
+
+##### See
+
+[fileFormat](#fileformat)
+
+##### Default Value
+
+`true`
+
+##### Example
+
+```javascript
+// Get the 'fix-end-of-line' option.
+const value = Rsvim.opt.fixEndOfLine;
+```
+
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
+```ts
+set fixEndOfLine(value): void;
+```
+
+Set the _fix-end-of-line_ option.
+
+##### Throws
+
+Throws [RangeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RangeError) if value is not a boolean.
+
+##### Example
+
+```javascript
+// Set the 'fix-end-of-line' option.
+Rsvim.opt.fixEndOfLine = false;
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+The _fix-end-of-line_ option.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
 ### lineBreak
 
 #### Get Signature
@@ -304,7 +386,7 @@ get lineBreak(): boolean;
 ```
 
 Get the _line-break_ option. This options is also known as
-[word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Global local to window.
+[word wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Local to window.
 
 If `true`, Vim will wrap long lines by a word boundary rather than at the last character that fits on the screen.
 It only affects the way the file is displayed, not its contents.
@@ -390,7 +472,7 @@ The _line-break_ option.
 get shiftWidth(): number;
 ```
 
-Get the _shift-width_ option. Global local to buffer.
+Get the _shift-width_ option. Local to buffer.
 
 When [expandTab](#expandtab) is `true`, the number of spaces that is used when inserts a
 [horizontal tab](https://en.wikipedia.org/wiki/Tab_key) (ASCII `9`).
@@ -478,7 +560,7 @@ get tabStop(): number;
 
 Get the _tab-stop_ option. This option is also known as
 [tab-size](https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size).
-Global local to buffer.
+Local to buffer.
 
 This option changes how text is displayed.
 
@@ -565,7 +647,7 @@ get wrap(): boolean;
 ```
 
 Get the _wrap_ option. This option is also known as
-[line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Global local to window.
+[line wrap](https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap). Local to window.
 
 This option changes how text is displayed.
 

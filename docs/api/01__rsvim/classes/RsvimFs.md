@@ -116,6 +116,8 @@ The sync version of [open](#open).
 </td>
 <td>
 
+&hyphen;
+
 </td>
 </tr>
 <tr>
@@ -130,6 +132,8 @@ The sync version of [open](#open).
 
 </td>
 <td>
+
+&hyphen;
 
 </td>
 </tr>

@@ -17,7 +17,7 @@ It is same with [std::fs::OpenOptions](https://doc.rust-lang.org/std/fs/struct.O
 ### append?
 
 ```ts
-optional append: boolean;
+optional append?: boolean;
 ```
 
 Set the file for append mode.
@@ -32,7 +32,7 @@ Set the file for append mode.
 ### create?
 
 ```ts
-optional create: boolean;
+optional create?: boolean;
 ```
 
 Create a new file or open it if it already exists.
@@ -49,7 +49,7 @@ In order for the file to be created, `write` or `append` access must be used.
 ### createNew?
 
 ```ts
-optional createNew: boolean;
+optional createNew?: boolean;
 ```
 
 Create a new file, failing if it already exists.
@@ -66,7 +66,7 @@ If this option is set, `create` and `truncate` options are ignored.
 ### read?
 
 ```ts
-optional read: boolean;
+optional read?: boolean;
 ```
 
 Set the file for read access.
@@ -81,7 +81,7 @@ Set the file for read access.
 ### truncate?
 
 ```ts
-optional truncate: boolean;
+optional truncate?: boolean;
 ```
 
 Open the file and truncate the file to `0` length if it already exists.
@@ -96,7 +96,7 @@ Open the file and truncate the file to `0` length if it already exists.
 ### write?
 
 ```ts
-optional write: boolean;
+optional write?: boolean;
 ```
 
 Set the file for write access. If the file already exists, any "write" calls on it will 
