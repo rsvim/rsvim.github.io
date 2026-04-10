@@ -10,19 +10,35 @@ import TabItem from '@theme/TabItem';
 ## Download
 
 <Tabs>
-  <TabItem value="Linux" label="Linux" default>
+  <TabItem value="Linux" label="Linux x64" default>
     ```bash
     curl -fsSL https://github.com/rsvim/rsvim/releases/latest/download/rsvim-x86_64-unknown-linux-gnu.tar.gz | tar zxf -
     ```
   </TabItem>
-  <TabItem value="Mac" label="Mac">
+  <TabItem value="Linux" label="Linux arm64" default>
+    ```bash
+    curl -fsSL https://github.com/rsvim/rsvim/releases/latest/download/rsvim-aarch64-unknown-linux-gnu.tar.gz | tar zxf -
+    ```
+  </TabItem>
+  <TabItem value="Mac" label="Mac x64">
+    ```bash
+    curl -fsSL https://github.com/rsvim/rsvim/releases/latest/download/rsvim-x86_64-apple-darwin.tar.gz | tar zxf -
+    ```
+  </TabItem>
+  <TabItem value="Mac" label="Mac arm64">
     ```bash
     curl -fsSL https://github.com/rsvim/rsvim/releases/latest/download/rsvim-aarch64-apple-darwin.tar.gz | tar zxf -
     ```
   </TabItem>
-  <TabItem value="Windows" label="Windows">
+  <TabItem value="Windows" label="Windows x64">
     ```powershell
     Invoke-WebRequest -Uri https://github.com/rsvim/rsvim/releases/latest/download/rsvim-x86_64-pc-windows-msvc.zip -OutFile rsvim.zip
+    Expand-Archive -Path rsvim.zip
+    ```
+  </TabItem>
+  <TabItem value="Windows" label="Windows arm64">
+    ```powershell
+    Invoke-WebRequest -Uri https://github.com/rsvim/rsvim/releases/latest/download/rsvim-aarch64-pc-windows-msvc.zip -OutFile rsvim.zip
     Expand-Archive -Path rsvim.zip
     ```
   </TabItem>
