@@ -564,7 +564,7 @@ By default the syntax parser libs are stored in `${RSVIM_CONFIG_HOME}/.tree-sitt
 
 ##### See
 
-Configuration \| https://rsvim.github.io/docs/manual/configuration
+[Rsvim Configuration](https://rsvim.github.io/docs/manual/configuration)
 
 ##### Default Value
 
