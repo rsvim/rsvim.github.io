@@ -13,6 +13,8 @@ updates:
       deps:
         patterns:
           - "*"
+    ignore:
+      - dependency-name: "typescript"
 
   - package-ecosystem: "github-actions"
     directory: "/"
