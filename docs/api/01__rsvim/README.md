@@ -88,6 +88,25 @@ const opt = Rsvim.opt;
 
 </td>
 </tr>
+<tr>
+<td>
+
+[RsvimSyn](classes/RsvimSyn.md)
+
+</td>
+<td>
+
+The `Rsvim.syn` global object for javascript runtime (editor process).
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.syn'.
+const syn = Rsvim.syn;
+```
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -216,6 +235,18 @@ const vim = Rsvim;
 <td>
 
 [RsvimOpt](namespaces/RsvimOpt/README.md)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimSyn](namespaces/RsvimSyn/README.md)
 
 </td>
 <td>
