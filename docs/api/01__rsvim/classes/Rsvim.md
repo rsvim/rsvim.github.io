@@ -103,5 +103,22 @@ const vim = Rsvim;
 
 </td>
 </tr>
+<tr>
+<td>
+
+<a id="property-syn"></a> `syn`
+
+</td>
+<td>
+
+`readonly`
+
+</td>
+<td>
+
+[`RsvimSyn`](RsvimSyn.md)
+
+</td>
+</tr>
 </tbody>
 </table>
