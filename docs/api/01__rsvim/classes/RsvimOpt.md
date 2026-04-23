@@ -500,7 +500,7 @@ const value = Rsvim.opt.shiftWidth;
 set shiftWidth(value): void;
 ```
 
-Set the _expand-tab_ option. It only accepts an integer between `[1,255]`, if the value is out of range, it will be bound to this range.
+Set the _shift-width_ option. It only accepts an integer between `[1,255]`, if the value is out of range, it will be bound to this range.
 
 ##### Throws
 
@@ -537,7 +537,94 @@ Rsvim.opt.shiftWidth = 4;
 </td>
 <td>
 
-The _expand-tab_ option.
+The _shift-width_ option.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`void`
+
+***
+
+### syntaxParserLibPath
+
+#### Get Signature
+
+```ts
+get syntaxParserLibPath(): string;
+```
+
+Get the _syntax-parser-lib-path_ option. Global option.
+
+By default the syntax parser libs are stored in `${RSVIM_CONFIG_HOME}/.tree-sitter-parsers` folder. `${RSVIM_CONFIG_HOME}` is the configuration home for rsvim.
+
+##### See
+
+[Rsvim Configuration](https://rsvim.github.io/docs/manual/configuration)
+
+##### Default Value
+
+`${RSVIM_CONFIG_HOME}/.tree-sitter-parsers`
+
+##### Example
+
+```javascript
+// Get the 'syntax-parser-lib-path' option.
+const value = Rsvim.opt.syntaxParserLibPath;
+```
+
+##### Returns
+
+`string`
+
+#### Set Signature
+
+```ts
+set syntaxParserLibPath(value): void;
+```
+
+Set the _syntax-parser-lib-path_ option. It only accepts a string which represents the file path on your local machine, which is used to save all compiled tree-sitter parser dynamic libraries.
+
+##### Throws
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if value is not an string.
+
+##### Example
+
+```javascript
+// Set the 'syntax-parser-lib-path' option.
+Rsvim.opt.syntaxParserLibPath = ".";
+```
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`value`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+The _syntax-parser-lib-path_ option.
 
 </td>
 </tr>
