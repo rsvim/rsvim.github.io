@@ -36,7 +36,7 @@ The tree-sitter parser file types.
 optional highlightsPath?: string;
 ```
 
-The tree-sitter parser highlights query path, optional.
+The tree-sitter parser highlights query path.
 
 ***
 
@@ -46,7 +46,7 @@ The tree-sitter parser highlights query path, optional.
 optional highlightsQuery?: string;
 ```
 
-The tree-sitter parser highlights query, optional.
+The tree-sitter parser highlights query.
 
 ***
 
@@ -56,7 +56,7 @@ The tree-sitter parser highlights query, optional.
 optional injectionRegex?: string;
 ```
 
-The tree-sitter parser injection regex, optional.
+The tree-sitter parser injection regex.
 
 ***
 
@@ -66,7 +66,7 @@ The tree-sitter parser injection regex, optional.
 optional injectionsPath?: string;
 ```
 
-The tree-sitter parser injections query path, optional.
+The tree-sitter parser injections query path.
 
 ***
 
@@ -76,7 +76,7 @@ The tree-sitter parser injections query path, optional.
 optional injectionsQuery?: string;
 ```
 
-The tree-sitter parser injections query, optional.
+The tree-sitter parser injections query.
 
 ***
 
@@ -116,7 +116,7 @@ The tree-sitter parser scope.
 optional tagsPath?: string;
 ```
 
-The tree-sitter parser tags query path, optional.
+The tree-sitter parser tags query path.
 
 ***
 
@@ -126,4 +126,4 @@ The tree-sitter parser tags query path, optional.
 optional tagsQuery?: string;
 ```
 
-The tree-sitter parser tags query, optional.
+The tree-sitter parser tags query.
