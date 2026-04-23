@@ -221,6 +221,7 @@ const config: Config = {
         "RsvimCmd/README.md": "RsvimCmd",
         "RsvimFs/README.md": "RsvimFs",
         "RsvimOpt/README.md": "RsvimOpt",
+        "RsvimSyn/README.md": "RsvimSyn",
         "TextEncoder/README.md": "TextEncoder",
         "TextDecoder/README.md": "TextDecoder",
       };
