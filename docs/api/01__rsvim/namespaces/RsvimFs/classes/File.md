@@ -153,7 +153,7 @@ const text = new TextDecoder().decode(buf); // decode into UTF-8 string "hello w
 readSync(buf): number;
 ```
 
-Sync version of [read](#read).
+The sync version of [read](#read).
 
 #### Parameters
 
@@ -272,7 +272,7 @@ const n = await file.write(buf); // write 11 bytes
 writeSync(buf): number;
 ```
 
-Sync version of [write](#write).
+The sync version of [write](#write).
 
 #### Parameters
 
