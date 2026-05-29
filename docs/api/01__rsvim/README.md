@@ -189,7 +189,7 @@ The global object.
 <table>
 <thead>
 <tr>
-<th>Namespace</th>
+<th>Class</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -197,7 +197,7 @@ The global object.
 <tr>
 <td>
 
-[Rsvim](namespaces/Rsvim/README.md)
+[Rsvim](classes/Rsvim.md)
 
 </td>
 <td>
