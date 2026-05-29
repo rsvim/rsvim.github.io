@@ -218,9 +218,13 @@ const config: Config = {
       const result = await params.defaultParseFrontMatter(params);
 
       const PathSuffixes = {
+        "Rsvim/README.md": "Rsvim",
+        "RsvimBuf/README.md": "RsvimBuf",
         "RsvimCmd/README.md": "RsvimCmd",
         "RsvimFs/README.md": "RsvimFs",
         "RsvimOpt/README.md": "RsvimOpt",
+        "RsvimProc/README.md": "RsvimProc",
+        "RsvimRt/README.md": "RsvimRt",
         "RsvimSyn/README.md": "RsvimSyn",
         "TextEncoder/README.md": "TextEncoder",
         "TextDecoder/README.md": "TextDecoder",

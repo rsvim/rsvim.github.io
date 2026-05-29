@@ -7,13 +7,23 @@ The `Rsvim.rt` global object for javascript runtime (editor process).
 const rt = Rsvim.rt;
 ```
 
-## Methods
+## Functions
 
-### exit()
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-```ts
-exit(exitCode?): void;
-```
+[exit](functions/exit.md)
+
+</td>
+<td>
 
 Exit editor.
 
@@ -22,46 +32,11 @@ To ensure file system data safety, editor will wait for all the ongoing file wri
 to complete before actually exiting, however any new write requests will be rejected.
 :::
 
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`exitCode?`
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-(Optional) The editor process exit with this exit code, by default with code `0`.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`void`
-
-#### Throws
+**Throws**
 
 Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if `exitCode` is neither an integer nor `undefined`.
 
-#### Example
+**Example**
 
 ```javascript
 // Exit with default exit code `0`.
@@ -70,3 +45,8 @@ Rsvim.rt.exit();
 // Exit with error exit code `-1`.
 Rsvim.rt.exit(-1);
 ```
+
+</td>
+</tr>
+</tbody>
+</table>

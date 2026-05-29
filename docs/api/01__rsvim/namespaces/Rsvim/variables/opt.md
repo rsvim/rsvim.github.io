@@ -1,0 +1,3 @@
+```ts
+const opt: RsvimOpt;
+```
