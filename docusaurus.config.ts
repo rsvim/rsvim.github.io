@@ -214,7 +214,7 @@ const config: Config = {
       fileContent: string;
       defaultParseFrontMatter: DefaultParseFrontMatter;
     }) => {
-      console.log(`params.filePath:${params.filePath}`);
+      // console.log(`params.filePath:${params.filePath}`);
       const result = await params.defaultParseFrontMatter(params);
 
       const PathSuffixes = {
