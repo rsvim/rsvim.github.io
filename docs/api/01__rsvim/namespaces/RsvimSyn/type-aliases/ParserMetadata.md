@@ -6,7 +6,7 @@ Tree-sitter parser metadata.
 
 ## See
 
-[RsvimSyn.getParserMetadata](../../../classes/RsvimSyn.md#getparsermetadata)
+[RsvimSyn.getParserMetadata](../functions/getParserMetadata.md)
 
 ## Properties
 

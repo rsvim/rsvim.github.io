@@ -14,7 +14,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -22,7 +22,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <tr>
 <td>
 
-[RsvimBuf](classes/RsvimBuf.md)
+[RsvimBuf](namespaces/RsvimBuf/README.md)
 
 </td>
 <td>
@@ -41,7 +41,7 @@ const buf = Rsvim.buf;
 <tr>
 <td>
 
-[RsvimCmd](classes/RsvimCmd.md)
+[RsvimCmd](namespaces/RsvimCmd/README.md)
 
 </td>
 <td>
@@ -60,7 +60,7 @@ const cmd = Rsvim.cmd;
 <tr>
 <td>
 
-[RsvimOpt](classes/RsvimOpt.md)
+[RsvimOpt](namespaces/RsvimOpt/README.md)
 
 </td>
 <td>
@@ -91,7 +91,7 @@ const opt = Rsvim.opt;
 <tr>
 <td>
 
-[RsvimSyn](classes/RsvimSyn.md)
+[RsvimSyn](namespaces/RsvimSyn/README.md)
 
 </td>
 <td>
@@ -107,6 +107,37 @@ const syn = Rsvim.syn;
 
 </td>
 </tr>
+<tr>
+<td>
+
+[RsvimOpt](variables/RsvimOpt.md)
+
+</td>
+<td>
+
+The `Rsvim.opt` global object for global editor options. These options will change the editor's behavior
+and suit user's personal habits.
+
+There are 3 kinds of editor option:
+- Global options: Options that are global that you use one value for all Rsvim component instances such
+  as buffer, window, statusline, etc. When you change the option, it will take effect immediately and
+  affect all existing instances.
+- Local options: Options that only apply to one component instance, each instance has its own copy of
+  this option, thus each can have its own value. This allow you to set an option in one instance, without
+  modifying other instances.
+- Global local options: Options that are global, and will be copy to a newly created Rsvim component
+  instance. A global-local-option always has its corresponding local-option. When you change the option,
+  it only will apply to the newly created instances, but cannot modify existing instances.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.opt'.
+const opt = Rsvim.opt;
+```
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -117,7 +148,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Namespace</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -125,7 +156,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <tr>
 <td>
 
-[RsvimFs](classes/RsvimFs.md)
+[RsvimFs](namespaces/RsvimFs/README.md)
 
 </td>
 <td>
@@ -144,7 +175,26 @@ const fs = Rsvim.fs;
 <tr>
 <td>
 
-[RsvimRt](classes/RsvimRt.md)
+[RsvimProc](namespaces/RsvimProc/README.md)
+
+</td>
+<td>
+
+The `Rsvim.proc` global object for child process.
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.proc'.
+const proc = Rsvim.proc;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimRt](namespaces/RsvimRt/README.md)
 
 </td>
 <td>
@@ -170,7 +220,7 @@ The global object.
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Namespace</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -178,7 +228,7 @@ The global object.
 <tr>
 <td>
 
-[Rsvim](classes/Rsvim.md)
+[Rsvim](namespaces/Rsvim/README.md)
 
 </td>
 <td>
@@ -191,67 +241,6 @@ The `Rsvim` global object.
 // Create a alias to 'Rsvim'.
 const vim = Rsvim;
 ```
-
-</td>
-</tr>
-</tbody>
-</table>
-
-## Other
-
-<table>
-<thead>
-<tr>
-<th>Namespace</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-[RsvimCmd](namespaces/RsvimCmd/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[RsvimFs](namespaces/RsvimFs/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[RsvimOpt](namespaces/RsvimOpt/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[RsvimSyn](namespaces/RsvimSyn/README.md)
-
-</td>
-<td>
-
-&hyphen;
 
 </td>
 </tr>

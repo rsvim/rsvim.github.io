@@ -2,7 +2,7 @@ The File object that access to an open file on filesystem.
 
 ## See
 
-[RsvimFs.open](../../../classes/RsvimFs.md#open)
+[RsvimFs.open](../functions/open.md)
 
 ## Accessors
 

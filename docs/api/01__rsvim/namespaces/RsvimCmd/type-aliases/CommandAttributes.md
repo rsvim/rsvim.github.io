@@ -6,7 +6,7 @@ Command attributes.
 
 ## See
 
-[RsvimCmd.create](../../../classes/RsvimCmd.md#create)
+[RsvimCmd.create](../functions/create.md)
 
 ## Properties
 
