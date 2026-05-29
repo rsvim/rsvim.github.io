@@ -4,4 +4,4 @@ type FileFormatOption = "dos" | "unix" | "mac";
 
 ## See
 
-[RsvimOpt.fileFormat](../../../variables/RsvimOpt.md#fileformat)
+[RsvimOpt.fileFormat](../../../classes/RsvimOpt.md#fileformat)
