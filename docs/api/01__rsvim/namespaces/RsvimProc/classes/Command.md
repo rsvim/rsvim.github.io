@@ -5,7 +5,7 @@ The command that can create a child process.
 ### Constructor
 
 ```ts
-new Command(execPath, options): Command;
+new Command(execPath, options?): Command;
 ```
 
 #### Parameters
@@ -33,12 +33,12 @@ new Command(execPath, options): Command;
 <tr>
 <td>
 
-`options`
+`options?`
 
 </td>
 <td>
 
-`any`
+[`CommandOptions`](../type-aliases/CommandOptions.md)
 
 </td>
 </tr>
@@ -48,3 +48,31 @@ new Command(execPath, options): Command;
 #### Returns
 
 `Command`
+
+## Accessors
+
+### execPath
+
+#### Get Signature
+
+```ts
+get execPath(): string;
+```
+
+##### Returns
+
+`string`
+
+***
+
+### options
+
+#### Get Signature
+
+```ts
+get options(): CommandOptions;
+```
+
+##### Returns
+
+[`CommandOptions`](../type-aliases/CommandOptions.md)

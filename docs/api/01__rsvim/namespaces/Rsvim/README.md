@@ -52,6 +52,12 @@ Renames and re-exports [RsvimFs](../RsvimFs/README.md)
 
 ***
 
+### proc
+
+Renames and re-exports [RsvimProc](../RsvimProc/README.md)
+
+***
+
 ### rt
 
 Renames and re-exports [RsvimRt](../RsvimRt/README.md)
