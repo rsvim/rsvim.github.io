@@ -29,30 +29,6 @@ const vim = Rsvim;
 
 </td>
 </tr>
-<tr>
-<td>
-
-[rt](variables/rt.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[syn](variables/syn.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -79,3 +55,15 @@ Renames and re-exports [RsvimFs](../RsvimFs/README.md)
 ### proc
 
 Renames and re-exports [RsvimProc](../RsvimProc/README.md)
+
+***
+
+### rt
+
+Renames and re-exports [RsvimRt](../RsvimRt/README.md)
+
+***
+
+### syn
+
+Renames and re-exports [RsvimSyn](../RsvimSyn/README.md)
