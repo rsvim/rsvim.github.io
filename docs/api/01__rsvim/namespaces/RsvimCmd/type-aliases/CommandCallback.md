@@ -37,6 +37,6 @@ It accepts a `ctx` parameter that indicates runtime information when the command
 
 ## See
 
- - [RsvimCmd.create](../functions/create.md)
+ - [RsvimCmd.create](../../../classes/RsvimCmd.md#create)
  - [CommandContext](CommandContext.md)
 ,

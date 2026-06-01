@@ -10,7 +10,7 @@ It is same with [std::fs::OpenOptions](https://doc.rust-lang.org/std/fs/struct.O
 
 ## See
 
-[RsvimFs.open](../functions/open.md)
+[RsvimFs.open](../../../classes/RsvimFs.md#open)
 
 ## Properties
 
