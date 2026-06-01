@@ -6,7 +6,7 @@ Options to load a tree-sitter parser.
 
 ## See
 
-[RsvimSyn.loadParser](../../../classes/RsvimSyn.md#loadparser)
+[RsvimSyn.loadParser](../functions/loadParser.md)
 
 ## Properties
 

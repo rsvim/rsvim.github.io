@@ -14,7 +14,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -22,7 +22,7 @@ These APIs are specific for editor, such as buffers, windows, key mappings, etc.
 <tr>
 <td>
 
-[RsvimBuf](classes/RsvimBuf.md)
+[RsvimBuf](namespaces/RsvimBuf/README.md)
 
 </td>
 <td>
@@ -41,7 +41,7 @@ const buf = Rsvim.buf;
 <tr>
 <td>
 
-[RsvimCmd](classes/RsvimCmd.md)
+[RsvimCmd](namespaces/RsvimCmd/README.md)
 
 </td>
 <td>
@@ -53,6 +53,25 @@ The `Rsvim.cmd` global object for Ex commands.
 ```javascript
 // Create a alias to 'Rsvim.cmd'.
 const cmd = Rsvim.cmd;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[RsvimSyn](namespaces/RsvimSyn/README.md)
+
+</td>
+<td>
+
+The `Rsvim.syn` global object for javascript runtime (editor process).
+
+**Example**
+
+```javascript
+// Create a alias to 'Rsvim.syn'.
+const syn = Rsvim.syn;
 ```
 
 </td>
@@ -88,25 +107,6 @@ const opt = Rsvim.opt;
 
 </td>
 </tr>
-<tr>
-<td>
-
-[RsvimSyn](classes/RsvimSyn.md)
-
-</td>
-<td>
-
-The `Rsvim.syn` global object for javascript runtime (editor process).
-
-**Example**
-
-```javascript
-// Create a alias to 'Rsvim.syn'.
-const syn = Rsvim.syn;
-```
-
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -117,7 +117,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Namespace</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -125,7 +125,7 @@ These APIs are general for common javascript-based runtime, similar to [Deno API
 <tr>
 <td>
 
-[RsvimFs](classes/RsvimFs.md)
+[RsvimFs](namespaces/RsvimFs/README.md)
 
 </td>
 <td>
@@ -144,7 +144,7 @@ const fs = Rsvim.fs;
 <tr>
 <td>
 
-[RsvimProc](classes/RsvimProc.md)
+[RsvimProc](namespaces/RsvimProc/README.md)
 
 </td>
 <td>
@@ -163,7 +163,7 @@ const proc = Rsvim.proc;
 <tr>
 <td>
 
-[RsvimRt](classes/RsvimRt.md)
+[RsvimRt](namespaces/RsvimRt/README.md)
 
 </td>
 <td>
@@ -189,7 +189,7 @@ The global object.
 <table>
 <thead>
 <tr>
-<th>Class</th>
+<th>Namespace</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -197,7 +197,7 @@ The global object.
 <tr>
 <td>
 
-[Rsvim](classes/Rsvim.md)
+[Rsvim](namespaces/Rsvim/README.md)
 
 </td>
 <td>
@@ -229,55 +229,7 @@ const vim = Rsvim;
 <tr>
 <td>
 
-[RsvimCmd](namespaces/RsvimCmd/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[RsvimFs](namespaces/RsvimFs/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
 [RsvimOpt](namespaces/RsvimOpt/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[RsvimProc](namespaces/RsvimProc/README.md)
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-[RsvimSyn](namespaces/RsvimSyn/README.md)
 
 </td>
 <td>

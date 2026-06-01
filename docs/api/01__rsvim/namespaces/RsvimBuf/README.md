@@ -7,13 +7,23 @@ The `Rsvim.buf` global object for Vim buffers.
 const buf = Rsvim.buf;
 ```
 
-## Methods
+## Functions
 
-### current()
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-```ts
-current(): number;
-```
+[current](functions/current.md)
+
+</td>
+<td>
 
 Get current buffer's ID.
 
@@ -27,26 +37,21 @@ valid buffer binded to the "current" window (where your cursor is). It will retu
 the valid buffer ID.
 :::
 
-#### Returns
-
-`number`
-
-It returns a valid buffer ID if the editor is initialized.
-Otherwise it returns `undefined` if the editor is not initialized.
-
-#### Example
+**Example**
 
 ```javascript
 const bufId = Rsvim.buf.current();
 ```
 
-***
+</td>
+</tr>
+<tr>
+<td>
 
-### list()
+[list](functions/list.md)
 
-```ts
-list(): number[];
-```
+</td>
+<td>
 
 List all buffers' IDs.
 
@@ -57,72 +62,29 @@ buffer binded to the "current" window (where your cursor is). It will return all
 buffer IDs as an array.
 :::
 
-#### Returns
-
-`number`[]
-
-All the buffers' IDs as an array. If there's no
-buffer (i.e. the editor is not initialized), it returns an empty array.
-
-#### Example
+**Example**
 
 ```javascript
 const bufIds = Rsvim.buf.list();
 ```
 
-***
+</td>
+</tr>
+<tr>
+<td>
 
-### writeSync()
+[writeSync](functions/writeSync.md)
 
-```ts
-writeSync(bufId): number;
-```
+</td>
+<td>
 
 Write (save) buffer's text contents to local filesystem synchronizely.
 
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`bufId`
-
-</td>
-<td>
-
-`number`
-
-</td>
-<td>
-
-The buffer's ID that you want to write to filesystem.
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`number`
-
-It returns a positive integer to indicate how many bytes
-have been written to the file, if written successfully.
-
-#### Throws
+**Throws**
 
 Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the parameter is invalid, or [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to write buffer to file system.
 
-#### Example
+**Example**
 
 ```javascript
 const bufId = Rsvim.buf.currentBufferId();
@@ -133,3 +95,8 @@ try {
   Rsvim.cmd.echo(`Error: failed to save buffer ${bufId}, exception: ${e}`);
 }
 ```
+
+</td>
+</tr>
+</tbody>
+</table>
