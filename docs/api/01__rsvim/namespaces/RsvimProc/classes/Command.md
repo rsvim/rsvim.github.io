@@ -1,4 +1,4 @@
-The command that can create a child process.
+The command that create a child process.
 
 ## Constructors
 
