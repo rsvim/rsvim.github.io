@@ -89,6 +89,23 @@ const vim = Rsvim;
 <tr>
 <td>
 
+<a id="property-proc"></a> `proc`
+
+</td>
+<td>
+
+`readonly`
+
+</td>
+<td>
+
+[`RsvimProc`](RsvimProc.md)
+
+</td>
+</tr>
+<tr>
+<td>
+
 <a id="property-rt"></a> `rt`
 
 </td>
