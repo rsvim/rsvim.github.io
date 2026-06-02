@@ -20,6 +20,18 @@ const proc = Rsvim.proc;
 <tr>
 <td>
 
+[ChildProcess](classes/ChildProcess.md)
+
+</td>
+<td>
+
+Child process spawned from command.
+
+</td>
+</tr>
+<tr>
+<td>
+
 [Command](classes/Command.md)
 
 </td>
