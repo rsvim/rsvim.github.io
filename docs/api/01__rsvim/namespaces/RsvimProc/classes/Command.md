@@ -76,3 +76,15 @@ get options(): CommandOptions;
 ##### Returns
 
 [`CommandOptions`](../type-aliases/CommandOptions.md)
+
+## Methods
+
+### spawn()
+
+```ts
+spawn(): Promise<ChildProcess>;
+```
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ChildProcess`](ChildProcess.md)\>

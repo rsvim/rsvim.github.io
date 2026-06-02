@@ -70,7 +70,7 @@ This allows the spawned child process to continue running after current process 
 ### env?
 
 ```ts
-optional env?: Record<string, string>;
+optional env?: Record<string, string | undefined | null>;
 ```
 
 Environment variables to pass to the child-process.
