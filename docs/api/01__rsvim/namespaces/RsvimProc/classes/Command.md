@@ -100,6 +100,10 @@ Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 #### Example
 
 ```javascript
-const cmd = new Rsvim.proc.Command("ls");
-const child = cmd.spawn();
+try {
+  const cmd = new Rsvim.proc.Command("ls");
+  const child = cmd.spawn();
+} catch (e) {
+  Rsvim.cmd.echo(`Failed to spawn child process: ${e}`);
+}
 ```
