@@ -82,9 +82,11 @@ get options(): CommandOptions;
 ### spawn()
 
 ```ts
-spawn(): Promise<ChildProcess>;
+spawn(): ChildProcess;
 ```
+
+Spawn a child process with
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ChildProcess`](ChildProcess.md)\>
+[`ChildProcess`](ChildProcess.md)
