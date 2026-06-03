@@ -82,9 +82,28 @@ get options(): CommandOptions;
 ### spawn()
 
 ```ts
-spawn(): Promise<ChildProcess>;
+spawn(): ChildProcess;
 ```
+
+Spawn a child process.
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ChildProcess`](ChildProcess.md)\>
+[`ChildProcess`](ChildProcess.md)
+
+It returns a child process.
+
+#### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to spawn the child process.
+
+#### Example
+
+```javascript
+try {
+  const cmd = new Rsvim.proc.Command("ls");
+  const child = cmd.spawn();
+} catch (e) {
+  Rsvim.cmd.echo(`Failed to spawn child process: ${e}`);
+}
+```
