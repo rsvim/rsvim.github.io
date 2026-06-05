@@ -37,7 +37,7 @@ if (!file.isDisposed()) {
 dispose: void;
 ```
 
-Close the file with `using` without `close` API.
+Close the file with `using` API instead of `close`.
 
 #### Returns
 

@@ -117,7 +117,7 @@ get stdout(): ChildProcessReadableStream;
 asyncDispose: Promise<void>;
 ```
 
-Same with `wait`, except it doesn't return exit status.
+Wait for the child process finish with `await using` API instead of `wait`.
 
 #### Returns
 
