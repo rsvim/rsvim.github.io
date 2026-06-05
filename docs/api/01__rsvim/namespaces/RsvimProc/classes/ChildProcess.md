@@ -16,6 +16,59 @@ get execPath(): string;
 
 ***
 
+### exitStatus
+
+#### Get Signature
+
+```ts
+get exitStatus(): ChildProcessExitStatus;
+```
+
+Get child process exit status.
+
+##### Example
+
+```javascript
+const child = new Rsvim.proc.Command("ls").spawn();
+await child.wait();
+const exitStatus = child.exitStatus;
+```
+
+##### Returns
+
+[`ChildProcessExitStatus`](../type-aliases/ChildProcessExitStatus.md)
+
+It returns exit status if the child process is already finished, otherwise it returns `null`.
+
+***
+
+### isDisposed
+
+#### Get Signature
+
+```ts
+get isDisposed(): boolean;
+```
+
+Child process is already completed.
+
+##### Example
+
+```javascript
+const child = new Rsvim.proc.Command("ls").spawn();
+{
+  await using usedChild = child;
+  Rsvim.cmd.echo(usedChild.isDisposed); // false
+}
+Rsvim.cmd.echo(usedChild.isDisposed); // true
+```
+
+##### Returns
+
+`boolean`
+
+***
+
 ### options
 
 #### Get Signature
@@ -58,6 +111,22 @@ get stdout(): ChildProcessReadableStream;
 
 ## Methods
 
+### \[asyncDispose\]()
+
+```ts
+asyncDispose: Promise<void>;
+```
+
+Same with `wait`, except it doesn't return exit status.
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`void`\>
+
+It returns nothing.
+
+***
+
 ### wait()
 
 ```ts
@@ -74,7 +143,7 @@ It returns a child process exit status.
 
 #### Throws
 
-Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to wait for child process.
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if the child process is already finished, or failed to wait.
 
 #### Example
 

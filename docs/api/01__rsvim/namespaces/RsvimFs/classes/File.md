@@ -68,6 +68,10 @@ Close the file.
 
 `void`
 
+#### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if the file is already been closed.
+
 #### Example
 
 ```javascript
