@@ -32,6 +32,18 @@ Child process spawned from command.
 <tr>
 <td>
 
+[ChildProcessReadableStream](classes/ChildProcessReadableStream.md)
+
+</td>
+<td>
+
+Child process readable stream.
+
+</td>
+</tr>
+<tr>
+<td>
+
 [Command](classes/Command.md)
 
 </td>

@@ -30,56 +30,28 @@ get options(): CommandOptions;
 
 ***
 
-### rid
+### stderr
 
 #### Get Signature
 
 ```ts
-get rid(): number;
+get stderr(): ChildProcessReadableStream;
 ```
 
 ##### Returns
 
-`number`
+[`ChildProcessReadableStream`](ChildProcessReadableStream.md)
 
 ***
 
-### stderrRid
+### stdout
 
 #### Get Signature
 
 ```ts
-get stderrRid(): number;
+get stdout(): ChildProcessReadableStream;
 ```
 
 ##### Returns
 
-`number`
-
-***
-
-### stdinRid
-
-#### Get Signature
-
-```ts
-get stdinRid(): number;
-```
-
-##### Returns
-
-`number`
-
-***
-
-### stdoutRid
-
-#### Get Signature
-
-```ts
-get stdoutRid(): number;
-```
-
-##### Returns
-
-`number`
+[`ChildProcessReadableStream`](ChildProcessReadableStream.md)
