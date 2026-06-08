@@ -69,6 +69,22 @@ The command that create a child process.
 <tr>
 <td>
 
+[ChildProcessExitStatus](type-aliases/ChildProcessExitStatus.md)
+
+</td>
+<td>
+
+Child process exit status.
+
+**See**
+
+[RsvimProc.ChildProcess](classes/ChildProcess.md)
+
+</td>
+</tr>
+<tr>
+<td>
+
 [CommandOptions](type-aliases/CommandOptions.md)
 
 </td>

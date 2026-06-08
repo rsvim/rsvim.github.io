@@ -37,7 +37,7 @@ if (!file.isDisposed()) {
 dispose: void;
 ```
 
-Close the file with `using` without `close` API.
+Close the file with `using` API instead of `close`.
 
 #### Returns
 
@@ -67,6 +67,10 @@ Close the file.
 #### Returns
 
 `void`
+
+#### Throws
+
+Throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if the file is already been closed.
 
 #### Example
 
