@@ -49,6 +49,18 @@ The File object that access to an open file on filesystem.
 <tr>
 <td>
 
+[FileInfo](type-aliases/FileInfo.md)
+
+</td>
+<td>
+
+File information.
+
+</td>
+</tr>
+<tr>
+<td>
+
 [OpenOptions](type-aliases/OpenOptions.md)
 
 </td>
@@ -79,6 +91,66 @@ It is same with [std::fs::OpenOptions](https://doc.rust-lang.org/std/fs/struct.O
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+
+[lstat](functions/lstat.md)
+
+</td>
+<td>
+
+Get the status of a file by path.
+
+:::note
+This api doesn't follow symbolic link.
+:::
+
+**See**
+
+[RsvimFs.stat](functions/stat.md)
+
+**Throws**
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the file name is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to get file status.
+
+**Example**
+
+```javascript
+const fstat = await Rsvim.fs.lstat("README.md");
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[lstatSync](functions/lstatSync.md)
+
+</td>
+<td>
+
+Sync version of `lstat`.
+
+:::note
+This api doesn't follow symbolic link.
+:::
+
+**See**
+
+[RsvimFs.lstat](functions/lstat.md)
+
+**Throws**
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the file name is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to get file status.
+
+**Example**
+
+```javascript
+const fstat = Rsvim.fs.lstatSync("README.md");
+```
+
+</td>
+</tr>
 <tr>
 <td>
 
@@ -202,6 +274,66 @@ The sync version of [readTextFile](functions/readTextFile.md).
 
 ```javascript
 const payload = Rsvim.fs.readTextFileSync("README.md");
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[stat](functions/stat.md)
+
+</td>
+<td>
+
+Get the status of a file by path.
+
+:::note
+This api follows symbolic link.
+:::
+
+**See**
+
+[RsvimFs.lstat](functions/lstat.md)
+
+**Throws**
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the file name is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to get file status.
+
+**Example**
+
+```javascript
+const fstat = await Rsvim.fs.stat("README.md");
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[statSync](functions/statSync.md)
+
+</td>
+<td>
+
+Sync version of `stat`.
+
+:::note
+This api follows symbolic link.
+:::
+
+**See**
+
+[RsvimFs.stat](functions/stat.md)
+
+**Throws**
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the file name is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to get file status.
+
+**Example**
+
+```javascript
+const fstat = Rsvim.fs.statSync("README.md");
 ```
 
 </td>
