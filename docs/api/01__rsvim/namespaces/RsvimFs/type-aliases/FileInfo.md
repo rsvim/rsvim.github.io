@@ -2,9 +2,12 @@
 type FileInfo = object;
 ```
 
-File information.
+File information, it contains 3 groups of properties:
+- Common properties that are available for all platforms.
+- Windows platforms only properties
+- Unix platforms only properties
 
-## Common Attributes
+## Common
 
 ### accessed?
 

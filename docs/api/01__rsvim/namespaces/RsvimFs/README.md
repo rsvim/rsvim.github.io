@@ -54,7 +54,10 @@ The File object that access to an open file on filesystem.
 </td>
 <td>
 
-File information.
+File information, it contains 3 groups of properties:
+- Common properties that are available for all platforms.
+- Windows platforms only properties
+- Unix platforms only properties
 
 </td>
 </tr>
