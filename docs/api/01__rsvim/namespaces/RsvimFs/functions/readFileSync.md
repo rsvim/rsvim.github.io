@@ -2,7 +2,7 @@
 function readFileSync(path): Uint8Array;
 ```
 
-The sync version of [readFile](readFile.md).
+Sync version of [readFile](readFile.md).
 
 ## Parameters
 
@@ -11,7 +11,6 @@ The sync version of [readFile](readFile.md).
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -26,11 +25,6 @@ The sync version of [readFile](readFile.md).
 `string`
 
 </td>
-<td>
-
-&hyphen;
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -38,8 +32,6 @@ The sync version of [readFile](readFile.md).
 ## Returns
 
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-
-## Throws
 
 ## Example
 

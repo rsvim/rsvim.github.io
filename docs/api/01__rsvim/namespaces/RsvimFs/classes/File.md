@@ -157,7 +157,7 @@ const text = new TextDecoder().decode(buf); // decode into UTF-8 string "hello w
 readSync(buf): number;
 ```
 
-The sync version of [read](#read).
+Sync version of [read](#read).
 
 #### Parameters
 
@@ -166,7 +166,6 @@ The sync version of [read](#read).
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -181,11 +180,6 @@ The sync version of [read](#read).
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 </td>
-<td>
-
-&hyphen;
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -193,8 +187,6 @@ The sync version of [read](#read).
 #### Returns
 
 `number`
-
-#### Throws
 
 #### Example
 
@@ -276,7 +268,7 @@ const n = await file.write(buf); // write 11 bytes
 writeSync(buf): number;
 ```
 
-The sync version of [write](#write).
+Sync version of [write](#write).
 
 #### Parameters
 
@@ -285,7 +277,6 @@ The sync version of [write](#write).
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -300,11 +291,6 @@ The sync version of [write](#write).
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 </td>
-<td>
-
-&hyphen;
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -312,8 +298,6 @@ The sync version of [write](#write).
 #### Returns
 
 `number`
-
-#### Throws
 
 #### Example
 
