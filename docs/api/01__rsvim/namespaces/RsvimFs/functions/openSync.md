@@ -2,7 +2,7 @@
 function openSync(path, options?): File;
 ```
 
-The sync version of [open](open.md).
+Sync version of [open](open.md).
 
 ## Parameters
 
@@ -11,7 +11,6 @@ The sync version of [open](open.md).
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -26,11 +25,6 @@ The sync version of [open](open.md).
 `string`
 
 </td>
-<td>
-
-&hyphen;
-
-</td>
 </tr>
 <tr>
 <td>
@@ -43,11 +37,6 @@ The sync version of [open](open.md).
 [`OpenOptions`](../type-aliases/OpenOptions.md)
 
 </td>
-<td>
-
-&hyphen;
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -55,8 +44,6 @@ The sync version of [open](open.md).
 ## Returns
 
 [`File`](../classes/File.md)
-
-## Throws
 
 ## Example
 

@@ -2,11 +2,7 @@
 function statSync(path): FileInfo;
 ```
 
-Sync version of `stat`.
-
-:::note
-This api follows symbolic link.
-:::
+Sync version of [stat](stat.md).
 
 ## Parameters
 
@@ -15,7 +11,6 @@ This api follows symbolic link.
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -30,11 +25,6 @@ This api follows symbolic link.
 `string`
 
 </td>
-<td>
-
-File path.
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -42,16 +32,6 @@ File path.
 ## Returns
 
 [`FileInfo`](../type-aliases/FileInfo.md)
-
-It returns the file status.
-
-## See
-
-[RsvimFs.stat](stat.md)
-
-## Throws
-
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the file name is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to get file status.
 
 ## Example
 

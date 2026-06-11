@@ -81,6 +81,20 @@ It is same with [std::fs::OpenOptions](https://doc.rust-lang.org/std/fs/struct.O
 
 </td>
 </tr>
+<tr>
+<td>
+
+[SymlinkOptions](type-aliases/SymlinkOptions.md)
+
+</td>
+<td>
+
+**See**
+
+[RsvimFs.symlink](functions/symlink.md)
+
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -132,19 +146,7 @@ const fstat = await Rsvim.fs.lstat("README.md");
 </td>
 <td>
 
-Sync version of `lstat`.
-
-:::note
-This api doesn't follow symbolic link.
-:::
-
-**See**
-
-[RsvimFs.lstat](functions/lstat.md)
-
-**Throws**
-
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the file name is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to get file status.
+Sync version of [lstat](functions/lstat.md).
 
 **Example**
 
@@ -185,9 +187,7 @@ const file = await Rsvim.fs.open("README.md");
 </td>
 <td>
 
-The sync version of [open](functions/open.md).
-
-**Throws**
+Sync version of [open](functions/open.md).
 
 **Example**
 
@@ -227,9 +227,7 @@ const buffer = await Rsvim.fs.readFile("README.md");
 </td>
 <td>
 
-The sync version of [readFile](functions/readFile.md).
-
-**Throws**
+Sync version of [readFile](functions/readFile.md).
 
 **Example**
 
@@ -269,9 +267,7 @@ const payload = await Rsvim.fs.readTextFile("README.md");
 </td>
 <td>
 
-The sync version of [readTextFile](functions/readTextFile.md).
-
-**Throws**
+Sync version of [readTextFile](functions/readTextFile.md).
 
 **Example**
 
@@ -319,24 +315,73 @@ const fstat = await Rsvim.fs.stat("README.md");
 </td>
 <td>
 
-Sync version of `stat`.
-
-:::note
-This api follows symbolic link.
-:::
-
-**See**
-
-[RsvimFs.stat](functions/stat.md)
-
-**Throws**
-
-Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the file name is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to get file status.
+Sync version of [stat](functions/stat.md).
 
 **Example**
 
 ```javascript
 const fstat = Rsvim.fs.statSync("README.md");
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[symlink](functions/symlink.md)
+
+</td>
+<td>
+
+Create symbolic link from a file path.
+
+On Windows platforms, you should specify the 3rd parameter "options" with below 3 options:
+
+- `"file"` or `"dir"`: Pointing to [CreateSymbolicLinkW](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-createsymboliclinkw) function.
+- `"junction"`: NTFS v5+ features roughly equivalent to Unix directory symbolic links.
+
+**Throws**
+
+Throws [TypeError](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if any parameter is invalid. Or throws [Error](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error) if failed to create symbolic link from the file.
+
+**Example**
+
+```javascript
+try {
+  // Linux
+  await Rsvim.fs.symlink("README.md", "linked-README.md");
+  // Windows
+  await Rsvim.fs.symlink("README.md", "linked-README.md", "junction");
+  Rsvim.cmd.echo(`Created symbolic link "linked-README.md" pointing to "README.md"`);
+} catch (e) {
+  Rsvim.cmd.echo(`Failed to create symbolic link pointing to "README.md": ${e}`);
+}
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+[symlinkSync](functions/symlinkSync.md)
+
+</td>
+<td>
+
+Sync version of [symlink](functions/symlink.md).
+
+**Example**
+
+```javascript
+try {
+  // Linux
+  Rsvim.fs.symlinkSync("README.md", "linked-README.md");
+  // Windows
+  Rsvim.fs.symlinkSync("README.md", "linked-README.md", "junction");
+  Rsvim.cmd.echo(`Created symbolic link "linked-README.md" pointing to "README.md"`);
+} catch (e) {
+  Rsvim.cmd.echo(`Failed to create symbolic link pointing to "README.md": ${e}`);
+}
 ```
 
 </td>

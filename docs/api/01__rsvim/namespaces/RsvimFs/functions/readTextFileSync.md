@@ -2,7 +2,7 @@
 function readTextFileSync(path): string;
 ```
 
-The sync version of [readTextFile](readTextFile.md).
+Sync version of [readTextFile](readTextFile.md).
 
 ## Parameters
 
@@ -11,7 +11,6 @@ The sync version of [readTextFile](readTextFile.md).
 <tr>
 <th>Parameter</th>
 <th>Type</th>
-<th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -26,11 +25,6 @@ The sync version of [readTextFile](readTextFile.md).
 `string`
 
 </td>
-<td>
-
-&hyphen;
-
-</td>
 </tr>
 </tbody>
 </table>
@@ -38,8 +32,6 @@ The sync version of [readTextFile](readTextFile.md).
 ## Returns
 
 `string`
-
-## Throws
 
 ## Example
 
